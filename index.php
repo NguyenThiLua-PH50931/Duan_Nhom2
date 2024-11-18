@@ -7,13 +7,16 @@ include "controllers/admin/AccountsController.php";
 include "controllers/users/LoginControllers.php";
 include "controllers/users/UsersControllers.php";
 include "controllers/users/HomeControllers.php";
+include "controllers/users/RegisterControllers.php";
 include "database/function.php";
 include "models/admin/CategoryModels.php";
 include "models/admin/ProductModels.php";
 include "models/admin/Auth.php";
 include "models/admin/AccountsModels.php";
 include "models/users/HomeModels.php";
+include "models/users/RegisterModels.php";
 include "models/users/LoginModels.php";
+
 include "commons/helpers.php";
 
 //Lấy tham số trên thanh địa chỉ URL
@@ -39,6 +42,12 @@ match ($admin) {
     //Auth
     'login' => (new AuthController)->login(),
     'logout' => (new AuthController)->logout(),
+    //Home
+    'home' => (new HomeController)->home(),
+    //Login user
+    'login-user' =>(new LoginController)->loginUser(),
+    //Register user
+    'register-user'=>(new RegisterControllers)->registerUser(),
 
     default => "Không tìm thấy file"
 };

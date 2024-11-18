@@ -1,7 +1,7 @@
 <?php
 class LoginController
 {
-    public function login()
+    public function loginUser()
     {
         $home = new LoginModels();
         include 'views/users/login.php';

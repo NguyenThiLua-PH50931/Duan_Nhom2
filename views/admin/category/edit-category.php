@@ -5,7 +5,7 @@
 <!-- Mirrored from maraviyainfotech.com/projects/carrot/carrot-v21/admin-html/product-list.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Nov 2024 15:41:49 GMT -->
 
 <head>
-    <?php include_once "views/admin/linkCss.php" ?>
+    <?php include_once "views/admin/layout/linkCss.php" ?>
 </head>
 
 <body>
@@ -16,10 +16,10 @@
         </div>
         <!-- Header -->
         <header class="cr-header">
-            <?php include_once "views/admin/header.php" ?>
+            <?php include_once "views/admin/layout/header.php" ?>
         </header>
         <!-- sidebar -->
-        <?php include_once "views/admin/sidebar.php" ?>
+        <?php include_once "views/admin/layout/sidebar.php" ?>
 
         <!-- main content -->
         <div class="cr-main-content">
@@ -51,7 +51,7 @@
                                                     <!-- <div class="avatar-preview cr-preview">
                                                         <div class="imagePreview cr-div-preview">
                                                             <img class="cr-image-preview"
-                                                                src="assets/admin//img/product/preview.jpg"
+                                                                src="assets/admin/layout//img/product/preview.jpg"
                                                                 alt="edit" name="anh_sp">
                                                         </div>
                                                     </div> -->
@@ -86,12 +86,12 @@
 
         <!-- Footer -->
         <footer>
-            <?php include_once "views/admin/footer.php" ?>
+            <?php include_once "views/admin/layout/footer.php" ?>
         </footer>
         <!-- Feature tools -->
-        <?php include_once "views/admin/feature-tools.php" ?>
+        <?php include_once "views/admin/layout/feature-tools.php" ?>
     </main>
-    <?php include_once "views/admin/script.php" ?>
+    <?php include_once "views/admin/layout/script.php" ?>
 </body>
 <!-- Mirrored from maraviyainfotech.com/projects/carrot/carrot-v21/admin-html/add-product.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Nov 2024 15:41:50 GMT -->
 

@@ -5,7 +5,7 @@
 <!-- Mirrored from maraviyainfotech.com/projects/carrot/carrot-v21/admin-html/signin.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Nov 2024 15:41:49 GMT -->
 
 <head>
-<?=include_once "views/admin/linkCss.php"?>
+<?=include_once "views/admin/layout/linkCss.php"?>
 
 </head>
 
@@ -73,7 +73,7 @@
         </section>
     </main>
 
-<?=include_once "views/admin/script.php"?>
+<?=include_once "views/admin/layout/script.php"?>
     
 </body>
 

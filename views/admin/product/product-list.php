@@ -36,8 +36,9 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="cr-card card-default product-list">
-                            <div class="cr-card-content ">
+                            <div class="cr-card-content">
                                 <div class="table-responsive">
+
                                     <form action="" method="post" enctype="multipart/form-data">
                                         <?php
                                         if (!empty($_SESSION['message'])) {

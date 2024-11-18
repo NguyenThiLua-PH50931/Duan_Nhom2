@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Nov 16, 2024 at 07:36 PM
+-- Generation Time: Nov 18, 2024 at 01:20 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -121,10 +121,10 @@ CREATE TABLE `gio_hang_chi_tiet` (
 
 CREATE TABLE `san_pham` (
   `id_sp` int NOT NULL,
-  `ten_sp` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `ten_sp` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `gia_tien` int NOT NULL,
   `anh_sp` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `mo_ta` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `mo_ta` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `luot_xem` int DEFAULT '0',
   `soluong_ton` int NOT NULL,
   `id_dm` int NOT NULL
@@ -135,10 +135,10 @@ CREATE TABLE `san_pham` (
 --
 
 INSERT INTO `san_pham` (`id_sp`, `ten_sp`, `gia_tien`, `anh_sp`, `mo_ta`, `luot_xem`, `soluong_ton`, `id_dm`) VALUES
-(1, 'Originals Campus', 350, 'images/micchon shikimori_.jpg', 'Giày đẹp', 0, 10, 1),
-(2, 'Youth of Paris Campus', 550, 'images/57341326-318b-4ce0-96f0-b3474c354b51.jpg', 'Giày đẹp, phong cách', 0, 20, 1),
-(7, 'Giày thể thao', 3333, 'images/1731785623_Alisa Mikhailovna Kujou.jpg', 'Đẹp', 0, 222, 1),
-(8, 'Giày MLB', 123, 'images/1731785738_Elaina.jpg', '123123123213', 0, 2, 3);
+(1, 'Originals Campus', 350, 'images/1731863675_vn-11134201-7r98o-m0cqvz5bmetr71.jpg', 'Giày đẹp', 0, 10, 1),
+(2, 'Youth of Paris Campus', 550, 'images/1731863666_1056436.jpg', 'Giày đẹp, phong cách', 0, 20, 1),
+(7, 'Giày thể thao', 3333, 'images/1731863656_images.jpg', 'Đẹp', 0, 222, 1),
+(8, 'Giày MLB', 123, 'images/1731863646_cb6642dc-68f5-4d86-bc4d-fc3451fb2543.jpg', '123123123213', 0, 2, 3);
 
 -- --------------------------------------------------------
 
@@ -153,7 +153,7 @@ CREATE TABLE `tai_khoan` (
   `so_dt` varchar(11) NOT NULL,
   `mat_khau` varchar(50) NOT NULL,
   `dia_chi` varchar(255) NOT NULL,
-  `so_thich` varchar(255) DEFAULT NULL,
+  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `vai_tro` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -161,9 +161,9 @@ CREATE TABLE `tai_khoan` (
 -- Dumping data for table `tai_khoan`
 --
 
-INSERT INTO `tai_khoan` (`id_tk`, `ten_tk`, `ho_ten`, `so_dt`, `mat_khau`, `dia_chi`, `so_thich`, `vai_tro`) VALUES
-(1, 'luantph', 'Nguyễn Thị Lụa', '0971918183', '12345', 'Bắc Ninh', 'Nghe nhạc', 1),
-(2, 'yennthph', 'Nguyễn Thị Hải Yến', '0971918184', '123456', 'Hà Nội', 'Bơi lội', 1);
+INSERT INTO `tai_khoan` (`id_tk`, `ten_tk`, `ho_ten`, `so_dt`, `mat_khau`, `dia_chi`, `email`, `vai_tro`) VALUES
+(1, 'luantph', 'Nguyễn Thị Lụa', '0971918183', '12345', 'Bắc Ninh', 'luantph50931@gmail.com', 1),
+(2, 'yennthph', 'Nguyễn Thị Hải Yến', '0971918184', '123456', 'Hà Nội', 'yenntph@gmail.com', 1);
 
 --
 -- Indexes for dumped tables

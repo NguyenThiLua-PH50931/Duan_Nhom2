@@ -1,9 +1,9 @@
 <?php
 class HomeController
 {
-    public function dashboad()
+    public function home()
     {
         $home = new HomeModels();
-        include 'views/users/index.php';
+        include 'views/users/home.php';
     }
 }

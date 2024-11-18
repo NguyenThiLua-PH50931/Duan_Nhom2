@@ -20,23 +20,23 @@
     <title>Carrot - Multipurpose eCommerce HTML Template</title>
 
     <!-- App favicon -->
-    <link rel="shortcut icon" href="assets/users/assets/img/logo/favicon.png">
+    <link rel="shortcut icon" href="assets/users//img/logo/favicon.png">
 
     <!-- Icon CSS -->
-    <link rel="stylesheet" href="assets/users/assets/css/vendor/materialdesignicons.min.css">
-    <link rel="stylesheet" href="assets/users/assets/css/vendor/remixicon.css">
+    <link rel="stylesheet" href="assets/users/css/vendor/materialdesignicons.min.css">
+    <link rel="stylesheet" href="assets/users/css/vendor/remixicon.css">
 
     <!-- Vendor -->
-    <link rel="stylesheet" href="assets/users/assets/css/vendor/animate.css">
-    <link rel="stylesheet" href="assets/users/assets/css/vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/users/assets/css/vendor/aos.min.css">
-    <link rel="stylesheet" href="assets/users/assets/css/vendor/range-slider.css">
-    <link rel="stylesheet" href="assets/users/assets/css/vendor/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/users/assets/css/vendor/jquery.slick.css">
-    <link rel="stylesheet" href="assets/users/assets/css/vendor/slick-theme.css">
+    <link rel="stylesheet" href="assets/users/css/vendor/animate.css">
+    <link rel="stylesheet" href="assets/users/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/users/css/vendor/aos.min.css">
+    <link rel="stylesheet" href="assets/users/css/vendor/range-slider.css">
+    <link rel="stylesheet" href="assets/users/css/vendor/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/users/css/vendor/jquery.slick.css">
+    <link rel="stylesheet" href="assets/users/css/vendor/slick-theme.css">
 
     <!-- Main CSS -->
-    <link rel="stylesheet" href="assets/users/assets/css/style.css">
+    <link rel="stylesheet" href="assets/users/css/style.css">
 </head>
 
 <body class="body-bg-6">
@@ -53,8 +53,8 @@
                 <div class="col-lg-12">
                     <div class="top-header">
                         <a href="index.html" class="cr-logo">
-                            <img src="assets/users/assets/img/logo/logo.png" alt="logo" class="logo">
-                            <img src="assets/users/assets/img/logo/dark-logo.png" alt="logo" class="dark-logo">
+                            <img src="assets/users/img/logo/logo.png" alt="logo" class="logo">
+                            <img src="assets/users/img/logo/dark-logo.png" alt="logo" class="dark-logo">
                         </a>
                         <form class="cr-search">
                             <input class="search-input" type="text" placeholder="Search For items...">
@@ -661,7 +661,7 @@
                                                 <a href="shop-left-sidebar.html" class="cr-button">shop now</a>
                                             </div>
                                         </div>
-                                        <img src="assets/users/assets/img/categories/3.jpg" alt="categories-3">
+                                        <img src="assets/users/img/categories/3.jpg" alt="categories-3">
                                     </div>
                                 </div>
                                 <div class="col-6 cr-categories-box mb-24">
@@ -682,7 +682,7 @@
                                                 <a href="shop-left-sidebar.html" class="cr-button">shop now</a>
                                             </div>
                                         </div>
-                                        <img src="assets/users/assets/img/categories/4.jpg" alt="categories-4">
+                                        <img src="assets/users/img/categories/4.jpg" alt="categories-4">
                                     </div>
                                 </div>
                             </div>
@@ -707,7 +707,7 @@
                                                 <a href="shop-left-sidebar.html" class="cr-button">shop now</a>
                                             </div>
                                         </div>
-                                        <img src="assets/users/assets/img/categories/1.jpg" alt="categories-1">
+                                        <img src="assets/users/img/categories/1.jpg" alt="categories-1">
                                     </div>
                                 </div>
                                 <div class="col-6 cr-categories-box">
@@ -728,7 +728,7 @@
                                                 <a href="shop-left-sidebar.html" class="cr-button">shop now</a>
                                             </div>
                                         </div>
-                                        <img src="assets/users/assets/img/categories/2.jpg" alt="categories-2">
+                                        <img src="assets/users/img/categories/2.jpg" alt="categories-2">
                                     </div>
                                 </div>
                             </div>
@@ -753,7 +753,7 @@
                                                 <a href="shop-left-sidebar.html" class="cr-button">shop now</a>
                                             </div>
                                         </div>
-                                        <img src="assets/users/assets/img/categories/5.jpg" alt="categories-5">
+                                        <img src="assets/users/img/categories/5.jpg" alt="categories-5">
                                     </div>
                                 </div>
                                 <div class="col-6 cr-categories-box mb-24">
@@ -774,7 +774,7 @@
                                                 <a href="shop-left-sidebar.html" class="cr-button">shop now</a>
                                             </div>
                                         </div>
-                                        <img src="assets/users/assets/img/categories/6.jpg" alt="categories-6">
+                                        <img src="assets/users/img/categories/6.jpg" alt="categories-6">
                                     </div>
                                 </div>
                             </div>
@@ -799,7 +799,7 @@
                                                 <a href="shop-left-sidebar.html" class="cr-button">shop now</a>
                                             </div>
                                         </div>
-                                        <img src="assets/users/assets/img/categories/7.jpg" alt="categories-7">
+                                        <img src="assets/users/img/categories/7.jpg" alt="categories-7">
                                     </div>
                                 </div>
                                 <div class="col-6 cr-categories-box mb-24">
@@ -820,7 +820,7 @@
                                                 <a href="shop-left-sidebar.html" class="cr-button">shop now</a>
                                             </div>
                                         </div>
-                                        <img src="assets/users/assets/img/categories/8.jpg" alt="categories-8">
+                                        <img src="assets/users/img/categories/8.jpg" alt="categories-8">
                                     </div>
                                 </div>
                             </div>
@@ -845,7 +845,7 @@
                                                 <a href="shop-left-sidebar.html" class="cr-button">shop now</a>
                                             </div>
                                         </div>
-                                        <img src="assets/users/assets/img/categories/9.jpg" alt="categories-9">
+                                        <img src="assets/users/img/categories/9.jpg" alt="categories-9">
                                     </div>
                                 </div>
                                 <div class="col-6 cr-categories-box mb-24">
@@ -866,7 +866,7 @@
                                                 <a href="shop-left-sidebar.html" class="cr-button">shop now</a>
                                             </div>
                                         </div>
-                                        <img src="assets/users/assets/img/categories/10.jpg" alt="categories-10">
+                                        <img src="assets/users/img/categories/10.jpg" alt="categories-10">
                                     </div>
                                 </div>
                             </div>
@@ -909,7 +909,7 @@
                         </div>
                         <div class="col-lg-12 col-sm-6 col-6 cr-product-box banner-480 mb-24">
                             <div class="cr-ice-cubes">
-                                <img src="assets/users/assets/img/product/product-banner.jpg" alt="product banner">
+                                <img src="assets/users/img/product/product-banner.jpg" alt="product banner">
                                 <div class="cr-ice-cubes-contain">
                                     <h4 class="title">Juicy </h4>
                                     <h5 class="sub-title">Fruits</h5>
@@ -926,7 +926,7 @@
                             <div class="cr-product-card">
                                 <div class="cr-product-image">
                                     <div class="cr-image-inner zoom-image-hover">
-                                        <img src="assets/users/assets/img/product/1.jpg" alt="product-1">
+                                        <img src="assets/users/img/product/1.jpg" alt="product-1">
                                     </div>
                                     <div class="cr-side-view">
                                         <a href="javascript:void(0)" class="wishlist">
@@ -964,7 +964,7 @@
                             <div class="cr-product-card">
                                 <div class="cr-product-image">
                                     <div class="cr-image-inner zoom-image-hover">
-                                        <img src="assets/users/assets/img/product/9.jpg" alt="product-1">
+                                        <img src="assets/users/img/product/9.jpg" alt="product-1">
                                     </div>
                                     <div class="cr-side-view">
                                         <a href="javascript:void(0)" class="wishlist">
@@ -1002,7 +1002,7 @@
                             <div class="cr-product-card">
                                 <div class="cr-product-image">
                                     <div class="cr-image-inner zoom-image-hover">
-                                        <img src="assets/users/assets/img/product/2.jpg" alt="product-1">
+                                        <img src="assets/users/img/product/2.jpg" alt="product-1">
                                     </div>
                                     <div class="cr-side-view">
                                         <a href="javascript:void(0)" class="wishlist">
@@ -1040,7 +1040,7 @@
                             <div class="cr-product-card">
                                 <div class="cr-product-image">
                                     <div class="cr-image-inner zoom-image-hover">
-                                        <img src="assets/users/assets/img/product/17.jpg" alt="product-1">
+                                        <img src="assets/users/img/product/17.jpg" alt="product-1">
                                     </div>
                                     <div class="cr-side-view">
                                         <a href="javascript:void(0)" class="wishlist">
@@ -1078,7 +1078,7 @@
                             <div class="cr-product-card">
                                 <div class="cr-product-image">
                                     <div class="cr-image-inner zoom-image-hover">
-                                        <img src="assets/users/assets/img/product/11.jpg" alt="product-1">
+                                        <img src="assets/users/img/product/11.jpg" alt="product-1">
                                     </div>
                                     <div class="cr-side-view">
                                         <a href="javascript:void(0)" class="wishlist">
@@ -1116,7 +1116,7 @@
                             <div class="cr-product-card">
                                 <div class="cr-product-image">
                                     <div class="cr-image-inner zoom-image-hover">
-                                        <img src="assets/users/assets/img/product/3.jpg" alt="product-1">
+                                        <img src="assets/users/img/product/3.jpg" alt="product-1">
                                     </div>
                                     <div class="cr-side-view">
                                         <a href="javascript:void(0)" class="wishlist">
@@ -1154,7 +1154,7 @@
                             <div class="cr-product-card">
                                 <div class="cr-product-image">
                                     <div class="cr-image-inner zoom-image-hover">
-                                        <img src="assets/users/assets/img/product/10.jpg" alt="product-1">
+                                        <img src="assets/users/img/product/10.jpg" alt="product-1">
                                     </div>
                                     <div class="cr-side-view">
                                         <a href="javascript:void(0)" class="wishlist">
@@ -1192,7 +1192,7 @@
                             <div class="cr-product-card">
                                 <div class="cr-product-image">
                                     <div class="cr-image-inner zoom-image-hover">
-                                        <img src="assets/users/assets/img/product/17.jpg" alt="product-1">
+                                        <img src="assets/users/img/product/17.jpg" alt="product-1">
                                     </div>
                                     <div class="cr-side-view">
                                         <a href="javascript:void(0)" class="wishlist">
@@ -1241,7 +1241,7 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide" data-aos="fade-up" data-aos-duration="2000">
                                 <div class="cr-product-banner-image">
-                                    <img src="assets/users/assets/img/product-banner/1.jpg" alt="product-banner">
+                                    <img src="assets/users/img/product-banner/1.jpg" alt="product-banner">
                                     <div class="cr-product-banner-contain">
                                         <h5>Healthy <br> Bakery Products</h5>
                                         <p><span class="percent">30%</span> Off <span class="text">on first order</span>
@@ -1254,7 +1254,7 @@
                             </div>
                             <div class="swiper-slide" data-aos="fade-up" data-aos-duration="2000">
                                 <div class="cr-product-banner-image">
-                                    <img src="assets/users/assets/img/product-banner/2.jpg" alt="product-banner">
+                                    <img src="assets/users/img/product-banner/2.jpg" alt="product-banner">
                                     <div class="cr-product-banner-contain">
                                         <h5>Fresh <br>Snacks & Sweets</h5>
                                         <p><span class="percent">20%</span> Off <span class="text">on first order</span>
@@ -1267,7 +1267,7 @@
                             </div>
                             <div class="swiper-slide" data-aos="fade-up" data-aos-duration="2000">
                                 <div class="cr-product-banner-image">
-                                    <img src="assets/users/assets/img/product-banner/3.jpg" alt="product-banner">
+                                    <img src="assets/users/img/product-banner/3.jpg" alt="product-banner">
                                     <div class="cr-product-banner-contain">
                                         <h5>Fresh & healthy <br> Organic Fruits</h5>
                                         <p><span class="percent">35%</span> Off <span class="text">on first order</span>
@@ -1396,7 +1396,7 @@
                             <div class="cr-product-card">
                                 <div class="cr-product-image">
                                     <div class="cr-image-inner zoom-image-hover">
-                                        <img src="assets/users/assets/img/product/9.jpg" alt="product-1">
+                                        <img src="assets/users/img/product/9.jpg" alt="product-1">
                                     </div>
                                     <div class="cr-side-view">
                                         <a href="javascript:void(0)" class="wishlist">
@@ -1434,7 +1434,7 @@
                             <div class="cr-product-card">
                                 <div class="cr-product-image">
                                     <div class="cr-image-inner zoom-image-hover">
-                                        <img src="assets/users/assets/img/product/10.jpg" alt="product-1">
+                                        <img src="assets/users/img/product/10.jpg" alt="product-1">
                                     </div>
                                     <div class="cr-side-view">
                                         <a href="javascript:void(0)" class="wishlist">
@@ -1473,7 +1473,7 @@
                             <div class="cr-product-card">
                                 <div class="cr-product-image">
                                     <div class="cr-image-inner zoom-image-hover">
-                                        <img src="assets/users/assets/img/product/1.jpg" alt="product-1">
+                                        <img src="assets/users/img/product/1.jpg" alt="product-1">
                                     </div>
                                     <div class="cr-side-view">
                                         <a href="javascript:void(0)" class="wishlist">
@@ -1511,7 +1511,7 @@
                             <div class="cr-product-card">
                                 <div class="cr-product-image">
                                     <div class="cr-image-inner zoom-image-hover">
-                                        <img src="assets/users/assets/img/product/2.jpg" alt="product-1">
+                                        <img src="assets/users/img/product/2.jpg" alt="product-1">
                                     </div>
                                     <div class="cr-side-view">
                                         <a href="javascript:void(0)" class="wishlist">
@@ -1550,7 +1550,7 @@
                             <div class="cr-product-card">
                                 <div class="cr-product-image">
                                     <div class="cr-image-inner zoom-image-hover">
-                                        <img src="assets/users/assets/img/product/3.jpg" alt="product-1">
+                                        <img src="assets/users/img/product/3.jpg" alt="product-1">
                                     </div>
                                     <div class="cr-side-view">
                                         <a href="javascript:void(0)" class="wishlist">
@@ -1589,7 +1589,7 @@
                 </div>
                 <div class="col-xxl-5 col-xl-6 col-lg-6 col-md-12" data-aos="fade-up" data-aos-duration="2000">
                     <div class="cr-products-rightbar">
-                        <img src="assets/users/assets/img/product/products-rightview.jpg" alt="products-rightview">
+                        <img src="assets/users/img/product/products-rightview.jpg" alt="products-rightview">
                         <div class="cr-products-rightbar-content">
                             <h4>Organic & Healthy <br> Vegetables</h4>
                             <div class="cr-off">
@@ -1630,7 +1630,7 @@
                             <div class="swiper-slide" data-aos="fade-up" data-aos-duration="2000">
                                 <div class="cr-testimonial">
                                     <div class="cr-testimonial-image">
-                                        <img src="assets/users/assets/img/testimonial/1.jpg" alt="businessman">
+                                        <img src="assets/users/img/testimonial/1.jpg" alt="businessman">
                                     </div>
                                     <div class="cr-testimonial-inner">
                                         <span>Co Founder</span>
@@ -1651,7 +1651,7 @@
                             <div class="swiper-slide" data-aos="fade-up" data-aos-duration="2000">
                                 <div class="cr-testimonial">
                                     <div class="cr-testimonial-image">
-                                        <img src="assets/users/assets/img/testimonial/2.jpg" alt="businessman">
+                                        <img src="assets/users/img/testimonial/2.jpg" alt="businessman">
                                     </div>
                                     <div class="cr-testimonial-inner">
                                         <span>Manager</span>
@@ -1672,7 +1672,7 @@
                             <div class="swiper-slide" data-aos="fade-up" data-aos-duration="2000">
                                 <div class="cr-testimonial">
                                     <div class="cr-testimonial-image">
-                                        <img src="assets/users/assets/img/testimonial/3.jpg" alt="businessman">
+                                        <img src="assets/users/img/testimonial/3.jpg" alt="businessman">
                                     </div>
                                     <div class="cr-testimonial-inner">
                                         <span>Team Leader</span>
@@ -1725,7 +1725,7 @@
                                         <a class="read" href="blog-detail-left-sidebar.html">Read More</a>
                                     </div>
                                     <div class="cr-blog-image">
-                                        <img src="assets/users/assets/img/blog/2.jpg" alt="blog-2">
+                                        <img src="assets/users/img/blog/2.jpg" alt="blog-2">
                                         <div class="cr-blog-date">
                                             <span>
                                                 10
@@ -1743,7 +1743,7 @@
                                         <a class="read" href="blog-detail-left-sidebar.html">Read More</a>
                                     </div>
                                     <div class="cr-blog-image">
-                                        <img src="assets/users/assets/img/blog/1.jpg" alt="blog-1">
+                                        <img src="assets/users/img/blog/1.jpg" alt="blog-1">
                                         <div class="cr-blog-date">
                                             <span>
                                                 09<code>sep</code>
@@ -1760,7 +1760,7 @@
                                         <a class="read" href="blog-detail-left-sidebar.html">Read More</a>
                                     </div>
                                     <div class="cr-blog-image">
-                                        <img src="assets/users/assets/img/blog/3.jpg" alt="blog-2">
+                                        <img src="assets/users/img/blog/3.jpg" alt="blog-2">
                                         <div class="cr-blog-date">
                                             <span>
                                                 12
@@ -1779,7 +1779,7 @@
                                         <a class="read" href="blog-detail-left-sidebar.html">Read More</a>
                                     </div>
                                     <div class="cr-blog-image">
-                                        <img src="assets/users/assets/img/blog/2.jpg" alt="blog-3">
+                                        <img src="assets/users/img/blog/2.jpg" alt="blog-3">
                                         <div class="cr-blog-date">
                                             <span>
                                                 22
@@ -1803,8 +1803,8 @@
                 <div class="col-xl-4 col-lg-6 col-sm-12 col-12 cr-footer-border">
                     <div class="cr-footer-logo">
                         <div class="image">
-                            <img src="assets/users/assets/img/logo/logo.png" alt="logo" class="logo">
-                            <img src="assets/users/assets/img/logo/dark-logo.png" alt="logo" class="dark-logo">
+                            <img src="assets/users/img/logo/logo.png" alt="logo" class="logo">
+                            <img src="assets/users/img/logo/dark-logo.png" alt="logo" class="dark-logo">
                         </div>
                         <p>Carrot is the biggest market of grocery products. Get your daily needs from our store.</p>
                     </div>
@@ -1883,49 +1883,49 @@
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <a href="#" class="cr-payment-image">
-                                            <img src="assets/users/assets/img/insta/1.jpg" alt="insta">
+                                            <img src="assets/users/img/insta/1.jpg" alt="insta">
                                             <div class="payment-overlay"></div>
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
                                         <a href="#" class="cr-payment-image">
-                                            <img src="assets/users/assets/img/insta/2.jpg" alt="insta">
+                                            <img src="assets/users/img/insta/2.jpg" alt="insta">
                                             <div class="payment-overlay"></div>
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
                                         <a href="#" class="cr-payment-image">
-                                            <img src="assets/users/assets/img/insta/3.jpg" alt="insta">
+                                            <img src="assets/users/img/insta/3.jpg" alt="insta">
                                             <div class="payment-overlay"></div>
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
                                         <a href="#" class="cr-payment-image">
-                                            <img src="assets/users/assets/img/insta/4.jpg" alt="insta">
+                                            <img src="assets/users/img/insta/4.jpg" alt="insta">
                                             <div class="payment-overlay"></div>
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
                                         <a href="#" class="cr-payment-image">
-                                            <img src="assets/users/assets/img/insta/5.jpg" alt="insta">
+                                            <img src="assets/users/img/insta/5.jpg" alt="insta">
                                             <div class="payment-overlay"></div>
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
                                         <a href="#" class="cr-payment-image">
-                                            <img src="assets/users/assets/img/insta/6.jpg" alt="insta">
+                                            <img src="assets/users/img/insta/6.jpg" alt="insta">
                                             <div class="payment-overlay"></div>
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
                                         <a href="#" class="cr-payment-image">
-                                            <img src="assets/users/assets/img/insta/7.jpg" alt="insta">
+                                            <img src="assets/users/img/insta/7.jpg" alt="insta">
                                             <div class="payment-overlay"></div>
                                         </a>
                                     </div>
                                     <div class="swiper-slide">
                                         <a href="#" class="cr-payment-image">
-                                            <img src="assets/users/assets/img/insta/8.jpg" alt="insta">
+                                            <img src="assets/users/img/insta/8.jpg" alt="insta">
                                             <div class="payment-overlay"></div>
                                         </a>
                                     </div>
@@ -1961,7 +1961,7 @@
                     <div class="row">
                         <div class="col-md-5 col-sm-12 col-xs-12">
                             <div class="zoom-image-hover modal-border-image">
-                                <img src="assets/users/assets/img/product/tab-1.jpg" alt="product-tab-2" class="product-image">
+                                <img src="assets/users/img/product/tab-1.jpg" alt="product-tab-2" class="product-image">
                             </div>
                         </div>
                         <div class="col-md-7 col-sm-12 col-xs-12">
@@ -2027,7 +2027,7 @@
                 </div>
                 <ul class="crcart-pro-items">
                     <li>
-                        <a href="product-left-sidebar.html" class="crside_pro_img"><img src="assets/users/assets/img/product/4.jpg"
+                        <a href="product-left-sidebar.html" class="crside_pro_img"><img src="assets/users/img/product/4.jpg"
                                 alt="product-1"></a>
                         <div class="cr-pro-content">
                             <a href="product-left-sidebar.html" class="cart_pro_title">Fresh Pomegranate</a>
@@ -2044,7 +2044,7 @@
                         </div>
                     </li>
                     <li>
-                        <a href="product-left-sidebar.html" class="crside_pro_img"><img src="assets/users/assets/img/product/2.jpg"
+                        <a href="product-left-sidebar.html" class="crside_pro_img"><img src="assets/users/img/product/2.jpg"
                                 alt="product-2"></a>
                         <div class="cr-pro-content">
                             <a href="product-left-sidebar.html" class="cart_pro_title">Green Apples</a>
@@ -2061,7 +2061,7 @@
                         </div>
                     </li>
                     <li>
-                        <a href="product-left-sidebar.html" class="crside_pro_img"><img src="assets/users/assets/img/product/3.jpg"
+                        <a href="product-left-sidebar.html" class="crside_pro_img"><img src="assets/users/img/product/3.jpg"
                                 alt="product-3"></a>
                         <div class="cr-pro-content">
                             <a href="product-left-sidebar.html" class="cart_pro_title">Watermelon - Small</a>
@@ -2164,10 +2164,10 @@
                     </div>
                     <ul class="rtl-mode">
                         <li class="rtl">
-                            <img src="assets/users/assets/img/tool/rtl.png" alt="rtl">
+                            <img src="assets/users/img/tool/rtl.png" alt="rtl">
                         </li>
                         <li class="ltr active-rtl-mode">
-                            <img src="assets/users/assets/img/tool/ltr.png" alt="ltr">
+                            <img src="assets/users/img/tool/ltr.png" alt="ltr">
                         </li>
                     </ul>
                 </div>
@@ -2177,22 +2177,22 @@
                     </div>
                     <ul class="bg-panel">
                         <li class="bg-1">
-                            <img src="assets/users/assets/img/shape/bg-shape-1.png" alt="bg-shape-1">
+                            <img src="assets/users/img/shape/bg-shape-1.png" alt="bg-shape-1">
                         </li>
                         <li class="bg-2">
-                            <img src="assets/users/assets/img/shape/bg-shape-2.png" alt="bg-shape-2">
+                            <img src="assets/users/img/shape/bg-shape-2.png" alt="bg-shape-2">
                         </li>
                         <li class="bg-3">
-                            <img src="assets/users/assets/img/shape/bg-shape-3.png" alt="bg-shape-3">
+                            <img src="assets/users/img/shape/bg-shape-3.png" alt="bg-shape-3">
                         </li>
                         <li class="bg-4">
-                            <img src="assets/users/assets/img/shape/bg-shape-4.png" alt="bg-shape-4">
+                            <img src="assets/users/img/shape/bg-shape-4.png" alt="bg-shape-4">
                         </li>
                         <li class="bg-5">
-                            <img src="assets/users/assets/img/shape/bg-shape-5.png" alt="bg-shape-5">
+                            <img src="assets/users/img/shape/bg-shape-5.png" alt="bg-shape-5">
                         </li>
                         <li class="bg-6 active-bg-panel">
-                            <img src="assets/users/assets/img/shape/bg-shape-6.png" alt="bg-shape-6">
+                            <img src="assets/users/img/shape/bg-shape-6.png" alt="bg-shape-6">
                         </li>
                     </ul>
                 </div>
@@ -2201,18 +2201,18 @@
     </div>
 
     <!-- Vendor Custom -->
-    <script src="assets/users/assets/js/vendor/jquery-3.6.4.min.js"></script>
-    <script src="assets/users/assets/js/vendor/jquery.zoom.min.js"></script>
-    <script src="assets/users/assets/js/vendor/bootstrap.bundle.min.js"></script>
-    <script src="assets/users/assets/js/vendor/mixitup.min.js"></script>
+    <script src="assets/users/js/vendor/jquery-3.6.4.min.js"></script>
+    <script src="assets/users/js/vendor/jquery.zoom.min.js"></script>
+    <script src="assets/users/js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="assets/users/js/vendor/mixitup.min.js"></script>
 
-    <script src="assets/users/assets/js/vendor/range-slider.js"></script>
-    <script src="assets/users/assets/js/vendor/aos.min.js"></script>
-    <script src="assets/users/assets/js/vendor/swiper-bundle.min.js"></script>
-    <script src="assets/users/assets/js/vendor/slick.min.js"></script>
+    <script src="assets/users/js/vendor/range-slider.js"></script>
+    <script src="assets/users/js/vendor/aos.min.js"></script>
+    <script src="assets/users/js/vendor/swiper-bundle.min.js"></script>
+    <script src="assets/users/js/vendor/slick.min.js"></script>
 
     <!-- Main Custom -->
-    <script src="assets/users/assets/js/main.js"></script>
+    <script src="assets/users/js/main.js"></script>
 </body>
 
 

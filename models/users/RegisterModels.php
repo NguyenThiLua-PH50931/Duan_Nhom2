@@ -1,7 +1,7 @@
 <?php
 require_once 'database/function.php';
 
-class LoginModels {
+class RegisterModels {
     private $conn;
 
     public $db;

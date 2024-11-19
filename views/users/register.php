@@ -104,7 +104,7 @@
                               
                                 <div class="cr-register-buttons">
                                     <button type="submit" class="cr-button" name="dangky">Đăng ký</button>
-                                    <a href="index.php?admin=login-user" class="link">
+                                    <a href="index.php?user=login-user" class="link">
                                        Bạn đã có tài khoản chưa?
                                     </a>
                                 </div>

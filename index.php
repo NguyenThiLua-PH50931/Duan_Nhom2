@@ -23,47 +23,35 @@ include "commons/helpers.php";
 $admin = $_GET['admin'] ?? "";
 $user = $_GET['user'] ?? "";
 
-// if (!isset($_SESSION['nameAccount'])) {
-//     if (!empty($_GET['admin']) && empty($_GET['user'] )) {
-//         header('location:index.php?admin=login');
-//         exit();
-//     }
-// }
+// Kiểm tra quyền truy cập vào khu vực admin
+if (!isset($_SESSION['nameAccount']) && $admin !== 'login') {
+    header('location: index.php?admin=login');
+    exit();
+}
 
-match ($admin) {
-    //Product
-    'add-product' => (new ProductsController)->addProduct(),
-    'edit-product' => (new ProductsController)->editProduct(),
-    'list-product' => (new ProductsController)->listProduct(),
-    'delete-product' => (new ProductsController)->deleteProduct(),
+if (!empty($admin)) {
+    // Điều hướng admin
+    match ($admin) {
+        'list-product' => (new ProductsController())->listProduct(),
+        'add-product' => (new ProductsController())->addProduct(),
+        'edit-product' => (new ProductsController())->editProduct(),
+        'delete-product' => (new ProductsController())->deleteProduct(),
+        'login' => (new AuthController())->login(),
+        'logout' => (new AuthController())->logout(),
+        default => die("Không tìm thấy file"),
+    };
+    
+}
 
-    //Category
-    'add-category' => (new CategoryController)->addCategory(),
-    'edit-category' => (new CategoryController)->editCategory(),
-    'list-category' => (new CategoryController)->listCategory(),
-    'delete-category' => (new CategoryController)->deleteCategory(),
-
-    // Tài khoản:
-    'list-accounts' => (new AccountsController)->listAccounts(),
-    'delete-accounts' => (new AccountsController)->deleteAccounts(),
-
-    //Auth
-    'login' => (new AuthController)->login(),
-    'logout' => (new AuthController)->logout(),
+if (!empty($user)) {
+    // Điều hướng user
+    match ($user) {
+        'home' => (new HomeController())->home(),
+        'login-user' => (new LoginController())->loginUser(),
+        'logout-user' => (new LoginController())->logoutUser(),
+        'register-user' => (new RegisterControllers())->registerForm(),
+        default => "Không tìm thấy file",
+    };
+}
 
 
-
-    default => "Không tìm thấy file"
-};
-match ($user) {
-    //Home
-    'home' => (new HomeController)->home(),
-    //Login user
-    'login-user' => (new LoginController)->loginUser(),
-    // Logout user
-    'logout-user' => (new LoginController)->logoutUser(),
-    //Register user
-    'register-user' => (new RegisterControllers)->registerForm(),
-
-    default => "Không tìm thấy file"
-};

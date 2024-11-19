@@ -63,7 +63,7 @@
                             <!-- <img src="assets/users/img/logo/logo.png" alt="logo"> -->
                             <h3>Đăng nhập</h3>
                         </div>
-                        <form class="cr-content-form" method="POST" enctype="multipart/form-data" action="index.php?admin=login-user">
+                        <form class="cr-content-form" method="POST" enctype="multipart/form-data" action="index.php?user=login-user">
                             <div class="form-group">
                                 <label>Username</label>
                                 <input type="text" placeholder="Enter Your Username" class="cr-form-control" name="ten_tk">
@@ -81,7 +81,7 @@
                             </div><br>
                             <div class="login-buttons">
                                 <button class="cr-button">Login</button>
-                                <a href="index.php?admin=register-user" class="cr-button btn-info">Singup</a>
+                                <a href="index.php?user=register-user" class="cr-button btn-info">Singup</a>
                                 <!-- <a href="index.php?admin=home" class="link"> -->
 
 

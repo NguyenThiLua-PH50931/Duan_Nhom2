@@ -22,15 +22,15 @@
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown">
                             <?php if (empty($_SESSION['nameAccount']) && empty($_SESSION['emailAccount'])) { ?>
-                                <a class="nav-link dropdown-toggle cr-right-bar-item" href="index.php?admin=login-user" class="cr-mode">
+                                <a class="nav-link dropdown-toggle cr-right-bar-item" href="index.php?user=login-user" class="cr-mode">
                                     <i class="ri-user-3-line"></i>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a class="dropdown-item" href="index.php?admin=register-user">Register</a>
+                                        <a class="dropdown-item" href="index.php?user=register-user">Register</a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="index.php?admin=login-user">Login</a>
+                                        <a class="dropdown-item" href="index.php?user=login-user">Login</a>
                                     </li>
                                 </ul>
                             <?php } else { ?>
@@ -39,10 +39,10 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a class="dropdown-item" href="index.php?admin=logout-user">Checkout</a>
+                                        <a class="dropdown-item" href="index.php?user=logout-user">Checkout</a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="index.php?admin=login-user">Login</a>
+                                        <a class="dropdown-item" href="index.php?user=login-user">Login</a>
                                     </li>
                                 </ul>
                             <?php } ?>

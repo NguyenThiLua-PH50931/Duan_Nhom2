@@ -46,6 +46,8 @@ match ($admin) {
     'home' => (new HomeController)->home(),
     //Login user
     'login-user' =>(new LoginController)->loginUser(),
+    // Logout user
+    'logout-user'=>(new LoginController)->logoutUser(),
     //Register user
     'register-user'=>(new RegisterControllers)->registerUser(),
 

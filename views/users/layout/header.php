@@ -19,34 +19,40 @@
                             </a>
                         </form>
                         <div class="cr-right-bar">
-                            <ul class="navbar-nav">
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle cr-right-bar-item" href="javascript:void(0)">
-                                        <i class="ri-user-3-line"></i>
-                                        <span>Account</span>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a class="dropdown-item" href="index.php?admin=register-user">Register</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="">Checkout</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="index.php?admin=login-user">Login</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <a href="wishlist.html" class="cr-right-bar-item">
-                                <i class="ri-heart-3-line"></i>
-                                <span>Wishlist</span>
-                            </a>
-                            <a href="javascript:void(0)" class="cr-right-bar-item Shopping-toggle">
-                                <i class="ri-shopping-cart-line"></i>
-                                <span>Cart</span>
-                            </a>
-                        </div>
+    <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+            <?php if (empty($_SESSION['nameAccount']) && empty($_SESSION['emailAccount'])) { ?>
+                <a href="index.php?admin=login-user" class="cr-mode">
+                    <i class="ri-user-3-line"></i>
+                </a>
+            <?php } else { ?>
+                <a class="nav-link dropdown-toggle cr-right-bar-item" href="javascript:void(0)" data-bs-toggle="dropdown">
+                    <span> <i class="ri-user-3-line"></i><?php echo $_SESSION['nameAccount']; ?></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item" href="index.php?admin=register-user">Register</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="index.php?admin=logout-user">Checkout</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="index.php?admin=login-user">Login</a>
+                    </li>
+                </ul>
+            <?php } ?>
+        </li>
+    </ul>
+    <a href="wishlist.html" class="cr-right-bar-item">
+        <i class="ri-heart-3-line"></i>
+        <span>Wishlist</span>
+    </a>
+    <a href="javascript:void(0)" class="cr-right-bar-item Shopping-toggle">
+        <i class="ri-shopping-cart-line"></i>
+        <span>Cart</span>
+    </a>
+</div>
+
                     </div>
                 </div>
             </div>

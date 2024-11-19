@@ -62,14 +62,14 @@
                             <!-- <img src="assets/users/img/logo/logo.png" alt="logo"> -->
                              <h3>Đăng nhập</h3>
                         </div>
-                        <form class="cr-content-form">
+                        <form class="cr-content-form" method="POST" enctype="multipart/form-data" action="index.php?admin=login-user">
                             <div class="form-group">
-                                <label>Email Address*</label>
-                                <input type="email" placeholder="Enter Your Email" class="cr-form-control">
+                                <label>Username</label>
+                                <input type="text" placeholder="Enter Your Username" class="cr-form-control" name="ten_tk">
                             </div>
                             <div class="form-group">
                                 <label>Password*</label>
-                                <input type="password" placeholder="Enter Your password" class="cr-form-control">
+                                <input type="password" placeholder="Enter Your password" class="cr-form-control" name="mat_khau" value="" required>
                             </div>
                             <div class="remember">
                                 <span class="form-group custom">
@@ -79,8 +79,8 @@
                                 <a class="link" href="forgot.html">Forgot Password?</a>
                             </div><br>
                             <div class="login-buttons">
-                                <button type="button" class="cr-button">Login</button>
-                                <a href="index.php?admin=home" class="link">
+                                <button type="submit" class="cr-button">Login</button>
+                                <!-- <a href="index.php?admin=home" class="link"> -->
                                      Signup?
                                 </a>
                             </div>

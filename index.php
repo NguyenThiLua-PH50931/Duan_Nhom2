@@ -19,18 +19,17 @@ include "models/users/LoginModels.php";
 
 include "commons/helpers.php";
 
-//Lấy tham số trên thanh địa chỉ URL
+// /Lấy tham số
 $admin = $_GET['admin'] ?? "";
 $user = $_GET['user'] ?? "";
 
-// Kiểm tra quyền truy cập vào khu vực admin
-if (!isset($_SESSION['nameAccount']) && $admin !== 'login') {
-    header('location: index.php?admin=login');
-    exit();
-}
-
+// Kiểm tra quyền truy cập admin
 if (!empty($admin)) {
-    // Điều hướng admin
+    if (!isset($_SESSION['nameAccount']) && $admin !== 'login') {
+        header('location: index.php?admin=login');
+        exit();
+    }
+
     match ($admin) {
         'list-product' => (new ProductsController())->listProduct(),
         'add-product' => (new ProductsController())->addProduct(),
@@ -40,18 +39,15 @@ if (!empty($admin)) {
         'logout' => (new AuthController())->logout(),
         default => die("Không tìm thấy file"),
     };
-    
 }
 
+// Điều hướng user
 if (!empty($user)) {
-    // Điều hướng user
     match ($user) {
         'home' => (new HomeController())->home(),
         'login-user' => (new LoginController())->loginUser(),
         'logout-user' => (new LoginController())->logoutUser(),
         'register-user' => (new RegisterControllers())->registerForm(),
-        default => "Không tìm thấy file",
+        default => die("Không tìm thấy file"),
     };
 }
-
-

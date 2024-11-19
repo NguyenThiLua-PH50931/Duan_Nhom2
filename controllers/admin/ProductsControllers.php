@@ -20,7 +20,7 @@ class ProductsController
             (new ProductModels)->insert($data);
             $_SESSION['message'] = "Thêm sản phẩm thành công";
             header("location: index.php?admin=list-product");
-            die;
+            exit();
         }
         //lấy danh mục
         $danh_muc = (new CategoryModels)->all();
@@ -53,6 +53,7 @@ class ProductsController
             (new ProductModels)->update($data);
             $_SESSION['message'] = "Sửa sản phẩm thành công";
             header('location: index.php?admin=list-product');
+            exit();
         }
         //lấy danh mục
         view(
@@ -75,5 +76,6 @@ class ProductsController
         (new ProductModels)->delete($product['id_sp']);
         $_SESSION['message'] = "Xóa sản phẩm thành công";
         header('location: index.php?admin=list-product');
+        exit();
     }
 }

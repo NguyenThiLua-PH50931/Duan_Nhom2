@@ -3,8 +3,9 @@
 
 
 <!-- Mirrored from maraviyainfotech.com/projects/carrot/carrot-v21/carrot-html/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Nov 2024 15:30:26 GMT -->
+
 <head>
-<?php include_once "views/users/layout/linkCss.php" ?>
+    <?php include_once "views/users/layout/linkCss.php" ?>
 </head>
 
 <body class="body-bg-6">
@@ -16,7 +17,7 @@
 
     <!-- Header -->
     <header>
-    <?php include_once "views/users/layout/header.php" ?>
+        <?php include_once "views/users/layout/header.php" ?>
     </header>
 
     <!-- Mobile menu -->
@@ -60,7 +61,7 @@
                     <div class="cr-login" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="400">
                         <div class="form-logo">
                             <!-- <img src="assets/users/img/logo/logo.png" alt="logo"> -->
-                             <h3>Đăng nhập</h3>
+                            <h3>Đăng nhập</h3>
                         </div>
                         <form class="cr-content-form" method="POST" enctype="multipart/form-data" action="index.php?admin=login-user">
                             <div class="form-group">
@@ -79,10 +80,11 @@
                                 <a class="link" href="forgot.html">Forgot Password?</a>
                             </div><br>
                             <div class="login-buttons">
-                                <button type="submit" class="cr-button">Login</button>
+                                <button class="cr-button">Login</button>
+                                <a href="index.php?admin=register-user" class="cr-button btn-info">Singup</a>
                                 <!-- <a href="index.php?admin=home" class="link"> -->
-                                     Signup?
-                                </a>
+
+
                             </div>
                         </form>
                     </div>
@@ -106,7 +108,7 @@
     <!-- Side-tool -->
     <?php include_once "views/users/layout/side-tool.php" ?>
 
-    
+
     <!-- Vendor Custom -->
     <?php include_once "views/users/layout/script.php" ?>
 
@@ -114,4 +116,5 @@
 
 
 <!-- Mirrored from maraviyainfotech.com/projects/carrot/carrot-v21/carrot-html/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Nov 2024 15:30:27 GMT -->
+
 </html>

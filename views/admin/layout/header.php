@@ -51,8 +51,9 @@
             </div>
             <div class="cr-right-tool cr-user-drop">
                 <?php
-                if (empty($_SESSION['nameAccount']) && empty($_SESSION['emailAccount'])  ) {
+                if (empty($_SESSION['nameAccount'])  ) {
                     echo '<a href="index.php?admin=login" class="cr-mode"><i class="ri-account-pin-circle-line"></i></a>';
+                    exit();
                 } else {
                     echo '<div class="cr-hover-drop">
                                 <div class="cr-hover-tool">
@@ -68,6 +69,7 @@
                                     </ul>
                                 </div>
                             </div>';
+                            
                 }
                 ?>
 

@@ -12,7 +12,7 @@ class LoginController
                 // debug($data['ten_tk']);
                 if ($value['ten_tk'] == $data['ten_tk'] && $value['mat_khau'] == $data['mat_khau']) {
                     $_SESSION['nameAccount'] = $value['ho_ten'];
-                    header("location:index.php?admin=home");
+                    header("location:index.php?user=home");
                   
                 } else {
                     echo "Sai thông tin";
@@ -26,7 +26,7 @@ class LoginController
     {
         if (isset($_SESSION['nameAccount'])) {
             unset($_SESSION['nameAccount']);
-            header('location:index.php?admin=home');
+            header('location:index.php?user=home');
             exit();
         } else {
             echo 'Bạn chưa đăng nhập';

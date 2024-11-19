@@ -21,6 +21,14 @@ include "commons/helpers.php";
 
 //Lấy tham số trên thanh địa chỉ URL
 $admin = $_GET['admin'] ?? "";
+$user = $_GET['user'] ?? "";
+
+// if (!isset($_SESSION['nameAccount'])) {
+//     if (!empty($_GET['admin']) && empty($_GET['user'] )) {
+//         header('location:index.php?admin=login');
+//         exit();
+//     }
+// }
 
 match ($admin) {
     //Product
@@ -42,14 +50,20 @@ match ($admin) {
     //Auth
     'login' => (new AuthController)->login(),
     'logout' => (new AuthController)->logout(),
+
+
+
+    default => "Không tìm thấy file"
+};
+match ($user) {
     //Home
     'home' => (new HomeController)->home(),
     //Login user
-    'login-user' =>(new LoginController)->loginUser(),
+    'login-user' => (new LoginController)->loginUser(),
     // Logout user
-    'logout-user'=>(new LoginController)->logoutUser(),
+    'logout-user' => (new LoginController)->logoutUser(),
     //Register user
-    'register-user'=>(new RegisterControllers)->registerUser(),
+    'register-user' => (new RegisterControllers)->registerForm(),
 
     default => "Không tìm thấy file"
 };

@@ -69,5 +69,6 @@ class CategoryController
         (new CategoryModels)->delete($category['id_dm']);
         $_SESSION['message'] = "Xóa danh mục thành công";
         header('location: index.php?admin=list-category');
+        exit();
     }
 }

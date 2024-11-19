@@ -39,7 +39,7 @@
                             <div class="cr-card-content">
                                 <div class="table-responsive">
 
-                                    <form action="" method="post" enctype="multipart/form-data">
+                                    <form action="aaa" method="post" enctype="multipart/form-data">
                                         <?php
                                         if (!empty($_SESSION['message'])) {
                                             echo '<div class="alert alert-success">' . $_SESSION['message'] . '</div>';

@@ -13,6 +13,7 @@ class AuthController
                 if ($value['ten_tk'] == $data['ten_tk'] && $value['mat_khau'] == $data['mat_khau']) {
                     $_SESSION['nameAccount'] = $value['ho_ten'];
                     header("location: index.php?admin=list-product");
+                    exit();
                 } else {
                     echo "Sai thông tin";
                 }
@@ -26,7 +27,7 @@ class AuthController
         if (isset($_SESSION['nameAccount'])) {
             unset($_SESSION['nameAccount']);
             $_SESSION['nameAccount'] == null;
-            header('location: index.php?admin=list-product');
+            header('location: index.php?admin=login');
             exit();
         } else {
             echo 'Bạn chưa đăng nhập';

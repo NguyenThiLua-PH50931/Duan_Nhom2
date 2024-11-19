@@ -17,6 +17,7 @@ class AccountsController
         $accounts = (new AccountsModels)->getAccountsById($id_tk);
         (new AccountsModels)->delete($accounts['id_tk']);
         header('location: index.php?admin=list-accounts');
+        exit();
     }
 
 }

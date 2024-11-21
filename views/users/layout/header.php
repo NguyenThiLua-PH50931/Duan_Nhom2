@@ -284,40 +284,23 @@
                             </a>
                         </li>
                         <li class="nav-item dropdown">
+                            <a class="nav-link" href="index.php?user=shop">
+                                Products
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="javascript:void(0)">
                                 Category
                             </a>
                             <ul class="dropdown-menu">
-                                <?php foreach($category as $cate): ?>
+                                <?php foreach ($category as $cate): ?>
                                     <li>
-                                    <a class="dropdown-item" href=""><?=$cate['ten_dm']?></a>
-                                </li>
-                                    <?php endforeach; ?>
+                                        <a class="dropdown-item" href="index.php?user=shop&id_dm=<?= $cate['id_dm'] ?>"><?= $cate['ten_dm'] ?></a>
+                                    </li>
+                                <?php endforeach; ?>
                             </ul>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="javascript:void(0)">
-                                Products
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item" href="product-left-sidebar.html">product
-                                        Left
-                                        sidebar </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="product-right-sidebar.html">product
-                                        Right
-                                        sidebar </a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="product-full-width.html">Product
-                                        Full
-                                        Width
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
+
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="javascript:void(0)">
                                 Pages

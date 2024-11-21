@@ -6,17 +6,11 @@
                     <img src="assets/users/img/logo/logo.png" alt="logo" class="logo">
                     <img src="assets/users/img/logo/dark-logo.png" alt="logo" class="dark-logo">
                 </a>
-                <form class="cr-search">
-                    <input class="search-input" type="text" placeholder="Search For items...">
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>All Categories</option>
-                        <option value="1">Mens</option>
-                        <option value="2">Womens</option>
-                        <option value="3">Electronics</option>
-                    </select>
-                    <a href="javascript:void(0)" class="search-btn">
+                <form action="index.php?user=shop" method="post" class="cr-search">
+                    <input class="search-input" type="text" placeholder="Search For items..." name="keyword">
+                    <button class="search-btn">
                         <i class="ri-search-line"></i>
-                    </a>
+                    </button>
                 </form>
                 <div class="cr-right-bar">
                     <ul class="navbar-nav">

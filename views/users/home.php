@@ -371,12 +371,12 @@
 
     <!-- Popular product -->
     <section class="section-popular-product-shape padding-b-100">
-        <div class="container" data-aos="fade-up" data-aos-duration="2000">
+        <div id="app" class="container" data-aos="fade-up" data-aos-duration="2000">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="mb-30">
                         <div class="cr-banner">
-                            <h2>Danh sách sản phâm</h2>
+                            <h2>Danh sách sản phẩm</h2>
                         </div>
                         <div class="cr-banner-sub-title">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
@@ -391,18 +391,15 @@
                         <div class="col-lg-12 col-sm-6 col-6 cr-product-box mb-24">
                             <div class="cr-product-tabs">
                                 <ul>
-                                    <a href="index.php?user=home">
-                                        <li class="active" data-filter="all">All</li>
-                                    </a>
+                                    <li class="active" data-filter="all" id="all">All</li>
                                     <?php foreach ($category as $cate) : ?>
-
-                                        <a href="index.php?user=home&id_dm=<?= $cate['id_dm'] ?>">
-                                            <li data-filter=".snack"><?= $cate['ten_dm'] ?></li>
-                                        </a>
-
+                                        <li class="category" data-filter=".snack" data-id="<?= $cate['id_dm'] ?>" id="category-<?= $cate['id_dm'] ?>">
+                                            <?= $cate['ten_dm'] ?>
+                                        </li>
                                     <?php endforeach; ?>
                                 </ul>
                             </div>
+
                         </div>
                         <div class="col-lg-12 col-sm-6 col-6 cr-product-box banner-480 mb-24">
                             <div class="cr-ice-cubes">
@@ -418,90 +415,48 @@
                     </div>
                 </div>
                 <div class="col-xl-9 col-lg-8 col-12 mb-24">
-                    <div class="row mb-minus-24">
-                        <?php if (isset($_GET['id_dm'])): ?>
-                            <?php foreach ($productByCategory as $value) : ?>
-                                <div class="mix vegetable col-xxl-3 col-xl-4 col-6 cr-product-box mb-24">
-                                    <div class="cr-product-card">
-                                        <div class="cr-product-image">
-                                            <div class="cr-image-inner zoom-image-hover">
-                                                <img src="<?= $value['anh_sp'] ?>" alt="product-1">
-                                            </div>
-                                            <div class="cr-side-view">
-                                                <a href="javascript:void(0)" class="wishlist">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                                <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview"
-                                                    role="button">
-                                                    <i class="ri-eye-line"></i>
-                                                </a>
-                                            </div>
-                                            <a class="cr-shopping-bag" href="javascript:void(0)">
-                                                <i class="ri-shopping-bag-line"></i>
+                    <div class="filterCategory row mb-minus-24">
+                        <?php foreach ($products as $pro) : ?>
+                            <div id="content" class="mix vegetable col-xxl-3 col-xl-4 col-6 cr-product-box mb-24">
+                                <div class="cr-product-card">
+                                    <div class="cr-product-image">
+                                        <div class="cr-image-inner zoom-image-hover">
+                                            <img src="<?= $pro['anh_sp'] ?>" alt="product-1">
+                                        </div>
+                                        <div class="cr-side-view">
+                                            <a href="javascript:void(0)" class="wishlist">
+                                                <i class="ri-heart-line"></i>
+                                            </a>
+                                            <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview"
+                                                role="button">
+                                                <i class="ri-eye-line"></i>
                                             </a>
                                         </div>
-                                        <div class="cr-product-details">
-                                            <div class="cr-brand">
-                                                <a href="shop-left-sidebar.html"><?= $value['ten_dm'] ?></a>
-                                                <div class="cr-star">
-                                                    <i class="ri-star-fill"></i>
-                                                    <i class="ri-star-fill"></i>
-                                                    <i class="ri-star-fill"></i>
-                                                    <i class="ri-star-fill"></i>
-                                                    <i class="ri-star-line"></i>
-                                                    <p>(4.5)</p>
-                                                </div>
+                                        <a class="cr-shopping-bag" href="javascript:void(0)">
+                                            <i class="ri-shopping-bag-line"></i>
+                                        </a>
+                                    </div>
+                                    <div class="cr-product-details">
+                                        <div class="cr-brand">
+                                            <a href="shop-left-sidebar.html"><?= $pro['ten_dm'] ?></a>
+                                            <div class="cr-star">
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-line"></i>
+                                                <p>(4.5)</p>
                                             </div>
-                                            <a href="index.php?user=detail-product&id_sp=<?=$value['id_sp']?>" class="title"><?= $value['ten_sp'] ?></a>
-                                            <p class="cr-price"><span class="new-price"><?= $value['gia_tien'] ?> VNĐ</span> <span
-                                                    class="old-price"><?= $value['gia_km'] ?></span></p>
                                         </div>
+                                        <a href="index.php?user=detail-product&id_sp=<?= $pro['id_sp'] ?>" class="title"><?= $pro['ten_sp'] ?></a>
+                                        <p class="cr-price"><span class="new-price"><?= $pro['gia_tien'] ?> VNĐ</span> <span
+                                                class="old-price"><?= $pro['gia_km'] ?></span></p>
                                     </div>
                                 </div>
-                            <?php endforeach; ?>
-                        <?php else: ?>
-                            <?php foreach ($products as $pro) : ?>
-                                <div class="mix vegetable col-xxl-3 col-xl-4 col-6 cr-product-box mb-24">
-                                    <div class="cr-product-card">
-                                        <div class="cr-product-image">
-                                            <div class="cr-image-inner zoom-image-hover">
-                                                <img src="<?= $pro['anh_sp'] ?>" alt="product-1">
-                                            </div>
-                                            <div class="cr-side-view">
-                                                <a href="javascript:void(0)" class="wishlist">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                                <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview"
-                                                    role="button">
-                                                    <i class="ri-eye-line"></i>
-                                                </a>
-                                            </div>
-                                            <a class="cr-shopping-bag" href="javascript:void(0)">
-                                                <i class="ri-shopping-bag-line"></i>
-                                            </a>
-                                        </div>
-                                        <div class="cr-product-details">
-                                            <div class="cr-brand">
-                                                <a href="shop-left-sidebar.html"><?= $pro['ten_dm'] ?></a>
-                                                <div class="cr-star">
-                                                    <i class="ri-star-fill"></i>
-                                                    <i class="ri-star-fill"></i>
-                                                    <i class="ri-star-fill"></i>
-                                                    <i class="ri-star-fill"></i>
-                                                    <i class="ri-star-line"></i>
-                                                    <p>(4.5)</p>
-                                                </div>
-                                            </div>
-                                            <a href="index.php?user=detail-product&id_sp=<?=$pro['id_sp']?>" class="title"><?= $pro['ten_sp'] ?></a>
-                                            <p class="cr-price"><span class="new-price"><?= $pro['gia_tien'] ?> VNĐ</span> <span
-                                                    class="old-price"><?= $pro['gia_km'] ?></span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            <?php endforeach; ?>
-                        <?php endif; ?>
-
+                            </div>
+                        <?php endforeach; ?>
                     </div>
+
                 </div>
             </div>
         </div>

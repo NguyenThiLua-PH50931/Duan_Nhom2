@@ -13,12 +13,40 @@ class HomeController
     }
     public function home()
     {
-        $home = new HomeModels();
-        $products = (new ProductModels)->getAllProducts();
+        // $products = (new ProductModels)->getAllProducts();
         $category = (new CategoryModels)->all();
-        $id_dm = $_GET['id_dm'] ?? '';
+
+        $id_dm = $_GET['id_dm'] ?? null;
         $filterCategory = (new CategoryModels())->find_one($id_dm);
-        $productByCategory = (new CategoryModels())->productByCategory($id_dm);
-        view("users/home", ['products' => $products, 'category' => $category, 'filterCategory' => $filterCategory, 'productByCategory' => $productByCategory]);
+
+        $keyword = $_POST['keyword'] ?? '';
+        // debug($keyword);
+
+        if ($id_dm) {
+            $products = (new CategoryModels())->productByCategory($id_dm);
+            // debug($products);
+        } elseif ($keyword) {
+            $products = (new ProductModel())->search($keyword);
+            // debug($products);
+        } else {
+            $products = (new ProductModels)->getAllProducts(); // Lấy tất cả sản phẩm
+            // debug($products);
+
+        }
+
+
+        view("users/home", ['products' => $products, 'category' => $category, 'filterCategory' => $filterCategory]);
+    }
+
+    public function filter()
+    {
+        $id_dm = $_GET['id_dm'] ?? null;
+        if ($id_dm) {
+            $products = (new CategoryModels())->productByCategory($id_dm);
+        } else {
+            $products = (new ProductModels)->getAllProducts(); // Lấy tất cả sản phẩm
+        }
+        header('Content-Type: application/json');
+        echo json_encode($products);
     }
 }

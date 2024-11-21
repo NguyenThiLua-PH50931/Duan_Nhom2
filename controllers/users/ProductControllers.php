@@ -3,12 +3,18 @@ class ProductControllers
 {
     public function shop()
     {
-        $home = new HomeModels();
-        $products = (new ProductModels)->getAllProducts();
         $category = (new CategoryModels)->all();
         $id_dm = $_GET['id_dm'] ?? '';
-        $filterCategory = (new CategoryModels())->find_one($id_dm);
-        $productByCategory = (new CategoryModels())->productByCategory($id_dm);
-        view("users/shop", ['products' => $products, 'category' => $category, 'filterCategory' => $filterCategory, 'productByCategory' => $productByCategory]);
+        $keyword = $_POST['keyword'] ?? '';
+
+        if ($id_dm) {
+            $products = (new CategoryModels())->productByCategory($id_dm);
+            // debug($products);
+        } elseif ($keyword) {
+            $products = (new ProductModel())->search($keyword);
+        } else {
+            $products = (new ProductModels)->getAllProducts(); // Lấy tất cả sản phẩm
+        }
+        view("users/shop", ['products' => $products, 'category' => $category]);
     }
 }

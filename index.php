@@ -73,6 +73,7 @@ if (!empty($user)) {
         'logout-user' => (new LoginController())->logoutUser(),
         'register-user' => (new RegisterControllers())->registerForm(),
         'detail-product' => (new DetailControllers())->show(),
+        'filter' => (new HomeController())->filter(),
         'shop' => (new ProductControllers())->shop(),
         default => die("Không tìm thấy file"),
     };

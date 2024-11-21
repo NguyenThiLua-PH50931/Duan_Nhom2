@@ -66,7 +66,7 @@ class CategoryModels
     public function productByCategory($id_dm)
     {
         $sql = "SELECT `id_sp`, `ten_sp`, `gia_tien`, `gia_km`, `anh_sp`, `mo_ta`, `luot_xem`, `soluong_ton`, danh_muc.ten_dm 
-            FROM `san_pham` JOIN danh_muc ON san_pham.id_dm = danh_muc.id_dm WHERE danh_muc.id_dm = :id_dm ORDER BY id_sp DESC";
+            FROM `san_pham` JOIN danh_muc ON san_pham.id_dm = danh_muc.id_dm WHERE san_pham.id_dm = :id_dm ORDER BY id_sp DESC";
         $stmt = $this->db->pdo->prepare($sql);
         $stmt->bindParam(':id_dm', $id_dm);
         $stmt->execute();

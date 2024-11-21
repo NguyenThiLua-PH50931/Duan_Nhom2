@@ -72,11 +72,8 @@
                                 <div class="center-content">
                                     <span>
                                         Chúng tôi có
-                                        <?php if (isset($_GET['id_dm'])) {
-                                            echo count($productByCategory);
-                                        } else {
-                                            echo count($products);
-                                        }
+                                        <?php
+                                        echo count($products);
                                         ?>
                                         sản phẩm!</span>
                                 </div>
@@ -93,87 +90,45 @@
                         </div>
                     </div>
                     <div class="row col-50 mb-minus-24">
-                        <?php if (isset($_GET['id_dm'])) : ?>
-                            <?php foreach ($productByCategory as $value) : ?>
-                                <div class="col-lg-3 col-6 cr-product-box mb-24">
-                                    <div class="cr-product-card">
-                                        <div class="cr-product-image">
-                                            <div class="cr-image-inner zoom-image-hover">
-                                                <img src="<?= $value['anh_sp'] ?>" alt="product-1">
-                                            </div>
-                                            <div class="cr-side-view">
-                                                <a href="javascript:void(0)" class="wishlist">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                                <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview"
-                                                    role="button">
-                                                    <i class="ri-eye-line"></i>
-                                                </a>
-                                            </div>
-                                            <a class="cr-shopping-bag" href="javascript:void(0)">
-                                                <i class="ri-shopping-bag-line"></i>
+                        <?php foreach ($products as $value) : ?>
+                            <div class="col-lg-3 col-6 cr-product-box mb-24">
+                                <div class="cr-product-card">
+                                    <div class="cr-product-image">
+                                        <div class="cr-image-inner zoom-image-hover">
+                                            <img src="<?= $value['anh_sp'] ?>" alt="product-1">
+                                        </div>
+                                        <div class="cr-side-view">
+                                            <a href="javascript:void(0)" class="wishlist">
+                                                <i class="ri-heart-line"></i>
+                                            </a>
+                                            <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview"
+                                                role="button">
+                                                <i class="ri-eye-line"></i>
                                             </a>
                                         </div>
-                                        <div class="cr-product-details">
-                                            <div class="cr-brand">
-                                                <a href="shop-left-sidebar.html"><?= $value['ten_dm'] ?></a>
-                                                <div class="cr-star">
-                                                    <i class="ri-star-fill"></i>
-                                                    <i class="ri-star-fill"></i>
-                                                    <i class="ri-star-fill"></i>
-                                                    <i class="ri-star-fill"></i>
-                                                    <i class="ri-star-line"></i>
-                                                    <p>(4.5)</p>
-                                                </div>
+                                        <a class="cr-shopping-bag" href="javascript:void(0)">
+                                            <i class="ri-shopping-bag-line"></i>
+                                        </a>
+                                    </div>
+                                    <div class="cr-product-details">
+                                        <div class="cr-brand">
+                                            <a href="shop-left-sidebar.html"><?= $value['ten_dm'] ?></a>
+                                            <div class="cr-star">
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-fill"></i>
+                                                <i class="ri-star-line"></i>
+                                                <p>(4.5)</p>
                                             </div>
-                                            <a href="product-left-sidebar.html" class="title"><?= $value['ten_sp'] ?></a>
-                                            <p class="cr-price"><span class="new-price">$<?= $value['gia_tien'] ?></span> <span
-                                                    class="old-price">$<?= $value['gia_km'] ?></span></p>
                                         </div>
+                                        <a href="product-left-sidebar.html" class="title"><?= $value['ten_sp'] ?></a>
+                                        <p class="cr-price"><span class="new-price">$<?= $value['gia_tien'] ?></span> <span
+                                                class="old-price">$<?= $value['gia_km'] ?></span></p>
                                     </div>
                                 </div>
-                            <?php endforeach; ?>
-                        <?php else: ?>
-                            <?php foreach ($products as $value) : ?>
-                                <div class="col-lg-3 col-6 cr-product-box mb-24">
-                                    <div class="cr-product-card">
-                                        <div class="cr-product-image">
-                                            <div class="cr-image-inner zoom-image-hover">
-                                                <img src="<?= $value['anh_sp'] ?>" alt="product-1">
-                                            </div>
-                                            <div class="cr-side-view">
-                                                <a href="javascript:void(0)" class="wishlist">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                                <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview"
-                                                    role="button">
-                                                    <i class="ri-eye-line"></i>
-                                                </a>
-                                            </div>
-                                            <a class="cr-shopping-bag" href="javascript:void(0)">
-                                                <i class="ri-shopping-bag-line"></i>
-                                            </a>
-                                        </div>
-                                        <div class="cr-product-details">
-                                            <div class="cr-brand">
-                                                <a href="shop-left-sidebar.html"><?= $value['ten_dm'] ?></a>
-                                                <div class="cr-star">
-                                                    <i class="ri-star-fill"></i>
-                                                    <i class="ri-star-fill"></i>
-                                                    <i class="ri-star-fill"></i>
-                                                    <i class="ri-star-fill"></i>
-                                                    <i class="ri-star-line"></i>
-                                                    <p>(4.5)</p>
-                                                </div>
-                                            </div>
-                                            <a href="product-left-sidebar.html" class="title"><?= $value['ten_sp'] ?></a>
-                                            <p class="cr-price"><span class="new-price">$<?= $value['gia_tien'] ?></span> <span
-                                                    class="old-price">$<?= $value['gia_km'] ?></span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            <?php endforeach; ?>
-                        <?php endif; ?>
+                            </div>
+                        <?php endforeach; ?>
                     </div>
                     <nav aria-label="..." class="cr-pagination">
                         <ul class="pagination">

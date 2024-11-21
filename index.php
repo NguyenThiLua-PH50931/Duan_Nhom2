@@ -5,9 +5,9 @@ include "controllers/admin/ProductsControllers.php";
 include "controllers/admin/AuthController.php";
 include "controllers/admin/AccountsController.php";
 include "controllers/users/LoginControllers.php";
-include "controllers/users/UsersControllers.php";
 include "controllers/users/HomeControllers.php";
 include "controllers/users/RegisterControllers.php";
+include "controllers/users/DetailControllers.php";
 include "database/function.php";
 include "models/admin/CategoryModels.php";
 include "models/admin/ProductModels.php";
@@ -31,10 +31,22 @@ if (!empty($admin)) {
     }
 
     match ($admin) {
+        // Sản phẩm
         'list-product' => (new ProductsController())->listProduct(),
         'add-product' => (new ProductsController())->addProduct(),
         'edit-product' => (new ProductsController())->editProduct(),
         'delete-product' => (new ProductsController())->deleteProduct(),
+
+        // Danh mục:
+        'list-category' => (new CategoryController())->listCategory(),
+        'add-category' => (new CategoryController())->addCategory(),
+        'edit-category' => (new CategoryController())->editCategory(),
+        'delete-category' => (new CategoryController())->deleteCategory(),
+
+        // Tài khoản:
+        'list-accounts'=>(new AccountsController)->listAccounts(),
+        'delete-accounts'=>(new AccountsController)->deleteAccounts(),
+      // Đăng nhập
         'login' => (new AuthController())->login(),
         'logout' => (new AuthController())->logout(),
         default => die("Không tìm thấy file"),
@@ -48,6 +60,7 @@ if (!empty($user)) {
         'login-user' => (new LoginController())->loginUser(),
         'logout-user' => (new LoginController())->logoutUser(),
         'register-user' => (new RegisterControllers())->registerForm(),
+        'detail-product'=>(new DetailControllers())->show(),
         default => die("Không tìm thấy file"),
     };
 }

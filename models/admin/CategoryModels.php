@@ -58,4 +58,29 @@ class CategoryModels
 
         $stmt->execute();
     }
+
+
+    // XỬ LÝ TRANG HOME:
+
+    // Lấy ra sản phẩm theo id danh mục:
+    public function productByCategory($id_dm)
+    {
+        $sql = "SELECT `id_sp`, `ten_sp`, `gia_tien`, `gia_km`, `anh_sp`, `mo_ta`, `luot_xem`, `soluong_ton`, danh_muc.ten_dm 
+            FROM `san_pham` JOIN danh_muc ON san_pham.id_dm = danh_muc.id_dm WHERE danh_muc.id_dm = :id_dm ORDER BY id_sp DESC";
+        $stmt = $this->db->pdo->prepare($sql);
+        $stmt->bindParam(':id_dm', $id_dm);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC); // Trả về tất cả sản phẩm trong danh mục
+    }
+
+
+    // Lấy ra tên danh mục cho trang chi tiết:
+    public function cateNameByProductId($id_sp)
+    {
+        $sql = "SELECT danh_muc.ten_dm FROM `danh_muc` JOIN san_pham ON san_pham.id_dm = danh_muc.id_dm WHERE san_pham.id_sp = :id_sp";
+        $stmt = $this->db->pdo->prepare($sql);
+        $stmt->bindParam(':id_sp', $id_sp);
+        $stmt->execute();
+       return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
 }

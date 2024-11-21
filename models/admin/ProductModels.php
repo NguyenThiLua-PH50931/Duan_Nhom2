@@ -16,9 +16,8 @@ class ProductModels
     // Lấy ra tất cả sản phẩm:
     public function getAllProducts()
     {
-        $sql = "SELECT * FROM san_pham ORDER BY id_sp DESC";
-        // $stmt = $this->conn->prepare($sql);
-        // $stmt->execute();
+        $sql = "SELECT `id_sp`, `ten_sp`, `gia_tien`, `gia_km`, `anh_sp`, `mo_ta`, `luot_xem`, `soluong_ton`, danh_muc.ten_dm 
+                FROM `san_pham` JOIN danh_muc on san_pham.id_dm = danh_muc.id_dm ORDER BY id_sp DESC";
         $stmt = $this->db->pdo->query($sql);
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $result;
@@ -32,23 +31,6 @@ class ProductModels
         $stmt->bindParam(':id_sp', $id_sp);
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_ASSOC);
-    }
-    public function getProductByCategoryId($id_dm)
-    {
-        $sql = "SELECT * FROM san_pham WHERE id_dm = :id_dm";
-        $stmt = $this->db->pdo->prepare($sql);
-        $stmt->bindParam(':id_dm', $id_dm);
-        $stmt->execute();
-        return $stmt->fetch(PDO::FETCH_ASSOC);
-    }
-    // Lấy ra sản phẩm theo  id danh mục:
-    public function productInCategory($id_dm)
-    {
-        $sql = "SELECT * FROM san_pham WHERE id_dm = $id_dm ORDER BY id_sp DESC";
-        $stmt = $this->conn->prepare($sql);
-        $stmt->execute();
-        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        return $result;
     }
 
     // Thêm mới sản phẩm:

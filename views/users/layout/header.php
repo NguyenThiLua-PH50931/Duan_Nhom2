@@ -279,7 +279,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.php?admin=home">
+                            <a class="nav-link" href="index.php?user=home">
                                 Home
                             </a>
                         </li>
@@ -288,19 +288,11 @@
                                 Category
                             </a>
                             <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item" href="shop-left-sidebar.html">Shop Left
-                                        sidebar</a>
+                                <?php foreach($category as $cate): ?>
+                                    <li>
+                                    <a class="dropdown-item" href="shop-left-sidebar.html"><?=$cate['ten_dm']?></a>
                                 </li>
-                                <li>
-                                    <a class="dropdown-item" href="shop-right-sidebar.html">Shop
-                                        Right
-                                        sidebar</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="shop-full-width.html">Full
-                                        Width</a>
-                                </li>
+                                    <?php endforeach; ?>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">

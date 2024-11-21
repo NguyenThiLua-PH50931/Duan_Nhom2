@@ -52,6 +52,8 @@
                                                     <th>Ảnh sản phẩm</th>
                                                     <th>Tên sản phẩm</th>
                                                     <th>Giá tiền</th>
+                                                    <th>Danh mục</th>
+
                                                     <th style="width: 100px">Lượt xem</th>
                                                     <th style="width: 100px">Số lượng tồn</th>
                                                     <th>Action</th>

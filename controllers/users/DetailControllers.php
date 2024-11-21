@@ -6,6 +6,14 @@ class DetailControllers
         $id_sp = $_GET['id_sp'] ?? '';
         $product = (new ProductModels)->getProductById($id_sp);
         $cateName = (new CategoryModels)->cateNameByProductId($id_sp);
-        view("users/detail-product", ['product' => $product, 'cateName'=>$cateName]);
+        $category = (new CategoryModels)->all();
+
+        // lấy ra các sản phẩm cùng loại trong trang chi tiết:
+        // $id_dm = $_GET['id_dm'] ?? '';
+        $sameProduct = (new CategoryModels())->sameProduct($id_sp, $product['id_dm']);
+        // var_dump($id_sp, $id_dm);
+        // var_dump($sameProduct);
+        // debug($cateName);
+        view("users/detail-product", ['product' => $product, 'cateName' => $cateName, 'category' => $category, 'sameProduct' => $sameProduct]);
     }
 }

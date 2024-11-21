@@ -376,11 +376,9 @@
                 <div class="col-lg-12">
                     <div class="mb-30">
                         <div class="cr-banner">
-                            <h2>Danh sách sản phâm</h2>
+                            <h2>Danh sách sản phẩm</h2>
                         </div>
                         <div class="cr-banner-sub-title">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore lacus vel facilisis. </p>
                         </div>
                     </div>
                 </div>
@@ -397,7 +395,7 @@
                                     <?php foreach ($category as $cate) : ?>
 
                                         <a href="index.php?user=home&id_dm=<?= $cate['id_dm'] ?>">
-                                            <li data-filter=".snack"><?= $cate['ten_dm'] ?></li>
+                                            <li data-filter=""><?= $cate['ten_dm'] ?></li>
                                         </a>
 
                                     <?php endforeach; ?>
@@ -452,7 +450,7 @@
                                                     <p>(4.5)</p>
                                                 </div>
                                             </div>
-                                            <a href="index.php?user=detail-product&id_sp=<?=$value['id_sp']?>" class="title"><?= $value['ten_sp'] ?></a>
+                                            <a href="index.php?user=detail-product&id_sp=<?= urlencode($value['id_sp']) ?>&id_dm=<?= urlencode($value['id_dm']) ?>" class="title"><?= htmlspecialchars($value['ten_sp'], ENT_QUOTES, 'UTF-8') ?></a>
                                             <p class="cr-price"><span class="new-price"><?= $value['gia_tien'] ?> VNĐ</span> <span
                                                     class="old-price"><?= $value['gia_km'] ?></span></p>
                                         </div>

@@ -11,4 +11,7 @@ class HomeController
         $productByCategory = (new CategoryModels())->productByCategory($id_dm);
         view("users/home", ['products' => $products, 'category' => $category, 'filterCategory' => $filterCategory, 'productByCategory' => $productByCategory]);
     }
+
+ 
+
 }

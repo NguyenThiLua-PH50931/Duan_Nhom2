@@ -409,8 +409,6 @@
                 </div>
             </nav>
             <div class="cr-calling">
-                <i class="ri-phone-line"></i>
-                <a href="javascript:void(0)">+123 ( 456 ) ( 7890 )</a>
             </div>
         </div>
     </div>

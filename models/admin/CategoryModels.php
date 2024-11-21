@@ -83,4 +83,14 @@ class CategoryModels
         $stmt->execute();
        return $stmt->fetch(PDO::FETCH_ASSOC);
     }
+
+    // lấy ra sản phẩm cùng loại trên trang chi tiết
+    public function sameProduct ($id_sp, $id_dm){
+        $sql = "SELECT * FROM san_pham WHERE id_dm=:id_dm AND id_sp<>:id_sp"; //<>: khác
+        $stmt = $this->db->pdo->prepare($sql);
+        $stmt->bindParam(':id_sp', $id_sp);
+        $stmt->bindParam(':id_dm', $id_dm);
+        $stmt->execute();
+       return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }

@@ -9,14 +9,15 @@
                 <form class="cr-search">
 
                     <!-- Tìm kiếm -->
+                     <h1>Tìm kiếm sản phẩm</h1>
                     <form action="index.php?user=home" method="get">
                         <input class="search-input" type="text" placeholder="Search For items..." name="search">
-                        <!-- <select class="form-select" aria-label="Default select example">
+                        <select class="form-select" aria-label="Default select example">
                             <option selected>All Categories</option>
                             <option value="1">Mens</option>
                             <option value="2">Womens</option>
                             <option value="3">Electronics</option>
-                        </select> -->
+                        </select>
                         <button class="search-btn" type="submit">
                             <i class="ri-search-line"></i>
                         </button>

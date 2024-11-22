@@ -99,46 +99,13 @@
                                 </div>
                             </div>
                             <div class="slider slider-nav thumb-image">
-                                <div class="thumbnail-image">
-                                    <div class="thumbImg">
-                                        <img src="/assets/users/img/product/9.jpg" alt="product-tab-1">
+                                <?php foreach ($relatedImages as $images):  ?>
+                                    <div class="thumbnail-image">
+                                        <div class="thumbImg">
+                                        <img src="<?= htmlspecialchars($images['anh_sp'], ENT_QUOTES, 'UTF-8') ?>" alt="related product">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="thumbnail-image">
-                                    <div class="thumbImg">
-                                        <img src="/assets/users/img/product/10.jpg" alt="product-tab-2">
-                                    </div>
-                                </div>
-                                <div class="thumbnail-image">
-                                    <div class="thumbImg">
-                                        <img src="/assets/users/img/product/11.jpg" alt="product-tab-3">
-                                    </div>
-                                </div>
-                                <div class="thumbnail-image">
-                                    <div class="thumbImg">
-                                        <img src="/assets/users/img/product/12.jpg" alt="product-tab-1">
-                                    </div>
-                                </div>
-                                <div class="thumbnail-image">
-                                    <div class="thumbImg">
-                                        <img src="/assets/users/img/product/13.jpg" alt="product-tab-2">
-                                    </div>
-                                </div>
-                                <div class="thumbnail-image">
-                                    <div class="thumbImg">
-                                        <img src="/assets/users/img/product/14.jpg" alt="product-tab-3">
-                                    </div>
-                                </div>
-                                <div class="thumbnail-image">
-                                    <div class="thumbImg">
-                                        <img src="/assets/users/img/product/15.jpg" alt="product-tab-1">
-                                    </div>
-                                </div>
-                                <div class="thumbnail-image">
-                                    <div class="thumbImg">
-                                        <img src="/assets/users/img/product/16.jpg" alt="product-tab-2">
-                                    </div>
-                                </div>
+                                <?php endforeach; ?>
                             </div>
                         </div>
                     </div>
@@ -224,10 +191,10 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="cr-popular-product">
-                    <?php if (!empty($sameProduct) && is_array($sameProduct)): ?>
-                        <?php foreach ($sameProduct as $value): ?>
-                        <div class="slick-slide">
-                            
+                        <?php if (!empty($sameProduct) && is_array($sameProduct)): ?>
+                            <?php foreach ($sameProduct as $value): ?>
+                                <div class="slick-slide">
+
                                     <div class="cr-product-card">
                                         <div class="cr-product-image">
                                             <div class="cr-image-inner zoom-image-hover">
@@ -265,12 +232,12 @@
 
                                         </div>
                                     </div>
-                                
-                        </div>
-                        <?php endforeach; ?>
-                            <?php else: ?>
-                                <p>Không có sản phẩm liên quan nào.</p>
-                            <?php endif; ?>
+
+                                </div>
+                            <?php endforeach; ?>
+                        <?php else: ?>
+                            <p>Không có sản phẩm liên quan nào.</p>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>

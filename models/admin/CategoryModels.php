@@ -65,7 +65,7 @@ class CategoryModels
     // Lấy ra sản phẩm theo id danh mục:
     public function productByCategory($id_dm)
     {
-        $sql = "SELECT `id_sp`, `ten_sp`, `gia_tien`, `gia_km`, `anh_sp`, `mo_ta`, `luot_xem`, `soluong_ton`, danh_muc.ten_dm 
+        $sql = "SELECT `id_sp`, `ten_sp`, `gia_tien`, `gia_km`, `anh_sp`, `mo_ta`, `luot_xem`, `soluong_ton`, danh_muc.ten_dm , danh_muc.id_dm
             FROM `san_pham` JOIN danh_muc ON san_pham.id_dm = danh_muc.id_dm WHERE danh_muc.id_dm = :id_dm ORDER BY id_sp DESC";
         $stmt = $this->db->pdo->prepare($sql);
         $stmt->bindParam(':id_dm', $id_dm);
@@ -81,16 +81,28 @@ class CategoryModels
         $stmt = $this->db->pdo->prepare($sql);
         $stmt->bindParam(':id_sp', $id_sp);
         $stmt->execute();
-       return $stmt->fetch(PDO::FETCH_ASSOC);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
     // lấy ra sản phẩm cùng loại trên trang chi tiết
-    public function sameProduct ($id_sp, $id_dm){
+    public function sameProduct($id_sp, $id_dm)
+    {
         $sql = "SELECT * FROM san_pham WHERE id_dm=:id_dm AND id_sp<>:id_sp"; //<>: khác
         $stmt = $this->db->pdo->prepare($sql);
         $stmt->bindParam(':id_sp', $id_sp);
         $stmt->bindParam(':id_dm', $id_dm);
         $stmt->execute();
-       return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    // lấy ra các ảnh liên quan (cùng danh mục):
+    public function getRelatedImages($id_dm, $id_sp)
+    {
+        $sql = "SELECT anh_sp FROM san_pham WHERE id_dm = :id_dm AND id_sp != :id_sp";
+        $stmt = $this->db->pdo->prepare($sql);
+        $stmt->bindParam(':id_dm', $id_dm, PDO::PARAM_INT);
+        $stmt->bindParam(':id_sp', $id_sp, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }

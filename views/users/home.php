@@ -450,7 +450,7 @@
                                                     <p>(4.5)</p>
                                                 </div>
                                             </div>
-                                            <a href="index.php?user=detail-product&id_sp=<?= urlencode($value['id_sp']) ?>&id_dm=<?= urlencode($value['id_dm']) ?>" class="title"><?= htmlspecialchars($value['ten_sp'], ENT_QUOTES, 'UTF-8') ?></a>
+                                            <a href="index.php?user=detail-product&id_sp=<?= urlencode($value['id_sp']) ?>&id_dm=<?= urlencode($value['id_dm']) ?> " class="title" ><?= htmlspecialchars($value['ten_sp'], ENT_QUOTES, 'UTF-8') ?></a>
                                             <p class="cr-price"><span class="new-price"><?= $value['gia_tien'] ?> VNĐ</span> <span
                                                     class="old-price"><?= $value['gia_km'] ?></span></p>
                                         </div>

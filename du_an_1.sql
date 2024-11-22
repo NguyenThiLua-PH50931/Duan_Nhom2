@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Nov 18, 2024 at 01:20 PM
+-- Generation Time: Nov 21, 2024 at 06:18 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -123,6 +123,7 @@ CREATE TABLE `san_pham` (
   `id_sp` int NOT NULL,
   `ten_sp` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `gia_tien` int NOT NULL,
+  `gia_km` int DEFAULT NULL,
   `anh_sp` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `mo_ta` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `luot_xem` int DEFAULT '0',
@@ -134,11 +135,16 @@ CREATE TABLE `san_pham` (
 -- Dumping data for table `san_pham`
 --
 
-INSERT INTO `san_pham` (`id_sp`, `ten_sp`, `gia_tien`, `anh_sp`, `mo_ta`, `luot_xem`, `soluong_ton`, `id_dm`) VALUES
-(1, 'Originals Campus', 350, 'images/1731863675_vn-11134201-7r98o-m0cqvz5bmetr71.jpg', 'Giày đẹp', 0, 10, 1),
-(2, 'Youth of Paris Campus', 550, 'images/1731863666_1056436.jpg', 'Giày đẹp, phong cách', 0, 20, 1),
-(7, 'Giày thể thao', 3333, 'images/1731863656_images.jpg', 'Đẹp', 0, 222, 1),
-(8, 'Giày MLB', 123, 'images/1731863646_cb6642dc-68f5-4d86-bc4d-fc3451fb2543.jpg', '123123123213', 0, 2, 3);
+INSERT INTO `san_pham` (`id_sp`, `ten_sp`, `gia_tien`, `gia_km`, `anh_sp`, `mo_ta`, `luot_xem`, `soluong_ton`, `id_dm`) VALUES
+(1, 'Originals Campus', 350, NULL, 'images/1731863675_vn-11134201-7r98o-m0cqvz5bmetr71.jpg', 'Giày đẹp', 0, 10, 1),
+(2, 'Youth of Paris Campus', 550, NULL, 'images/1731863666_1056436.jpg', 'Giày đẹp, phong cách', 0, 20, 1),
+(7, 'Giày thể thao', 3333, NULL, 'images/1731863656_images.jpg', 'Đẹp', 0, 222, 1),
+(8, 'Giày MLB', 123, NULL, 'images/1731863646_cb6642dc-68f5-4d86-bc4d-fc3451fb2543.jpg', '123123123213', 0, 2, 3),
+(10, 'Nike Air Max 90.', 399, NULL, 'images/1732183590_2377_122489721_344542823505527_5851162293678721969_n.jpg', 'Đôi giày được ra mắt vào năm 1982 với thiết kế năng động khỏe khoắn đã trở thành đôi giày thịnh hành mà ai cũng muốn được chiếm hữu. Với vẻ ngoài đơn giản nên rất dễ dàng trong việc phối đồ giúp bạn tự tin nhiều năng lượng hơn.', 0, 10, 2),
+(11, ' Nike VaporMax ACE', 450, NULL, 'images/1732183706_nike-af1-low-white-brown-1-800x800.jpg', 'Nike VaporMax ACE được đánh giá là một trong những đôi giày có tính đột phá cao nhất trong dòng Air Max của Nike. Thiết kế giày loại bỏ hoàn toàn thanh chống nhựa TPU phía bên trong phần Air', 0, 10, 2),
+(12, 'Nike Air Jordan 1 Chicago', 455, NULL, 'images/1732183809_Giày-Nike-Jordan-Mid-Hồng.jpg', 'Air Jordan 1 Retro Chicago đã từ lâu trở thành một biểu tượng không thể thiếu và được người hâm mộ yêu thích nhất trong dòng sản phẩm Jordan', 0, 10, 4),
+(13, 'Nike Jordan 3 Black Cement', 799, NULL, 'images/1732183861_Nike-Air-Jordan-1-Low-Shattered-Backboard5-1.jpg', 'Nike Jordan 3 Black Cement là mẫu giày đánh dấu đánh dấu kỷ niệm sinh nhật lần thứ 55 của Michael Jordan. Điểm nổi bật của đôi giày này đó chính là họa tiết họa tiết da voi đặc trưng.', 0, 10, 4),
+(14, 'Nike Air Jordan 4 Bred', 1050, NULL, 'images/1732183973_wsxc1692114685292_8.jpg', 'Phiên bản giày này nổi bật nhất với phần đế giày màu đỏ, phần thân trên của giày màu đen cùng với những chi tiết giày màu xám kèm theo. Phần đế giữa của giày màu trắng cùng với một số họa tiết đen, xám, trắng.', 0, 10, 4);
 
 -- --------------------------------------------------------
 
@@ -163,7 +169,10 @@ CREATE TABLE `tai_khoan` (
 
 INSERT INTO `tai_khoan` (`id_tk`, `ten_tk`, `ho_ten`, `so_dt`, `mat_khau`, `dia_chi`, `email`, `vai_tro`) VALUES
 (1, 'luantph', 'Nguyễn Thị Lụa', '0971918183', '12345', 'Bắc Ninh', 'luantph50931@gmail.com', 1),
-(2, 'yennthph', 'Nguyễn Thị Hải Yến', '0971918184', '123456', 'Hà Nội', 'yenntph@gmail.com', 1);
+(2, 'yennthph', 'Nguyễn Thị Hải Yến', '0971918184', '123456', 'Hà Nội', 'yenntph@gmail.com', 1),
+(5, 'a', 'a', '12345678', 'a', 'a', 'luantph50931@gmail.com', 0),
+(6, 'a', 'a', '12345678', 'a', 'Bắc Ninh1', 'luantph50931@gmail.com', 0),
+(7, 'luantph', 'Admin', '12345678', '123', 'Bắc Ninh', 'luantph50931@gmail.com', 0);
 
 --
 -- Indexes for dumped tables
@@ -240,7 +249,7 @@ ALTER TABLE `binh_luan`
 -- AUTO_INCREMENT for table `danh_muc`
 --
 ALTER TABLE `danh_muc`
-  MODIFY `id_dm` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_dm` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `don_hang`
@@ -270,13 +279,13 @@ ALTER TABLE `gio_hang_chi_tiet`
 -- AUTO_INCREMENT for table `san_pham`
 --
 ALTER TABLE `san_pham`
-  MODIFY `id_sp` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_sp` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `tai_khoan`
 --
 ALTER TABLE `tai_khoan`
-  MODIFY `id_tk` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_tk` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Constraints for dumped tables

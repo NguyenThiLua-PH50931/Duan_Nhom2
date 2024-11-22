@@ -7,16 +7,23 @@
                     <img src="assets/users/img/logo/dark-logo.png" alt="logo" class="dark-logo">
                 </a>
                 <form class="cr-search">
-                    <input class="search-input" type="text" placeholder="Search For items...">
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>All Categories</option>
-                        <option value="1">Mens</option>
-                        <option value="2">Womens</option>
-                        <option value="3">Electronics</option>
-                    </select>
-                    <a href="javascript:void(0)" class="search-btn">
-                        <i class="ri-search-line"></i>
-                    </a>
+
+                    <!-- Tìm kiếm -->
+                    <form action="index.php?user=home" method="get">
+                        <input class="search-input" type="text" placeholder="Search For items..." name="search">
+                        <!-- <select class="form-select" aria-label="Default select example">
+                            <option selected>All Categories</option>
+                            <option value="1">Mens</option>
+                            <option value="2">Womens</option>
+                            <option value="3">Electronics</option>
+                        </select> -->
+                        <button class="search-btn" type="submit">
+                            <i class="ri-search-line"></i>
+                        </button>
+                    </form>
+                    <!-- Xử lý -->
+
+
                 </form>
                 <div class="cr-right-bar">
                     <ul class="navbar-nav">
@@ -288,11 +295,11 @@
                                 Category
                             </a>
                             <ul class="dropdown-menu">
-                                <?php foreach($category as $cate): ?>
+                                <?php foreach ($category as $cate): ?>
                                     <li>
-                                    <a class="dropdown-item" href="shop-left-sidebar.html"><?=$cate['ten_dm']?></a>
-                                </li>
-                                    <?php endforeach; ?>
+                                        <a class="dropdown-item" href="shop-left-sidebar.html"><?= $cate['ten_dm'] ?></a>
+                                    </li>
+                                <?php endforeach; ?>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">

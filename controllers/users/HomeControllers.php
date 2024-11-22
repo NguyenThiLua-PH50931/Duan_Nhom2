@@ -9,11 +9,12 @@ class HomeController
         $id_dm = $_GET['id_dm'] ?? '';
         $filterCategory = (new CategoryModels())->find_one($id_dm);
         $productByCategory = (new CategoryModels())->productByCategory($id_dm);
-//         var_dump($productByCategory);
-// exit;
-        view("users/home", ['products' => $products, 'category' => $category, 'filterCategory' => $filterCategory, 'productByCategory' => $productByCategory]);
+        // var_dump($productByCategory);
+        // exit;
+
+        // Tìm kiếm sản phẩm:
+        $keyword = isset($_GET['search']) ? $_GET['search'] : '';
+        $searchProduct = (new ProductModels())->searchProduct($keyword);
+        view("users/home", ['products' => $products, 'category' => $category, 'filterCategory' => $filterCategory, 'productByCategory' => $productByCategory,'searchProduct'=>$searchProduct]);
     }
-
- 
-
 }

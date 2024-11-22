@@ -37,19 +37,6 @@
                     <div class="cr-hero-banner cr-banner-image-two">
                         <div class="container">
                             <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="cr-left-side-contain slider-animation">
-                                        <h5><span>100%</span> Organic Fruits</h5>
-                                        <h1>Explore fresh & juicy fruits.</h1>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet reiciendis
-                                            beatae consequuntur.</p>
-                                        <div class="cr-last-buttons">
-                                            <a href="shop-left-sidebar.html" class="cr-button">
-                                                shop now
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -59,17 +46,6 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <div class="cr-left-side-contain slider-animation">
-                                        <h5><span>100%</span> Organic Vegetables</h5>
-                                        <h1>The best way to stuff your wallet.</h1>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet reiciendis
-                                            beatae consequuntur.</p>
-                                        <div class="cr-last-buttons">
-                                            <a href="shop-left-sidebar.html" class="cr-button">
-                                                shop now
-                                            </a>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -87,41 +63,14 @@
                 <div class="col-lg-4 col-12 mb-24">
                     <div class="cr-categories">
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
-                            <li class="nav-item" role="presentation">
+                            <?php foreach($category as $value): ?>
+                                <li class="nav-item" role="presentation">
                                 <button class="nav-link active center-categories-inner" id="cake_milk-tab"
                                     data-bs-toggle="tab" data-bs-target="#cake_milk" type="button" role="tab"
-                                    aria-controls="cake_milk" aria-selected="true">
-                                    Cake & Milk <span>(65 items)</span>
-                                </button>
+                                    aria-controls="cake_milk" aria-selected="true"><?=$value['ten_dm']?> <span></span>
+                                    </button >
                             </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link center-categories-inner" id="meat-tab" data-bs-toggle="tab"
-                                    data-bs-target="#meat" type="button" role="tab" aria-controls="meat"
-                                    aria-selected="false" tabindex="-1">
-                                    Fresh Meat <span>(30 items)</span>
-                                </button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link center-categories-inner" id="Vegetables-tab"
-                                    data-bs-toggle="tab" data-bs-target="#Vegetables" type="button" role="tab"
-                                    aria-controls="Vegetables" aria-selected="false" tabindex="-1">
-                                    Vegetables <span>(25 items)</span>
-                                </button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link center-categories-inner" id="Custard-tab" data-bs-toggle="tab"
-                                    data-bs-target="#Custard" type="button" role="tab" aria-controls="Custard"
-                                    aria-selected="false" tabindex="-1">
-                                    Apple & Mango <span>(45 items)</span>
-                                </button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link center-categories-inner" id="Strawberry-tab"
-                                    data-bs-toggle="tab" data-bs-target="#Strawberry" type="button" role="tab"
-                                    aria-controls="Strawberry" aria-selected="false" tabindex="-1">
-                                    Strawberry <span>(68 items)</span>
-                                </button>
-                            </li>
+                                <?php endforeach; ?>
                             <li class="nav-item" role="presentation">
                                 <a class="center-categories-inner cr-view-more" href="shop-left-sidebar.html">
                                     View More
@@ -512,45 +461,6 @@
                 <div class="col-lg-12">
                     <div class="cr-banner-slider swiper-container">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide" data-aos="fade-up" data-aos-duration="2000">
-                                <div class="cr-product-banner-image">
-                                    <img src="assets/users/img/product-banner/1.jpg" alt="product-banner">
-                                    <div class="cr-product-banner-contain">
-                                        <h5>Healthy <br> Bakery Products</h5>
-                                        <p><span class="percent">30%</span> Off <span class="text">on first order</span>
-                                        </p>
-                                        <div class="cr-product-banner-buttons">
-                                            <a href="shop-left-sidebar.html" class="cr-button">shop now</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide" data-aos="fade-up" data-aos-duration="2000">
-                                <div class="cr-product-banner-image">
-                                    <img src="assets/users/img/product-banner/2.jpg" alt="product-banner">
-                                    <div class="cr-product-banner-contain">
-                                        <h5>Fresh <br>Snacks & Sweets</h5>
-                                        <p><span class="percent">20%</span> Off <span class="text">on first order</span>
-                                        </p>
-                                        <div class="cr-product-banner-buttons">
-                                            <a href="shop-left-sidebar.html" class="cr-button">shop now</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide" data-aos="fade-up" data-aos-duration="2000">
-                                <div class="cr-product-banner-image">
-                                    <img src="assets/users/img/product-banner/3.jpg" alt="product-banner">
-                                    <div class="cr-product-banner-contain">
-                                        <h5>Fresh & healthy <br> Organic Fruits</h5>
-                                        <p><span class="percent">35%</span> Off <span class="text">on first order</span>
-                                        </p>
-                                        <div class="cr-product-banner-buttons">
-                                            <a href="shop-left-sidebar.html" class="cr-button">shop now</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>

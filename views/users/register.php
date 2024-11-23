@@ -82,7 +82,7 @@
                                         <input type="text" placeholder="Nhập tên" class="cr-form-control" name="ho_ten">
                                     </div>
                                 </div>
-                                <div class="col-12 col-sm-6">
+                                <div class="col-12">
                                     <div class="form-group">
                                         <label>Email*</label>
                                         <input type="email" placeholder="Nhập email" class="cr-form-control" name="email">
@@ -95,7 +95,7 @@
                                             class="cr-form-control" name="so_dt">
                                     </div>
                                 </div>
-                                <div class="col-12">
+                                <div class="col-12 col-sm-6">
                                     <div class="form-group">
                                         <label>Địa chỉ</label>
                                         <input type="text" placeholder="Nhập địa chỉ" class="cr-form-control" name="dia_chi">
@@ -105,7 +105,7 @@
                                 <div class="cr-register-buttons">
                                     <button type="submit" class="cr-button" name="dangky">Đăng ký</button>
                                     <a href="index.php?user=login-user" class="link">
-                                       Bạn đã có tài khoản chưa?
+                                       Bạn đã có tài khoản.
                                     </a>
                                 </div>
                             </div>

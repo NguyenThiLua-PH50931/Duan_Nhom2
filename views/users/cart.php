@@ -62,47 +62,51 @@
                         <div class="row">
                             <form action="#">
                                 <div class="cr-table-content">
-                                    <table>
-                                        <thead>
-                                            <tr>
-                                                <th>Product</th>
-                                                <th>price</th>
-                                                <th class="text-center">Quantity</th>
-                                                <th>Total</th>
-                                                <th>Action</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <?php foreach ($cart as $value) : ?>
+                                    <?php if (!empty($_SESSION['id_tk'])): ?>
+                                        <table>
+                                            <thead>
                                                 <tr>
-                                                    <td class="cr-cart-name">
-                                                        <a href="javascript:void(0)">
-                                                            <img src="<?=$value['anh_sp']?>" width="150px" alt="product-1"
-                                                                class="cr-cart-img">
-                                                            <?=$value['ten_sp']?>
-                                                        </a>
-                                                    </td>
-                                                    <td class="cr-cart-price">
-                                                        <span class="amount"><?=$value['gia_tien']?>VNĐ</span>
-                                                    </td>
-                                                    <td class="cr-cart-qty">
-                                                        <div class="cart-qty-plus-minus">
-                                                            <button type="button" class="plus">+</button>
-                                                            <input type="text" placeholder="." value="<?=$value['so_luong']?>" minlength="1"
-                                                                maxlength="20" class="quantity">
-                                                            <button type="button" class="minus">-</button>
-                                                        </div>
-                                                    </td>
-                                                    <td class="cr-cart-subtotal"><?=$total?></td>
-                                                    <td class="cr-cart-remove">
-                                                        <a href="javascript:void(0)">
-                                                            <i class="ri-delete-bin-line"></i>
-                                                        </a>
-                                                    </td>
+                                                    <th>Product</th>
+                                                    <th>price</th>
+                                                    <th class="text-center">Quantity</th>
+                                                    <th>Total</th>
+                                                    <th>Action</th>
                                                 </tr>
-                                            <?php endforeach; ?>
-                                        </tbody>
-                                    </table>
+                                            </thead>
+                                            <tbody>
+                                                <?php foreach ($cart as $value) : ?>
+                                                    <tr>
+                                                        <td class="cr-cart-name">
+                                                            <a href="javascript:void(0)">
+                                                                <img src="<?= $value['anh_sp'] ?>" width="150px" alt="product-1"
+                                                                    class="cr-cart-img">
+                                                                <?= $value['ten_sp'] ?>
+                                                            </a>
+                                                        </td>
+                                                        <td class="cr-cart-price">
+                                                            <span class="amount"><?= $value['gia_tien'] ?>VNĐ</span>
+                                                        </td>
+                                                        <td class="cr-cart-qty">
+                                                            <div class="cart-qty-plus-minus">
+                                                                <button type="button" class="plus">+</button>
+                                                                <input type="text" placeholder="." value="<?= $value['so_luong'] ?>" minlength="1"
+                                                                    maxlength="20" class="quantity">
+                                                                <button type="button" class="minus">-</button>
+                                                            </div>
+                                                        </td>
+                                                        <td class="cr-cart-subtotal"><?= $total ?></td>
+                                                        <td class="cr-cart-remove">
+                                                            <a href="javascript:void(0)">
+                                                                <i class="ri-delete-bin-line"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                <?php endforeach; ?>
+                                            </tbody>
+                                        </table>
+                                    <?php else: ?>
+                                        <p>Bạn cần đăng nhập !!!</p>
+                                    <?php endif; ?>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-12">

@@ -12,6 +12,7 @@ class ProductControllers
             // debug($products);
         } elseif ($keyword) {
             $products = (new ProductModel())->search($keyword);
+            // debug($products);
         } else {
             $products = (new ProductModels)->getAllProducts(); // Lấy tất cả sản phẩm
         }

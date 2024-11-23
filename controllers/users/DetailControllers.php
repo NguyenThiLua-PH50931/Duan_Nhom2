@@ -17,6 +17,10 @@ class DetailControllers
 
         // Lấy ra ảnh liên quan (cùng danh mục):
         $relatedImages = (new CategoryModels())->getRelatedImages($product['id_dm'], $id_sp);
+<<<<<<< HEAD
         view("users/detail-product", ['product' => $product, 'cateName' => $cateName, 'category' => $category, 'sameProduct' => $sameProduct, 'relatedImages' => $relatedImages]);
+=======
+        view("users/detail-product", ['product' => $product, 'cateName' => $cateName, 'category' => $category, 'sameProduct' => $sameProduct,'relatedImages'=>$relatedImages]);
+>>>>>>> e495d8f4324ea651921d199d940f0e7c63c457fa
     }
 }

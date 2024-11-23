@@ -6,11 +6,33 @@
                     <img src="assets/users/img/logo/logo.png" alt="logo" class="logo">
                     <img src="assets/users/img/logo/dark-logo.png" alt="logo" class="dark-logo">
                 </a>
+<<<<<<< HEAD
                 <form action="index.php?user=shop" method="post" class="cr-search">
                     <input class="search-input" type="text" placeholder="Search For items..." name="keyword">
                     <button class="search-btn">
                         <i class="ri-search-line"></i>
                     </button>
+=======
+                <form class="cr-search">
+
+                    <!-- Tìm kiếm -->
+                     <h1>Tìm kiếm sản phẩm</h1>
+                    <form action="index.php?user=home" method="get">
+                        <input class="search-input" type="text" placeholder="Search For items..." name="search">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>All Categories</option>
+                            <option value="1">Mens</option>
+                            <option value="2">Womens</option>
+                            <option value="3">Electronics</option>
+                        </select>
+                        <button class="search-btn" type="submit">
+                            <i class="ri-search-line"></i>
+                        </button>
+                    </form>
+                    <!-- Xử lý -->
+
+
+>>>>>>> e495d8f4324ea651921d199d940f0e7c63c457fa
                 </form>
                 <div class="cr-right-bar">
                     <ul class="navbar-nav">
@@ -46,7 +68,11 @@
                         <i class="ri-heart-3-line"></i>
                         <span>Wishlist</span>
                     </a>
+<<<<<<< HEAD
                     <a href="index.php?user=cart" class="cr-right-bar-item">
+=======
+                    <a href="javascript:void(0)" class="cr-right-bar-item Shopping-toggle">
+>>>>>>> e495d8f4324ea651921d199d940f0e7c63c457fa
                         <i class="ri-shopping-cart-line"></i>
                         <span>Cart</span>
                     </a>
@@ -278,23 +304,56 @@
                             </a>
                         </li>
                         <li class="nav-item dropdown">
+<<<<<<< HEAD
                             <a class="nav-link" href="index.php?user=shop">
                                 Products
                             </a>
                         </li>
                         <li class="nav-item dropdown">
+=======
+>>>>>>> e495d8f4324ea651921d199d940f0e7c63c457fa
                             <a class="nav-link dropdown-toggle" href="javascript:void(0)">
                                 Category
                             </a>
                             <ul class="dropdown-menu">
                                 <?php foreach ($category as $cate): ?>
                                     <li>
+<<<<<<< HEAD
                                         <a class="dropdown-item" href="index.php?user=shop&id_dm=<?= $cate['id_dm'] ?>"><?= $cate['ten_dm'] ?></a>
+=======
+                                        <a class="dropdown-item" href="shop-left-sidebar.html"><?= $cate['ten_dm'] ?></a>
+>>>>>>> e495d8f4324ea651921d199d940f0e7c63c457fa
                                     </li>
                                 <?php endforeach; ?>
                             </ul>
                         </li>
+<<<<<<< HEAD
 
+=======
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="javascript:void(0)">
+                                Products
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="product-left-sidebar.html">product
+                                        Left
+                                        sidebar </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="product-right-sidebar.html">product
+                                        Right
+                                        sidebar </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="product-full-width.html">Product
+                                        Full
+                                        Width
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+>>>>>>> e495d8f4324ea651921d199d940f0e7c63c457fa
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="javascript:void(0)">
                                 Pages
@@ -386,8 +445,11 @@
                 </div>
             </nav>
             <div class="cr-calling">
+<<<<<<< HEAD
                 <i class="ri-phone-line"></i>
                 <a href="javascript:void(0)">+123 ( 456 ) ( 7890 )</a>
+=======
+>>>>>>> e495d8f4324ea651921d199d940f0e7c63c457fa
             </div>
         </div>
     </div>

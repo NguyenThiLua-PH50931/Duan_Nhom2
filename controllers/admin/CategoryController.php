@@ -54,7 +54,10 @@ class CategoryController
 
         $category = (new CategoryModels)->find_one($id_dm);
         $deleteImg = (new CategoryModels)->productByCategory($id_dm);
+<<<<<<< HEAD
 
+=======
+>>>>>>> e495d8f4324ea651921d199d940f0e7c63c457fa
         // debug($deleteImg);
 
         $imagePath = 'd:\\PHP\\laragon\\www\\Du_An1\\' . $deleteImg['anh_sp'];

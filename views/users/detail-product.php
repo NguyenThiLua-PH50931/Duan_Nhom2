@@ -147,54 +147,57 @@
                     <div class="cr-size-and-weight-contain">
                         <h2 class="heading"><?= $product['ten_sp'] ?></h2>
                     </div>
-                    <div class="cr-size-and-weight">
-                        <div class="list">
-                            <ul>
-                                <li><label>Thương hiệu <span>:</span></label><?= $cateName['ten_dm'] ?></li>
-                                <li><label>Giá tiền <span>:</span></label><?= $product['gia_tien'] ?></li>
-                                
-                                <li><label>Lượt xem <span>:</span></label><?= $product['luot_xem'] ?></li>
-                                <li><label>Số lượng tồn <span>:</span></label><?= $product['soluong_ton'] ?></li>
-                            </ul>
-                        </div>
-                        <div class="cr-product-price">
-                            <span class="new-price"><?= $product['gia_tien'] ?>VND</span>
-                            <span class="old-price"><?= $product['gia_km'] ?>VND</span>
-                        </div>
-                        <!-- <div class="cr-size-weight">
-                            <h5><span>Size</span>/<span>Weight</span> :</h5>
-                            <div class="cr-kg">
+                    <form action="index.php?user=addCart" method="post" enctype="multipart/form-data">
+                        <div class="cr-size-and-weight">
+                            <div class="list">
                                 <ul>
-                                    <li class="active-color">50kg</li>
-                                    <li>80kg</li>
-                                    <li>120kg</li>
-                                    <li>200kg</li>
+                                    <li><label>Thương hiệu <span>:</span></label><?= $cateName['ten_dm'] ?></li>
+                                    <li><label>Giá tiền <span>:</span></label><?= $product['gia_tien'] ?></li>
+
+                                    <li><label>Lượt xem <span>:</span></label><?= $product['luot_xem'] ?></li>
+                                    <li><label>Số lượng tồn <span>:</span></label><?= $product['soluong_ton'] ?></li>
                                 </ul>
                             </div>
-                        </div> -->
-                        <div class="cr-add-card">
-                            <div class="cr-qty-main">
-                                <input type="text" placeholder="." value="1" minlength="1" maxlength="20"
-                                    class="quantity">
-                                <button type="button" class="plus">+</button>
-                                <button type="button" class="minus">-</button>
+                            <div class="cr-product-price">
+                                <span class="new-price"><?= $product['gia_tien'] ?>VND</span>
+                                <span class="old-price"><?= $product['gia_km'] ?>VND</span>
                             </div>
-                            <div class="cr-add-button">
-                                <button type="button" class="cr-button btn-outline-success cr-shopping-bag">Thêm vào giỏ hàng</button>
-                            </div>
-                            <div class="cr-add-button">
-                                <button type="button" class="cr-button cr-shopping-bag">Mua ngay</button>
-                            </div>
-                            <div class="cr-card-icon">
-                                <a href="javascript:void(0)" class="wishlist">
-                                    <i class="ri-heart-line"></i>
-                                </a>
-                                <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview" role="button">
-                                    <i class="ri-eye-line"></i>
-                                </a>
+                            <!-- <div class="cr-size-weight">
+                                <h5><span>Size</span>/<span>Weight</span> :</h5>
+                                <div class="cr-kg">
+                                    <ul>
+                                        <li class="active-color">50kg</li>
+                                        <li>80kg</li>
+                                        <li>120kg</li>
+                                        <li>200kg</li>
+                                    </ul>
+                                </div>
+                            </div> -->
+                            <div class="cr-add-card">
+                                <div class="cr-qty-main">
+                                    <input type="text" placeholder="." value="1" minlength="1" maxlength="20"
+                                        class="quantity" name="so_luong">
+                                    <button type="button" class="plus">+</button>
+                                    <button type="button" class="minus">-</button>
+                                </div>
+                                <input type="hidden" name="id_sp" value="<?= $product['id_sp'] ?>">
+                                <div class="cr-add-button">
+                                    <button name="addCart" class="cr-button btn-outline-success">Thêm vào giỏ hàng</button>
+                                </div>
+                                <div class="cr-add-button">
+                                    <button type="button" class="cr-button cr-shopping-bag">Mua ngay</button>
+                                </div>
+                                <div class="cr-card-icon">
+                                    <a href="javascript:void(0)" class="wishlist">
+                                        <i class="ri-heart-line"></i>
+                                    </a>
+                                    <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview" role="button">
+                                        <i class="ri-eye-line"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
             <div class="row" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="600">
@@ -351,43 +354,53 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="cr-popular-product">
-                        <div class="slick-slide">
-                            <div class="cr-product-card">
-                                <div class="cr-product-image">
-                                    <div class="cr-image-inner zoom-image-hover">
-                                        <img src="<?= $value['anh_sp'] ?>" alt="product-1">
-                                    </div>
-                                    <div class="cr-side-view">
-                                        <a href="javascript:void(0)" class="wishlist">
-                                            <i class="ri-heart-line"></i>
-                                        </a>
-                                        <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview"
-                                            role="button">
-                                            <i class="ri-eye-line"></i>
-                                        </a>
-                                    </div>
-                                    <a class="cr-shopping-bag" href="javascript:void(0)">
-                                        <i class="ri-shopping-bag-line"></i>
-                                    </a>
-                                </div>
-                                <div class="cr-product-details">
-                                    <div class="cr-brand">
-                                        <a href="">Snacks</a>
-                                        <div class="cr-star">
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-line"></i>
-                                            <p>(4.5)</p>
+                        <?php if (!empty($sameProduct) && is_array($sameProduct)): ?>
+                            <?php foreach ($sameProduct as $value): ?>
+                                <div class="slick-slide">
+
+                                    <div class="cr-product-card">
+                                        <div class="cr-product-image">
+                                            <div class="cr-image-inner zoom-image-hover">
+                                                <img src="<?= $value['anh_sp'] ?>" alt="product-1">
+                                            </div>
+                                            <div class="cr-side-view">
+                                                <a href="javascript:void(0)" class="wishlist">
+                                                    <i class="ri-heart-line"></i>
+                                                </a>
+                                                <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview"
+                                                    role="button">
+                                                    <i class="ri-eye-line"></i>
+                                                </a>
+                                            </div>
+                                            <a class="cr-shopping-bag" href="javascript:void(0)">
+                                                <i class="ri-shopping-bag-line"></i>
+                                            </a>
+                                        </div>
+                                        <div class="cr-product-details">
+                                            <div class="cr-brand">
+                                                <a href=""><?= $cateName['ten_dm'] ?></a>
+
+                                                <div class="cr-star">
+                                                    <i class="ri-star-fill"></i>
+                                                    <i class="ri-star-fill"></i>
+                                                    <i class="ri-star-fill"></i>
+                                                    <i class="ri-star-fill"></i>
+                                                    <i class="ri-star-line"></i>
+                                                    <p>(4.5)</p>
+                                                </div>
+                                            </div>
+                                            <a href="product-left-sidebar.html" class="title"><?= $value['ten_sp'] ?></a>
+                                            <p class="cr-price"><span class="new-price"></span> <?= $value['gia_tien'] ?><span
+                                                    class="old-price"><?= $value['gia_km'] ?></span></p>
+
                                         </div>
                                     </div>
-                                    <a href="product-left-sidebar.html" class="title"></a>
-                                    <p class="cr-price"><span class="new-price"></span> <span
-                                            class="old-price"></span></p>
+
                                 </div>
-                            </div>
-                        </div>
+                            <?php endforeach; ?>
+                        <?php else: ?>
+                            <p>Không có sản phẩm liên quan nào.</p>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>

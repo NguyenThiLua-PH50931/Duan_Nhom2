@@ -122,7 +122,7 @@
                                                 <p>(4.5)</p>
                                             </div>
                                         </div>
-                                        <a href="product-left-sidebar.html" class="title"><?= $value['ten_sp'] ?></a>
+                                        <a href="index.php?user=detail-product&id_sp=<?=$value['id_sp']?>" class="title"><?= $value['ten_sp'] ?></a>
                                         <p class="cr-price"><span class="new-price">$<?= $value['gia_tien'] ?></span> <span
                                                 class="old-price">$<?= $value['gia_km'] ?></span></p>
                                     </div>

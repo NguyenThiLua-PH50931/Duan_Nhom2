@@ -13,6 +13,7 @@ include "controllers/users/HomeControllers.php";
 include "controllers/users/RegisterControllers.php";
 include "controllers/users/DetailControllers.php";
 include "controllers/users/ProductControllers.php";
+include "controllers/users/CartControllers.php";
 
 //==========================Models========================
 //---------------Model-Admin-------------
@@ -22,11 +23,12 @@ include "models/admin/ProductModels.php";
 include "models/admin/Auth.php";
 include "models/admin/AccountsModels.php";
 
-//---------------Controllers-User-------------
+//---------------Model-User-------------
 include "models/users/HomeModels.php";
 include "models/users/RegisterModels.php";
 include "models/users/LoginModels.php";
 include "models/users/ProductModel.php";
+include "models/users/CartModel.php";
 
 include "commons/helpers.php";
 
@@ -75,6 +77,8 @@ if (!empty($user)) {
         'detail-product' => (new DetailControllers())->show(),
         'filter' => (new HomeController())->filter(),
         'shop' => (new ProductControllers())->shop(),
+        'cart' => (new CartControllers())->viewCart(),
+        'addCart' => (new CartControllers())->addCart(),
         default => die("Không tìm thấy file"),
     };
 }

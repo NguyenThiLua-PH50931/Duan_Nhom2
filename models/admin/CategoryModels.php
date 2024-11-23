@@ -81,6 +81,26 @@ class CategoryModels
         $stmt = $this->db->pdo->prepare($sql);
         $stmt->bindParam(':id_sp', $id_sp);
         $stmt->execute();
-       return $stmt->fetch(PDO::FETCH_ASSOC);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+    public function sameProduct($id_sp, $id_dm)
+    {
+        $sql = "SELECT * FROM san_pham WHERE id_dm=:id_dm AND id_sp<>:id_sp"; //<>: khác
+        $stmt = $this->db->pdo->prepare($sql);
+        $stmt->bindParam(':id_sp', $id_sp);
+        $stmt->bindParam(':id_dm', $id_dm);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    // lấy ra các ảnh liên quan (cùng danh mục):
+    public function getRelatedImages($id_dm, $id_sp)
+    {
+        $sql = "SELECT anh_sp FROM san_pham WHERE id_dm = :id_dm AND id_sp != :id_sp";
+        $stmt = $this->db->pdo->prepare($sql);
+        $stmt->bindParam(':id_dm', $id_dm, PDO::PARAM_INT);
+        $stmt->bindParam(':id_sp', $id_sp, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }

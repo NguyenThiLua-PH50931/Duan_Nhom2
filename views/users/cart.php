@@ -352,6 +352,21 @@
     <!-- Tab to top -->
     <?php include_once "views/users/layout/tap-top.php" ?>
 
+    <?php if (isset($_SESSION['addCart'])) : ?>
+        <div class="cr-cart-notify">
+            <p class="compare-note">Add product in <a href="cart.html"> Cart</a> Successfully!</p>
+        </div>
+        <?php
+        // Xóa thông báo khỏi session sau khi đã hiển thị
+        unset($_SESSION['addCart']);
+        ?>
+    <?php endif; ?>
+    <script>
+        $(document).ready(function() {
+            // Hiển thị thông báo (thêm .fadeIn() trước khi fadeOut)
+            $('.cr-cart-notify').fadeIn().delay(3000).fadeOut(); // Hiển thị thông báo rồi ẩn sau 3 giây
+        });
+    </script>
 
     <!-- Cart -->
     <?php include_once "views/users/layout/cart.php" ?>

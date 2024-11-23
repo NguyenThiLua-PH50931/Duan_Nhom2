@@ -37,7 +37,6 @@
                     <div class="cr-hero-banner cr-banner-image-two">
                         <div class="container">
                             <div class="row">
-<<<<<<< HEAD
                                 <div class="col-lg-12">
                                     <div class="cr-left-side-contain slider-animation">
                                         <h5><span>100%</span> Organic Fruits</h5>
@@ -51,8 +50,6 @@
                                         </div>
                                     </div>
                                 </div>
-=======
->>>>>>> e495d8f4324ea651921d199d940f0e7c63c457fa
                             </div>
                         </div>
                     </div>
@@ -62,7 +59,6 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-12">
-<<<<<<< HEAD
                                     <div class="cr-left-side-contain slider-animation">
                                         <h5><span>100%</span> Organic Vegetables</h5>
                                         <h1>The best way to stuff your wallet.</h1>
@@ -74,8 +70,6 @@
                                             </a>
                                         </div>
                                     </div>
-=======
->>>>>>> e495d8f4324ea651921d199d940f0e7c63c457fa
                                 </div>
                             </div>
                         </div>
@@ -93,7 +87,6 @@
                 <div class="col-lg-4 col-12 mb-24">
                     <div class="cr-categories">
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
-<<<<<<< HEAD
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link active center-categories-inner" id="cake_milk-tab"
                                     data-bs-toggle="tab" data-bs-target="#cake_milk" type="button" role="tab"
@@ -129,16 +122,6 @@
                                     Strawberry <span>(68 items)</span>
                                 </button>
                             </li>
-=======
-                            <?php foreach($category as $value): ?>
-                                <li class="nav-item" role="presentation">
-                                <button class="nav-link active center-categories-inner" id="cake_milk-tab"
-                                    data-bs-toggle="tab" data-bs-target="#cake_milk" type="button" role="tab"
-                                    aria-controls="cake_milk" aria-selected="true"><?=$value['ten_dm']?> <span></span>
-                                    </button >
-                            </li>
-                                <?php endforeach; ?>
->>>>>>> e495d8f4324ea651921d199d940f0e7c63c457fa
                             <li class="nav-item" role="presentation">
                                 <a class="center-categories-inner cr-view-more" href="shop-left-sidebar.html">
                                     View More
@@ -388,11 +371,7 @@
 
     <!-- Popular product -->
     <section class="section-popular-product-shape padding-b-100">
-<<<<<<< HEAD
         <div id="app" class="container" data-aos="fade-up" data-aos-duration="2000">
-=======
-        <div class="container" data-aos="fade-up" data-aos-duration="2000">
->>>>>>> e495d8f4324ea651921d199d940f0e7c63c457fa
             <div class="row">
                 <div class="col-lg-12">
                     <div class="mb-30">
@@ -400,11 +379,8 @@
                             <h2>Danh sách sản phẩm</h2>
                         </div>
                         <div class="cr-banner-sub-title">
-<<<<<<< HEAD
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                                 ut labore lacus vel facilisis. </p>
-=======
->>>>>>> e495d8f4324ea651921d199d940f0e7c63c457fa
                         </div>
                     </div>
                 </div>
@@ -415,7 +391,6 @@
                         <div class="col-lg-12 col-sm-6 col-6 cr-product-box mb-24">
                             <div class="cr-product-tabs">
                                 <ul>
-<<<<<<< HEAD
                                     <li class="active" data-filter="all" id="all">All</li>
                                     <?php foreach ($category as $cate) : ?>
                                         <li class="category" data-filter=".snack" data-id="<?= $cate['id_dm'] ?>" id="category-<?= $cate['id_dm'] ?>">
@@ -425,20 +400,6 @@
                                 </ul>
                             </div>
 
-=======
-                                    <a href="index.php?user=home">
-                                        <li class="active" data-filter="all">All</li>
-                                    </a>
-                                    <?php foreach ($category as $cate) : ?>
-
-                                        <a href="index.php?user=home&id_dm=<?= $cate['id_dm'] ?>">
-                                            <li data-filter=""><?= $cate['ten_dm'] ?></li>
-                                        </a>
-
-                                    <?php endforeach; ?>
-                                </ul>
-                            </div>
->>>>>>> e495d8f4324ea651921d199d940f0e7c63c457fa
                         </div>
                         <div class="col-lg-12 col-sm-6 col-6 cr-product-box banner-480 mb-24">
                             <div class="cr-ice-cubes">
@@ -454,7 +415,6 @@
                     </div>
                 </div>
                 <div class="col-xl-9 col-lg-8 col-12 mb-24">
-<<<<<<< HEAD
                     <div class="filterCategory row mb-minus-24">
                         <?php foreach ($products as $pro) : ?>
                             <div id="content" class="mix vegetable col-xxl-3 col-xl-4 col-6 cr-product-box mb-24">
@@ -497,92 +457,6 @@
                         <?php endforeach; ?>
                     </div>
 
-=======
-                    <div class="row mb-minus-24">
-                        <?php if (isset($_GET['id_dm'])): ?>
-                            <?php foreach ($productByCategory as $value) : ?>
-                                <div class="mix vegetable col-xxl-3 col-xl-4 col-6 cr-product-box mb-24">
-                                    <div class="cr-product-card">
-                                        <div class="cr-product-image">
-                                            <div class="cr-image-inner zoom-image-hover">
-                                                <img src="<?= $value['anh_sp'] ?>" alt="product-1">
-                                            </div>
-                                            <div class="cr-side-view">
-                                                <a href="javascript:void(0)" class="wishlist">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                                <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview"
-                                                    role="button">
-                                                    <i class="ri-eye-line"></i>
-                                                </a>
-                                            </div>
-                                            <a class="cr-shopping-bag" href="javascript:void(0)">
-                                                <i class="ri-shopping-bag-line"></i>
-                                            </a>
-                                        </div>
-                                        <div class="cr-product-details">
-                                            <div class="cr-brand">
-                                                <a href="shop-left-sidebar.html"><?= $value['ten_dm'] ?></a>
-                                                <div class="cr-star">
-                                                    <i class="ri-star-fill"></i>
-                                                    <i class="ri-star-fill"></i>
-                                                    <i class="ri-star-fill"></i>
-                                                    <i class="ri-star-fill"></i>
-                                                    <i class="ri-star-line"></i>
-                                                    <p>(4.5)</p>
-                                                </div>
-                                            </div>
-                                            <a href="index.php?user=detail-product&id_sp=<?= urlencode($value['id_sp']) ?>&id_dm=<?= urlencode($value['id_dm']) ?> " class="title" ><?= htmlspecialchars($value['ten_sp'], ENT_QUOTES, 'UTF-8') ?></a>
-                                            <p class="cr-price"><span class="new-price"><?= $value['gia_tien'] ?> VNĐ</span> <span
-                                                    class="old-price"><?= $value['gia_km'] ?></span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            <?php endforeach; ?>
-                        <?php else: ?>
-                            <?php foreach ($products as $pro) : ?>
-                                <div class="mix vegetable col-xxl-3 col-xl-4 col-6 cr-product-box mb-24">
-                                    <div class="cr-product-card">
-                                        <div class="cr-product-image">
-                                            <div class="cr-image-inner zoom-image-hover">
-                                                <img src="<?= $pro['anh_sp'] ?>" alt="product-1">
-                                            </div>
-                                            <div class="cr-side-view">
-                                                <a href="javascript:void(0)" class="wishlist">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                                <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview"
-                                                    role="button">
-                                                    <i class="ri-eye-line"></i>
-                                                </a>
-                                            </div>
-                                            <a class="cr-shopping-bag" href="javascript:void(0)">
-                                                <i class="ri-shopping-bag-line"></i>
-                                            </a>
-                                        </div>
-                                        <div class="cr-product-details">
-                                            <div class="cr-brand">
-                                                <a href="shop-left-sidebar.html"><?= $pro['ten_dm'] ?></a>
-                                                <div class="cr-star">
-                                                    <i class="ri-star-fill"></i>
-                                                    <i class="ri-star-fill"></i>
-                                                    <i class="ri-star-fill"></i>
-                                                    <i class="ri-star-fill"></i>
-                                                    <i class="ri-star-line"></i>
-                                                    <p>(4.5)</p>
-                                                </div>
-                                            </div>
-                                            <a href="index.php?user=detail-product&id_sp=<?=$pro['id_sp']?>" class="title"><?= $pro['ten_sp'] ?></a>
-                                            <p class="cr-price"><span class="new-price"><?= $pro['gia_tien'] ?> VNĐ</span> <span
-                                                    class="old-price"><?= $pro['gia_km'] ?></span></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            <?php endforeach; ?>
-                        <?php endif; ?>
-
-                    </div>
->>>>>>> e495d8f4324ea651921d199d940f0e7c63c457fa
                 </div>
             </div>
         </div>
@@ -595,7 +469,6 @@
                 <div class="col-lg-12">
                     <div class="cr-banner-slider swiper-container">
                         <div class="swiper-wrapper">
-<<<<<<< HEAD
                             <div class="swiper-slide" data-aos="fade-up" data-aos-duration="2000">
                                 <div class="cr-product-banner-image">
                                     <img src="assets/users/img/product-banner/1.jpg" alt="product-banner">
@@ -635,8 +508,6 @@
                                     </div>
                                 </div>
                             </div>
-=======
->>>>>>> e495d8f4324ea651921d199d940f0e7c63c457fa
                         </div>
                     </div>
                 </div>

@@ -92,16 +92,4 @@ class ProductModels
         $stmt->bindParam(':id_dm', $categoryId);
         $stmt->execute();
     }
-<<<<<<< HEAD
-=======
-
-    // Tìm kiếm sản phẩm:
-    public function searchProduct ($keyword){
-        $sql = "SELECT * FROM san_pham WHERE ten_sp LIKE :keyword";
-        $stmt = $this->db->pdo->prepare($sql);
-        $stmt->bindValue(':keyword', '%' . $keyword . '%', PDO::FETCH_ASSOC);
-        $stmt->execute();
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
-    }
->>>>>>> e495d8f4324ea651921d199d940f0e7c63c457fa
 }

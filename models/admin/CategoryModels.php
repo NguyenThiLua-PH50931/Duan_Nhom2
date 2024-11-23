@@ -65,13 +65,8 @@ class CategoryModels
     // Lấy ra sản phẩm theo id danh mục:
     public function productByCategory($id_dm)
     {
-<<<<<<< HEAD
         $sql = "SELECT `id_sp`, `ten_sp`, `gia_tien`, `gia_km`, `anh_sp`, `mo_ta`, `luot_xem`, `soluong_ton`, danh_muc.ten_dm 
             FROM `san_pham` JOIN danh_muc ON san_pham.id_dm = danh_muc.id_dm WHERE san_pham.id_dm = :id_dm ORDER BY id_sp DESC";
-=======
-        $sql = "SELECT `id_sp`, `ten_sp`, `gia_tien`, `gia_km`, `anh_sp`, `mo_ta`, `luot_xem`, `soluong_ton`, danh_muc.ten_dm , danh_muc.id_dm
-            FROM `san_pham` JOIN danh_muc ON san_pham.id_dm = danh_muc.id_dm WHERE danh_muc.id_dm = :id_dm ORDER BY id_sp DESC";
->>>>>>> e495d8f4324ea651921d199d940f0e7c63c457fa
         $stmt = $this->db->pdo->prepare($sql);
         $stmt->bindParam(':id_dm', $id_dm);
         $stmt->execute();
@@ -88,11 +83,6 @@ class CategoryModels
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
-<<<<<<< HEAD
-=======
-
-    // lấy ra sản phẩm cùng loại trên trang chi tiết
->>>>>>> e495d8f4324ea651921d199d940f0e7c63c457fa
     public function sameProduct($id_sp, $id_dm)
     {
         $sql = "SELECT * FROM san_pham WHERE id_dm=:id_dm AND id_sp<>:id_sp"; //<>: khác
@@ -113,8 +103,4 @@ class CategoryModels
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> e495d8f4324ea651921d199d940f0e7c63c457fa
 }

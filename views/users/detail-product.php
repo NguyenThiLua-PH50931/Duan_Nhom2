@@ -99,7 +99,6 @@
                                 </div>
                             </div>
                             <div class="slider slider-nav thumb-image">
-<<<<<<< HEAD
                                 <div class="thumbnail-image">
                                     <div class="thumbImg">
                                         <img src="/assets/users/img/product/9.jpg" alt="product-tab-1">
@@ -140,15 +139,6 @@
                                         <img src="/assets/users/img/product/16.jpg" alt="product-tab-2">
                                     </div>
                                 </div>
-=======
-                                <?php foreach ($relatedImages as $images):  ?>
-                                    <div class="thumbnail-image">
-                                        <div class="thumbImg">
-                                        <img src="<?= htmlspecialchars($images['anh_sp'], ENT_QUOTES, 'UTF-8') ?>" alt="related product">
-                                        </div>
-                                    </div>
-                                <?php endforeach; ?>
->>>>>>> e495d8f4324ea651921d199d940f0e7c63c457fa
                             </div>
                         </div>
                     </div>
@@ -157,7 +147,6 @@
                     <div class="cr-size-and-weight-contain">
                         <h2 class="heading"><?= $product['ten_sp'] ?></h2>
                     </div>
-<<<<<<< HEAD
                     <form action="index.php?user=addCart" method="post" enctype="multipart/form-data">
                         <div class="cr-size-and-weight">
                             <div class="list">
@@ -342,62 +331,6 @@
                                     </form>
                                 </div>
                             </div>
-=======
-                    <div class="cr-size-and-weight">
-                        <div class="list">
-                            <ul>
-                                <li><label>Thương hiệu <span>:</span></label><?= $cateName['ten_dm'] ?></li>
-                                <li><label>Giá tiền <span>:</span></label><?= $product['gia_tien'] ?></li>
-                                <li><label>Lượt xem <span>:</span></label><?= $product['luot_xem'] ?></li>
-                                <li><label>Số lượng tồn <span>:</span></label><?= $product['soluong_ton'] ?></li>
-                            </ul>
-                        </div>
-                        <div class="cr-product-price">
-                            <span class="new-price"><?= $product['gia_tien'] ?>VND</span>
-                            <span class="old-price"><?= $product['gia_km'] ?>VND</span>
-                        </div>
-                        <!-- <div class="cr-size-weight">
-                            <h5><span>Size</span>/<span>Weight</span> :</h5>
-                            <div class="cr-kg">
-                                <ul>
-                                    <li class="active-color">50kg</li>
-                                    <li>80kg</li>
-                                    <li>120kg</li>
-                                    <li>200kg</li>
-                                </ul>
-                            </div>
-                        </div> -->
-                        <div class="cr-add-card">
-                            <div class="cr-qty-main">
-                                <input type="text" placeholder="." value="1" minlength="1" maxlength="20"
-                                    class="quantity">
-                                <button type="button" class="plus">+</button>
-                                <button type="button" class="minus">-</button>
-                            </div>
-                            <div class="cr-add-button">
-                                <button type="button" class="cr-button cr-shopping-bag">Mua ngay</button>
-                            </div>
-                            <div class="cr-card-icon">
-                                <a href="javascript:void(0)" class="wishlist">
-                                    <i class="ri-heart-line"></i>
-                                </a>
-                                <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview" role="button">
-                                    <i class="ri-eye-line"></i>
-                                </a>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
-
-                <div class="tab-pane fade show active" id="description" role="tabpanel"
-                    aria-labelledby="description-tab">
-                    <h5 class="heading">Mô tả sản phẩm</h5>
-                    <div class="cr-tab-content">
-                        <div class="cr-description">
-                            <p><?= $product['mo_ta'] ?></p>
->>>>>>> e495d8f4324ea651921d199d940f0e7c63c457fa
                         </div>
                     </div>
                 </div>

@@ -74,7 +74,7 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <?php foreach ($cart as $value) : ?>
+                                                <?php foreach ($cart as $value): ?>
                                                     <tr>
                                                         <td class="cr-cart-name">
                                                             <a href="javascript:void(0)">
@@ -89,14 +89,16 @@
                                                         <td class="cr-cart-qty">
                                                             <div class="cart-qty-plus-minus">
                                                                 <button type="button" class="plus">+</button>
-                                                                <input type="text" placeholder="." value="<?= $value['so_luong'] ?>" minlength="1"
+                                                                <input type="text" placeholder="."
+                                                                    value="<?= $value['so_luong'] ?>" minlength="1"
                                                                     maxlength="20" class="quantity">
                                                                 <button type="button" class="minus">-</button>
                                                             </div>
                                                         </td>
-                                                        <td class="cr-cart-subtotal"><?= $total ?></td>
+                                                        <td class="cr-cart-subtotal"><?= $total ?> VNĐ</td>
                                                         <td class="cr-cart-remove">
-                                                            <a href="javascript:void(0)">
+                                                            <a onclick="return confirm('Bạn có chắc muốn xóa ?')"
+                                                                href="index.php?user=deleteCart&id_giohang_chitiet=<?= $value['id_giohang_chitiet'] ?>">
                                                                 <i class="ri-delete-bin-line"></i>
                                                             </a>
                                                         </td>
@@ -133,21 +135,16 @@
     <!-- Tab to top -->
     <?php include_once "views/users/layout/tap-top.php" ?>
 
-    <?php if (isset($_SESSION['addCart'])) : ?>
-        <div class="cr-cart-notify">
-            <p class="compare-note">Add product in <a href="cart.html"> Cart</a> Successfully!</p>
-        </div>
-        <?php
-        // Xóa thông báo khỏi session sau khi đã hiển thị
-        unset($_SESSION['addCart']);
-        ?>
-    <?php endif; ?>
-    <script>
-        $(document).ready(function() {
-            // Hiển thị thông báo (thêm .fadeIn() trước khi fadeOut)
-            $('.cr-cart-notify').fadeIn().delay(3000).fadeOut(); // Hiển thị thông báo rồi ẩn sau 3 giây
-        });
-    </script>
+    <?php
+    if (isset($_SESSION['addCart'])) {
+        echo $_SESSION['addCart'];
+    } elseif (isset($_SESSION['deleteCart'])) {
+        echo $_SESSION['deleteCart'];
+    }
+    $_SESSION['addCart'] = null;
+    $_SESSION['deleteCart'] = null;
+
+    ?>
 
     <!-- Cart -->
     <?php include_once "views/users/layout/cart.php" ?>

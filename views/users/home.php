@@ -237,7 +237,6 @@
                                         </div>
                                         <div class="cr-services-contain">
                                             <h4>Sản phẩm chất lượng</h4>
-                                            
                                         </div>
                                     </div>
                                 </div>
@@ -248,7 +247,6 @@
                                         </div>
                                         <div class="cr-services-contain">
                                             <h4>Hỗ trợ 24X7</h4>
-                                            
                                         </div>
                                     </div>
                                 </div>
@@ -259,7 +257,6 @@
                                         </div>
                                         <div class="cr-services-contain">
                                             <h4>Giao hàng nhanh</h4>
-                                            
                                         </div>
                                     </div>
                                 </div>
@@ -270,7 +267,6 @@
                                         </div>
                                         <div class="cr-services-contain">
                                             <h4>Thanh toán an toàn</h4>
-                                            
                                         </div>
                                     </div>
                                 </div>

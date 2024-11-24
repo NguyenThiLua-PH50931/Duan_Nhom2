@@ -17,7 +17,9 @@
                         <li class="nav-item dropdown">
                             <?php if (empty($_SESSION['nameAccount']) && empty($_SESSION['emailAccount'])) { ?>
                                 <a class="nav-link dropdown-toggle cr-right-bar-item" href="index.php?user=login-user" class="cr-mode">
-                                    <i class="ri-user-3-line"></i>
+                                    <i class="ri-user-3-line">
+                                        <span>Account</span>
+                                    </i>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li>
@@ -29,14 +31,11 @@
                                 </ul>
                             <?php } else { ?>
                                 <a class="nav-link dropdown-toggle cr-right-bar-item" href="javascript:void(0)" data-bs-toggle="dropdown">
-                                    <span> <i class="ri-user-3-line"></i><?php echo $_SESSION['nameAccount']; ?></span>
+                                    <i class="ri-user-3-line"></i><span><?php echo $_SESSION['nameAccount']; ?></span>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li>
                                         <a class="dropdown-item" href="index.php?user=logout-user">Checkout</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="index.php?user=login-user">Login</a>
                                     </li>
                                 </ul>
                             <?php } ?>

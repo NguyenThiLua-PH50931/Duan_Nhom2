@@ -79,6 +79,7 @@ if (!empty($user)) {
         'shop' => (new ProductControllers())->shop(),
         'cart' => (new CartControllers())->viewCart(),
         'addCart' => (new CartControllers())->addCart(),
+        'deleteCart' => (new CartControllers())->deleteCart(),
         default => die("Không tìm thấy file"),
     };
 }

@@ -69,13 +69,13 @@ class CartModel
         }
         $stmt->execute();
     }
-    // public function addCart($id_sp, $so_luong)
-    // {
-    //     $sql = "INSERT INTO `gio_hang_chi_tiet`(`id_sp`, `so_luong`) 
-    //             VALUES (:id_sp, :so_luong)";
-    //     $stmt = $this->db->pdo->prepare($sql);
-    //     $stmt->bindParam(':id_sp', $id_sp);
-    //     $stmt->bindParam(':so_luong', $so_luong);
-    //     $stmt->execute();
-    // }
+
+    public function deleteCart($id_giohang_chitiet)
+    {
+        $sql = "DELETE FROM `gio_hang_chi_tiet` WHERE `id_giohang_chitiet` = :id_giohang_chitiet ";
+        $stmt = $this->db->pdo->prepare($sql);
+        $stmt->bindParam(':id_giohang_chitiet', $id_giohang_chitiet);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
 }

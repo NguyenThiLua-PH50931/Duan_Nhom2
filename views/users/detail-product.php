@@ -187,154 +187,154 @@
                                 <div class="cr-add-button">
                                     <button type="button" class="cr-button cr-shopping-bag">Mua ngay</button>
                                 </div>
-                                <div class="cr-card-icon">
-                                    <a href="javascript:void(0)" class="wishlist">
-                                        <i class="ri-heart-line"></i>
-                                    </a>
-                                    <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview" role="button">
-                                        <i class="ri-eye-line"></i>
-                                    </a>
-                                </div>
-                            </div>
+                    </form>
+                    <form action="" method="post">
+                        <input type="hidden" name="id_sp" value="<?= $product['id_sp'] ?>">
+                        <div class="cr-card-icon">
+                            <button name="addWishlist" class="wishlist border-0">
+                                <i class="ri-heart-line"></i>
+                            </button>
                         </div>
                     </form>
                 </div>
             </div>
-            <div class="row" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="600">
-                <div class="col-12">
-                    <div class="cr-paking-delivery">
-                        <ul class="nav nav-tabs" id="myTab" role="tablist">
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="description-tab" data-bs-toggle="tab"
-                                    data-bs-target="#description" type="button" role="tab" aria-controls="description"
-                                    aria-selected="true">Description</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="additional-tab" data-bs-toggle="tab"
-                                    data-bs-target="#additional" type="button" role="tab" aria-controls="additional"
-                                    aria-selected="false">Information</button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="review-tab" data-bs-toggle="tab" data-bs-target="#review"
-                                    type="button" role="tab" aria-controls="review"
-                                    aria-selected="false">Review</button>
-                            </li>
-                        </ul>
-                        <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active" id="description" role="tabpanel"
-                                aria-labelledby="description-tab">
-                                <div class="cr-tab-content">
-                                    <div class="cr-description">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error in vero
-                                            sapiente odio, error dolore vero temporibus consequatur, nobis veniam odit
-                                            dignissimos consectetur quae in perferendis
-                                            doloribusdebitis corporis, eaque dicta, repellat amet, illum adipisci vel
-                                            perferendis dolor! Quis vel consequuntur repellat distinctio rem. Corrupti
-                                            ratione alias odio, error dolore temporibus consequatur, nobis veniam odit
-                                            laborum dignissimos consectetur quae vero in perferendis provident quis.</p>
-                                    </div>
-                                    <h4 class="heading">Packaging & Delivery</h4>
-                                    <div class="cr-description">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error in vero
-                                            perferendis dolor! Quis vel consequuntur repellat distinctio rem. Corrupti
-                                            ratione alias odio, error dolore temporibus consequatur, nobis veniam odit
-                                            laborum dignissimos consectetur quae vero in perferendis provident quis.</p>
-                                    </div>
+        </div>
+        </div>
+        <div class="row" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="600">
+            <div class="col-12">
+                <div class="cr-paking-delivery">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="description-tab" data-bs-toggle="tab"
+                                data-bs-target="#description" type="button" role="tab" aria-controls="description"
+                                aria-selected="true">Description</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="additional-tab" data-bs-toggle="tab"
+                                data-bs-target="#additional" type="button" role="tab" aria-controls="additional"
+                                aria-selected="false">Information</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="review-tab" data-bs-toggle="tab" data-bs-target="#review"
+                                type="button" role="tab" aria-controls="review"
+                                aria-selected="false">Review</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="description" role="tabpanel"
+                            aria-labelledby="description-tab">
+                            <div class="cr-tab-content">
+                                <div class="cr-description">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error in vero
+                                        sapiente odio, error dolore vero temporibus consequatur, nobis veniam odit
+                                        dignissimos consectetur quae in perferendis
+                                        doloribusdebitis corporis, eaque dicta, repellat amet, illum adipisci vel
+                                        perferendis dolor! Quis vel consequuntur repellat distinctio rem. Corrupti
+                                        ratione alias odio, error dolore temporibus consequatur, nobis veniam odit
+                                        laborum dignissimos consectetur quae vero in perferendis provident quis.</p>
+                                </div>
+                                <h4 class="heading">Packaging & Delivery</h4>
+                                <div class="cr-description">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error in vero
+                                        perferendis dolor! Quis vel consequuntur repellat distinctio rem. Corrupti
+                                        ratione alias odio, error dolore temporibus consequatur, nobis veniam odit
+                                        laborum dignissimos consectetur quae vero in perferendis provident quis.</p>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="additional" role="tabpanel" aria-labelledby="additional-tab">
-                                <div class="cr-tab-content">
-                                    <div class="cr-description">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error in vero
-                                            sapiente
-                                            doloribus debitis corporis, eaque dicta, repellat amet, illum adipisci vel
-                                            perferendis dolor! Quis vel consequuntur repellat distinctio rem. Corrupti
-                                            ratione alias odio, error dolore temporibus consequatur, nobis veniam odit
-                                            laborum dignissimos consectetur quae vero in perferendis provident quis.</p>
-                                    </div>
-                                    <div class="list">
-                                        <ul>
-                                            <li><label>Brand <span>:</span></label>ESTA BETTERU CO</li>
-                                            <li><label>Flavour <span>:</span></label>Super Saver Pack</li>
-                                            <li><label>Diet Type <span>:</span></label>Vegetarian</li>
-                                            <li><label>Weight <span>:</span></label>200 Grams</li>
-                                            <li><label>Speciality <span>:</span></label>Gluten Free, Sugar Free</li>
-                                            <li><label>Info <span>:</span></label>Egg Free, Allergen-Free</li>
-                                            <li><label>Items <span>:</span></label>1</li>
-                                        </ul>
-                                    </div>
+                        </div>
+                        <div class="tab-pane fade" id="additional" role="tabpanel" aria-labelledby="additional-tab">
+                            <div class="cr-tab-content">
+                                <div class="cr-description">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error in vero
+                                        sapiente
+                                        doloribus debitis corporis, eaque dicta, repellat amet, illum adipisci vel
+                                        perferendis dolor! Quis vel consequuntur repellat distinctio rem. Corrupti
+                                        ratione alias odio, error dolore temporibus consequatur, nobis veniam odit
+                                        laborum dignissimos consectetur quae vero in perferendis provident quis.</p>
+                                </div>
+                                <div class="list">
+                                    <ul>
+                                        <li><label>Brand <span>:</span></label>ESTA BETTERU CO</li>
+                                        <li><label>Flavour <span>:</span></label>Super Saver Pack</li>
+                                        <li><label>Diet Type <span>:</span></label>Vegetarian</li>
+                                        <li><label>Weight <span>:</span></label>200 Grams</li>
+                                        <li><label>Speciality <span>:</span></label>Gluten Free, Sugar Free</li>
+                                        <li><label>Info <span>:</span></label>Egg Free, Allergen-Free</li>
+                                        <li><label>Items <span>:</span></label>1</li>
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="tab-pane fade" id="review" role="tabpanel" aria-labelledby="review-tab">
-                                <div class="cr-tab-content-from">
-                                    <div class="post">
-                                        <div class="content">
-                                            <img src="/assets/users/img/review/1.jpg" alt="review">
-                                            <div class="details">
-                                                <span class="date">Jan 08, 2024</span>
-                                                <span class="name">Oreo Noman</span>
-                                            </div>
-                                            <div class="cr-t-review-rating">
-                                                <i class="ri-star-s-fill"></i>
-                                                <i class="ri-star-s-fill"></i>
-                                                <i class="ri-star-s-fill"></i>
-                                                <i class="ri-star-s-fill"></i>
-                                                <i class="ri-star-s-fill"></i>
-                                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="review" role="tabpanel" aria-labelledby="review-tab">
+                            <div class="cr-tab-content-from">
+                                <div class="post">
+                                    <div class="content">
+                                        <img src="/assets/users/img/review/1.jpg" alt="review">
+                                        <div class="details">
+                                            <span class="date">Jan 08, 2024</span>
+                                            <span class="name">Oreo Noman</span>
                                         </div>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error in vero
-                                            sapiente doloribus debitis corporis, eaque dicta, repellat amet, illum
-                                            adipisci vel
-                                            perferendis dolor! quae vero in perferendis provident quis.</p>
-                                        <div class="content mt-30">
-                                            <img src="/assets/users/img/review/2.jpg" alt="review">
-                                            <div class="details">
-                                                <span class="date">Mar 22, 2024</span>
-                                                <span class="name">Lina Wilson</span>
-                                            </div>
-                                            <div class="cr-t-review-rating">
-                                                <i class="ri-star-s-fill"></i>
-                                                <i class="ri-star-s-fill"></i>
-                                                <i class="ri-star-s-fill"></i>
-                                                <i class="ri-star-s-fill"></i>
-                                                <i class="ri-star-s-line"></i>
-                                            </div>
+                                        <div class="cr-t-review-rating">
+                                            <i class="ri-star-s-fill"></i>
+                                            <i class="ri-star-s-fill"></i>
+                                            <i class="ri-star-s-fill"></i>
+                                            <i class="ri-star-s-fill"></i>
+                                            <i class="ri-star-s-fill"></i>
                                         </div>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error in vero
-                                            sapiente doloribus debitis corporis, eaque dicta, repellat amet, illum
-                                            adipisci vel
-                                            perferendis dolor! quae vero in perferendis provident quis.</p>
                                     </div>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error in vero
+                                        sapiente doloribus debitis corporis, eaque dicta, repellat amet, illum
+                                        adipisci vel
+                                        perferendis dolor! quae vero in perferendis provident quis.</p>
+                                    <div class="content mt-30">
+                                        <img src="/assets/users/img/review/2.jpg" alt="review">
+                                        <div class="details">
+                                            <span class="date">Mar 22, 2024</span>
+                                            <span class="name">Lina Wilson</span>
+                                        </div>
+                                        <div class="cr-t-review-rating">
+                                            <i class="ri-star-s-fill"></i>
+                                            <i class="ri-star-s-fill"></i>
+                                            <i class="ri-star-s-fill"></i>
+                                            <i class="ri-star-s-fill"></i>
+                                            <i class="ri-star-s-line"></i>
+                                        </div>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error in vero
+                                        sapiente doloribus debitis corporis, eaque dicta, repellat amet, illum
+                                        adipisci vel
+                                        perferendis dolor! quae vero in perferendis provident quis.</p>
+                                </div>
 
-                                    <h4 class="heading">Add a Review</h4>
-                                    <form action="javascript:void(0)">
-                                        <div class="cr-ratting-star">
-                                            <span>Your rating :</span>
-                                            <div class="cr-t-review-rating">
-                                                <i class="ri-star-s-fill"></i>
-                                                <i class="ri-star-s-fill"></i>
-                                                <i class="ri-star-s-line"></i>
-                                                <i class="ri-star-s-line"></i>
-                                                <i class="ri-star-s-line"></i>
-                                            </div>
+                                <h4 class="heading">Add a Review</h4>
+                                <form action="javascript:void(0)">
+                                    <div class="cr-ratting-star">
+                                        <span>Your rating :</span>
+                                        <div class="cr-t-review-rating">
+                                            <i class="ri-star-s-fill"></i>
+                                            <i class="ri-star-s-fill"></i>
+                                            <i class="ri-star-s-line"></i>
+                                            <i class="ri-star-s-line"></i>
+                                            <i class="ri-star-s-line"></i>
                                         </div>
-                                        <div class="cr-ratting-input">
-                                            <input name="your-name" placeholder="Name" type="text">
-                                        </div>
-                                        <div class="cr-ratting-input">
-                                            <input name="your-email" placeholder="Email*" type="email" required="">
-                                        </div>
-                                        <div class="cr-ratting-input form-submit">
-                                            <textarea name="your-commemt" placeholder="Enter Your Comment"></textarea>
-                                            <button class="cr-button" type="submit" value="Submit">Submit</button>
-                                        </div>
-                                    </form>
-                                </div>
+                                    </div>
+                                    <div class="cr-ratting-input">
+                                        <input name="your-name" placeholder="Name" type="text">
+                                    </div>
+                                    <div class="cr-ratting-input">
+                                        <input name="your-email" placeholder="Email*" type="email" required="">
+                                    </div>
+                                    <div class="cr-ratting-input form-submit">
+                                        <textarea name="your-commemt" placeholder="Enter Your Comment"></textarea>
+                                        <button class="cr-button" type="submit" value="Submit">Submit</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </section>
 
@@ -363,15 +363,18 @@
                                             <div class="cr-image-inner zoom-image-hover">
                                                 <img src="<?= $value['anh_sp'] ?>" alt="product-1">
                                             </div>
-                                            <div class="cr-side-view">
-                                                <a href="javascript:void(0)" class="wishlist">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                                <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview"
-                                                    role="button">
-                                                    <i class="ri-eye-line"></i>
-                                                </a>
-                                            </div>
+                                            <form action="" method="post">
+                                                <div class="cr-side-view">
+                                                    <input type="hidden" name="id_sp" value="<?= $value['id_sp'] ?>">
+                                                    <button class="rounded-circle border-0" name="addWishlist">
+                                                        <i class="ri-heart-line"></i>
+                                                    </button>
+                                                    <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview"
+                                                        role="button">
+                                                        <i class="ri-eye-line"></i>
+                                                    </a>
+                                                </div>
+                                            </form>
                                             <a class="cr-shopping-bag" href="javascript:void(0)">
                                                 <i class="ri-shopping-bag-line"></i>
                                             </a>
@@ -410,6 +413,20 @@
     <!-- Footer -->
     <?php include_once "views/users/layout/footer.php" ?>
 
+    <?php
+    if (isset($_SESSION['thongBao'])) {
+        echo $_SESSION['thongBao'];
+    } elseif (isset($_SESSION['deleteCart'])) {
+        echo $_SESSION['deleteCart'];
+    } elseif (isset($_SESSION['successWishlist'])) {
+        echo $_SESSION['successWishlist'];
+    }
+    unset($_SESSION['thongBao']);
+    unset($_SESSION['deleteCart']);
+    unset($_SESSION['successWishlist']);
+
+
+    ?>
 
     <!-- Tab to top -->
     <?php include_once "views/users/layout/tap-top.php" ?>

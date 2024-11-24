@@ -8,7 +8,7 @@
                 </a>
                 <form action="index.php?user=shop" method="post" class="cr-search">
                     <input class="search-input" type="text" placeholder="Search For items..." name="keyword">
-                    <button class="search-btn">
+                    <button class="search-btn border-0">
                         <i class="ri-search-line"></i>
                     </button>
                 </form>
@@ -41,7 +41,7 @@
                             <?php } ?>
                         </li>
                     </ul>
-                    <a href="wishlist.html" class="cr-right-bar-item">
+                    <a href="index.php?user=wishlist" class="cr-right-bar-item">
                         <i class="ri-heart-3-line"></i>
                         <span>Wishlist</span>
                     </a>

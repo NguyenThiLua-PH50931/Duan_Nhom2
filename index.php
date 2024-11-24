@@ -14,6 +14,7 @@ include "controllers/users/RegisterControllers.php";
 include "controllers/users/DetailControllers.php";
 include "controllers/users/ProductControllers.php";
 include "controllers/users/CartControllers.php";
+include "controllers/users/WishlistController.php";
 
 //==========================Models========================
 //---------------Model-Admin-------------
@@ -29,6 +30,7 @@ include "models/users/RegisterModels.php";
 include "models/users/LoginModels.php";
 include "models/users/ProductModel.php";
 include "models/users/CartModel.php";
+include "models/users/WishlistModel.php";
 
 include "commons/helpers.php";
 
@@ -80,6 +82,8 @@ if (!empty($user)) {
         'cart' => (new CartControllers())->viewCart(),
         'addCart' => (new CartControllers())->addCart(),
         'deleteCart' => (new CartControllers())->deleteCart(),
+        'wishlist' => (new WishlistController())->wishlist(),
+        // 'addWishlist' => (new WishlistController())->addWishlist(),
         default => die("Không tìm thấy file"),
     };
 }

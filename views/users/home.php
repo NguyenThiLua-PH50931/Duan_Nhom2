@@ -130,15 +130,18 @@
                                         <div class="cr-image-inner zoom-image-hover">
                                             <img src="<?= $pro['anh_sp'] ?>" alt="product-1">
                                         </div>
-                                        <div class="cr-side-view">
-                                            <a href="javascript:void(0)" class="wishlist">
-                                                <i class="ri-heart-line"></i>
-                                            </a>
-                                            <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview"
-                                                role="button">
-                                                <i class="ri-eye-line"></i>
-                                            </a>
-                                        </div>
+                                        <form action="" method="post">
+                                            <div class="cr-side-view">
+                                                <input type="hidden" name="id_sp" value="<?= $pro['id_sp'] ?>">
+                                                <button class="rounded-circle border-0" name="addWishlist">
+                                                    <i class="ri-heart-line"></i>
+                                                </button>
+                                                <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview"
+                                                    role="button">
+                                                    <i class="ri-eye-line"></i>
+                                                </a>
+                                            </div>
+                                        </form>
                                         <a class="cr-shopping-bag" href="javascript:void(0)">
                                             <i class="ri-shopping-bag-line"></i>
                                         </a>
@@ -280,6 +283,22 @@
 
     <!-- Footer -->
     <?php include_once "views/users/layout/footer.php" ?>
+
+    <?php
+    if (isset($_SESSION['thongBao'])) {
+        echo $_SESSION['thongBao'];
+    } elseif (isset($_SESSION['deleteCart'])) {
+        echo $_SESSION['deleteCart'];
+    } elseif (isset($_SESSION['successWishlist'])) {
+        echo $_SESSION['successWishlist'];
+    }
+    unset($_SESSION['thongBao']);
+    unset($_SESSION['deleteCart']);
+    unset($_SESSION['successWishlist']);
+
+
+    ?>
+
     <!-- Tab to top -->
     <?php include_once "views/users/layout/tap-top.php" ?>
     <!-- Model -->

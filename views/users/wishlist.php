@@ -67,11 +67,8 @@
                                         <img src="<?= $value['anh_sp'] ?>" alt="product-1">
                                     </div>
                                     <div class="cr-side-view">
-                                        <a class="cr-remove-product" href="javascript:void(0)">
+                                        <a class="cr-remove-product" href="index.php?user=deleteWishlist&id_yeuthich=<?= $value['id_yeuthich'] ?>">
                                             <i class="ri-close-line"></i>
-                                        </a>
-                                        <a href="javascript:void(0)" class="wishlist">
-                                            <i class="ri-heart-line"></i>
                                         </a>
                                         <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview"
                                             role="button">
@@ -101,14 +98,23 @@
                             </div>
                         </div>
                     <?php endforeach; ?>
+                <?php elseif ($wishlist == null): ?>
+                    <p class="cr-wishlist-msg">Bạn chưa thêm sản phẩm yêu thích nào!</p>
                 <?php else: ?>
-                    <p>Bạn cần đăng nhập !!!</p>
+                    <p>Bạn cần <a href="index.php?user=login-user" class="text-success">đăng nhập</a> !!!</p>
                 <?php endif; ?>
             </div>
     </section>
 
     <!-- Footer -->
     <?php include_once "views/users/layout/footer.php" ?>
+
+    <?php
+    if (isset($_SESSION['deleteCart'])) {
+        echo $_SESSION['deleteCart'];
+    }
+    unset($_SESSION['deleteCart']);
+    ?>
 
     <!-- Tab to top -->
     <?php include_once "views/users/layout/tap-top.php" ?>

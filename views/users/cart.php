@@ -107,7 +107,7 @@
                                             </tbody>
                                         </table>
                                     <?php else: ?>
-                                        <p>Bạn cần đăng nhập !!!</p>
+                                        <p>Bạn cần <a href="index.php?user=login-user" class="text-success">đăng nhập</a> !!!</p>
                                     <?php endif; ?>
                                 </div>
                                 <div class="row mb-5">

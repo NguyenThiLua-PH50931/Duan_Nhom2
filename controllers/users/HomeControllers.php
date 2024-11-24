@@ -35,18 +35,22 @@ class HomeController
         }
 
         if (isset($_POST['addWishlist'])) {
-            $id_tk = $_SESSION['id_tk'];
-            $id_sp = $_POST['id_sp'];
-            $result = (new WishlistModel)->addWishlist($id_tk, $id_sp);
-            // debug($result['id_yeuthich']);
-            if (!empty($result)) {
-                $_SESSION['thongBao'] = '<div class="cr-cart-notify"><p class="compare-note">Đã có sản phẩm trong<a href="index.php?user=wishlist"> Wishlist</a> Successfully!</p></div>';
-                header('Location: index.php?user=home');
+            if (!isset($_SESSION['id_tk'])) {
+                header('Location: index.php?user=login-user');
                 exit();
             } else {
-                $_SESSION['successWishlist'] = '<div class="cr-cart-notify"><p class="compare-note">Add product in <a href="index.php?user=wishlist"> Wishlist</a> Successfully!</p></div>';
-                header('Location: index.php?user=home');
-                exit();
+                $id_tk = $_SESSION['id_tk'];
+                $id_sp = $_POST['id_sp'];
+                $result = (new WishlistModel)->addWishlist($id_tk, $id_sp);
+                if (!empty($result)) {
+                    $_SESSION['thongBao'] = '<div class="cr-cart-notify"><p class="compare-note">Đã có sản phẩm trong<a href="index.php?user=wishlist"> Wishlist</a> Successfully!</p></div>';
+                    header('Location: index.php?user=detail-product&id_sp=' . $id_sp);
+                    exit();
+                } else {
+                    $_SESSION['successWishlist'] = '<div class="cr-cart-notify"><p class="compare-note">Add product in <a href="index.php?user=wishlist"> Wishlist</a> Successfully!</p></div>';
+                    header('Location: index.php?user=detail-product&id_sp=' . $id_sp);
+                    exit();
+                }
             }
         }
 

@@ -83,7 +83,7 @@ if (!empty($user)) {
         'addCart' => (new CartControllers())->addCart(),
         'deleteCart' => (new CartControllers())->deleteCart(),
         'wishlist' => (new WishlistController())->wishlist(),
-        // 'addWishlist' => (new WishlistController())->addWishlist(),
+        'deleteWishlist' => (new WishlistController())->deleteWishlist(),
         default => die("Không tìm thấy file"),
     };
 }

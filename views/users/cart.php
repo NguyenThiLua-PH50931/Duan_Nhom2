@@ -114,7 +114,7 @@
                                     <div class="col-lg-12">
                                         <div class="cr-cart-update-bottom">
                                             <a href="index.php?user=shop" class="cr-links">Continue Shopping</a>
-                                            <a href="cart.html" class="cr-button">
+                                            <a href="index.php?user=getShipping" class="cr-button">
                                                 Check Out
                                             </a>
                                         </div>

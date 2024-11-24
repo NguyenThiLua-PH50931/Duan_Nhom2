@@ -303,8 +303,6 @@
     <?php include_once "views/users/layout/tap-top.php" ?>
     <!-- Model -->
     <?php include_once "views/users/layout/model.php" ?>
-    <!-- Cart -->
-    <?php include_once "views/users/layout/cart.php" ?>
     <!-- Side-tool -->
     <?php include_once "views/users/layout/side-tool.php" ?>
     <!-- Vendor Custom -->

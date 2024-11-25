@@ -66,6 +66,7 @@
                         <form class="cr-content-form" method="POST" enctype="multipart/form-data" action="index.php?user=login-user">
                             <div class="form-group">
                                 <label>Username</label>
+<<<<<<< HEAD
                                 <input type="text" placeholder="Enter Your Username" class="cr-form-control" name="ten_tk"
                                 required pattern="[A-Za-z0-9_]{3,20}"
                                 title="Tên tài khoản chỉ chứa chữ cái, số, hoặc dấu gạch dưới, từ 3 đến 20 ký tự."> 
@@ -75,6 +76,13 @@
                                 <label>Password*</label>
                                 <input type="password" placeholder="Enter Your password" class="cr-form-control" name="mat_khau" value="" required minlength="6"
                                 title="Mật khẩu phải có ít nhất 6 ký tự.">
+=======
+                                <input type="text" placeholder="Enter Your Username" class="cr-form-control" name="ten_tk">
+                            </div>
+                            <div class="form-group">
+                                <label>Password*</label>
+                                <input type="password" placeholder="Enter Your password" class="cr-form-control" name="mat_khau" value="" required>
+>>>>>>> 3f4624e7f81c6fdd921ca931283702c859835fb9
                             </div>
                             <div class="remember">
                                 <span class="form-group custom">

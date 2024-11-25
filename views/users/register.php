@@ -3,9 +3,14 @@
 
 
 <!-- Mirrored from maraviyainfotech.com/projects/carrot/carrot-v21/carrot-html/register.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Nov 2024 15:30:26 GMT -->
+<<<<<<< HEAD
 
 <head>
     <?php include_once "views/users/layout/linkCss.php" ?>
+=======
+<head>
+<?php include_once "views/users/layout/linkCss.php" ?>
+>>>>>>> 3f4624e7f81c6fdd921ca931283702c859835fb9
 </head>
 
 <body class="body-bg-6">
@@ -17,7 +22,11 @@
 
     <!-- Header -->
     <header>
+<<<<<<< HEAD
         <?php include_once "views/users/layout/header.php" ?>
+=======
+    <?php include_once "views/users/layout/header.php" ?>
+>>>>>>> 3f4624e7f81c6fdd921ca931283702c859835fb9
     </header>
 
     <!-- Mobile menu -->
@@ -61,11 +70,16 @@
                     <div class="cr-register" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="400">
                         <div class="form-logo">
                             <!-- <img src="assets/users/img/logo/logo.png" alt="logo"> -->
+<<<<<<< HEAD
                             <h3>Đăng ký</h3>
+=======
+                             <h3>Đăng ký</h3>
+>>>>>>> 3f4624e7f81c6fdd921ca931283702c859835fb9
                         </div>
                         <form class="cr-content-form" method="post">
                             <div class="row">
                                 <div class="col-12 col-sm-6">
+<<<<<<< HEAD
                                     <div class="form-group">
                                         <label>Tên tài khoản</label>
                                         <input type="text" placeholder="Nhập họ" class="cr-form-control" name="ten_tk"
@@ -79,33 +93,58 @@
                                         <input type="password" placeholder="Nhập mật khẩu" class="cr-form-control" name="mat_khau"
                                             required minlength="6"
                                             title="Mật khẩu phải có ít nhất 6 ký tự.">
+=======
+                                    <div class="form-group" >
+                                        <label>Tên tài khoản</label>
+                                        <input type="text" placeholder="Nhập họ" class="cr-form-control" name="ten_tk">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group" >
+                                        <label>Mật khẩu</label>
+                                        <input type="password" placeholder="Nhập mật khẩu" class="cr-form-control" name="mat_khau">
+>>>>>>> 3f4624e7f81c6fdd921ca931283702c859835fb9
                                     </div>
                                 </div>
                                 <div class="col-12 col-sm-6">
                                     <div class="form-group">
                                         <label>Họ và tên</label>
+<<<<<<< HEAD
                                         <input type="text" placeholder="Nhập tên" class="cr-form-control" name="ho_ten"
                                             required pattern="[A-Za-zÀ-ỹ\s]{3,50}"
                                             title="Họ và tên chỉ chứa chữ cái và khoảng trắng, từ 3 đến 50 ký tự.">
+=======
+                                        <input type="text" placeholder="Nhập tên" class="cr-form-control" name="ho_ten">
+>>>>>>> 3f4624e7f81c6fdd921ca931283702c859835fb9
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group">
                                         <label>Email*</label>
+<<<<<<< HEAD
                                         <input type="email" placeholder="Nhập email" class="cr-form-control" name="email" required>
+=======
+                                        <input type="email" placeholder="Nhập email" class="cr-form-control" name="email">
+>>>>>>> 3f4624e7f81c6fdd921ca931283702c859835fb9
                                     </div>
                                 </div>
                                 <div class="col-12 col-sm-6">
                                     <div class="form-group">
                                         <label>Số điện thoại</label>
+<<<<<<< HEAD
                                         <input type="text" placeholder="Số điện thoại" class="cr-form-control" name="so_dt"
                                             required pattern="\d{10,11}"
                                             title="Số điện thoại chỉ chứa số và có độ dài 10-11 ký tự.">
+=======
+                                        <input type="text" placeholder="Số điện thoại"
+                                            class="cr-form-control" name="so_dt">
+>>>>>>> 3f4624e7f81c6fdd921ca931283702c859835fb9
                                     </div>
                                 </div>
                                 <div class="col-12 col-sm-6">
                                     <div class="form-group">
                                         <label>Địa chỉ</label>
+<<<<<<< HEAD
                                         <input type="text" placeholder="Nhập địa chỉ" class="cr-form-control" name="dia_chi" required>
                                     </div>
                                 </div>
@@ -113,11 +152,24 @@
                                     <button type="submit" class="cr-button" name="dangky">Đăng ký</button>
                                     <a href="index.php?user=login-user" class="link">
                                         Bạn đã có tài khoản.
+=======
+                                        <input type="text" placeholder="Nhập địa chỉ" class="cr-form-control" name="dia_chi">
+                                    </div>
+                                </div>
+                              
+                                <div class="cr-register-buttons">
+                                    <button type="submit" class="cr-button" name="dangky">Đăng ký</button>
+                                    <a href="index.php?user=login-user" class="link">
+                                       Bạn đã có tài khoản.
+>>>>>>> 3f4624e7f81c6fdd921ca931283702c859835fb9
                                     </a>
                                 </div>
                             </div>
                         </form>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3f4624e7f81c6fdd921ca931283702c859835fb9
                     </div>
                 </div>
             </div>
@@ -138,7 +190,11 @@
     <!-- Side-tool -->
     <?php include_once "views/users/layout/side-tool.php" ?>
 
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 3f4624e7f81c6fdd921ca931283702c859835fb9
     <!-- Vendor Custom -->
     <script src="assets/users/js/vendor/jquery-3.6.4.min.js"></script>
     <?php include_once "views/users/layout/script.php" ?>
@@ -147,5 +203,8 @@
 
 
 <!-- Mirrored from maraviyainfotech.com/projects/carrot/carrot-v21/carrot-html/register.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Nov 2024 15:30:26 GMT -->
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3f4624e7f81c6fdd921ca931283702c859835fb9
 </html>

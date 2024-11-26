@@ -4,26 +4,50 @@ class LoginController
     public function loginUser()
     {
         $category = (new CategoryModels)->all();
-
-        if ($_SERVER['REQUEST_METHOD'] == "POST") {
+        // Khởi tạo thông báo lỗi cho từng trường
+        $err_message = [
+            'ten_tk' => '',
+            'mat_khau' => ''
+        ];
+    
+        if ($_SERVER['REQUEST_METHOD'] === "POST") {
             $data = $_POST;
-            // debug($data);
-            $acc = (new LoginModels)->getLoginUser();
-
-            foreach ($acc as $value) {
-                // debug($data['ten_tk']);
-                if ($value['ten_tk'] == $data['ten_tk'] && $value['mat_khau'] == $data['mat_khau']) {
-                    $_SESSION['nameAccount'] = $value['ho_ten'];
-                    $_SESSION['id_tk'] = $value['id_tk'];
-                    header("location:index.php?user=home");
-                } else {
-                    echo "Sai thông tin";
+    
+            // Kiểm tra đầu vào
+            if (empty($data['ten_tk'])) {
+                $err_message['ten_tk'] = "Tên tài khoản không được để trống";
+            } elseif (empty($data['mat_khau'])) {
+                $err_message['mat_khau'] = "Mật khẩu không được để trống";
+            } else {
+                // Lấy dữ liệu tài khoản từ model
+                $accounts = (new LoginModels)->getLoginUser();
+                $isLoginSuccessful = false;
+    
+                foreach ($accounts as $account) {
+                    // Kiểm tra thông tin đăng nhập
+                    if ($account['ten_tk'] === $data['ten_tk'] && password_verify($data['mat_khau'], $account['mat_khau'])) {
+                        // Lưu thông tin vào session
+                        $_SESSION['nameAccount'] = $account['ho_ten'];
+                        $_SESSION['id_tk'] = $account['id_tk'];
+                        $isLoginSuccessful = true;
+                        $_SESSION['message'] = "Đăng nhập thành công";
+                        header("Location: index.php?user=home");
+                        exit; // Thoát để tránh thực hiện thêm đoạn mã phía sau
+                    }
+                }
+    
+                if (!$isLoginSuccessful) {
+                    $err_message['mat_khau'] = "Tên tài khoản hoặc mật khẩu không chính xác";
                 }
             }
-            $_SESSION['message'] = "Đăng nhập thành công";
         }
-        return view('users/login', ['category' => $category]);
+    
+        // Trả về view kèm thông báo lỗi
+        return view('users/login', ['category' => $category, 'err_message' => $err_message]);
     }
+    
+
+
     public function logoutUser()
     {
         if (isset($_SESSION['nameAccount'])) {

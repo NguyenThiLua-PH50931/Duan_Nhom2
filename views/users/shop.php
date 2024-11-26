@@ -115,7 +115,9 @@
                                                 <i class="ri-shopping-bag-line"></i>
                                             </a>
                                         </div>
-                                        <div class="cr-product-details">                                                                           
+                                        <div class="cr-product-details">   
+                                        <div class="cr-brand">
+                                            </div>                                                                        
                                             <a href="index.php?user=detail-product&id_sp=<?= $product['id_sp'] ?>" class="title">
                                                 <?= $product['ten_sp'] ?>
                                             </a>

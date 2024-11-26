@@ -51,43 +51,43 @@
                             <div class="slider slider-for">
                                 <div class="slider-banner-image">
                                 <div class="zoom-image-hover">
-                                        <img src="assets/users/img/product/1732546425_Nike-Air-Jordan-1-Low-Shattered-Backboard5-1.jpg" alt="product-tab-1"
+                                        <img src="<?=$product['anh_sp']?>" alt="product-tab-1"
                                             class="product-image">
                                     </div>
                                 </div>
                                 <div class="slider-banner-image">
                                     <div class="zoom-image-hover">
-                                        <img src="assets/users/img/product/1732546554_resize.jpg" alt="product-tab-2"
+                                        <img src="" alt="product-tab-2"
                                             class="product-image">
                                     </div>
                                 </div>
                                 <div class="slider-banner-image">
                                     <div class="zoom-image-hover">
-                                        <img src="assets/users/img/product/images (1).jpg" alt="product-tab-3"
+                                        <img src="" alt="product-tab-3"
                                             class="product-image">
                                     </div>
                                 </div>
                                 <div class="slider-banner-image">
                                     <div class="zoom-image-hover">
-                                        <img src="assets/users/img/product/vn-11134207-7r98o-lx2mwrh6eyu323.jpg" alt="product-tab-1"
+                                        <img src="" alt="product-tab-1"
                                             class="product-image">
                                     </div>
                                 </div>
                                 <div class="slider-banner-image">
                                     <div class="zoom-image-hover">
-                                        <img src="assets/users/img/product/giay-mlb-chunky-a-new-york-yankees-ivoryyy-1.jpg" alt="product-tab-2"
+                                        <img src="" alt="product-tab-2"
                                             class="product-image">
                                     </div>
                                 </div>
                                 <div class="slider-banner-image">
                                     <div class="zoom-image-hover">
-                                        <img src="assets/users/img/product/1732543568_z3550698796715-8daca0c2d6cf2abcb81494973beb6a06-1127-750x750.jpg" alt="product-tab-3"
+                                        <img src="" alt="product-tab-3"
                                             class="product-image">
                                     </div>
                                 </div>
                                 <div class="slider-banner-image">
                                     <div class="zoom-image-hover">
-                                        <img src="assets/users/img/product/1732183706_nike-af1-low-white-brown-1-800x800.jpg" alt="product-tab-1"
+                                        <img src="" alt="product-tab-1"
                                             class="product-image">
                                     </div>
                                 </div>
@@ -101,37 +101,37 @@
                             <div class="slider slider-nav thumb-image">
                                 <div class="thumbnail-image">
                                     <div class="thumbImg">
-                                        <img src="assets/users/img/product/1732546425_Nike-Air-Jordan-1-Low-Shattered-Backboard5-1.jpg" alt="product-tab-1">
+                                        <img src="" alt="product-tab-1">
                                     </div>
                                 </div>
                                 <div class="thumbnail-image">
                                     <div class="thumbImg">
-                                        <img src="assets/users/img/product/1732546554_resize.jpg" alt="product-tab-2">
+                                        <img src="" alt="product-tab-2">
                                     </div>
                                 </div>
                                 <div class="thumbnail-image">
                                     <div class="thumbImg">
-                                        <img src="assets/users/img/product/images (1).jpg" alt="product-tab-3">
+                                        <img src="" alt="product-tab-3">
                                     </div>
                                 </div>
                                 <div class="thumbnail-image">
                                     <div class="thumbImg">
-                                        <img src="assets/users/img/product/vn-11134207-7r98o-lx2mwrh6eyu323.jpg" alt="product-tab-1">
+                                        <img src="" alt="product-tab-1">
                                     </div>
                                 </div>
                                 <div class="thumbnail-image">
                                     <div class="thumbImg">
-                                        <img src="assets/users/img/product/giay-mlb-chunky-a-new-york-yankees-ivoryyy-1.jpg" alt="product-tab-2">
+                                        <img src="" alt="product-tab-2">
                                     </div>
                                 </div>
                                 <div class="thumbnail-image">
                                     <div class="thumbImg">
-                                        <img src="assets/users/img/product/1732543568_z3550698796715-8daca0c2d6cf2abcb81494973beb6a06-1127-750x750.jpg" alt="product-tab-3">
+                                        <img src="" alt="product-tab-3">
                                     </div>
                                 </div>
                                 <div class="thumbnail-image">
                                     <div class="thumbImg">
-                                        <img src="assets/users/img/product/1732183706_nike-af1-low-white-brown-1-800x800.jpg" alt="product-tab-1">
+                                        <img src="" alt="product-tab-1">
                                     </div>
                                 </div>
                               
@@ -140,6 +140,7 @@
                     </div>
                 </div>
                 <div class="col-xxl-8 col-xl-7 col-md-6 col-12 mb-24">
+                   
                     <div class="cr-size-and-weight-contain">
                         <h2 class="heading"><?= $product['ten_sp'] ?></h2>
                     </div>
@@ -388,7 +389,7 @@
                                                     <p>(4.5)</p>
                                                 </div>
                                             </div>
-                                            <a href="product-left-sidebar.html" class="title"><?= $value['ten_sp'] ?></a>
+                                            <a href="index.php?user=detail-product&id_sp=<?=$value['id_sp']?>" class="title"><?= $value['ten_sp'] ?></a>
                                             <p class="cr-price"><span class="new-price"></span> <?= $value['gia_tien'] ?><span
                                                     class="old-price"><?= $value['gia_km'] ?></span></p>
 

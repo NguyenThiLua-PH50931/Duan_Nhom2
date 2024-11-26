@@ -71,22 +71,32 @@
                                                             <?= $dm['ten_dm'] ?>
                                                         </option>
                                                     <?php endforeach ?>
-
+                                                        
                                                 </select>
                                             </div>
                                             <div class="col-md-6">
                                                 <label for="ten_sp" class="form-label">Tên sản phẩm</label>
-                                                <input type="text" class="form-control slug-title" id="ten_sp" name="ten_sp">
+                                                <input type="text" class="form-control slug-title" id="ten_sp" name="ten_sp" value="<?= htmlspecialchars($data['ten_sp'] ?? '') ?>">
+                                                <?php if (!empty($err_message['ten_sp'])): ?>
+                                                    <small style="color: red;"><?= $err_message['ten_sp'] ?></small>
+                                                <?php endif; ?>
+
                                             </div>
 
                                             <div class="col-md-6">
                                                 <label class="form-label">Giá tiền <span>
                                                     </span></label>
-                                                <input type="number" class="form-control" id="gia_tien" name="gia_tien">
+                                                <input type="number" class="form-control" id="gia_tien" name="gia_tien" value="<?= htmlspecialchars($data['gia_tien'] ?? '') ?>">
+                                                <?php if (!empty($err_message['gia_tien'])): ?>
+                                                    <small style="color: red;"><?= $err_message['gia_tien'] ?></small>
+                                                <?php endif; ?>
                                             </div>
                                             <div class="col-md-6">
                                                 <label for="soluong_ton" class="form-label">Số lượng tồn</label>
-                                                <input type="number" class="form-control slug-title" id="soluong_ton" name="soluong_ton">
+                                                <input type="number" class="form-control slug-title" id="soluong_ton" name="soluong_ton"  value="<?= htmlspecialchars($data['soluong_ton'] ?? '') ?>">
+                                                <?php if (!empty($err_message['soluong_ton'])): ?>
+                                                    <small style="color: red;"><?= $err_message['soluong_ton'] ?></small>
+                                                <?php endif; ?>
                                             </div>
                                             <div class="col-md-12">
                                                 <label class="mo_ta">Mô tả</label>
@@ -94,7 +104,10 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <label for="anh_sp" class="form-label">Ảnh sản phẩm</label>
-                                                <input type="file" class="form-control slug-title" id="anh_sp" name="anh_sp">
+                                                <input type="file" class="form-control slug-title" id="anh_sp" name="anh_sp"  value="<?= htmlspecialchars($data['anh_sp'] ?? '') ?>">
+                                                <?php if (!empty($err_message['anh_sp'])): ?>
+                                                    <small style="color: red;"><?= $err_message['anh_sp'] ?></small>
+                                                <?php endif; ?>
                                             </div>
 
 

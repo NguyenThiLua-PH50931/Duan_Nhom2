@@ -5,6 +5,17 @@
 <head>
     <?php include_once "views/admin/layout/linkCss.php" ?>
 </head>
+<style>
+    table {
+        margin-top: 15px;
+        padding: 20px;
+        width: 70%;
+
+    }
+    th{
+        font-weight: bold;
+    }
+</style>
 
 <body>
     <main class="wrapper sb-default">
@@ -40,7 +51,9 @@
                                 <div class="table-responsive">
                                     <h5 style="text-align:center">Accounts List</h5>
                                     <form action="" method="post" enctype="multipart/form-data">
-                                        <table id="product_list" class="table" style="width:100%">
+
+                                        <table id="" class="table table-hover">
+                                            <a href="index.php?admin=add-accounts" class="cr-btn default-btn color-success" style="width: 120px;">Thêm mới</a>
                                             <thead>
                                                 <tr>
                                                     <th>Tên tài khoản</th>
@@ -91,10 +104,6 @@
                                 </td>
                                 </tr>
                             <?php endforeach ?>
-
-
-
-
                             </tr>
                             </tbody>
                             </table>
@@ -104,7 +113,6 @@
                     </div>
                 </div>
             </div>
-        </div>
         </div>
 
         <!-- Footer -->

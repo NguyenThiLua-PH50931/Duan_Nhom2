@@ -63,18 +63,23 @@
                             <!-- <img src="assets/users/img/logo/logo.png" alt="logo"> -->
                             <h3>Đăng nhập</h3>
                         </div>
+
                         <form class="cr-content-form" method="POST" enctype="multipart/form-data" action="index.php?user=login-user">
                             <div class="form-group">
                                 <label>Username</label>
                                 <input type="text" placeholder="Enter Your Username" class="cr-form-control" name="ten_tk"
-                                required pattern="[A-Za-z0-9_]{3,20}"
-                                title="Tên tài khoản chỉ chứa chữ cái, số, hoặc dấu gạch dưới, từ 3 đến 20 ký tự."> 
-                                 <!-- pattern: biểu thức chính quy -->
+                                    value="<?= htmlspecialchars($_POST['ten_tk'] ?? '') ?>">
+                                <?php if (!empty($err_message['ten_tk'])): ?>
+                                    <small style="color: red;"><?= $err_message['ten_tk'] ?></small>
+                                <?php endif; ?>
                             </div>
                             <div class="form-group">
                                 <label>Password*</label>
-                                <input type="password" placeholder="Enter Your password" class="cr-form-control" name="mat_khau" value="" required minlength="6"
-                                title="Mật khẩu phải có ít nhất 6 ký tự.">
+                                <input type="password" placeholder="Enter Your password" class="cr-form-control" name="mat_khau"
+                                    value="<?= htmlspecialchars($_POST['mat_khau'] ?? '') ?>">
+                                <?php if (!empty($err_message['mat_khau'])): ?>
+                                    <small style="color: red;"><?= $err_message['mat_khau'] ?></small>
+                                <?php endif; ?>
                             </div>
                             <div class="form-group">
                             </div>

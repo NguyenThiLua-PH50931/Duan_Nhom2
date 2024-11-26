@@ -11,16 +11,37 @@ class CategoryController
     // Thêm mới sản phẩm:
     public function addCategory()
     {
+        $err_message = [
+            'ten_dm' => ''
+        ];
+
         if ($_SERVER['REQUEST_METHOD'] == "POST") {
             $data = $_POST;
-            (new CategoryModels)->insert($data);
-            $_SESSION['message'] = "Thêm danh mục thành công";
-            header("location: index.php?admin=list-category");
-            exit();
+
+            // Kiểm tra trống
+            if (empty($data['ten_dm'])) {
+                $err_message['ten_dm'] = 'Tên danh mục không được để trống';
+            } else {
+                // Kiểm tra trùng lặp
+                $existingCategory = (new CategoryModels)->findByName($data['ten_dm']);
+                if ($existingCategory) {
+                    $err_message['ten_dm'] = 'Tên danh mục đã tồn tại. Vui lòng điền tên danh mục khác';
+                }
+            }
+
+            // Nếu không có lỗi, thêm danh mục
+            if (empty(array_filter($err_message))) {
+                (new CategoryModels)->insert($data);
+                $_SESSION['message'] = "Thêm danh mục thành công";
+                header("location: index.php?admin=list-category");
+                exit();
+            }
         }
-        //render view
-        return view("admin/category/add-category");
+
+        // Hiển thị form với thông báo lỗi (nếu có)
+        return view("admin/category/add-category", ['err_message' => $err_message]);
     }
+
 
     // Xóa sản phẩm:
 

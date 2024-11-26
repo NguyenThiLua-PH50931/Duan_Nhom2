@@ -1,5 +1,4 @@
 <?php
-// require_once 'database/function.php';
 class Auth extends Database
 {
     public $db;

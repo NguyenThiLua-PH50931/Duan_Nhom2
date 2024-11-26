@@ -64,6 +64,7 @@ if (!empty($admin)) {
         // Tài khoản:
         'list-accounts' => (new AccountsController)->listAccounts(),
         'delete-accounts' => (new AccountsController)->deleteAccounts(),
+        'add-accounts' => (new AccountsController)->addAccounts(),
         // Đăng nhập
         'login' => (new AuthController())->login(),
         'logout' => (new AuthController())->logout(),
@@ -93,3 +94,5 @@ if (!empty($user)) {
         default => die("Không tìm thấy file"),
     };
 }
+
+

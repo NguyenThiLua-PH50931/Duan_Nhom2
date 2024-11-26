@@ -65,7 +65,10 @@
 
                                             <div class="col-md-6">
                                                 <label for="ten_sp" class="form-label">Tên danh mục</label>
-                                                <input type="text" class="form-control slug-title" name="ten_dm">
+                                                <input type="text" class="form-control slug-title" name="ten_dm" value="<?= htmlspecialchars($_POST['ten_dm'] ?? '') ?>">
+                                                <?php if (!empty($err_message['ten_dm'])): ?>
+                                                    <small style="color: red;"><?= $err_message['ten_dm'] ?></small>
+                                                    <?php endif; ?>
                                             </div>
                                             <div class="col-md-12">
                                                 <button type="submit" class="btn cr-btn-primary" value="Thêm mới">Thêm mới</button>

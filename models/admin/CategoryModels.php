@@ -103,4 +103,13 @@ class CategoryModels
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    // Kiểm tra danh mục bị trùng lặp:
+    public function findByName($ten_dm)
+    {
+        $sql = "SELECT * FROM danh_muc WHERE ten_dm = :ten_dm";
+        $stmt = $this->db->pdo->prepare($sql);
+        $stmt->execute(['ten_dm' => $ten_dm]);
+        return $stmt->fetch(); // Trả về danh mục nếu tồn tại
+    }
 }

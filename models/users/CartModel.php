@@ -78,4 +78,16 @@ class CartModel
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
+    public function updateCart($id_giohang_chitiet, $so_luong)
+    {
+        $query = "UPDATE gio_hang_chi_tiet SET so_luong = :so_luong WHERE id_giohang_chitiet = :id_giohang_chitiet";
+        $stmt = $this->db->pdo->prepare($query);
+        $stmt->bindParam(':so_luong', $so_luong, PDO::PARAM_INT);
+        $stmt->bindParam(':id_giohang_chitiet', $id_giohang_chitiet, PDO::PARAM_INT);
+        $stmt->execute();
+    }
+    
+    
+    
+
 }

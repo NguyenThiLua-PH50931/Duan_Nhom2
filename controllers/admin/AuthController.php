@@ -31,7 +31,6 @@ class AuthController
             if (empty($err_message['ten_tk']) && empty($err_message['mat_khau'])) {
                 // 2. Loại bỏ ký tự đặc biệt (ngăn XSS)
                 $username = htmlspecialchars(trim($data['ten_tk']));
-                $password = trim($data['mat_khau']); // Không cần htmlspecialchars() ở đây
     
                 // 3. Lấy thông tin từ cơ sở dữ liệu
                 $auth = new Auth();
@@ -40,7 +39,7 @@ class AuthController
                 // 4. Xác minh tài khoản và mật khẩu
                 $is_valid = false; // Biến kiểm tra xác thực
                 foreach ($acc as $value) {
-                    if ($value['ten_tk'] === $username && password_verify($password, $value['mat_khau'])) {
+                    if ($value['ten_tk'] === $username && $value['mat_khau'] === $data['mat_khau']) {
                         $is_valid = true;
                         // Lưu thông tin vào session và chuyển hướng
                         $_SESSION['nameAccount'] = $value['ho_ten'];

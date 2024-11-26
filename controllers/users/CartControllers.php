@@ -29,10 +29,13 @@ class CartControllers
         if (isset($_POST['update_cart'])) {
             // Duyệt qua từng sản phẩm và cập nhật số lượng
             // debug($_POST);
-            if ($_POST['so_luong'] > 0) {
-                // Cập nhật số lượng trong giỏ hàng
-                $cartModel = new CartModel();
-                $cartModel->updateCart($_POST['id_giohang_chitiet'], $_POST['so_luong']);
+            foreach ($_POST['id_giohang_chitiet'] as $key => $value) {
+                $newSL = $_POST['so_luong'][$key];
+                if ($newSL > 0) {
+                    // Cập nhật số lượng trong giỏ hàng
+                    $cartModel = new CartModel();
+                    $cartModel->updateCart($value, $newSL);
+                }
             }
 
             // Sau khi cập nhật, chuyển hướng lại giỏ hàng

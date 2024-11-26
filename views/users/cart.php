@@ -76,7 +76,7 @@
                                             </thead>
                                             <tbody>
                                                 <?php foreach ($cart as $value): ?>
-                                                    <input type="hidden" name="id_giohang_chitiet" value="<?=$value['id_giohang_chitiet']?>">
+                                                    <input type="hidden" name="id_giohang_chitiet[]" value="<?=$value['id_giohang_chitiet']?>">
                                                     <tr>
                                                         <td class="cr-cart-name">
                                                             <a href="javascript:void(0)">
@@ -90,7 +90,7 @@
                                                         <td class="cr-cart-qty">
                                                             <div class="cart-qty-plus-minus">
                                                                 <!-- Input number để thay đổi số lượng -->
-                                                                <input type="number" name="so_luong" value="<?= $value['so_luong'] ?>" min="1" class="quantity">
+                                                                <input type="number" name="so_luong[]" value="<?= $value['so_luong'] ?>" min="1" class="quantity">
                                                             </div>
                                                         </td>
                                                         <td class="cr-cart-subtotal">

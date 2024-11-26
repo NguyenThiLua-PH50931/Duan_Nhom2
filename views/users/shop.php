@@ -74,6 +74,7 @@
                                         ?>
                                         sản phẩm!</span>
                                 </div>
+                                <!-- Lọc sản phẩm theo giá -->
 
                                 <div class="cr-select">
                                     <!-- Form lọc sản phẩm -->
@@ -174,8 +175,6 @@
 
 
     <!-- Cart -->
-    <?php include_once "views/users/layout/cart.php" ?>
-
 
     <!-- Side-tool -->
     <?php include_once "views/users/layout/side-tool.php" ?>

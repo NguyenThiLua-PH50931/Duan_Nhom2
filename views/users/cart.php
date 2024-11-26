@@ -60,14 +60,15 @@
                 <div class="col-12">
                     <div class="cr-cart-content" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="400">
                         <div class="row">
-                            <form action="#">
+                            <form action="index.php?user=updateCart" method="POST">
                                 <div class="cr-table-content">
                                     <?php if (!empty($_SESSION['id_tk'])): ?>
+                                        <!-- <form > -->
                                         <table>
                                             <thead>
                                                 <tr>
                                                     <th>Product</th>
-                                                    <th>price</th>
+                                                    <th>Price</th>
                                                     <th class="text-center">Quantity</th>
                                                     <th>Total</th>
                                                     <th>Action</th>
@@ -75,30 +76,28 @@
                                             </thead>
                                             <tbody>
                                                 <?php foreach ($cart as $value): ?>
+                                                    <input type="hidden" name="id_giohang_chitiet" value="<?=$value['id_giohang_chitiet']?>">
                                                     <tr>
                                                         <td class="cr-cart-name">
                                                             <a href="javascript:void(0)">
-                                                                <img src="<?= $value['anh_sp'] ?>" width="150px" alt="product-1"
-                                                                    class="cr-cart-img">
+                                                                <img src="<?= $value['anh_sp'] ?>" width="150px" alt="product-1" class="cr-cart-img">
                                                                 <?= $value['ten_sp'] ?>
                                                             </a>
                                                         </td>
                                                         <td class="cr-cart-price">
-                                                            <span class="amount"><?= $value['gia_tien'] ?>VNĐ</span>
+                                                            <span class="amount"><?= number_format($value['gia_tien'], 0, ',', '.') ?> VNĐ</span>
                                                         </td>
                                                         <td class="cr-cart-qty">
                                                             <div class="cart-qty-plus-minus">
-                                                                <button type="button" class="plus">+</button>
-                                                                <input type="text" placeholder="."
-                                                                    value="<?= $value['so_luong'] ?>" minlength="1"
-                                                                    maxlength="20" class="quantity">
-                                                                <button type="button" class="minus">-</button>
+                                                                <!-- Input number để thay đổi số lượng -->
+                                                                <input type="number" name="so_luong" value="<?= $value['so_luong'] ?>" min="1" class="quantity">
                                                             </div>
                                                         </td>
-                                                        <td class="cr-cart-subtotal"><?= $total ?> VNĐ</td>
+                                                        <td class="cr-cart-subtotal">
+                                                            <?= number_format($value['so_luong'] * $value['gia_tien'], 0, ',', '.') ?> VNĐ
+                                                        </td>
                                                         <td class="cr-cart-remove">
-                                                            <a onclick="return confirm('Bạn có chắc muốn xóa ?')"
-                                                                href="index.php?user=deleteCart&id_giohang_chitiet=<?= $value['id_giohang_chitiet'] ?>">
+                                                            <a onclick="return confirm('Bạn có chắc muốn xóa ?')" href="index.php?user=deleteCart&id_giohang_chitiet=<?= $value['id_giohang_chitiet'] ?>">
                                                                 <i class="ri-delete-bin-line"></i>
                                                             </a>
                                                         </td>
@@ -106,10 +105,17 @@
                                                 <?php endforeach; ?>
                                             </tbody>
                                         </table>
+                                        <!-- Nút gửi form để cập nhật giỏ hàng -->
+                                        <div class="cr-cart-update-bottom">
+                                            <button type="submit" name="update_cart" class="cr-button">Update Cart</button>
+                                        </div>
+                                        <!-- </form> -->
                                     <?php else: ?>
                                         <p>Bạn cần <a href="index.php?user=login-user" class="text-success">đăng nhập</a> !!!</p>
                                     <?php endif; ?>
                                 </div>
+
+
                                 <div class="row mb-5">
                                     <div class="col-lg-12">
                                         <div class="cr-cart-update-bottom">

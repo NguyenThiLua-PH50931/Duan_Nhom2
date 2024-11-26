@@ -83,6 +83,7 @@ if (!empty($user)) {
         'filter' => (new HomeController())->filter(),
         'shop' => (new ProductControllers())->shop(),
         'cart' => (new CartControllers())->viewCart(),
+        'updateCart' => (new CartControllers())->updateCart(),
         'addCart' => (new CartControllers())->addCart(),
         'deleteCart' => (new CartControllers())->deleteCart(),
         'wishlist' => (new WishlistController())->wishlist(),

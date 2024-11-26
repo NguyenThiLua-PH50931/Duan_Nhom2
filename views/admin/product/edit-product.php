@@ -95,7 +95,7 @@
                                             <div class="col-md-6">
                                                 <label for="anh_sp" class="form-label">Ảnh sản phẩm</label>
                                                 <input type="file" class="form-control slug-title" id="anh_sp" name="anh_sp">
-                                                <img src="images/<?= $product['anh_sp'] ?>" width="170px" style="margin-top: 10px">
+                                                <img src="<?= $product['anh_sp'] ?>" width="170px" style="margin-top: 10px">
                                             </div>
                                             <input type="hidden" name="id_sp" value="<?= $product['id_sp'] ?>">
 

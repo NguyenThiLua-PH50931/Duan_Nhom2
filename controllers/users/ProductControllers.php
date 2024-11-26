@@ -3,18 +3,18 @@ class ProductControllers
 {
     public function shop()
     {
+        // Lấy danh mục sản phẩm
         $category = (new CategoryModels)->all();
-        $id_dm = $_GET['id_dm'] ?? '';
-        $keyword = $_POST['keyword'] ?? '';
 
-        if ($id_dm) {
-            $products = (new CategoryModels())->productByCategory($id_dm);
-            // debug($products);
-        } elseif ($keyword) {
-            $products = (new ProductModel())->search($keyword);
-            // debug($products);
+        // Lấy giá trị `sort` từ URL hoặc mặc định
+        $sort = isset($_GET['sort']) ? $_GET['sort'] : '';
+
+        if (!empty($sort)) {
+            // Nếu có tham số `sort`, lọc sản phẩm theo giá
+            $products = (new ProductModel)->getProductsBySort($sort);
         } else {
-            $products = (new ProductModels)->getAllProducts(); // Lấy tất cả sản phẩm
+            // Nếu không có tham số `sort`, lấy toàn bộ sản phẩm
+            $products = (new ProductModels)->getAllProducts();
         }
 
         if (isset($_POST['addWishlist'])) {
@@ -31,6 +31,9 @@ class ProductControllers
                 exit();
             }
         }
+    // var_dump($products);
+    // exit;
+
         view("users/shop", ['products' => $products, 'category' => $category]);
     }
 }

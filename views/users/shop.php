@@ -62,9 +62,6 @@
                         <div class="col-12">
                             <div class="cr-shop-bredekamp">
                                 <div class="cr-toggle">
-                                    <a href="javascript:void(0)" class="shop_side_view">
-                                        <i class="ri-filter-line"></i>
-                                    </a>
                                     <a href="javascript:void(0)" class="gridCol active-grid">
                                         <i class="ri-grid-line"></i>
                                     </a>
@@ -77,62 +74,62 @@
                                         ?>
                                         sản phẩm!</span>
                                 </div>
+
                                 <div class="cr-select">
-                                    <label>Sort By :</label>
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option selected>Sản phẩm mới</option>
-                                        <option value="1">Sản phẩm cũ</option>
-                                        <option value="2">Giá tăng dần</option>
-                                        <option value="2">Giá giảm dần</option>
-                                    </select>
+                                    <!-- Form lọc sản phẩm -->
+                                    <form action="" method="get">
+                                        <input type="hidden" name="user" value="shop">
+                                        <select name="sort" id="sort" onchange="this.form.submit()">
+                                            <option value="gia_moi" <?= (isset($_GET['sort']) && $_GET['sort'] == 'gia_moi') ? 'selected' : ''; ?>>
+                                                Sản phẩm mới
+                                            </option>
+                                            <option value="gia_cu" <?= (isset($_GET['sort']) && $_GET['sort'] == 'gia_cu') ? 'selected' : ''; ?>>
+                                                Sản phẩm cũ
+                                            </option>
+                                            <option value="gia_tang" <?= (isset($_GET['sort']) && $_GET['sort'] == 'gia_tang') ? 'selected' : ''; ?>>
+                                                Giá tăng dần
+                                            </option>
+                                            <option value="gia_giam" <?= (isset($_GET['sort']) && $_GET['sort'] == 'gia_giam') ? 'selected' : ''; ?>>
+                                                Giá giảm dần
+                                            </option>
+                                        </select>
+                                    </form>
+
                                 </div>
+
                             </div>
                         </div>
                     </div>
+                    <!-- Hiển thị sản phẩm đã lọc -->
                     <div class="row col-50 mb-minus-24">
-                        <?php foreach ($products as $value) : ?>
-                            <div class="col-lg-3 col-6 cr-product-box mb-24">
-                                <div class="cr-product-card">
-                                    <div class="cr-product-image">
-                                        <div class="cr-image-inner zoom-image-hover">
-                                            <img src="<?= $value['anh_sp'] ?>" alt="product-1">
-                                        </div>
-                                        <form action="" method="post">
-                                            <div class="cr-side-view">
-                                                <input type="hidden" name="id_sp" value="<?= $value['id_sp'] ?>">
-                                                <button class="rounded-circle border-0" name="addWishlist">
-                                                    <i class="ri-heart-line"></i>
-                                                </button>
-                                                <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview"
-                                                    role="button">
-                                                    <i class="ri-eye-line"></i>
-                                                </a>
+                        <?php if (!empty($products)): ?>
+                            <?php foreach ($products as $product): ?>
+                                <div class="col-lg-3 col-6 cr-product-box mb-24">
+                                    <div class="cr-product-card">
+                                        <div class="cr-product-image">
+                                            <div class="cr-image-inner zoom-image-hover">
+                                                <img src="<?= $product['anh_sp'] ?>" alt="<?= $product['ten_sp'] ?>">
                                             </div>
-                                        </form>
-                                        <a class="cr-shopping-bag" href="javascript:void(0)">
-                                            <i class="ri-shopping-bag-line"></i>
-                                        </a>
-                                    </div>
-                                    <div class="cr-product-details">
-                                        <div class="cr-brand">
-                                            <a href="shop-left-sidebar.html"><?= $value['ten_dm'] ?></a>
-                                            <div class="cr-star">
-                                                <i class="ri-star-fill"></i>
-                                                <i class="ri-star-fill"></i>
-                                                <i class="ri-star-fill"></i>
-                                                <i class="ri-star-fill"></i>
-                                                <i class="ri-star-line"></i>
-                                                <p>(4.5)</p>
-                                            </div>
+                                            <a class="cr-shopping-bag" href="javascript:void(0)">
+                                                <i class="ri-shopping-bag-line"></i>
+                                            </a>
                                         </div>
-                                        <a href="index.php?user=detail-product&id_sp=<?= $value['id_sp'] ?>" class="title"><?= $value['ten_sp'] ?></a>
-                                        <p class="cr-price"><span class="new-price">$<?= $value['gia_tien'] ?></span> <span
-                                                class="old-price">$<?= $value['gia_km'] ?></span></p>
+                                        <div class="cr-product-details">                                                                           
+                                            <a href="index.php?user=detail-product&id_sp=<?= $product['id_sp'] ?>" class="title">
+                                                <?= $product['ten_sp'] ?>
+                                            </a>
+                                            <p class="cr-price">
+                                                <span class="new-price"><?= number_format($product['gia_tien']) ?> VNĐ</span>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        <?php endforeach; ?>
+                            <?php endforeach; ?>
+                        <?php else: ?>
+                            <p>Không có sản phẩm nào phù hợp.</p>
+                        <?php endif; ?>
                     </div>
+
                     <nav aria-label="..." class="cr-pagination">
                         <ul class="pagination">
                             <li class="page-item disabled">
@@ -154,100 +151,6 @@
     </section>
     <!-- sidebar-shop -->
     <div class="filter-sidebar-overlay"></div>
-    <div class="cr-shop-leftside">
-        <div class="cr-shop-leftside-inner">
-            <div class="cr-title">
-                <h6>Filters</h6>
-                <a href="javascript:void(0)" class="close-shop-leftside">
-                    <i class="ri-close-line"></i>
-                </a>
-            </div>
-            <div class="cr-shop-sideview">
-                <div class="cr-shop-categories">
-                    <h4 class="cr-shop-sub-title">Category</h4>
-                    <div class="cr-checkbox">
-                        <div class="checkbox-group">
-                            <input type="checkbox" id="drinks">
-                            <label for="drinks">Juice & Drinks</label>
-                            <span>[20]</span>
-                        </div>
-                        <div class="checkbox-group">
-                            <input type="checkbox" id="drinks1">
-                            <label for="drinks1">Dairy & Milk</label>
-                            <span>[54]</span>
-                        </div>
-                        <div class="checkbox-group">
-                            <input type="checkbox" id="drinks2">
-                            <label for="drinks2">Snack & Spice</label>
-                            <span>[64]</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="cr-shop-price">
-                    <h4 class="cr-shop-sub-title">Price</h4>
-                    <div class="price-range-slider">
-                        <div id="slider-range" class="range-bar"></div>
-                        <p class="range-value">
-                            <label>Price :</label>
-                            <input type="text" id="amount" placeholder="'" readonly>
-                        </p>
-                        <button type="button" class="cr-button">Filter</button>
-                    </div>
-                </div>
-                <div class="cr-shop-color">
-                    <h4 class="cr-shop-sub-title">Colors</h4>
-                    <div class="cr-checkbox">
-                        <div class="checkbox-group">
-                            <input type="checkbox" id="blue">
-                            <label for="blue">Blue</label>
-                            <span class="blue"></span>
-                        </div>
-                        <div class="checkbox-group">
-                            <input type="checkbox" id="yellow">
-                            <label for="yellow">Yellow</label>
-                            <span class="yellow"></span>
-                        </div>
-                        <div class="checkbox-group">
-                            <input type="checkbox" id="red">
-                            <label for="red">Red</label>
-                            <span class="red"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="cr-shop-weight">
-                    <h4 class="cr-shop-sub-title">Weight</h4>
-                    <div class="cr-checkbox">
-                        <div class="checkbox-group">
-                            <input type="checkbox" id="2kg">
-                            <label for="2kg">2kg Pack</label>
-                        </div>
-                        <div class="checkbox-group">
-                            <input type="checkbox" id="20kg">
-                            <label for="20kg">20kg Pack</label>
-                        </div>
-                        <div class="checkbox-group">
-                            <input type="checkbox" id="30kg">
-                            <label for="30kg">30kg pack</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="cr-shop-tags">
-                    <h4 class="cr-shop-sub-title">Tages</h4>
-                    <div class="cr-shop-tags-inner">
-                        <ul class="cr-tags">
-                            <li><a href="javascript:void(0)">Vegetables</a></li>
-                            <li><a href="javascript:void(0)">juice</a></li>
-                            <li><a href="javascript:void(0)">Food</a></li>
-                            <li><a href="javascript:void(0)">Dry Fruits</a></li>
-                            <li><a href="javascript:void(0)">Vegetables</a></li>
-                            <li><a href="javascript:void(0)">juice</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Footer -->
     <?php include_once "views/users/layout/footer.php" ?>
 

@@ -23,6 +23,14 @@ class CartModel
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+    public function getCartById($id_tk)
+    {
+        $query = "SELECT * FROM gio_hang WHERE id_tk = :id_tk";
+        $stmt = $this->db->pdo->prepare($query);
+        $stmt->bindParam("id_tk", $id_tk);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
     public function addCart($id_tk, $id_sp, $so_luong)
     {
         // Kiểm tra giỏ hàng tồn tại
@@ -78,6 +86,22 @@ class CartModel
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
+    public function deleteCartByID($id_giohang)
+    {
+        $sql = "DELETE FROM `gio_hang_chi_tiet` WHERE `id_giohang` = :id_giohang ";
+        $stmt = $this->db->pdo->prepare($sql);
+        $stmt->bindParam(':id_giohang', $id_giohang);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+    public function deleteCartByIDTK($id_tk)
+    {
+        $sql = "DELETE FROM `gio_hang` WHERE `id_tk` = :id_tk ";
+        $stmt = $this->db->pdo->prepare($sql);
+        $stmt->bindParam(':id_tk', $id_tk);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
     public function updateCart($id_giohang_chitiet, $so_luong)
     {
         $query = "UPDATE gio_hang_chi_tiet SET so_luong = :so_luong WHERE id_giohang_chitiet = :id_giohang_chitiet";
@@ -86,8 +110,4 @@ class CartModel
         $stmt->bindParam(':id_giohang_chitiet', $id_giohang_chitiet, PDO::PARAM_INT);
         $stmt->execute();
     }
-    
-    
-    
-
 }

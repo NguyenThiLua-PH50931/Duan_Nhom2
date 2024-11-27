@@ -129,7 +129,7 @@
                     <div class="col-lg-12">
                         <div class="cr-breadcrumb-title">
                             <h2>Checkout</h2>
-                            <span> <a href="index.php?user=home">Home</a> > <a href="index.php?user=cart">Cart</a> > Checkout</span>
+                            <span> <a href="index.php?user=home">Home</a> > <a href="index.php?user=cart">Cart</a> > Shipping</span>
                         </div>
                     </div>
                 </div>

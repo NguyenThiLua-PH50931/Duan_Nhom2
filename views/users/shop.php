@@ -186,9 +186,6 @@
     <!-- Tab to top -->
     <?php include_once "views/users/layout/tap-top.php" ?>
 
-
-    <!-- Cart -->
-
     <!-- Side-tool -->
     <?php include_once "views/users/layout/side-tool.php" ?>
 

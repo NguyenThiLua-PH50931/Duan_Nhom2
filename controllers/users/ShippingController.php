@@ -19,6 +19,9 @@ class ShippingController
             (new ShippingModel)->addShipping(
                 $_SESSION['id_tk'],
                 $_POST['diaChi'],
+                $_POST['city'],
+                $_POST['district'],
+                $_POST['ward'],
                 $_POST['soDienThoai'],
                 $_POST['hoTen'],
                 $_POST['note']
@@ -27,15 +30,18 @@ class ShippingController
             exit();
         }
         if (isset($_POST['updateShipping'])) {
+            // debug($_POST);
             $data = (new ShippingModel)->updateShipping(
                 $_POST['id_vanChuyen'],
                 $_SESSION['id_tk'],
                 $_POST['diaChi'],
+                $_POST['city'],
+                $_POST['district'],
+                $_POST['ward'],
                 $_POST['soDienThoai'],
                 $_POST['hoTen'],
                 $_POST['note']
             );
-            debug($data);
             header('Location: index.php?user=getShipping');
             exit();
         }

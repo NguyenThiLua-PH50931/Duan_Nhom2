@@ -152,7 +152,7 @@
     </main>
 
     <script>
-        const apiKey = 'YOUR_API_KEY'; // https://account.goong.io/keys
+        const apiKey = 'nsu1wIR9Lhtnw1YOvtCVmUpG3D1Vm00ahKJHRQiT'; // https://account.goong.io/keys
         const addressInput = document.getElementById('address');
         const suggestionsContainer = document.getElementById('suggestions');
         const cityInput = document.getElementById('city');
@@ -209,13 +209,13 @@
 
         addressInput.addEventListener('input', (e) => debouncedSearch(e.target.value));
 
-        document.addEventListener('click', function (e) {
+        document.addEventListener('click', function(e) {
             if (!suggestionsContainer.contains(e.target) && e.target !== addressInput) {
                 suggestionsContainer.style.display = 'none';
             }
         });
 
-        document.getElementById('checkoutForm').addEventListener('submit', function (e) {
+        document.getElementById('checkoutForm').addEventListener('submit', function(e) {
             e.preventDefault();
             sessionToken = crypto.randomUUID();
             alert('Theo dõi mình để xem thêm các video công nghệ nhé!');

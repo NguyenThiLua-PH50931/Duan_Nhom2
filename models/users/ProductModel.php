@@ -33,7 +33,8 @@ class ProductModel
     // Lọc sản phẩm theo giá:
     public function getProductsBySort($sort)
     {
-        $sql = "SELECT * FROM san_pham";
+        $sql = "SELECT `id_sp`, `ten_sp`, `gia_tien`, `gia_km`, `anh_sp`, `mo_ta`, `luot_xem`, `soluong_ton`, danh_muc.ten_dm 
+                FROM `san_pham` JOIN danh_muc on san_pham.id_dm = danh_muc.id_dm";
         switch ($sort) {
             case 'gia_moi':
                 $sql .= " ORDER BY ngay_gio DESC"; // Sản phẩm mới
@@ -51,11 +52,10 @@ class ProductModel
                 $sql .= " ORDER BY ngay_gio DESC"; // Mặc định
                 break;
         }
-    
+
         $stmt = $this->db->pdo->prepare($sql);
         $stmt->execute();
-        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);   
+        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $results;
     }
-    
 }

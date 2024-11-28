@@ -58,8 +58,7 @@
                     </a> -->
 
                     <?php
-
-                    if (isset($_SESSION['vai_tro']) && $_SESSION['vai_tro'] == '1') {
+                    if (isset($_SESSION['vai_tro']) && $_SESSION['vai_tro'] == 1) {
                         echo '<a href="index.php?admin=list-product" class="cr-right-bar-item"><i class="ri-user-3-line"></i><span>Đăng nhập Admin</span></a>';
                     }
                     ?>

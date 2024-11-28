@@ -9,10 +9,10 @@ class LoginController
             'ten_tk' => '',
             'mat_khau' => ''
         ];
-    
+
         if ($_SERVER['REQUEST_METHOD'] === "POST") {
             $data = $_POST;
-    
+
             // Kiểm tra đầu vào
             if (empty($data['ten_tk'])) {
                 $err_message['ten_tk'] = "Tên tài khoản không được để trống";
@@ -22,7 +22,7 @@ class LoginController
                 // Lấy dữ liệu tài khoản từ model
                 $accounts = (new LoginModels)->getLoginUser();
                 $isLoginSuccessful = false;
-            
+
                 foreach ($accounts as $account) {
                     // Kiểm tra thông tin đăng nhập
                     if ($account['ten_tk'] === $data['ten_tk'] && $account['mat_khau'] === $data['mat_khau']) {
@@ -36,17 +36,17 @@ class LoginController
                         exit; // Thoát để tránh thực hiện thêm đoạn mã phía sau
                     }
                 }
-            
+
                 if (!$isLoginSuccessful) {
                     $err_message['mat_khau'] = "Tên tài khoản hoặc mật khẩu không chính xác";
                 }
             }
-        }               
-    
+        }
+
         // Trả về view kèm thông báo lỗi
         return view('users/login', ['category' => $category, 'err_message' => $err_message]);
     }
-    
+
 
 
     public function logoutUser()
@@ -54,6 +54,7 @@ class LoginController
         if (isset($_SESSION['nameAccount'])) {
             unset($_SESSION['nameAccount']);
             unset($_SESSION['id_tk']);
+            unset($_SESSION['vai_tro']);
             header('location:index.php?user=home');
             exit();
         } else {

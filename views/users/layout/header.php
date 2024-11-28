@@ -63,8 +63,6 @@
                     }
                     ?>
 
-
-
                 </div>
 
             </div>
@@ -75,11 +73,6 @@
     <div class="container">
         <div class="cr-menu-list">
             <div class="cr-category-icon-block">
-                <div class="cr-category-menu">
-                    <div class="cr-category-toggle">
-                        <i class="ri-menu-2-line"></i>
-                    </div>
-                </div>
                 <div class="cr-cat-dropdown">
                     <div class="cr-cat-block">
                         <div class="cr-cat-tab">

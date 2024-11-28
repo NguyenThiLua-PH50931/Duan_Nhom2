@@ -1,5 +1,7 @@
 <?php
 session_start();
+// var_dump($_SESSION['vai_tro']);
+
 //==========================Controllers========================
 //---------------Controllers-Admin-------------
 include "controllers/admin/CategoryController.php";

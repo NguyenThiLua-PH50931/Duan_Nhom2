@@ -13,7 +13,12 @@
 <head>
     <?php include_once "views/users/layout/linkCss.php" ?>
 </head>
-
+<?php
+    if (isset($_SESSION['error_message'])) {
+        echo '<div style="color: red;">' . $_SESSION['error_message'] . '</div>';
+        unset($_SESSION['error_message']); // Xóa thông báo sau khi hiển thị
+    }
+    ?>
 <body class="body-bg-6">
 
     <!-- Loader -->
@@ -59,6 +64,7 @@
     </section>
 
     <!-- Popular product -->
+
     <section class="section-popular-product-shape padding-b-100">
         <div id="app" class="container" data-aos="fade-up" data-aos-duration="2000">
             <div class="row">

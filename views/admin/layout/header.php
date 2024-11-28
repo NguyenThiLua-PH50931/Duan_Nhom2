@@ -66,6 +66,7 @@
                                     </div>
                                     <ul class="border-top">
                                         <li><a href="index.php?admin=logout"><i class="ri-logout-circle-r-line"></i>Logout</a></li>
+                                        <li><a href="index.php?user=home"><i class="ri-logout-circle-r-line"></i>Quay lại trang chủ</a></li>
                                     </ul>
                                 </div>
                             </div>';

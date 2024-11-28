@@ -64,7 +64,7 @@
                                                     <button type="button" class="linkedin">
                                                         <i class="ri-linkedin-fill"></i>
                                                     </button>
-                                                    <span class="already-acc">Not a member? <a href="signup.html"
+                                                    <span class="already-acc">Quay lại trang chủ <a href="index.php?user=home"
                                                             class="signup-btn">Sign up</a></span>
                                                 </div>
                                             </div>

@@ -22,25 +22,26 @@ class LoginController
                 // Lấy dữ liệu tài khoản từ model
                 $accounts = (new LoginModels)->getLoginUser();
                 $isLoginSuccessful = false;
-    
+            
                 foreach ($accounts as $account) {
                     // Kiểm tra thông tin đăng nhập
                     if ($account['ten_tk'] === $data['ten_tk'] && password_verify($data['mat_khau'], $account['mat_khau'])) {
                         // Lưu thông tin vào session
                         $_SESSION['nameAccount'] = $account['ho_ten'];
                         $_SESSION['id_tk'] = $account['id_tk'];
+                        $_SESSION['vai_tro'] = $account['vai_tro']; // Thêm vai trò vào session
                         $isLoginSuccessful = true;
                         $_SESSION['message'] = "Đăng nhập thành công";
                         header("Location: index.php?user=home");
                         exit; // Thoát để tránh thực hiện thêm đoạn mã phía sau
                     }
                 }
-    
+            
                 if (!$isLoginSuccessful) {
                     $err_message['mat_khau'] = "Tên tài khoản hoặc mật khẩu không chính xác";
                 }
             }
-        }
+        }               
     
         // Trả về view kèm thông báo lỗi
         return view('users/login', ['category' => $category, 'err_message' => $err_message]);

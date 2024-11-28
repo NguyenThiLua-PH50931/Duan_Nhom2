@@ -9,69 +9,70 @@ class AuthController
             'mat_khau' => ''
         ];
     
-        // Kiểm tra nếu đã đăng nhập
-        if (isset($_SESSION['nameAccount'])) {
-            header('location: index.php?admin=list-product');
-            exit();
-        }
-    
+        // Kiểm tra khi người dùng gửi dữ liệu form
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $data = $_POST;
     
-            // 1. Validate dữ liệu đầu vào
+            // Validate dữ liệu đầu vào
             if (empty($data['ten_tk'])) {
                 $err_message['ten_tk'] = "Tên tài khoản không được để trống!";
             }
-    
             if (empty($data['mat_khau'])) {
                 $err_message['mat_khau'] = "Trường mật khẩu không được để trống!";
             }
     
             // Nếu không có lỗi, tiếp tục xử lý đăng nhập
             if (empty($err_message['ten_tk']) && empty($err_message['mat_khau'])) {
-                // 2. Loại bỏ ký tự đặc biệt (ngăn XSS)
+                // Xử lý dữ liệu đầu vào an toàn
                 $username = htmlspecialchars(trim($data['ten_tk']));
-                $password = trim($data['mat_khau']); // Không cần htmlspecialchars() ở đây
+                $password = trim($data['mat_khau']);
     
-                // 3. Lấy thông tin từ cơ sở dữ liệu
+                // Lấy thông tin từ cơ sở dữ liệu
                 $auth = new Auth();
                 $acc = $auth->getLogin();
     
-                // 4. Xác minh tài khoản và mật khẩu
-                $is_valid = false; // Biến kiểm tra xác thực
+                // Kiểm tra tài khoản và mật khẩu
+                $is_valid = false;
                 foreach ($acc as $value) {
                     if ($value['ten_tk'] === $username && password_verify($password, $value['mat_khau'])) {
                         $is_valid = true;
-                        // Lưu thông tin vào session và chuyển hướng
+    
+                        // Lưu thông tin vào session và phân quyền
                         $_SESSION['nameAccount'] = $value['ho_ten'];
-                        header("location: index.php?admin=list-product");
+                        $_SESSION['vai_tro'] = ($value['vai_tro'] == 1) ? 'admin' : 'user';
+    
+                        // Kiểm tra quyền và điều hướng
+                        if ($_SESSION['vai_tro'] === 'admin') {
+                            header('Location: index.php?admin=list-product');
+                        } else {
+                            $_SESSION['error_message'] = "Bạn không có quyền truy cập admin";
+                            header('Location: index.php?user=home');
+                            exit(); // Kết thúc kịch bản sau chuyển hướng
+                        }
                         exit();
                     }
                 }
     
-                // 5. Thông báo lỗi nếu thông tin không hợp lệ
+                // Thông báo lỗi nếu tài khoản không hợp lệ
                 if (!$is_valid) {
-                    $err_message['mat_khau'] = "Sai tên tài khoản hoặc mật khẩu.";
+                    $err_message['mat_khau'] = "Sai tên tài khoản và mật khẩu.";
                 }
             }
         }
     
-        // 6. Hiển thị giao diện đăng nhập và thông báo lỗi (nếu có)
+        // Hiển thị giao diện đăng nhập và thông báo lỗi nếu có
         include "views/admin/auth/login.php";
     }
     
-
-
-
-    public function logout()
-    {
-        if (isset($_SESSION['nameAccount'])) {
-            unset($_SESSION['nameAccount']); // Xóa session
-            session_destroy(); // Hủy toàn bộ session
-            header('location: index.php?admin=login'); // Quay lại trang đăng nhập
-            exit();
-        } else {
-            echo 'Bạn chưa đăng nhập!';
-        }
+public function logout()
+{
+    // Kiểm tra session và logout
+    if (isset($_SESSION['nameAccount'])) {
+        session_destroy(); // Hủy session hoàn toàn
+        header('Location: index.php?admin=login'); // Quay lại trang đăng nhập
+        exit();
+    } else {
+        echo 'Bạn chưa đăng nhập!';
     }
+}
 }

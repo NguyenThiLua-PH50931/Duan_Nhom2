@@ -25,7 +25,10 @@ class AuthController
             if (empty($err_message['ten_tk']) && empty($err_message['mat_khau'])) {
                 // Xử lý dữ liệu đầu vào an toàn
                 $username = htmlspecialchars(trim($data['ten_tk']));
+<<<<<<< HEAD
                 $password = trim($data['mat_khau']);
+=======
+>>>>>>> c5e7456b27fb5bf0a2edbeba1efc9f3fca9db6de
     
                 // Lấy thông tin từ cơ sở dữ liệu
                 $auth = new Auth();
@@ -34,7 +37,7 @@ class AuthController
                 // Kiểm tra tài khoản và mật khẩu
                 $is_valid = false;
                 foreach ($acc as $value) {
-                    if ($value['ten_tk'] === $username && password_verify($password, $value['mat_khau'])) {
+                    if ($value['ten_tk'] === $username && $value['mat_khau'] === $data['mat_khau']) {
                         $is_valid = true;
     
                         // Lưu thông tin vào session và phân quyền

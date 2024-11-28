@@ -25,7 +25,7 @@ class LoginController
             
                 foreach ($accounts as $account) {
                     // Kiểm tra thông tin đăng nhập
-                    if ($account['ten_tk'] === $data['ten_tk'] && password_verify($data['mat_khau'], $account['mat_khau'])) {
+                    if ($account['ten_tk'] === $data['ten_tk'] && $account['mat_khau'] === $data['mat_khau']) {
                         // Lưu thông tin vào session
                         $_SESSION['nameAccount'] = $account['ho_ten'];
                         $_SESSION['id_tk'] = $account['id_tk'];

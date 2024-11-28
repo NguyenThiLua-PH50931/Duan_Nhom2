@@ -35,7 +35,10 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a class="dropdown-item" href="index.php?user=logout-user">Checkout</a>
+                                        <a class="dropdown-item" href="index.php?user=logout-user">Logout</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="index.php?user=checkout">Checkout</a>
                                     </li>
                                 </ul>
                             <?php } ?>

@@ -76,7 +76,7 @@
                                             </thead>
                                             <tbody>
                                                 <?php foreach ($cart as $value): ?>
-                                                    <input type="hidden" name="id_giohang_chitiet[]" value="<?=$value['id_giohang_chitiet']?>">
+                                                    <input type="hidden" name="id_giohang_chitiet[]" value="<?= $value['id_giohang_chitiet'] ?>">
                                                     <tr>
                                                         <td class="cr-cart-name">
                                                             <a href="javascript:void(0)">
@@ -151,10 +151,6 @@
     $_SESSION['deleteCart'] = null;
 
     ?>
-
-    <!-- Cart -->
-    <?php include_once "views/users/layout/cart.php" ?>
-
 
     <!-- Side-tool -->
     <?php include_once "views/users/layout/side-tool.php" ?>

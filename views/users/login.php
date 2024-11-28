@@ -109,11 +109,6 @@
     <!-- Tab to top -->
     <?php include_once "views/users/layout/tap-top.php" ?>
 
-
-    <!-- Cart -->
-    <?php include_once "views/users/layout/cart.php" ?>
-
-
     <!-- Side-tool -->
     <?php include_once "views/users/layout/side-tool.php" ?>
 

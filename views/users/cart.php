@@ -105,11 +105,11 @@
                                                 <?php endforeach; ?>
                                             </tbody>
                                         </table>
-                                        <!-- Nút gửi form để cập nhật giỏ hàng -->
-                                        <div class="cr-cart-update-bottom">
-                                            <button type="submit" name="update_cart" class="cr-button">Update Cart</button>
-                                        </div>
-                                        <!-- </form> -->
+                                        <?php if (count($cart) > 0) : ?>
+                                            <div class="cr-cart-update-bottom">
+                                                <button type="submit" name="update_cart" class="cr-button">Update Cart</button>
+                                            </div>
+                                        <?php endif; ?>
                                     <?php else: ?>
                                         <p>Bạn cần <a href="index.php?user=login-user" class="text-success">đăng nhập</a> !!!</p>
                                     <?php endif; ?>

@@ -18,6 +18,7 @@ class CheckoutController
             }
 
             $totalAll = array_sum($subtotals);
+            $_SESSION['tongTien'] = $totalAll;
         }
         $shipping = (new ShippingModel())->getShipping($id_tk);
 
@@ -45,6 +46,7 @@ class CheckoutController
             (new CartModel)->deleteCartByID($id_cart);
             (new CartModel)->deleteCartByIDTK($id_tk);
 
+            unset($_SESSION['tongTien']);
             header('location: index.php?user=home');
             exit();
         }

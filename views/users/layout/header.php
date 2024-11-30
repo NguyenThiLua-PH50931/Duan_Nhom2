@@ -58,13 +58,10 @@
                     </a> -->
 
                     <?php
-
-                    if (isset($_SESSION['vai_tro']) && $_SESSION['vai_tro'] == '1') {
+                    if (isset($_SESSION['vai_tro']) && $_SESSION['vai_tro'] == 1) {
                         echo '<a href="index.php?admin=list-product" class="cr-right-bar-item"><i class="ri-user-3-line"></i><span>Đăng nhập Admin</span></a>';
                     }
                     ?>
-
-
 
                 </div>
 
@@ -76,11 +73,6 @@
     <div class="container">
         <div class="cr-menu-list">
             <div class="cr-category-icon-block">
-                <div class="cr-category-menu">
-                    <div class="cr-category-toggle">
-                        <i class="ri-menu-2-line"></i>
-                    </div>
-                </div>
                 <div class="cr-cat-dropdown">
                     <div class="cr-cat-block">
                         <div class="cr-cat-tab">

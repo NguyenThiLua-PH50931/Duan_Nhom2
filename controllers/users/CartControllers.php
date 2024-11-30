@@ -9,6 +9,7 @@ class CartControllers
         // Kiểm tra nếu người dùng đã đăng nhập
         if ($id_tk) {
             $cart = (new CartModel)->getCart($id_tk);  // Lấy giỏ hàng
+            // debug($cart);
             // Tính tổng giỏ hàng
             foreach ($cart as $item) {
                 $total += $item['so_luong'] * $item['gia_tien'];

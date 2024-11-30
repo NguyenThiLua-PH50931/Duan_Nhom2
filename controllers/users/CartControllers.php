@@ -5,6 +5,7 @@ class CartControllers
     {
         $id_tk = $_SESSION['id_tk'] ?? '';
         $total = 0;
+        $subtotals = [];
 
         // Kiểm tra nếu người dùng đã đăng nhập
         if ($id_tk) {
@@ -13,14 +14,17 @@ class CartControllers
             // Tính tổng giỏ hàng
             foreach ($cart as $item) {
                 $total += $item['so_luong'] * $item['gia_tien'];
+                $subtotals[] = $total;
             }
+            $totalAll = array_sum($subtotals);
+            $_SESSION['tongTien'] = $totalAll;
         }
 
         // Lấy danh sách danh mục sản phẩm
         $category = (new CategoryModels)->all();
 
         // Render view giỏ hàng
-        view("users/cart", ['cart' => $cart ?? [], 'total' => $total, 'category' => $category]);
+        view("users/cart", ['cart' => $cart ?? [], 'total' => $total, 'category' => $category, 'totalAll' => $totalAll]);
     }
 
 

@@ -90,7 +90,7 @@
                                                         <td class="cr-cart-qty">
                                                             <div class="cart-qty-plus-minus">
                                                                 <!-- Input number để thay đổi số lượng -->
-                                                                <input type="number" name="so_luong[]" value="<?= $value['so_luong'] ?>" min="1" class="quantity">
+                                                                <input type="number" name="so_luong[]" data-id="<?= $value['id_giohang_chitiet'] ?>" value="<?= $value['so_luong'] ?>" class="quantity">
                                                             </div>
                                                         </td>
                                                         <td class="cr-cart-subtotal">
@@ -106,6 +106,17 @@
                                             </tbody>
                                         </table>
                                         <?php if (count($cart) > 0) : ?>
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th></th>
+                                                        <th></th>
+                                                        <th class="text-center">Tổng thanh toán (<?= count($cart) ?> sản phẩm)</th>
+                                                        <th><?= number_format($totalAll) ?> VNĐ</th>
+                                                        <th></th>
+                                                    </tr>
+                                                </thead>
+                                            </table>
                                             <div class="cr-cart-update-bottom">
                                                 <button type="submit" name="update_cart" class="cr-button">Update Cart</button>
                                             </div>
@@ -114,8 +125,6 @@
                                         <p>Bạn cần <a href="index.php?user=login-user" class="text-success">đăng nhập</a> !!!</p>
                                     <?php endif; ?>
                                 </div>
-
-
                                 <div class="row mb-5">
                                     <div class="col-lg-12">
                                         <div class="cr-cart-update-bottom">
@@ -133,6 +142,20 @@
             </div>
         </div>
     </section>
+    <script>
+        document.querySelectorAll('.quantity').forEach(input => {
+            input.addEventListener('change', function() {
+                if (this.value <= 0) {
+                    const idGiohangChitiet = this.getAttribute('data-id');
+                    if (confirm('Số lượng không thể nhỏ hơn 0. Bạn có muốn xóa sản phẩm này khỏi giỏ hàng?')) {
+                        window.location.href = `index.php?user=deleteCart&id_giohang_chitiet=${idGiohangChitiet}`;
+                    } else {
+                        this.value = 0; // Đặt lại giá trị về 0 nếu người dùng từ chối xóa
+                    }
+                }
+            });
+        });
+    </script>
 
     <!-- Footer -->
     <?php include_once "views/users/layout/footer.php" ?>
@@ -146,8 +169,11 @@
         echo $_SESSION['addCart'];
     } elseif (isset($_SESSION['deleteCart'])) {
         echo $_SESSION['deleteCart'];
+    } elseif (isset($_SESSION['tongTien'])) {
+        echo $_SESSION['tongTien'];
     }
     $_SESSION['addCart'] = null;
+    $_SESSION['tongTien'] = null;
     $_SESSION['deleteCart'] = null;
 
     ?>

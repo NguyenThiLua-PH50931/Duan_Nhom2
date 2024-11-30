@@ -37,6 +37,7 @@ include "models/users/CartModel.php";
 include "models/users/WishlistModel.php";
 include "models/users/ShippingModel.php";
 include "models/users/CheckoutModel.php";
+include "models/users/CommentModel.php";
 
 include "commons/helpers.php";
 

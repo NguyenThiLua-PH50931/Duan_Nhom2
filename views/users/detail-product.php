@@ -50,8 +50,8 @@
                         <div class="banner-slider">
                             <div class="slider slider-for">
                                 <div class="slider-banner-image">
-                                <div class="zoom-image-hover">
-                                        <img src="<?=$product['anh_sp']?>" alt="product-tab-1"
+                                    <div class="zoom-image-hover">
+                                        <img src="<?= $product['anh_sp'] ?>" alt="product-tab-1"
                                             class="product-image">
                                     </div>
                                 </div>
@@ -134,13 +134,13 @@
                                         <img src="" alt="product-tab-1">
                                     </div>
                                 </div>
-                              
+
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-xxl-8 col-xl-7 col-md-6 col-12 mb-24">
-                   
+
                     <div class="cr-size-and-weight-contain">
                         <h2 class="heading"><?= $product['ten_sp'] ?></h2>
                     </div>
@@ -204,17 +204,12 @@
                         <li class="nav-item" role="presentation">
                             <button class="nav-link active" id="description-tab" data-bs-toggle="tab"
                                 data-bs-target="#description" type="button" role="tab" aria-controls="description"
-                                aria-selected="true">Description</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="additional-tab" data-bs-toggle="tab"
-                                data-bs-target="#additional" type="button" role="tab" aria-controls="additional"
-                                aria-selected="false">Information</button>
+                                aria-selected="true">Mô tả</button>
                         </li>
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" id="review-tab" data-bs-toggle="tab" data-bs-target="#review"
                                 type="button" role="tab" aria-controls="review"
-                                aria-selected="false">Review</button>
+                                aria-selected="false">Bình luận</button>
                         </li>
                     </ul>
                     <div class="tab-content" id="myTabContent">
@@ -222,116 +217,78 @@
                             aria-labelledby="description-tab">
                             <div class="cr-tab-content">
                                 <div class="cr-description">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error in vero
-                                        sapiente odio, error dolore vero temporibus consequatur, nobis veniam odit
-                                        dignissimos consectetur quae in perferendis
-                                        doloribusdebitis corporis, eaque dicta, repellat amet, illum adipisci vel
-                                        perferendis dolor! Quis vel consequuntur repellat distinctio rem. Corrupti
-                                        ratione alias odio, error dolore temporibus consequatur, nobis veniam odit
-                                        laborum dignissimos consectetur quae vero in perferendis provident quis.</p>
-                                </div>
-                                <h4 class="heading">Packaging & Delivery</h4>
-                                <div class="cr-description">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error in vero
-                                        perferendis dolor! Quis vel consequuntur repellat distinctio rem. Corrupti
-                                        ratione alias odio, error dolore temporibus consequatur, nobis veniam odit
-                                        laborum dignissimos consectetur quae vero in perferendis provident quis.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="additional" role="tabpanel" aria-labelledby="additional-tab">
-                            <div class="cr-tab-content">
-                                <div class="cr-description">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error in vero
-                                        sapiente
-                                        doloribus debitis corporis, eaque dicta, repellat amet, illum adipisci vel
-                                        perferendis dolor! Quis vel consequuntur repellat distinctio rem. Corrupti
-                                        ratione alias odio, error dolore temporibus consequatur, nobis veniam odit
-                                        laborum dignissimos consectetur quae vero in perferendis provident quis.</p>
-                                </div>
-                                <div class="list">
-                                    <ul>
-                                        <li><label>Brand <span>:</span></label>ESTA BETTERU CO</li>
-                                        <li><label>Flavour <span>:</span></label>Super Saver Pack</li>
-                                        <li><label>Diet Type <span>:</span></label>Vegetarian</li>
-                                        <li><label>Weight <span>:</span></label>200 Grams</li>
-                                        <li><label>Speciality <span>:</span></label>Gluten Free, Sugar Free</li>
-                                        <li><label>Info <span>:</span></label>Egg Free, Allergen-Free</li>
-                                        <li><label>Items <span>:</span></label>1</li>
-                                    </ul>
+                                    <p><?= $product['mo_ta'] ?></p>
                                 </div>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="review" role="tabpanel" aria-labelledby="review-tab">
                             <div class="cr-tab-content-from">
                                 <div class="post">
-                                    <div class="content">
-                                        <img src="/assets/users/img/review/1.jpg" alt="review">
-                                        <div class="details">
-                                            <span class="date">Jan 08, 2024</span>
-                                            <span class="name">Oreo Noman</span>
-                                        </div>
-                                        <div class="cr-t-review-rating">
-                                            <i class="ri-star-s-fill"></i>
-                                            <i class="ri-star-s-fill"></i>
-                                            <i class="ri-star-s-fill"></i>
-                                            <i class="ri-star-s-fill"></i>
-                                            <i class="ri-star-s-fill"></i>
-                                        </div>
-                                    </div>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error in vero
-                                        sapiente doloribus debitis corporis, eaque dicta, repellat amet, illum
-                                        adipisci vel
-                                        perferendis dolor! quae vero in perferendis provident quis.</p>
-                                    <div class="content mt-30">
-                                        <img src="/assets/users/img/review/2.jpg" alt="review">
-                                        <div class="details">
-                                            <span class="date">Mar 22, 2024</span>
-                                            <span class="name">Lina Wilson</span>
-                                        </div>
-                                        <div class="cr-t-review-rating">
-                                            <i class="ri-star-s-fill"></i>
-                                            <i class="ri-star-s-fill"></i>
-                                            <i class="ri-star-s-fill"></i>
-                                            <i class="ri-star-s-fill"></i>
-                                            <i class="ri-star-s-line"></i>
-                                        </div>
-                                    </div>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error in vero
-                                        sapiente doloribus debitis corporis, eaque dicta, repellat amet, illum
-                                        adipisci vel
-                                        perferendis dolor! quae vero in perferendis provident quis.</p>
-                                </div>
+                                    <?php if (!empty($comments)): ?>
+                                        <?php foreach ($comments as $comment): ?>
+                                            <div class="content">
+                                                <img src="./assets/users/img/review/anh.jpg" alt="">
+                                                <div class="details">
+                                                    <span class="date"><?= htmlspecialchars($comment['ngay_bl']) ?></span>
+                                                    <span class="name"><?= htmlspecialchars($comment['ho_ten']) ?></span>
+                                                </div>
+                                                <div class="cr-t-review-rating">
+                                                    <i class="ri-star-s-fill"></i>
+                                                    <i class="ri-star-s-fill"></i>
+                                                    <i class="ri-star-s-fill"></i>
+                                                    <i class="ri-star-s-fill"></i>
+                                                    <i class="ri-star-s-fill"></i>
+                                                </div>
 
-                                <h4 class="heading">Add a Review</h4>
-                                <form action="javascript:void(0)">
-                                    <div class="cr-ratting-star">
-                                        <span>Your rating :</span>
-                                        <div class="cr-t-review-rating">
-                                            <i class="ri-star-s-fill"></i>
-                                            <i class="ri-star-s-fill"></i>
-                                            <i class="ri-star-s-line"></i>
-                                            <i class="ri-star-s-line"></i>
-                                            <i class="ri-star-s-line"></i>
+                                                <div class="d-flex justify-content-center">
+                                                    <button type="button"
+                                                        class="btn btn-outline-success dropdown-toggle dropdown-toggle-split"
+                                                        data-bs-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false" data-display="static">
+                                                        <span class="sr-only"><i
+                                                                class="ri-settings-3-line"></i></span>
+                                                    </button>
+
+                                                    <div class="dropdown-menu">
+                                                        <a class="dropdown-item" href="">Chỉnh sửa</a>
+                                                        <a class="dropdown-item" href="index.php?user=detail-product&id_sp=<?=$comment['id_sp']?>">Xóa</a>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <p><?= htmlspecialchars($comment['noi_dung_bl']) ?></p>
+                                            <hr>
+                                        <?php endforeach; ?>
+                                    <?php else: ?>
+                                        <p>Chưa có bình luận nào. Hãy là người đầu tiên bình luận!</p>
+                                    <?php endif; ?>
+
+
+                                    <hr>
+
+                                    <h4 class="heading">Thêm bình luận về sản phẩm</h4>
+                                    <form action="" method="post">
+                                        <div class="cr-ratting-input form-submit">
+                                            <textarea name="noi_dung_bl" placeholder="Bình luận tại đây" required></textarea>
+                                            <button class="cr-button" type="submit" name="addComment">Gửi bình luận</button>
                                         </div>
-                                    </div>
-                                    <div class="cr-ratting-input">
-                                        <input name="your-name" placeholder="Name" type="text">
-                                    </div>
-                                    <div class="cr-ratting-input">
-                                        <input name="your-email" placeholder="Email*" type="email" required="">
-                                    </div>
-                                    <div class="cr-ratting-input form-submit">
-                                        <textarea name="your-commemt" placeholder="Enter Your Comment"></textarea>
-                                        <button class="cr-button" type="submit" value="Submit">Submit</button>
-                                    </div>
-                                </form>
+                                    </form>
+
+                                    <!-- Thông báo -->
+                                    <?php if (isset($_SESSION['successComment'])): ?>
+                                        <p style="color:green;"><?php echo $_SESSION['successComment'];
+                                                                unset($_SESSION['successComment']); ?></p>
+                                    <?php elseif (isset($_SESSION['errorComment'])): ?>
+                                        <p style="color:red;"><?php echo $_SESSION['errorComment'];
+                                                                unset($_SESSION['errorComment']); ?></p>
+                                    <?php endif; ?>
+
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
     </section>
 
@@ -389,7 +346,7 @@
                                                     <p>(4.5)</p>
                                                 </div>
                                             </div>
-                                            <a href="index.php?user=detail-product&id_sp=<?=$value['id_sp']?>" class="title"><?= $value['ten_sp'] ?></a>
+                                            <a href="index.php?user=detail-product&id_sp=<?= $value['id_sp'] ?>" class="title"><?= $value['ten_sp'] ?></a>
                                             <p class="cr-price"><span class="new-price"></span> <?= $value['gia_tien'] ?><span
                                                     class="old-price"><?= $value['gia_km'] ?></span></p>
 

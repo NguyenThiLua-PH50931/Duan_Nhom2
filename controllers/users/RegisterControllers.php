@@ -17,7 +17,12 @@ class RegisterControllers
 
         // Xử lý khi form được gửi
         if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['dangky'])) {
+            // echo '<pre>';
+            // print_r($_POST);
+            // echo '</pre>';
+            // die();
             $data = $_POST;
+
 
             // Kiểm tra dữ liệu
             if (empty($data['ten_tk'])) {
@@ -60,7 +65,7 @@ class RegisterControllers
                         $data['dia_chi']
                     );
                     // Chuyển hướng sau khi thành công
-                    header('Location: index.php?user=login-user');
+                    header('location:index.php?user=login-user');
                     exit;
                 } catch (Exception $e) {
                     $err_message['general'] = "Lỗi trong quá trình xử lý: " . $e->getMessage();

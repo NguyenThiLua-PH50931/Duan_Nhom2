@@ -53,7 +53,7 @@
                         <div class="form-logo">
                             <h3>Đăng ký</h3>
                         </div>
-                        <form class="cr-content-form" method="post">
+                        <form class="cr-content-form" method="post" action="index.php?user=register-user">
                             <div class="row">
                                 <!-- Tên tài khoản -->
                                 <div class="col-12 col-sm-6">

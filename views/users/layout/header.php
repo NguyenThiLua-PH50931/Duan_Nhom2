@@ -40,6 +40,9 @@
                                     <li>
                                         <a class="dropdown-item" href="index.php?user=checkout">Checkout</a>
                                     </li>
+                                    <li>
+                                        <a class="dropdown-item" href="index.php?user=checkout">Đơn mua</a>
+                                    </li>
                                 </ul>
                             <?php } ?>
                         </li>

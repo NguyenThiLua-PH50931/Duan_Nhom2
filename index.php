@@ -19,6 +19,7 @@ include "controllers/users/CartControllers.php";
 include "controllers/users/WishlistController.php";
 include "controllers/users/ShippingController.php";
 include "controllers/users/CheckoutController.php";
+include "controllers/users/donMuaController.php";
 
 //==========================Models========================
 //---------------Model-Admin-------------
@@ -97,6 +98,7 @@ if (!empty($user)) {
         'shipping' => (new ShippingController())->shipping(),
         'checkout' => (new CheckoutController())->getCheckout(),
         'thanhToanSP' => (new CheckoutController())->checkout(),
+        'donMua' => (new donMuaController())->getDonMua(),
         default => die("Không tìm thấy file"),
     };
 }

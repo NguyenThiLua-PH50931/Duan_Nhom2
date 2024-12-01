@@ -6,8 +6,9 @@ class ShippingController
         $id_tk = $_SESSION['id_tk'];
 
         $shipping = (new ShippingModel())->getShipping($id_tk);
+        // debug($shipping);
 
-        view("users/shipping", ['shipping' => $shipping ?? '']);
+        view("users/shipping", ['shipping' => $shipping]);
     }
     public function shipping()
     {

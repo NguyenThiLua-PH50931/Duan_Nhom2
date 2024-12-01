@@ -8,6 +8,7 @@ include "controllers/admin/CategoryController.php";
 include "controllers/admin/ProductsControllers.php";
 include "controllers/admin/AuthController.php";
 include "controllers/admin/AccountsController.php";
+include "controllers/admin/CommentController.php";
 
 //---------------Controllers-User-------------
 include "controllers/users/LoginControllers.php";
@@ -27,6 +28,7 @@ include "models/admin/CategoryModels.php";
 include "models/admin/ProductModels.php";
 include "models/admin/Auth.php";
 include "models/admin/AccountsModels.php";
+include "models/admin/CommentModels.php";
 
 //---------------Model-User-------------
 include "models/users/HomeModels.php";
@@ -72,7 +74,12 @@ if (!empty($admin)) {
         // Đăng nhập
         'login' => (new AuthController())->login(),
         'logout' => (new AuthController())->logout(),
-        default => die("Không tìm thấy file"),
+
+        // Bình luận
+        'list-comment' => (new CommentController())->listComment(),
+        'delete-comment' => (new CommentController())->deleteComment(),
+
+        default => die("Không tìm thấy file")
     };
 }
 

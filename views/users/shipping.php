@@ -171,20 +171,20 @@
                                                 <div class="grid">
                                                     <div>
                                                         <label for="city">Tỉnh/Thành phố</label>
-                                                        <input type="text" id="city" name="city" value="<?= $shipping['city'] ?>" required placeholder="Nhập tỉnh/thành phố">
+                                                        <input type="text" id="city" name="city" value="<?= $shipping['city'] ?? ''?>" required placeholder="Nhập tỉnh/thành phố">
                                                     </div>
                                                     <div>
                                                         <label for="district">Quận/Huyện</label>
-                                                        <input type="text" id="district" name="district" value="<?= $shipping['district'] ?>" required placeholder="Nhập quận/huyện">
+                                                        <input type="text" id="district" name="district" value="<?= $shipping['district'] ?? ''?>" required placeholder="Nhập quận/huyện">
                                                     </div>
                                                     <div>
                                                         <label for="ward">Phường/Xã</label>
-                                                        <input type="text" id="ward" name="ward" value="<?= $shipping['ward'] ?>" required placeholder="Nhập phường/xã">
+                                                        <input type="text" id="ward" name="ward" value="<?= $shipping['ward'] ?? '' ?>" required placeholder="Nhập phường/xã">
                                                     </div>
                                                 </div>
                                                 <span class="cr-bill-wrap mb-4">
                                                     <label>Region State</label>
-                                                    <textarea class="form-control" rows="5" name="note" id=""><?= $shipping['note'] ?></textarea>
+                                                    <textarea class="form-control" rows="5" name="note" id=""><?= $shipping['note'] ?? ''?></textarea>
                                                 </span>
                                             </div>
 

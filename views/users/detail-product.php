@@ -226,6 +226,8 @@
                                 <div class="post">
                                     <?php if (!empty($comments)): ?>
                                         <?php foreach ($comments as $comment): ?>
+
+
                                             <div class="content">
                                                 <img src="./assets/users/img/review/anh.jpg" alt="">
                                                 <div class="details">
@@ -240,18 +242,31 @@
                                                     <i class="ri-star-s-fill"></i>
                                                 </div>
 
-                                                <div class="d-flex justify-content-center">
+                                                <div class="justify-content-center">
                                                     <button type="button"
-                                                        class="btn btn-outline-success dropdown-toggle dropdown-toggle-split"
+                                                        class="btn btn-outline-success dropdown-toggle-split"
                                                         data-bs-toggle="dropdown" aria-haspopup="true"
                                                         aria-expanded="false" data-display="static">
                                                         <span class="sr-only"><i
-                                                                class="ri-settings-3-line"></i></span>
+                                                                class="ri-settings-4-line"></i></span>
                                                     </button>
 
                                                     <div class="dropdown-menu">
-                                                        <a class="dropdown-item" href="">Chỉnh sửa</a>
-                                                        <a class="dropdown-item" href="index.php?user=detail-product&id_sp=<?=$comment['id_sp']?>">Xóa</a>
+
+                                                        <!-- Chỉnh sửa bình luận -->
+                                                        <form action="index.php?user=detail-product&id_sp=<?= htmlspecialchars($_GET['id_sp']) ?>&action=update&id_bl=<?= $comment['id_bl'] ?>" method="post">
+                                                            <textarea name="noi_dung_bl" class="form-control" required><?= htmlspecialchars($comment['noi_dung_bl']) ?></textarea>
+                                                            
+                                                            <button type="submit" style="color: green;" class="dropdown-item">Cập nhật</button>
+                                                        </form>
+
+                                                        <!-- // Hiển thị nút "Xóa" nếu người dùng là admin hoặc chủ sở hữu bình luận -->
+
+                                                        <a class="dropdown-item" style="color: red;" href="index.php?user=detail-product&id_sp=<?= $_GET['id_sp'] ?>&action=delete&id_bl=<?= $comment['id_bl'] ?>"
+                                                            onclick="return confirm('Bạn có chắc chắn muốn xóa bình luận này không?');">
+                                                            Xóa
+                                                        </a>
+
                                                     </div>
                                                 </div>
 

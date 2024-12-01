@@ -13,15 +13,17 @@
                         <i class="ri-dashboard-3-line"></i><span class="condense">Dashboard<i
                                 class="drop-arrow ri-arrow-down-s-line"></i></span></a>
                     <ul class="cr-sb-drop condense">
-                       
+
                         <li><a href="index.php?admin=list-product" class="cr-page-link drop"><i
                                     class="ri-checkbox-blank-circle-line"></i>Product</a></li>
-            
+
                         <li><a href="index.php?admin=list-category" class="cr-page-link drop"><i
                                     class="ri-checkbox-blank-circle-line"></i>Category</a></li>
 
                         <li><a href="index.php?admin=list-accounts" class="cr-page-link drop"><i
                                     class="ri-checkbox-blank-circle-line"></i>Accounts</a></li>
+                        <li><a href="index.php?admin=list-comment" class="cr-page-link drop"><i
+                                    class="ri-checkbox-blank-circle-line"></i>Comment</a></li>
                     </ul>
                 </li>
             </ul>

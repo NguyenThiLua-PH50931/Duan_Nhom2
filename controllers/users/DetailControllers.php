@@ -31,7 +31,7 @@ class DetailControllers
                 }
             }
         }
-
+// ---------------------------------------THÊM BÌNH LUẬN----------------------------------------
         if (isset($_POST['addComment'])) {
             if (!isset($_SESSION['id_tk'])) {
                 $_SESSION['errorComment'] = 'Bạn cần đăng nhập để bình luận!';
@@ -56,27 +56,71 @@ class DetailControllers
         }
 
 
-        // Danh sách bình luận:
+//   ----------------------------------DANH SÁCH BÌNH LUẬN---------------------------------------------
+
         $comments = (new CommentModel())->getCommentsByProductId($id_sp);
 
+// -----------------------------------XÓA BÌNH LUẬN-------------------------------------
         // Xóa bình luận:
         // Kiểm tra nếu tồn tại id_bl trong URL và người dùng có quyền xóa
-        if (isset($_GET['id_bl'])) {
+        if (isset($_GET['action']) && $_GET['action'] == 'delete' && isset($_GET['id_bl'])) {
             $id_bl = $_GET['id_bl'];
 
-            // Kiểm tra nếu người dùng có quyền xóa (admin hoặc chủ bình luận)
-            if ($_SESSION['vai_tro'] == 'admin' || $_SESSION['id_tk'] == $comments['id_tk']) {
-                // Xóa bình luận
-                (new CommentModel())->deleteComment($id_bl);
-                $_SESSION['successComment'] = 'Bình luận đã được xóa!';
+            // Lấy thông tin bình luận cụ thể theo id_bl
+            $comment = (new CommentModel())->getCommentById($id_bl);
+
+            if ($comment) {
+                // Kiểm tra quyền xóa: admin hoặc chính chủ bình luận
+                if ($_SESSION['vai_tro'] == 'admin' || $_SESSION['id_tk'] == $comment['id_tk']) {
+                    // Xóa bình luận
+                    if ((new CommentModel())->deleteComment($id_bl)) {
+                        $_SESSION['successComment'] = 'Bình luận đã được xóa!';
+                    } else {
+                        $_SESSION['errorComment'] = 'Có lỗi xảy ra khi xóa bình luận!';
+                    }
+                } else {
+                    $_SESSION['errorComment'] = 'Bạn không có quyền xóa bình luận này!';
+                }
             } else {
-                $_SESSION['errorComment'] = 'Bạn không có quyền xóa bình luận này!';
+                $_SESSION['errorComment'] = 'Bình luận không tồn tại!';
             }
 
             // Chuyển hướng về trang chi tiết sản phẩm sau khi xóa
             header('Location: index.php?user=detail-product&id_sp=' . $_GET['id_sp']);
             exit();
         }
+        // ---------------------------------------------CHỈNH SỬA BÌNH LUẬN------------------------------
+
+        if (isset($_GET['action']) && $_GET['action'] == 'update' && isset($_GET['id_bl'])) {
+            $id_bl = $_GET['id_bl'];
+            $noi_dung_bl = $_POST['noi_dung_bl'];
+        
+            // Lấy thông tin bình luận để kiểm tra quyền
+            $comment = (new CommentModel())->getCommentById($id_bl);
+        
+            if (!$comment) {
+                $_SESSION['errorComment'] = 'Bình luận không tồn tại!';
+            } else {
+                // Chỉ cho phép chủ bình luận chỉnh sửa
+                if ($_SESSION['id_tk'] == $comment['id_tk']) {
+                    // Cập nhật nội dung bình luận
+                    $updated = (new CommentModel())->updateComment($id_bl, $noi_dung_bl);
+                    if ($updated) {
+                        $_SESSION['successComment'] = 'Bình luận đã được cập nhật!';
+                    } else {
+                        $_SESSION['errorComment'] = 'Có lỗi xảy ra khi cập nhật bình luận!';
+                    }
+                } else {
+                    $_SESSION['errorComment'] = 'Bạn không có quyền chỉnh sửa bình luận này!';
+                }
+            }
+        
+            // Chuyển hướng lại trang chi tiết sản phẩm
+            header('Location: index.php?user=detail-product&id_sp=' . $_GET['id_sp']);
+            exit();
+        }
+        
+
 
         view("users/detail-product", ['product' => $product, 'cateName' => $cateName, 'category' => $category, 'sameProduct' => $sameProduct, 'comments' => $comments]);
     }

@@ -41,7 +41,7 @@
                                         <a class="dropdown-item" href="index.php?user=checkout">Checkout</a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="index.php?user=checkout">Đơn mua</a>
+                                        <a class="dropdown-item" href="index.php?user=donMua">Đơn mua</a>
                                     </li>
                                 </ul>
                             <?php } ?>

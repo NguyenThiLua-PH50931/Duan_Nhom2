@@ -1,16 +1,31 @@
 <?php
-class donMuaController
+class OrderController
 {
-    public function getDonMua()
+    public function getOrder()
     {
         $id_tk = $_SESSION['id_tk'];
 
         $category = (new CategoryModels)->all();
 
-        $id_dm = $_GET['id_dm'] ?? null;
-        $filterCategory = (new CategoryModels())->find_one($id_dm);
+        // Kiểm tra nếu người dùng đã đăng nhập
+        if ($id_tk) {
+            $order = (new OrderModel())->getOrder($id_tk);
 
-        view("users/donMua", ['category' => $category, 'filterCategory' => $filterCategory]);
+            // foreach ($order as $value) {
+            //     if ($value['id_trangThai'] == 1) {
+            //         $orderDetail = (new OrderModel())->getOrder($id_tk);
+            //     } elseif ($value['id_trangThai'] == 2) {
+            //         $orderDetail = (new OrderModel())->getOrder($id_tk);
+            //     } elseif ($value['id_trangThai'] == 3) {
+            //         $orderDetail = (new OrderModel())->getOrder($id_tk);
+            //     } elseif ($value['id_trangThai'] == 4) {
+            //         $orderDetail = (new OrderModel())->getOrder($id_tk);
+            //     }
+            //     // debug($orderDetail);
+            // }
+        }
+
+        view("users/order", ['category' => $category, 'order' => $order]);
     }
 
     public function checkout()

@@ -154,22 +154,23 @@
                                         <div class="cr-bl-block-content">
                                             <div class="cr-check-bill-form mb-minus-24">
                                                 <span class="cr-bill-wrap cr-bill-half">
-                                                    <label>Họ tên*</label>
+                                                    <label>Họ tên *</label>
                                                     <input type="text" name="hoTen" value="<?= $shipping['hoTen'] ?? '' ?>"
                                                         placeholder="Nhập tên của bạn..." required>
                                                 </span>
                                                 <span class="cr-bill-wrap cr-bill-half">
-                                                    <label>Số điện thoại*</label>
+                                                    <label>Số điện thoại *</label>
                                                     <input type="text" name="soDienThoai" value="<?= $shipping['soDienThoai'] ?? '' ?>"
                                                         placeholder="Nhập số điện thoại..." required>
                                                 </span>
                                                 <span class="cr-bill-wrap">
-                                                    <label for="address">Địa chỉ</label>
+                                                    <label for="address">Địa chỉ *</label>
                                                     <input type="text" id="address" name="diaChi" value="<?= $shipping['diaChi'] ?? '' ?>" placeholder="Nhập địa chỉ...">
                                                     <div id="suggestions" class="suggestions"></div>
                                                 </span>
                                                 <div class="grid">
                                                     <div>
+<<<<<<< HEAD
                                                         <label for="city">Tỉnh/Thành phố</label>
                                                         <input type="text" id="city" name="city" value="<?= $shipping['city'] ?? ''?>" required placeholder="Nhập tỉnh/thành phố">
                                                     </div>
@@ -179,12 +180,28 @@
                                                     </div>
                                                     <div>
                                                         <label for="ward">Phường/Xã</label>
+=======
+                                                        <label for="city">Tỉnh/Thành phố *</label>
+                                                        <input type="text" id="city" name="city" value="<?= $shipping['city'] ?? '' ?>" required placeholder="Nhập tỉnh/thành phố">
+                                                    </div>
+                                                    <div>
+                                                        <label for="district">Quận/Huyện *</label>
+                                                        <input type="text" id="district" name="district" value="<?= $shipping['district'] ?? '' ?>" required placeholder="Nhập quận/huyện">
+                                                    </div>
+                                                    <div>
+                                                        <label for="ward">Phường/Xã *</label>
+>>>>>>> 7f5260d009ae94b81da46516c0b0ad478ac9c697
                                                         <input type="text" id="ward" name="ward" value="<?= $shipping['ward'] ?? '' ?>" required placeholder="Nhập phường/xã">
                                                     </div>
                                                 </div>
                                                 <span class="cr-bill-wrap mb-4">
+<<<<<<< HEAD
                                                     <label>Region State</label>
                                                     <textarea class="form-control" rows="5" name="note" id=""><?= $shipping['note'] ?? ''?></textarea>
+=======
+                                                    <label>Ghi chú</label>
+                                                    <textarea class="form-control" rows="5" name="note" id=""><?= $shipping['note'] ?? '' ?></textarea>
+>>>>>>> 7f5260d009ae94b81da46516c0b0ad478ac9c697
                                                 </span>
                                             </div>
 

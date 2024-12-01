@@ -20,6 +20,7 @@ include "controllers/users/CartControllers.php";
 include "controllers/users/WishlistController.php";
 include "controllers/users/ShippingController.php";
 include "controllers/users/CheckoutController.php";
+include "controllers/users/OrderController.php";
 
 //==========================Models========================
 //---------------Model-Admin-------------
@@ -40,6 +41,7 @@ include "models/users/WishlistModel.php";
 include "models/users/ShippingModel.php";
 include "models/users/CheckoutModel.php";
 include "models/users/CommentModel.php";
+include "models/users/OrderModel.php";
 
 include "commons/helpers.php";
 
@@ -104,6 +106,7 @@ if (!empty($user)) {
         'shipping' => (new ShippingController())->shipping(),
         'checkout' => (new CheckoutController())->getCheckout(),
         'thanhToanSP' => (new CheckoutController())->checkout(),
+        'donMua' => (new OrderController())->getOrder(),
         default => die("Không tìm thấy file"),
     };
 }

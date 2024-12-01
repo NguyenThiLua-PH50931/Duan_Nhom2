@@ -17,7 +17,7 @@ class ProductModels
     public function getAllProducts()
     {
         $sql = "SELECT `id_sp`, `ten_sp`, `gia_tien`, `gia_km`, `anh_sp`, `mo_ta`, `luot_xem`, `soluong_ton`, danh_muc.ten_dm 
-                FROM `san_pham` JOIN danh_muc on san_pham.id_dm = danh_muc.id_dm ORDER BY id_sp DESC";
+                FROM `san_pham` JOIN danh_muc on san_pham.id_dm = danh_muc.id_dm ORDER BY id_sp DESC limit 8";
         $stmt = $this->db->pdo->query($sql);
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $result;

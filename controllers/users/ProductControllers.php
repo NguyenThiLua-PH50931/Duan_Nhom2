@@ -7,11 +7,13 @@ class ProductControllers
         $category = (new CategoryModels)->all();
 
         // Lấy giá trị `sort` từ URL hoặc mặc định
-        $sort = isset($_GET['sort']) ? $_GET['sort'] : '';
-
+        $sort = $_GET['sort'] ?? '';
+        $id_dm = $_GET['id_dm'] ?? '';
         if (!empty($sort)) {
             // Nếu có tham số `sort`, lọc sản phẩm theo giá
             $products = (new ProductModel)->getProductsBySort($sort);
+        } elseif (!empty($id_dm)) {
+            $products = (new CategoryModels)->productByCategory($id_dm);
         } else {
             // Nếu không có tham số `sort`, lấy toàn bộ sản phẩm
             $products = (new ProductModels)->getAllProducts();
@@ -31,9 +33,6 @@ class ProductControllers
                 exit();
             }
         }
-    // var_dump($products);
-    // exit;
-
         view("users/shop", ['products' => $products, 'category' => $category]);
     }
 }

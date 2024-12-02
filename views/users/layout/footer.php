@@ -134,7 +134,7 @@
             </div>
         </div>
         <div class="cr-last-footer">
-            <p><span id=""></span> <a href="index.html">LYSport</a>, Xây dựng Website bán giày</p>
+            <p><span id=""></span> <a href="index.html">SHOE SHOP</a>, Xây dựng Website bán giày</p>
         </div>
     </div>
 </footer>

@@ -16,7 +16,7 @@
     </div>
 
     <!-- Header -->
-    <header>
+    <header style="height: 180px; margin-bottom: 10px;">
         <?php include_once "views/users/layout/header.php" ?>
     </header>
 
@@ -29,8 +29,8 @@
         <div class="cr-breadcrumb-image">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
-                        <div class="cr-breadcrumb-title">
+                    <div class="col-lg-12" >
+                        <div class="cr-breadcrumb-title" >
                             <h2>Shop</h2>
                             <span> <a href="index.html">Home</a> - Shop</span>
                         </div>

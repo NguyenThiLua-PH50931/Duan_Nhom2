@@ -40,7 +40,8 @@
                 <div class="cr-page-title cr-page-title-2">
                     <div class="cr-breadcrumb">
                         <ul>
-                            <li><a href="index.html">Carrot</a></li>
+                        <li><a href="index.html" style="color: green">SHOE SHOP</a></li>
+
                             <li>Comment List</li>
                         </ul>
                     </div>
@@ -50,21 +51,24 @@
                         <div class="cr-card card-default product-list">
                             <div class="cr-card-content ">
                                 <div class="table-responsive">
-                                    <h5 style="text-align:center">Comment List</h5>
+                                    <h5 style="text-align:center; font-size: 30px; color:green; font-weight: bold; ">Comment List</h5>
                                     <form action="" method="post" enctype="multipart/form-data">
-
                                         <table id="" class="table table-hover">
                                             <thead>
                                                 <tr>
-                                                    <th>Người bình luận</th>
-                                                    <th>Nội dung bình luận</th>
-                                                    <th>Ngày bình luận</th>
+                                                    <th style="font-weight: bold; font-size:15px">Người bình luận</th>
+                                                    <th style="font-weight: bold; font-size:15px"> Nội dung bình luận</th>
+                                                    <th style="font-weight: bold; font-size:15px">Ngày bình luận</th>
                                                     <th></th>
                                                 </tr>
+                                                <tr></tr>
+                                                
+                                               
                                             </thead>
 
                                             <tbody>
                                                 <?php foreach ($allComment as $cm) : ?>
+                                                    <tr></tr>
                                                     <tr>
                                                         <td><?= $cm['ho_ten'] ?></td>
                                                         <td><?= $cm['noi_dung_bl'] ?></td>
@@ -72,8 +76,8 @@
                                                         <!-- <td><span class="active">active</span></td> -->
                                                         <td>
                                                             <div class="d-flex justify-content-center">
-                                                                <button type="button"
-                                                                    class="btn btn-outline-success dropdown-toggle dropdown-toggle-split"
+                                                                <button 
+                                                                    class="btn btn-success dropdown-toggle dropdown-toggle-split"
                                                                     data-bs-toggle="dropdown" aria-haspopup="true"
                                                                     aria-expanded="false" data-display="static">
                                                                     <span class="sr-only"><i

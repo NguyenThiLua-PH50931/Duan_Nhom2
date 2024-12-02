@@ -3,14 +3,17 @@
         <div class="col-lg-12">
             <div class="top-header">
                 <a href="index.html" class="cr-logo">
-                    <img src="assets/users/img/logo/logo.png" alt="logo" class="logo">
-                    <img src="assets/users/img/logo/dark-logo.png" alt="logo" class="dark-logo">
+                    <img src="assets/users/img/logo/logo.png" alt="logo" class="logo" style="height:90px; width:180px;">
                 </a>
-                <form action="index.php?user=shop" method="post" class="cr-search">
-                    <input class="search-input" type="text" placeholder="Search For items..." name="keyword">
-                    <button class="search-btn border-0">
-                        <i class="ri-search-line"></i>
-                    </button>
+
+                <form class="row g-3" action="index.php?user=shop" method="post" style="margin-top: 2px;">
+                    <div class="col-auto">
+                        <label for="inputPassword2" class="visually-hidden">Tìm kiếm tại đây</label>
+                        <input type="text" class="form-control" id="text" name="keyword" placeholder="Tìm kiếm tại đây" style="width: 300px; border: 1px forestgreen solid;">
+                    </div>
+                    <div class="col-auto">
+                        <button type="submit" class="" style="border-radius: 10px; height: 40px;   border: 1px forestgreen solid;">Search</button>
+                    </div>
                 </form>
                 <div class="cr-right-bar">
                     <ul class="navbar-nav">
@@ -62,7 +65,7 @@
 
                     <?php
                     if (isset($_SESSION['vai_tro']) && $_SESSION['vai_tro'] == 1) {
-                        echo '<a href="index.php?admin=list-product" class="cr-right-bar-item"><i class="ri-user-3-line"></i><span>Đăng nhập Admin</span></a>';
+                        echo '<a href="index.php?admin=dasboard" class="cr-right-bar-item"><i class="ri-user-3-line"></i><span style="width: 200px">Đăng nhập Admin</span></a>';
                     }
                     ?>
 
@@ -307,98 +310,25 @@
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="javascript:void(0)">
+                            <a class="nav-link" href="javascript:void(0)">
                                 Pages
                             </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item" href="about.html">About Us</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="contact-us.html">Contact Us</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="cart.html">Cart</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="checkout.html">Checkout</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="track-order.html">Track Order</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="wishlist.html">Wishlist</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="faq.html">Faq</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="login.html">Login</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="register.html">Register</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="policy.html">Policy</a>
-                                </li>
-                            </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="javascript:void(0)">
+                            <a class="nav-link " href="javascript:void(0)">
                                 Blog
                             </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item" href="blog-left-sidebar.html">Left
-                                        Sidebar</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="blog-right-sidebar.html">Right
-                                        Sidebar</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="blog-full-width.html">Full
-                                        Width</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="blog-detail-left-sidebar.html">Detail
-                                        Left
-                                        Sidebar</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="blog-detail-right-sidebar.html">Detail
-                                        Right
-                                        Sidebar</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="blog-detail-full-width.html">Detail
-                                        Full
-                                        Width</a>
-                                </li>
-                            </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="javascript:void(0)">
+                            <a class="nav-link " href="javascript:void(0)">
                                 Elements
                             </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a class="dropdown-item" href="elements-products.html">Products</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="elements-typography.html">Typography</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="elements-buttons.html">Buttons</a>
-                                </li>
-                            </ul>
                         </li>
                     </ul>
                 </div>
             </nav>
             <div class="cr-calling">
-                <i class="ri-phone-line"></i>
-                <a href="javascript:void(0)">+123 ( 456 ) ( 7890 )</a>
+
             </div>
         </div>
     </div>

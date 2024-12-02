@@ -9,7 +9,6 @@ include "controllers/admin/ProductsControllers.php";
 include "controllers/admin/AuthController.php";
 include "controllers/admin/AccountsController.php";
 include "controllers/admin/CommentController.php";
-include "controllers/admin/DashboardController.php";
 include "controllers/admin/OrdersController.php";
 
 //---------------Controllers-User-------------
@@ -59,9 +58,6 @@ if (!empty($admin)) {
     }
 
     match ($admin) {
-
-        // Dashboard
-        'dashboard' => (new DashboardController())->dashboard(),
 
         // Sản phẩm
         'list-product' => (new ProductsController())->listProduct(),

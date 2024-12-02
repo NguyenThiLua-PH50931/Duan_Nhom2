@@ -16,7 +16,7 @@
     </div>
 
     <!-- Header -->
-    <header>
+    <header style="height: 180px; margin-bottom: 10px;">
         <?php include_once "views/users/layout/header.php" ?>
     </header>
 
@@ -26,7 +26,7 @@
 
     <!-- Breadcrumb -->
     <section class="section-breadcrumb">
-        <div class="cr-breadcrumb-image">
+        <div class="cr-breadcrumb-image" style="margin-top: 40px;">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -155,21 +155,35 @@
                                     <li><label>Số lượng tồn <span>:</span></label><?= $product['soluong_ton'] ?></li>
                                 </ul>
                             </div>
+                            <!-- Biến thể -->
+                            <div class="cr-size-weight">
+                                <form action="index.php?user=cart" method="POST">
+                                    <h5><span>Size: </span></h5>
+                                    <div>
+                                        <input type="radio" name="size" value="37" id="size-37" required>
+                                        <label for="size-37">37</label>
+
+                                        <input type="radio" name="size" value="38" id="size-38">
+                                        <label for="size-38">38</label>
+
+                                        <input type="radio" name="size" value="39" id="size-39">
+                                        <label for="size-39">39</label>
+
+                                        <input type="radio" name="size" value="40" id="size-40">
+                                        <label for="size-40">40</label>
+                                    </div>
+                                </form>
+                            </div>
                             <div class="cr-product-price">
                                 <span class="new-price"><?= $product['gia_tien'] ?>VND</span>
                                 <span class="old-price"><?= $product['gia_km'] ?>VND</span>
                             </div>
-                            <!-- <div class="cr-size-weight">
-                                <h5><span>Size</span>/<span>Weight</span> :</h5>
-                                <div class="cr-kg">
-                                    <ul>
-                                        <li class="active-color">50kg</li>
-                                        <li>80kg</li>
-                                        <li>120kg</li>
-                                        <li>200kg</li>
-                                    </ul>
-                                </div>
-                            </div> -->
+
+
+
+                            <!-- Xử lý khi người dùng nhấn nút chọn size -->
+                            <script></script>
+
                             <div class="cr-add-card">
                                 <div class="cr-qty-main">
                                     <input type="text" placeholder="." value="1" minlength="1" maxlength="20"
@@ -178,6 +192,11 @@
                                     <button type="button" class="minus">-</button>
                                 </div>
                                 <input type="hidden" name="id_sp" value="<?= $product['id_sp'] ?>">
+
+                                
+                            
+
+
                                 <div class="cr-add-button">
                                     <button name="addCart" class="cr-button btn-outline-success">Thêm vào giỏ hàng</button>
                                 </div>
@@ -188,11 +207,13 @@
                     <form action="" method="post">
                         <input type="hidden" name="id_sp" value="<?= $product['id_sp'] ?>">
                         <div class="cr-card-icon">
-                            <button name="addWishlist" class="wishlist border-0">
+                            <button name="addWishlist" class="cr-button btn-outline-success">
                                 <i class="ri-heart-line"></i>
                             </button>
                         </div>
                     </form>
+
+
                 </div>
             </div>
         </div>
@@ -243,8 +264,9 @@
                                                 </div>
 
                                                 <div class="justify-content-center">
-                                                    <button type="button"
-                                                        class="btn btn-outline-success dropdown-toggle-split"
+
+                                                    <button type="button" style="margin-left: 10px;   border-radius: 5px; "
+                                                        class="btn btn-outline-success dropdown-toggle"
                                                         data-bs-toggle="dropdown" aria-haspopup="true"
                                                         aria-expanded="false" data-display="static">
                                                         <span class="sr-only"><i

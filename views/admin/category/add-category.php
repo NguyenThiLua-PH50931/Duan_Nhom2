@@ -26,9 +26,10 @@
                 <!-- Page title & breadcrumb -->
                 <div class="cr-page-title cr-page-title-2">
                     <div class="cr-breadcrumb">
-                        <h5>Add Category</h5>
+                        <h5 style="text-align:center; font-size: 30px; color:green;">Add Category</h5>
                         <ul>
-                            <li><a href="index.html">Carrot</a></li>
+                        <li><a href="index.html" style="color: green">SHOE SHOP</a></li>
+
                             <li>Add Category</li>
                         </ul>
                     </div>
@@ -71,7 +72,7 @@
                                                     <?php endif; ?>
                                             </div>
                                             <div class="col-md-12">
-                                                <button type="submit" class="btn cr-btn-primary" value="Thêm mới">Thêm mới</button>
+                                                <button type="submit" class="btn btn-success" value="Thêm mới">Thêm mới</button>
                                             </div>
                                         </form>
                                     </div>

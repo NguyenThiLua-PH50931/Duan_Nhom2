@@ -16,7 +16,7 @@
     </div>
 
     <!-- Header -->
-    <header>
+    <header style="height: 180px; margin-bottom: 10px;">
         <?php include_once "views/users/layout/header.php" ?>
     </header>
 
@@ -68,6 +68,7 @@
                                             <thead>
                                                 <tr>
                                                     <th>Product</th>
+                                                    <th>Size</th>
                                                     <th>Price</th>
                                                     <th class="text-center">Quantity</th>
                                                     <th>Total</th>
@@ -84,6 +85,14 @@
                                                                 <?= $value['ten_sp'] ?>
                                                             </a>
                                                         </td>
+
+
+                                                        <!-- Sizze -->
+                                                        <td  class="cr-cart-price">
+                                                            
+                                                        </td>
+
+
                                                         <td class="cr-cart-price">
                                                             <span class="amount"><?= number_format($value['gia_tien'], 0, ',', '.') ?> VNĐ</span>
                                                         </td>

@@ -18,27 +18,6 @@
             </div>
         </div>
         <div class="right-header">
-            <div class="cr-right-tool cr-flag-drop language">
-                <div class="cr-hover-drop">
-                    <div class="cr-hover-tool">
-                        <img class="flag" src="assets/admin/img/flag/us.png" alt="flag">
-                    </div>
-                    <div class="cr-hover-drop-panel right">
-                        <ul>
-                            <li><a href="javascript:void(0)"><img class="flag" src="assets/admin/img/flag/us.png"
-                                        alt="flag">English</a></li>
-                            <li><a href="javascript:void(0)"><img class="flag" src="assets/admin/img/flag/in.png"
-                                        alt="flag">Hindi</a></li>
-                            <li><a href="javascript:void(0)"><img class="flag" src="assets/admin/img/flag/de.png"
-                                        alt="flag"> Deutsch</a></li>
-                            <li><a href="javascript:void(0)"><img class="flag" src="assets/admin/img/flag/it.png"
-                                        alt="flag">Italian</a></li>
-                            <li><a href="javascript:void(0)"><img class="flag" src="assets/admin/img/flag/jp.png"
-                                        alt="flag">Japanese</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
           
             <div class="cr-right-tool display-screen">
                 <a class="cr-screen full" href="javascript:void(0)"><i class="ri-fullscreen-line"></i></a>

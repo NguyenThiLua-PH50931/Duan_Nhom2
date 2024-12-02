@@ -20,7 +20,7 @@
     </div>
 
     <!-- Header -->
-    <header>
+    <header style="height: 180px; margin-bottom: 10px;">
         <?php include_once "views/users/layout/header.php" ?><?php include_once "views/users/layout/header.php" ?>
     </header>
 

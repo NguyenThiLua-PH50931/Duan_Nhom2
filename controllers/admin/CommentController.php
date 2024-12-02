@@ -5,7 +5,7 @@ class CommentController
     // Danh sách sản phẩm
     public function listComment()
     {
-        $id_sp = $_GET['id_sp'];
+        // $id_sp = $_GET['id_sp'];
         $allComment = (new CommentModels)->getAllComments();
         view("admin/comment/list-comment", ['allComment' => $allComment]);
     }

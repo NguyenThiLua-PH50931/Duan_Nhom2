@@ -25,10 +25,10 @@
                 <!-- Page title & breadcrumb -->
                 <div class="cr-page-title cr-page-title-2">
                     <div class="cr-breadcrumb">
-                        <a href="index.php?admin=add-product" class="cr-btn default-btn color-success">Thêm mới</a>
-                        <h3>Product List</h3>
+                        <a href="index.php?admin=add-product" class="cr-btn default-btn btn btn-success">Thêm mới</a>
+                        <h5 style="text-align:center; font-size: 30px; color:green;">Product List</h5>
                         <ul>
-                            <li><a href="index.html">Carrot</a></li>
+                        <li><a href="index.html" style="color: green">SHOE SHOP</a></li>
                             <li>Product List</li>
                         </ul>
                     </div>
@@ -49,14 +49,14 @@
                                         <table id="product_list" class="table">
                                             <thead>
                                                 <tr>
-                                                    <th>Ảnh sản phẩm</th>
-                                                    <th>Tên sản phẩm</th>
-                                                    <th>Giá tiền</th>
-                                                    <th>Danh mục</th>
+                                                    <th style="font-weight: bold; font-size:15px">Ảnh sản phẩm</th>
+                                                    <th style="font-weight: bold; font-size:15px">Tên sản phẩm</th>
+                                                    <th style="font-weight: bold; font-size:15px">Giá tiền</th>
+                                                    <th style="font-weight: bold; font-size:15px">Danh mục</th>
 
-                                                    <th style="width: 100px">Lượt xem</th>
-                                                    <th style="width: 100px">Số lượng tồn</th>
-                                                    <th>Action</th>
+                                                    <th style="width: 100px; font-weight: bold; font-size:15px">Lượt xem</th>
+                                                    <th style=" font-weight: bold; font-size:15px">Số lượng tồn</th>
+                                                    <th style=" width: 100px; font-weight: bold; font-size:15px; ">Action</th>
                                                 </tr>
                                             </thead>
 
@@ -68,13 +68,14 @@
                                                         </td>
                                                         <td><?= $pro['ten_sp'] ?></td>
                                                         <td><?= $pro['gia_tien'] ?> VNĐ</td>
+                                                        <td><?= $pro['ten_dm'] ?></td>
                                                         <td><?= $pro['luot_xem'] ?></td>
                                                         <td><?= $pro['soluong_ton'] ?></td>
                                                         <!-- <td><span class="active">active</span></td> -->
                                                         <td>
                                                             <div class="d-flex justify-content-center">
                                                                 <button type="button"
-                                                                    class="btn btn-outline-success dropdown-toggle dropdown-toggle-split"
+                                                                    class="btn btn-success dropdown-toggle dropdown-toggle-split"
                                                                     data-bs-toggle="dropdown" aria-haspopup="true"
                                                                     aria-expanded="false" data-display="static">
                                                                     <span class="sr-only"><i

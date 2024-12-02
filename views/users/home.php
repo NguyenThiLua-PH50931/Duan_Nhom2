@@ -27,7 +27,7 @@
     </div>
 
     <!-- Header -->
-    <header>
+    <header style="height: 170px;">
         <?php include_once "views/users/layout/header.php" ?>
     </header>
 
@@ -39,8 +39,8 @@
         <div class="cr-slider swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <div class="cr-hero-banner cr-banner-image-two">
-                        <div class="container">
+                    <div class="cr-hero-banner cr-banner-image-two" style="height: 500px; margin-top: 30px;">
+                    <div class="container">
                             <div class="row">
                                 <div class="col-lg-12">
                                 </div>
@@ -49,7 +49,7 @@
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="cr-hero-banner cr-banner-image-one">
+                    <div class="cr-hero-banner cr-banner-image-one" style="height: 500px; margin-top: 30px;">
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-12">
@@ -96,10 +96,10 @@
                             <div class="cr-ice-cubes">
                                 <img src="assets/users/img/product/product-banner.jpg" alt="product banner">
                                 <div class="cr-ice-cubes-contain">
-                                    <h4 class="title">Juicy </h4>
-                                    <h5 class="sub-title">Fruits</h5>
-                                    <span>100% Natural</span>
-                                    <a href="shop-left-sidebar.html" class="cr-button">Shop Now</a>
+                                    <h4 class="title"></h4>
+                                    <h5 class="sub-title"></h5>
+                                    <span></span>
+                                    <!-- <a href="shop-left-sidebar.html" class="cr-button"></a> -->
                                 </div>
                             </div>
                         </div>

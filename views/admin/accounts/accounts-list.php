@@ -6,14 +6,8 @@
     <?php include_once "views/admin/layout/linkCss.php" ?>
 </head>
 <style>
-    table {
-        margin-top: 15px;
-        padding: 20px;
-        width: 70%;
-
-    }
-    th{
-        font-weight: bold;
+    th {
+        font-size: 30px;
     }
 </style>
 
@@ -38,9 +32,11 @@
                 <!-- Page title & breadcrumb -->
                 <div class="cr-page-title cr-page-title-2">
                     <div class="cr-breadcrumb">
+                        <a href="index.php?admin=add-accounts" class="cr-btn default-btn btn btn-success" style="width: 120px;">Thêm mới</a>
+                        <h5 style="font-size: 30px; color:green; text-align: center; font-weight: bold; "> Accounts List</h5>
                         <ul>
-                            <li><a href="index.html">Carrot</a></li>
-                            <li>Account List</li>
+                            <li><a href="index.html" style="color: green">SHOE SHOP</a></li>
+                            <li>Account - List</li>
                         </ul>
                     </div>
                 </div>
@@ -49,34 +45,33 @@
                         <div class="cr-card card-default product-list">
                             <div class="cr-card-content ">
                                 <div class="table-responsive">
-                                    <h5 style="text-align:center">Accounts List</h5>
                                     <form action="" method="post" enctype="multipart/form-data">
-
                                         <table id="" class="table table-hover">
-                                            <a href="index.php?admin=add-accounts" class="cr-btn default-btn color-success" style="width: 120px;">Thêm mới</a>
+                                            <br>
                                             <thead>
                                                 <tr>
-                                                    <th>Tên tài khoản</th>
-                                                    <th>Họ tên</th>
-                                                    <th>Số điện thoại</th>
-                                                    <th>Mật khẩu</th>
-                                                    <th>Địa chỉ</th>
-                                                    <th>Email</th>
-                                                    <th>Vai trò</th>
+                                                    <th style="font-weight: bold; font-size:15px">Tên tài khoản</th>
+                                                    <th style="font-weight: bold; font-size:15px">Họ tên</th>
+                                                    <th style="font-weight: bold; font-size:15px">Số điện thoại</th>
+                                                    <th style="font-weight: bold; font-size:15px">Mật khẩu</th>
+                                                    <th style="font-weight: bold; font-size:15px">Địa chỉ</th>
+                                                    <th style="font-weight: bold; font-size:15px">Email</th>
+                                                    <th style="font-weight: bold; font-size:15px">Vai trò</th>
                                                     <th></th>
                                                 </tr>
                                             </thead>
-
                                             <tbody>
                                                 <?php foreach ($accounts as $ac) : ?>
                                                     <tr>
-                                                        <td><?= $ac['ten_tk'] ?></td>
-                                                        <td><?= $ac['ho_ten'] ?></td>
-                                                        <td><?= $ac['so_dt'] ?></td>
-                                                        <td><?= $ac['mat_khau'] ?></td>
-                                                        <td><?= $ac['dia_chi'] ?></td>
-                                                        <td><?= $ac['email'] ?></td>
-                                                        <td>
+                                                        <td style="width: 200px; "><?= $ac['ten_tk'] ?></td>
+                                                        <td style="width: 200px;"><?= $ac['ho_ten'] ?></td>
+                                                        <td style="width: 200px;"><?= $ac['so_dt'] ?></td>
+                                                        <td style="word-break: break-word; width: 300px;">
+                                                            <?= $ac['mat_khau'] ?>
+                                                        </td>
+                                                        <td style="width: 200px;"><?= $ac['dia_chi'] ?></td>
+                                                        <td style="width: 200px;"><?= $ac['email'] ?></td>
+                                                        <td style="width: 200px;">
                                                             <?php
                                                             if ($ac["vai_tro"] == 1) {
                                                                 echo "Admin";
@@ -89,7 +84,7 @@
                                                         <td>
                                                             <div class="d-flex justify-content-center">
                                                                 <button type="button"
-                                                                    class="btn btn-outline-success dropdown-toggle dropdown-toggle-split"
+                                                                    class="btn btn-success dropdown-toggle dropdown-toggle-split"
                                                                     data-bs-toggle="dropdown" aria-haspopup="true"
                                                                     aria-expanded="false" data-display="static">
                                                                     <span class="sr-only"><i

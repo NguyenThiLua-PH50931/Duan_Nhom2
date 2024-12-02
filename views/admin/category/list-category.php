@@ -27,10 +27,11 @@
                 <!-- Page title & breadcrumb -->
                 <div class="cr-page-title cr-page-title-2">
                     <div class="cr-breadcrumb">
-                        <a href="index.php?admin=add-category" class="cr-btn default-btn color-success">Thêm mới</a>
-                        <h3>Category List</h3>
+                        <a href="index.php?admin=add-category" class="cr-btn default-btn btn btn-success">Thêm mới</a>
+                        <h5 style="text-align:center; font-size: 30px; color:green;">Category List</h5>
                         <ul>
-                            <li><a href="#">Carrot</a></li>
+                        <li><a href="index.html" style="color: green">SHOE SHOP</a></li>
+
                             <li>Category List</li>
                         </ul>
                     </div>
@@ -47,11 +48,12 @@
                                         }
                                         $_SESSION['message'] = null;
                                         ?>
-                                        <table class="table text-center">
+                                        <table class="table">
                                             <thead>
                                                 <tr>
-                                                    <th style="font-size:20px">Tên danh mục</th>
-                                                    <th style="font-size:20px">Action</th>
+                                                    <th style="font-weight: bold; font-size:15px">Tên danh mục</th>
+                                                    <th></th>
+                                                    <th style="font-weight: bold; font-size:15px"></th>
                                                 </tr>
                                             </thead>
 
@@ -63,7 +65,7 @@
                                                         <td>
                                                             <div class="d-flex justify-content-center">
                                                                 <button type="button"
-                                                                    class="btn btn-outline-success dropdown-toggle dropdown-toggle-split"
+                                                                    class="btn btn-success dropdown-toggle dropdown-toggle-split"
                                                                     data-bs-toggle="dropdown" aria-haspopup="true"
                                                                     aria-expanded="false" data-display="static">
                                                                     <span class="sr-only"><i

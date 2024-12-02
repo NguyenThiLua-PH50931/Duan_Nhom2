@@ -57,6 +57,7 @@ if (!empty($admin)) {
     }
 
     match ($admin) {
+        // dasboad:
         // Sản phẩm
         'list-product' => (new ProductsController())->listProduct(),
         'add-product' => (new ProductsController())->addProduct(),

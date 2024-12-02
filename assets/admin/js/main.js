@@ -641,14 +641,14 @@
     }
 
     /*======== Product list DATA TABLE ========*/
-    var responsiveDataTable = $("#product_list");
-    if (responsiveDataTable.length !== 0) {
-        responsiveDataTable.DataTable({
-            "aLengthMenu": [[10, 20, 30, -1], [10, 20, 30, "All"]],
-            "pageLength": 10,
-            "dom": '<"row justify-content-between top-information"lf>rt<"row justify-content-between bottom-information"ip><"clear">'
-        });
-    }
+    // var responsiveDataTable = $("#product_list");
+    // if (responsiveDataTable.length !== 0) {
+    //     responsiveDataTable.DataTable({
+    //         // "aLengthMenu": [[10, 20, 30, -1], [10, 20, 30, "All"]],
+    //         // "pageLength": 10,
+    //         "dom": '<"row justify-content-between top-information"lf>rt<"row justify-content-between bottom-information"ip><"clear">'
+    //     });
+    // }
 
     /*========== On ckick card zoom (full screen) ===========*/
     $(".cr-full-card").on("click", function () {

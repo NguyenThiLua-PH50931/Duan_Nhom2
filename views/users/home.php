@@ -27,7 +27,7 @@
     </div>
 
     <!-- Header -->
-    <header style="height: 170px;">
+    <header style="height: 180px;">
         <?php include_once "views/users/layout/header.php" ?>
     </header>
 

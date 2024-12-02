@@ -8,12 +8,16 @@
         <div class="cr-sb-content">
             <ul class="cr-sb-list">
                 <li class="cr-sb-item sb-drop-item">
+<<<<<<< HEAD
                     <a href="index.php?admin=dasboard" class="cr-drop-toggle">
 
+=======
+                    <a href="index.php?admin=dashboard" class="">
+>>>>>>> 8072630ef72034f4ea3a87ca39bad6d2febf0d06
                         <i class="ri-dashboard-3-line"></i><span class="condense">Dashboard<i
-                                class="drop-arrow ri-arrow-down-s-line"></i></span></a>
+                                class=""></i></span>
+                    </a>
                     <ul class="cr-sb-drop condense">
-
                         <li><a href="index.php?admin=list-product" class="cr-page-link drop"><i
                                     class="ri-checkbox-blank-circle-line"></i>Product</a></li>
 
@@ -22,8 +26,16 @@
 
                         <li><a href="index.php?admin=list-accounts" class="cr-page-link drop"><i
                                     class="ri-checkbox-blank-circle-line"></i>Accounts</a></li>
-                        <li><a href="index.php?admin=list-comment" class="cr-page-link drop"><i
-                                    class="ri-checkbox-blank-circle-line"></i>Comment</a></li>
+                        <li>
+                            <a href="index.php?admin=list-comment" class="cr-page-link drop"><i
+                                    class="ri-checkbox-blank-circle-line"></i>Comment
+                            </a>
+                        </li>
+                        <li>
+                            <a href="index.php?admin=listOrder" class="cr-page-link drop"><i
+                                    class="ri-checkbox-blank-circle-line"></i>Order
+                            </a>
+                        </li>
                     </ul>
                 </li>
             </ul>

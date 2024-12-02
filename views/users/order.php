@@ -104,7 +104,7 @@
                                     </a>
                                 </div>
 
-                                <div class="cr-step" onclick="changeTableContent('dispatched')">
+                                <div class="cr-step" onclick="changeTableContent('daGiao')">
                                     <a href="javascript:void(0)">
                                         <span class="cr-step-icon">
                                             <i class="ri-gift-line"></i>
@@ -112,7 +112,7 @@
                                     </a>
                                 </div>
 
-                                <div class="cr-step" onclick="changeTableContent('dispatched')">
+                                <div class="cr-step" onclick="changeTableContent('huyDon')">
                                     <a href="javascript:void(0)">
 
                                         <span class="cr-step-icon">
@@ -131,6 +131,8 @@
                                             <th>Price</th>
                                             <th class="text-center">Quantity</th>
                                             <th>Total</th>
+                                            <th>Phương thức</th>
+                                            <th class="text-center">Địa chỉ</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -229,8 +231,14 @@
                                 <td class="cr-cart-subtotal">
                                     <?= number_format($value['soLuong'] * $value['gia_tien'], 0, ',', '.') ?> VNĐ
                                 </td>
+                                <td class="cr-cart-qty text-center">
+                                    <span><?= $value['phuongthuc_thanhtoan'] ?></span>
+                                </td>
+                                <td class="cr-cart-qty text-center">
+                                    <span><?= $shipping['diaChi'] ?></span>
+                                </td>
                                 <td class="cr-cart-remove text-center">
-                                    <a class="text-center" onclick="return confirm('Bạn có chắc muốn xóa ?')" href="">
+                                    <a class="text-center" onclick="return confirm('Bạn có chắc muốn xóa ?')" href="index.php?user=huyDon&id_donHang=<?= $value['id'] ?>">
                                         Hủy Đơn
                                     </a>
                                 </td>
@@ -258,6 +266,45 @@
                                 <td class="cr-cart-subtotal">
                                     <?= number_format($value['soLuong'] * $value['gia_tien'], 0, ',', '.') ?> VNĐ
                                 </td>
+                                <td class="cr-cart-qty text-center">
+                                    <span><?= $value['phuongthuc_thanhtoan'] ?></span>
+                                </td>
+                                <td class="cr-cart-qty text-center">
+                                    <span><?= $shipping['diaChi'] ?></span>
+                                </td>
+                                <td class="cr-cart-remove text-center">
+                                    <i class="ri-check-line"></i>
+                                </td>
+                            </tr>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+        `;
+            } else if (status === 'dispatched') {
+                newContent = `
+                <?php foreach ($order as $value): ?>
+                <?php if ($value['id_trangThai'] == 3) : ?>
+                            <tr>
+                                <td class="cr-cart-name">
+                                    <a href="javascript:void(0)">
+                                        <img src="<?= $value['anh_sp'] ?>" width="150px" alt="product-1" class="cr-cart-img">
+                                        <?= $value['ten_sp'] ?>
+                                    </a>
+                                </td>
+                                <td class="cr-cart-price">
+                                    <span class="amount"><?= number_format($value['gia_tien'], 0, ',', '.') ?> VNĐ</span>
+                                </td>
+                                <td class="cr-cart-qty text-center">
+                                    <span><?= $value['soLuong'] ?></span>
+                                </td>
+                                <td class="cr-cart-subtotal">
+                                    <?= number_format($value['soLuong'] * $value['gia_tien'], 0, ',', '.') ?> VNĐ
+                                </td>
+                                <td class="cr-cart-qty text-center">
+                                    <span><?= $value['phuongthuc_thanhtoan'] ?></span>
+                                </td>
+                                <td class="cr-cart-qty text-center">
+                                    <span><?= $shipping['diaChi'] ?></span>
+                                </td>
                                 <td class="cr-cart-remove text-center">
                                     <a class="text-center" onclick="return confirm('Bạn có chắc muốn xóa ?')" href="">
                                         Hủy Đơn
@@ -267,20 +314,75 @@
                         <?php endif; ?>
                     <?php endforeach; ?>
         `;
-            } else if (status === 'dispatched') {
+            } else if (status === 'daGiao') {
                 newContent = `
-            <tr>
-                <td class="cr-cart-name">
-                    <a href="javascript:void(0)">
-                        <img src="product3.jpg" width="50px" alt="product">
-                        Sản phẩm 3
-                    </a>
-                </td>
-                <td class="cr-cart-price">400,000 VNĐ</td>
-                <td class="cr-cart-qty text-center">1</td>
-                <td class="cr-cart-subtotal">400,000 VNĐ</td>
-                <td class="cr-cart-remove"><a href="#"><i class="ri-delete-bin-line"></i></a></td>
-            </tr>
+                <?php foreach ($order as $value): ?>
+                <?php if ($value['id_trangThai'] == 4) : ?>
+                            <tr>
+                                <td class="cr-cart-name">
+                                    <a href="javascript:void(0)">
+                                        <img src="<?= $value['anh_sp'] ?>" width="150px" alt="product-1" class="cr-cart-img">
+                                        <?= $value['ten_sp'] ?>
+                                    </a>
+                                </td>
+                                <td class="cr-cart-price">
+                                    <span class="amount"><?= number_format($value['gia_tien'], 0, ',', '.') ?> VNĐ</span>
+                                </td>
+                                <td class="cr-cart-qty text-center">
+                                    <span><?= $value['soLuong'] ?></span>
+                                </td>
+                                <td class="cr-cart-subtotal">
+                                    <?= number_format($value['soLuong'] * $value['gia_tien'], 0, ',', '.') ?> VNĐ
+                                </td>
+                                <td class="cr-cart-qty text-center">
+                                    <span><?= $value['phuongthuc_thanhtoan'] ?></span>
+                                </td>
+                                <td class="cr-cart-qty text-center">
+                                    <span><?= $shipping['diaChi'] ?></span>
+                                </td>
+                                <td class="cr-cart-remove text-center">
+                                    <a class="text-center" href="index.php?user=detail-product&id_sp=<?= $value['id_sp'] ?>">
+                                        Mua lại
+                                    </a>
+                                </td>
+                            </tr>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+        `;
+            } else if (status === 'huyDon') {
+                newContent = `
+                <?php foreach ($order as $value): ?>
+                <?php if ($value['id_trangThai'] == 5) : ?>
+                            <tr>
+                                <td class="cr-cart-name">
+                                    <a href="javascript:void(0)">
+                                        <img src="<?= $value['anh_sp'] ?>" width="150px" alt="product-1" class="cr-cart-img">
+                                        <?= $value['ten_sp'] ?>
+                                    </a>
+                                </td>
+                                <td class="cr-cart-price">
+                                    <span class="amount"><?= number_format($value['gia_tien'], 0, ',', '.') ?> VNĐ</span>
+                                </td>
+                                <td class="cr-cart-qty text-center">
+                                    <span><?= $value['soLuong'] ?></span>
+                                </td>
+                                <td class="cr-cart-subtotal">
+                                    <?= number_format($value['soLuong'] * $value['gia_tien'], 0, ',', '.') ?> VNĐ
+                                </td>
+                                <td class="cr-cart-qty text-center">
+                                    <span><?= $value['phuongthuc_thanhtoan'] ?></span>
+                                </td>
+                                <td class="cr-cart-qty text-center">
+                                    <span><?= $shipping['diaChi'] ?></span>
+                                </td>
+                                <td class="cr-cart-remove text-center text-success">
+                                    <a class="text-center" href="index.php?user=detail-product&id_sp=<?= $value['id_sp'] ?>">
+                                        Mua lại
+                                    </a>
+                                </td>
+                            </tr>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
         `;
             } else {
                 newContent = `
@@ -301,6 +403,14 @@
     <!-- Footer -->
     <?php include_once "views/users/layout/footer.php" ?>
 
+    <?php
+    if (isset($_SESSION['huyDon'])) {
+        echo $_SESSION['huyDon'];
+    }
+    unset($_SESSION['huyDon']);
+
+
+    ?>
 
     <!-- Tab to top -->
     <?php include_once "views/users/layout/tap-top.php" ?>

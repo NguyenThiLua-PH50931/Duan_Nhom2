@@ -84,18 +84,17 @@
                                                                             class="ri-settings-3-line"></i></span>
                                                                 </button>
                                                                 <div class="dropdown-menu">
-                                                                <a class="dropdown-item" href="index.php?admin=delete-comment&id_bl=<?= $cm['id_bl'] ?>"
-                                                                onclick="return confirm('Bạn có chắc muốn xóa ?')">Xóa bình luận</a>
+                                                                    <a class="dropdown-item" href="index.php?admin=delete-comment&id_bl=<?= $cm['id_bl'] ?>"
+                                                                        onclick="return confirm('Bạn có chắc muốn xóa ?')">Xóa bình luận</a>
                                                                 </div>
                                                             </div>
+                                                        </td>
+                                                    </tr>
+                                                <?php endforeach ?>
+                                            </tbody>
+                                        </table>
+                                    </form>
                                 </div>
-                                </td>
-                                </tr>
-                            <?php endforeach ?>
-                            </tr>
-                            </tbody>
-                            </table>
-                            </form>
                             </div>
                         </div>
                     </div>
@@ -107,8 +106,6 @@
         <footer>
             <?php include_once "views/admin/layout/footer.php" ?>
         </footer>
-        <!-- Feature tools -->
-        <?php include_once "views/admin/layout/feature-tools.php" ?>
     </main>
     <?php include_once "views/admin/layout/script.php" ?>
 </body>

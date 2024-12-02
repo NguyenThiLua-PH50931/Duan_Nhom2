@@ -25,22 +25,23 @@ class CheckoutModel
         $stmt->bindParam("phuongthuc_thanhtoan", $phuongthuc_thanhtoan);
         $stmt->bindParam("ngaydat_don", $now);
         $stmt->bindParam("id_tk", $id_tk);
-        $result = $stmt->execute();
+        $stmt->execute();
 
-        //Lấy id vừa tạo
+        // Lấy id vừa tạo
         $id_donHang = $this->db->pdo->lastInsertId();
 
-        if ($result) {
+        if ($id_donHang) {
             $cart = (new CartModel)->getCart($_SESSION['id_tk']);
             foreach ($cart as $value) {
                 $id_sp = $value['id_sp'];
                 $so_luong = $value['so_luong'];
                 $tongTien = $_SESSION['tongTien'];
-                $sql = "INSERT INTO `donhangchitiet`(`id_donHang`, `id_sp`, `soLuong`, `tongTien`) 
-                        VALUES (:id_donHang, :id_sp, :soLuong, :tongTien)";
+                $sql = "INSERT INTO `donhangchitiet`(`id_donHang`, `id_sp`, `id_trangThai`,`soLuong`, `tongTien`) 
+                        VALUES (:id_donHang, :id_sp, :trangthai_donhang, :soLuong,:tongTien)";
                 $stmt = $this->db->pdo->prepare($sql);
-                $stmt->bindParam("id_donHang", $id_donHang);
+                $stmt->bindParam("id_donHang", $id_donHang, PDO::PARAM_INT);
                 $stmt->bindParam("id_sp", $id_sp);
+                $stmt->bindParam("trangthai_donhang", $trangthai_donhang);
                 $stmt->bindParam("soLuong", $so_luong);
                 $stmt->bindParam("tongTien", $tongTien);
                 $stmt->execute();

@@ -1,983 +1,1271 @@
+<!-----------------------------------------------------------------------------------
+    Item Name: Carrot - Multipurpose eCommerce HTML Template.
+    Author: ashishmaraviya
+    Version: 2.1
+    Copyright 2024
+----------------------------------------------------------------------------------->
 <!DOCTYPE html>
- <html lang="en" dir="ltr">
- 
- 
-<!-- Mirrored from maraviyainfotech.com/projects/carrot/carrot-v21/carrot-html/track-order.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Nov 2024 15:30:29 GMT -->
+<html lang="en" dir="ltr">
+
+
+<!-- Mirrored from maraviyainfotech.com/projects/carrot/carrot-v21/admin-html/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Nov 2024 15:41:02 GMT -->
 <head>
-     <meta charset="utf-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <meta name="keywords"
-         content="ecommerce, market, shop, mart, cart, deal, multipurpose, marketplace">
-     <meta name="description" content="Carrot - Multipurpose eCommerce HTML Template.">
-     <meta name="author" content="ashishmaraviya">
- 
-     <title>Carrot - Multipurpose eCommerce HTML Template</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="admin, dashboard, ecommerce, panel" />
+	<meta name="description" content="Carrot - Admin.">
+	<meta name="author" content="ashishmaraviya">
 
-    <!-- App favicon -->
-    <link rel="shortcut icon" href="assets/users/img/logo/favicon.png">
+	<title>Carrot - Admin.</title>
 
-    <!-- Icon CSS -->
-    <link rel="stylesheet" href="assets/users/css/vendor/materialdesignicons.min.css">
-    <link rel="stylesheet" href="assets/users/css/vendor/remixicon.css">
+	<!-- App favicon -->
+	<link rel="shortcut icon" href="assets/admin/img/favicon/favicon.ico">
 
-    <!-- Vendor -->
-    <link rel="stylesheet" href="assets/users/css/vendor/animate.css">
-    <link rel="stylesheet" href="assets/users/css/vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/users/css/vendor/aos.min.css">
-    <link rel="stylesheet" href="assets/users/css/vendor/range-slider.css">
-    <link rel="stylesheet" href="assets/users/css/vendor/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/users/css/vendor/jquery.slick.css">
-    <link rel="stylesheet" href="assets/users/css/vendor/slick-theme.css">
+	<!-- Icon CSS -->
+	<link href="assets/admin/css/vendor/materialdesignicons.min.css" rel="stylesheet">
+	<link href="assets/admin/css/vendor/remixicon.css" rel="stylesheet">
+	<link href="assets/admin/css/vendor/owl.carousel.min.css" rel="stylesheet">
 
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="assets/users/css/style.css">
+	<!-- Vendor CSS -->
+	<link href='assets/admin/css/vendor/datatables.bootstrap5.min.css' rel='stylesheet'>
+	<link href='assets/admin/css/vendor/responsive.datatables.min.css' rel='stylesheet'>
+	<link href='assets/admin/css/vendor/daterangepicker.css' rel='stylesheet'>
+	<link href="assets/admin/css/vendor/simplebar.css" rel="stylesheet">
+	<link href="assets/admin/css/vendor/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/admin/css/vendor/apexcharts.css" rel="stylesheet">
+	<link href="assets/admin/css/vendor/jquery-jvectormap-1.2.2.css" rel="stylesheet">
+
+	<!-- Main CSS -->
+	<link id="main-css" href="assets/admin/css/style.css" rel="stylesheet">
+
 </head>
 
-<body class="body-bg-6">
+<body>
+	<main class="wrapper sb-default ecom">
+		<!-- Loader -->
+		<div id="cr-overlay">
+			<div class="loader"></div>
+		</div>
 
-    <!-- Loader -->
-    <div id="cr-overlay">
-        <span class="loader"></span>
-    </div>
+		<!-- Header -->
+		<header class="cr-header">
+			<div class="container-fluid">
+				<div class="cr-header-items">
+					<div class="left-header">
+						<a href="javascript:void(0)" class="cr-toggle-sidebar">
+							<span class="outer-ring">
+								<span class="inner-ring"></span>
+							</span>
+						</a>
+						<div class="header-search-box">
+							<div class="header-search-drop">
+								<a href="javascript:void(0)" class="open-search"><i class="ri-search-line"></i></a>
+								<form class="cr-search">
+									<input class="search-input" type="text" placeholder="Search...">
+									<a href="javascript:void(0)" class="search-btn"><i class="ri-search-line"></i>
+									</a>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="right-header">
+						<div class="cr-right-tool cr-flag-drop language">
+							<div class="cr-hover-drop">
+								<div class="cr-hover-tool">
+									<img class="flag" src="assets/admin/img/flag/us.png" alt="flag">
+								</div>
+								<div class="cr-hover-drop-panel right">
+									<ul>
+										<li><a href="javascript:void(0)"><img class="flag" src="assets/admin/img/flag/us.png"
+													alt="flag">English</a></li>
+										<li><a href="javascript:void(0)"><img class="flag" src="assets/admin/img/flag/in.png"
+													alt="flag">Hindi</a></li>
+										<li><a href="javascript:void(0)"><img class="flag" src="assets/admin/img/flag/de.png"
+													alt="flag"> Deutsch</a></li>
+										<li><a href="javascript:void(0)"><img class="flag" src="assets/admin/img/flag/it.png"
+													alt="flag">Italian</a></li>
+										<li><a href="javascript:void(0)"><img class="flag" src="assets/admin/img/flag/jp.png"
+													alt="flag">Japanese</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="cr-right-tool apps">
+							<div class="cr-hover-drop">
+								<div class="cr-hover-tool">
+									<i class="ri-apps-2-line"></i>
+								</div>
+								<div class="cr-hover-drop-panel right">
+									<h6 class="title">Apps</h6>
+									<ul>
+										<li><a href="javascript:void(0)"><img class="app" src="assets/admin/img/apps/1.png"
+													alt="flag">English</a></li>
+										<li><a href="javascript:void(0)"><img class="app" src="assets/admin/img/apps/2.png"
+													alt="flag">Hindi</a></li>
+										<li><a href="javascript:void(0)"><img class="app" src="assets/admin/img/apps/3.png"
+													alt="flag"> Deutsch</a></li>
+										<li><a href="javascript:void(0)"><img class="app" src="assets/admin/img/apps/4.png"
+													alt="flag">Italian</a></li>
+										<li><a href="javascript:void(0)"><img class="app" src="assets/admin/img/apps/5.png"
+													alt="flag">Japanese</a></li>
+										<li><a href="javascript:void(0)"><img class="app" src="assets/admin/img/apps/6.png"
+													alt="flag">Japanese</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="cr-right-tool display-screen">
+							<a class="cr-screen full" href="javascript:void(0)"><i
+									class="ri-fullscreen-line"></i></a>
+							<a class="cr-screen reset" href="javascript:void(0)"><i
+									class="ri-fullscreen-exit-line"></i></a>
+						</div>
+						<div class="cr-right-tool">
+							<a class="cr-notify" href="javascript:void(0)">
+								<i class="ri-notification-2-line"></i>
+								<span class="label"></span>
+							</a>
+						</div>
+						<div class="cr-right-tool display-dark">
+							<a class="cr-mode dark" href="javascript:void(0)"><i class="ri-moon-clear-line"></i></a>
+							<a class="cr-mode light" href="javascript:void(0)"><i class="ri-sun-line"></i></a>
+						</div>
+						<div class="cr-right-tool cr-user-drop">
+							<div class="cr-hover-drop">
+								<div class="cr-hover-tool">
+									<img class="user" src="assets/admin/img/user/1.jpg" alt="user">
+								</div>
+								<div class="cr-hover-drop-panel right">
+									<div class="details">
+										<h6>Wiley Waites</h6>
+										<p>wiley@example.com</p>
+									</div>
+									<ul class="border-top">
+										<li><a href="team-profile.html">Profile</a></li>
+										<li><a href="faq.html">Help</a></li>
+										<li><a href="chatapp.html">Messages</a></li>
+										<li><a href="project-overview.html">Projects</a></li>
+										<li><a href="team-update.html">Settings</a></li>
+									</ul>
+									<ul class="border-top">
+										<li><a href="signin.html"><i class="ri-logout-circle-r-line"></i>Logout</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
 
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="top-header">
-                        <a href="index.html" class="cr-logo">
-                            <img src="assets/users/img/logo/logo.png" alt="logo" class="logo">
-                            <img src="assets/users/img/logo/dark-logo.png" alt="logo" class="dark-logo">
-                        </a>
-                        <form class="cr-search">
-                            <input class="search-input" type="text" placeholder="Search For items...">
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>All Categories</option>
-                                <option value="1">Mens</option>
-                                <option value="2">Womens</option>
-                                <option value="3">Electronics</option>
-                              </select>
-                            <a href="javascript:void(0)" class="search-btn">
-                                <i class="ri-search-line"></i>
-                            </a>
-                        </form>
-                        <div class="cr-right-bar">
-                            <ul class="navbar-nav">
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle cr-right-bar-item" href="javascript:void(0)">
-                                        <i class="ri-user-3-line"></i>
-                                        <span>Account</span>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a class="dropdown-item" href="register.html">Register</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="checkout.html">Checkout</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="login.html">Login</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <a href="wishlist.html" class="cr-right-bar-item">
-                                <i class="ri-heart-3-line"></i>
-                                <span>Wishlist</span>
-                            </a>
-                            <a href="javascript:void(0)" class="cr-right-bar-item Shopping-toggle">
-                                <i class="ri-shopping-cart-line"></i>
-                                <span>Cart</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="cr-fix" id="cr-main-menu-desk">
-            <div class="container">
-                <div class="cr-menu-list">
-                    <div class="cr-category-icon-block">
-                        <div class="cr-category-menu">
-                            <div class="cr-category-toggle">
-                                <i class="ri-menu-2-line"></i>
-                            </div>
-                        </div>
-                        <div class="cr-cat-dropdown">
-                            <div class="cr-cat-block">
-                                <div class="cr-cat-tab">
-                                    <div class="cr-tab-list nav flex-column nav-pills" id="v-pills-tab" role="tablist"
-                                        aria-orientation="vertical">
-                                        <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
-                                            data-bs-target="#v-pills-home" type="button" role="tab"
-                                            aria-controls="v-pills-home" aria-selected="true">
-                                            Dairy &amp; Bakery</button>
-                                        <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"
-                                            data-bs-target="#v-pills-profile" type="button" role="tab"
-                                            aria-controls="v-pills-profile" aria-selected="false" tabindex="-1">
-                                            Fruits &amp; Vegetable</button>
-                                        <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill"
-                                            data-bs-target="#v-pills-messages" type="button" role="tab"
-                                            aria-controls="v-pills-messages" aria-selected="false" tabindex="-1">
-                                            Snack &amp; Spice</button>
-                                        <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill"
-                                            data-bs-target="#v-pills-settings" type="button" role="tab"
-                                            aria-controls="v-pills-settings" aria-selected="false" tabindex="-1">
-                                            Juice &amp; Drinks </button>
-                                        <a class="nav-link" href="shop-left-sidebar.html">
-                                            View All </a>
-                                    </div>
-                                    <div class="tab-content" id="v-pills-tabContent">
-                                        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
-                                            aria-labelledby="v-pills-home-tab">
-                                            <div class="tab-list row">
-                                                <div class="col">
-                                                    <h6 class="cr-col-title">Dairy</h6>
-                                                    <ul class="cat-list">
-                                                        <li><a href="shop-left-sidebar.html">Milk</a></li>
-                                                        <li><a href="shop-left-sidebar.html">Ice cream</a>
-                                                        </li>
-                                                        <li><a href="shop-left-sidebar.html">Cheese</a></li>
-                                                        <li><a href="shop-left-sidebar.html">Frozen
-                                                                custard</a>
-                                                        </li>
-                                                        <li><a href="shop-left-sidebar.html">Frozen
-                                                                yogurt</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col">
-                                                    <h6 class="cr-col-title">Bakery</h6>
-                                                    <ul class="cat-list">
-                                                        <li><a href="shop-left-sidebar.html">Cake and
-                                                                Pastry</a>
-                                                        </li>
-                                                        <li><a href="shop-left-sidebar.html">Rusk Toast</a>
-                                                        </li>
-                                                        <li><a href="shop-left-sidebar.html">Bread &amp;
-                                                                Buns</a>
-                                                        </li>
-                                                        <li><a href="shop-left-sidebar.html">Chocolate
-                                                                Brownie</a>
-                                                        </li>
-                                                        <li><a href="shop-left-sidebar.html">Cream Roll</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
-                                            aria-labelledby="v-pills-profile-tab">
-                                            <div class="tab-list row">
-                                                <div class="col">
-                                                    <h6 class="cr-col-title">Fruits</h6>
-                                                    <ul class="cat-list">
-                                                        <li><a href="shop-left-sidebar.html">Cauliflower</a>
-                                                        </li>
-                                                        <li><a href="shop-left-sidebar.html">Bell
-                                                                Peppers</a></li>
-                                                        <li><a href="shop-left-sidebar.html">Broccoli</a>
-                                                        </li>
-                                                        <li><a href="shop-left-sidebar.html">Cabbage</a>
-                                                        </li>
-                                                        <li><a href="shop-left-sidebar.html">Tomato</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col">
-                                                    <h6 class="cr-col-title">Vegetable</h6>
-                                                    <ul class="cat-list">
-                                                        <li><a href="shop-left-sidebar.html">Cauliflower</a>
-                                                        </li>
-                                                        <li><a href="shop-left-sidebar.html">Bell
-                                                                Peppers</a></li>
-                                                        <li><a href="shop-left-sidebar.html">Broccoli</a>
-                                                        </li>
-                                                        <li><a href="shop-left-sidebar.html">Cabbage</a>
-                                                        </li>
-                                                        <li><a href="shop-left-sidebar.html">Tomato</a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
-                                            aria-labelledby="v-pills-messages-tab">
-                                            <div class="tab-list row">
-                                                <div class="col">
-                                                    <h6 class="cr-col-title">Snacks</h6>
-                                                    <ul class="cat-list">
-                                                        <li><a href="shop-left-sidebar.html">French
-                                                                fries</a></li>
-                                                        <li><a href="shop-left-sidebar.html">potato
-                                                                chips</a></li>
-                                                        <li><a href="shop-left-sidebar.html">Biscuits &amp;
-                                                                Cookies</a></li>
-                                                        <li><a href="shop-left-sidebar.html">Popcorn</a>
-                                                        </li>
-                                                        <li><a href="shop-left-sidebar.html">Rice Cakes</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col">
-                                                    <h6 class="cr-col-title">Spice</h6>
-                                                    <ul class="cat-list">
-                                                        <li><a href="shop-left-sidebar.html">Cinnamon
-                                                                Powder</a>
-                                                        </li>
-                                                        <li><a href="shop-left-sidebar.html">Cumin
-                                                                Powder</a></li>
-                                                        <li><a href="shop-left-sidebar.html">Fenugreek
-                                                                Powder</a>
-                                                        </li>
-                                                        <li><a href="shop-left-sidebar.html">Pepper
-                                                                Powder</a>
-                                                        </li>
-                                                        <li><a href="shop-left-sidebar.html">Long Pepper</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
-                                            aria-labelledby="v-pills-settings-tab">
-                                            <div class="tab-list row">
-                                                <div class="col">
-                                                    <h6 class="cr-col-title">Juice</h6>
-                                                    <ul class="cat-list">
-                                                        <li><a href="shop-left-sidebar.html">Mango Juice</a>
-                                                        </li>
-                                                        <li><a href="shop-left-sidebar.html">Coconut
-                                                                Water</a>
-                                                        </li>
-                                                        <li><a href="shop-left-sidebar.html">Tetra Pack</a>
-                                                        </li>
-                                                        <li><a href="shop-left-sidebar.html">Apple
-                                                                Juices</a></li>
-                                                        <li><a href="shop-left-sidebar.html">Lychee
-                                                                Juice</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="col">
-                                                    <h6 class="cr-col-title">soft drink</h6>
-                                                    <ul class="cat-list">
-                                                        <li><a href="shop-left-sidebar.html">Breizh Cola</a>
-                                                        </li>
-                                                        <li><a href="shop-left-sidebar.html">Green Cola</a>
-                                                        </li>
-                                                        <li><a href="shop-left-sidebar.html">Jolt Cola</a>
-                                                        </li>
-                                                        <li><a href="shop-left-sidebar.html">Mecca Cola</a>
-                                                        </li>
-                                                        <li><a href="shop-left-sidebar.html">Topsia Cola</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <nav class="navbar navbar-expand-lg">
-                        <a href="javascript:void(0)" class="navbar-toggler shadow-none">
-                            <i class="ri-menu-3-line"></i>
-                        </a>
-                        <div class="cr-header-buttons">
-                            <ul class="navbar-nav">
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link" href="javascript:void(0)">
-                                        <i class="ri-user-3-line"></i>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a class="dropdown-item" href="register.html">Register</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="checkout.html">Checkout</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="login.html">Login</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <a href="wishlist.html" class="cr-right-bar-item">
-                                <i class="ri-heart-line"></i>
-                            </a>
-                            <a href="javascript:void(0)" class="cr-right-bar-item Shopping-toggle">
-                                <i class="ri-shopping-cart-line"></i>
-                            </a>
-                        </div>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="index.html">
-                                        Home
-                                    </a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="javascript:void(0)">
-                                        Category
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a class="dropdown-item" href="shop-left-sidebar.html">Shop Left
-                                                sidebar</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="shop-right-sidebar.html">Shop
-                                                Right
-                                                sidebar</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="shop-full-width.html">Full
-                                                Width</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="javascript:void(0)">
-                                        Products
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a class="dropdown-item" href="product-left-sidebar.html">product
-                                                Left
-                                                sidebar </a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="product-right-sidebar.html">product
-                                                Right
-                                                sidebar </a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="product-full-width.html">Product
-                                                Full
-                                                Width
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="javascript:void(0)">
-                                        Pages
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a class="dropdown-item" href="about.html">About Us</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="contact-us.html">Contact Us</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="cart.html">Cart</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="checkout.html">Checkout</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="track-order.html">Track Order</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="wishlist.html">Wishlist</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="faq.html">Faq</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="login.html">Login</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="register.html">Register</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="policy.html">Policy</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="javascript:void(0)">
-                                        Blog
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a class="dropdown-item" href="blog-left-sidebar.html">Left
-                                                Sidebar</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="blog-right-sidebar.html">Right
-                                                Sidebar</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="blog-full-width.html">Full
-                                                Width</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="blog-detail-left-sidebar.html">Detail
-                                                Left
-                                                Sidebar</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="blog-detail-right-sidebar.html">Detail
-                                                Right
-                                                Sidebar</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="blog-detail-full-width.html">Detail
-                                                Full
-                                                Width</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="javascript:void(0)">
-                                        Elements
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a class="dropdown-item" href="elements-products.html">Products</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="elements-typography.html">Typography</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="elements-buttons.html">Buttons</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                    <div class="cr-calling">
-                        <i class="ri-phone-line"></i>
-                        <a href="javascript:void(0)">+123 ( 456 ) ( 7890 )</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+		<!-- sidebar -->
+		<div class="cr-sidebar-overlay"></div>
+		<div class="cr-sidebar" data-mode="light">
+			<div class="cr-sb-logo">
+				<a href="index.html" class="sb-full"><img src="assets/admin/img/logo/full-logo.png" alt="logo"></a>
+				<a href="index.html" class="sb-collapse"><img src="assets/admin/img/logo/collapse-logo.png" alt="logo"></a>
+			</div>
+			<div class="cr-sb-wrapper">
+				<div class="cr-sb-content">
+					<ul class="cr-sb-list">
+						<li class="cr-sb-item sb-drop-item">
+							<a href="javascript:void(0)" class="cr-drop-toggle">
+								<i class="ri-dashboard-3-line"></i><span class="condense">Bảng điều khiển<i
+										class="drop-arrow ri-arrow-down-s-line"></i></span></a>
+							<ul class="cr-sb-drop condense">
+								<li><a href="index.html" class="cr-page-link drop"><i
+									class="ri-checkbox-blank-circle-line"></i>ecommerce</a></li>
+								<li><a href="product-list.html" class="cr-page-link drop"><i
+											class="ri-checkbox-blank-circle-line"></i>Danh sách sản phẩm</a></li>
+								<li><a href="add-product.html" class="cr-page-link drop"><i
+											class="ri-checkbox-blank-circle-line"></i>Thêm mới sản phẩm</a></li>
+								<li><a href="add-category.html" class="cr-page-link drop"><i
+											class="ri-checkbox-blank-circle-line"></i>Add Category</a></li>
+								<li><a href="add-sub-category.html" class="cr-page-link drop"><i
+											class="ri-checkbox-blank-circle-line"></i>Add Sub Category</a></li>
+								<li><a href="order-list.html" class="cr-page-link drop"><i
+											class="ri-checkbox-blank-circle-line"></i>Order List</a></li>
+								<li class="cr-sb-item sb-subdrop-item">
+									<a href="javascript:void(0)" class="cr-sub-drop-toggle">
+										<i class="ri-shield-user-line"></i><span class="condense">Vendor<i
+												class="drop-arrow ri-arrow-down-s-line"></i></span></a>
+									<ul class="cr-sb-subdrop condense">
+										<li><a href="vendor-profile.html" class="cr-page-link subdrop"><i
+													class="ri-checkbox-blank-circle-line"></i>Profile</a></li>
+										<li><a href="vendor-update.html" class="cr-page-link subdrop"><i
+													class="ri-checkbox-blank-circle-line"></i>Vendor Update</a></li>
+										<li><a href="vendor-list.html" class="cr-page-link subdrop"><i
+													class="ri-checkbox-blank-circle-line"></i>Vendor List</a></li>
+										<li><a href="invoice.html" class="cr-page-link subdrop"><i
+													class="ri-checkbox-blank-circle-line"></i>Invoice</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="cr-sb-item-separator"></li>
+						<li class="cr-sb-title condense">Pages</li>
+						<li class="cr-sb-item sb-drop-item">
+							<a href="javascript:void(0)" class="cr-drop-toggle">
+								<i class="ri-pages-line"></i><span class="condense">Authentication<i
+										class="drop-arrow ri-arrow-down-s-line"></i></span></a>
+							<ul class="cr-sb-drop condense">
+								<li><a href="signin.html" class="cr-page-link drop"><i
+											class="ri-checkbox-blank-circle-line"></i></i>Login</a></li>
+								<li><a href="signup.html" class="cr-page-link drop"><i
+											class="ri-checkbox-blank-circle-line"></i>Signup</a></li>
+								<li><a href="forgot.html" class="cr-page-link drop"><i
+											class="ri-checkbox-blank-circle-line"></i>Forgot password</a></li>
+								<li><a href="two-factor.html" class="cr-page-link drop"><i
+											class="ri-checkbox-blank-circle-line"></i>two factor</a></li>
+								<li><a href="reset-password.html" class="cr-page-link drop"><i
+											class="ri-checkbox-blank-circle-line"></i>Reset password</a></li>
+								<li><a href="remember.html" class="cr-page-link drop"><i
+											class="ri-checkbox-blank-circle-line"></i>Remember</a></li>
+							</ul>
+						</li>
+						<li class="cr-sb-item-separator"></li>
+						<li class="cr-sb-title condense">Elements</li>
+						<li class="cr-sb-item">
+							<a href="remix-icons.html" class="cr-page-link">
+								<i class="ri-remixicon-line"></i><span class="condense"><span class="hover-title">remix
+										icons</span></span></a>
+						</li>
+						<li class="cr-sb-item">
+							<a href="material-icons.html" class="cr-page-link">
+								<i class="mdi mdi-material-ui"></i><span class="condense"><span
+										class="hover-title">Material icons</span></span></a>
+						</li>
+						<li class="cr-sb-item">
+							<a href="apexchart.html" class="cr-page-link">
+								<i class="ri-bar-chart-grouped-line"></i><span class="condense"><span
+										class="hover-title">Apexcharts</span></span></a>
+						</li>
+						<li class="cr-sb-item">
+							<a href="buttons.html" class="cr-page-link">
+								<i class="ri-radio-button-line"></i><span class="condense"><span
+										class="hover-title">Buttons</span></span></a>
+						</li>
+						<li class="cr-sb-item">
+							<a href="accordions.html" class="cr-page-link">
+								<i class="ri-play-list-add-line"></i><span class="condense"><span
+										class="hover-title">Accordions</span></span></a>
+						</li>
+						<li class="cr-sb-item">
+							<a href="typography.html" class="cr-page-link">
+								<i class="ri-file-text-line"></i><span class="condense"><span
+										class="hover-title">Typography</span></span></a>
+						</li>
+						<li class="cr-sb-item">
+							<a href="alert-popup.html" class="cr-page-link">
+								<i class="ri-file-warning-line"></i><span class="condense"><span
+										class="hover-title">Alert Popup</span></span></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 
-    <!-- Mobile menu -->
-    <div class="cr-sidebar-overlay"></div>
-    <div id="cr_mobile_menu" class="cr-side-cart cr-mobile-menu">
-        <div class="cr-menu-title">
-            <span class="menu-title">My Menu</span>
-            <button type="button" class="cr-close">×</button>
-        </div>
-        <div class="cr-menu-inner">
-            <div class="cr-menu-content">
-                <ul>
-                    <li class="dropdown drop-list">
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li class="dropdown drop-list">
-                        <span class="menu-toggle"></span>
-                        <a href="javascript:void(0)" class="dropdown-list">Category</a>
-                        <ul class="sub-menu">
-                            <li><a href="shop-left-sidebar.html">Shop Left sidebar</a></li>
-                            <li><a href="shop-right-sidebar.html">Shop Right sidebar</a></li>
-                            <li><a href="shop-full-width.html">Full Width</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown drop-list">
-                        <span class="menu-toggle"></span>
-                        <a href="javascript:void(0)" class="dropdown-list">product</a>
-                        <ul class="sub-menu">
-                            <li><a href="product-left-sidebar.html">product Left sidebar</a></li>
-                            <li><a href="product-right-sidebar.html">product Right sidebar</a></li>
-                            <li><a href="product-full-width.html">Product Full Width </a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown drop-list">
-                        <span class="menu-toggle"></span>
-                        <a href="javascript:void(0)" class="dropdown-list">Pages</a>
-                        <ul class="sub-menu">
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="contact-us.html">Contact Us</a></li>
-                            <li><a href="cart.html">Cart</a></li>
-                            <li><a href="checkout.html">Checkout</a></li>
-                            <li><a href="track-order.html">Track Order</a></li>
-                            <li><a href="wishlist.html">Wishlist</a></li>
-                            <li><a href="faq.html">Faq</a></li>
-                            <li><a href="login.html">Login</a></li>
-                            <li><a href="register.html">Register</a></li>
-                            <li><a href="policy.html">Policy</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown drop-list">
-                        <span class="menu-toggle"></span>
-                        <a href="javascript:void(0)" class="dropdown-list">Blog</a>
-                        <ul class="sub-menu">
-                            <li><a href="blog-left-sidebar.html">Left Sidebar</a></li>
-                            <li><a href="blog-right-sidebar.html">Right Sidebar</a></li>
-                            <li><a href="blog-full-width.html">Full Width</a></li>
-                            <li><a href="blog-detail-left-sidebar.html">Detail Left Sidebar</a></li>
-                            <li><a href="blog-detail-right-sidebar.html">Detail Right Sidebar</a></li>
-                            <li><a href="blog-detail-full-width.html">Detail Full Width</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown drop-list">
-                        <span class="menu-toggle"></span>
-                        <a href="javascript:void(0)">Element</a>
-                        <ul class="sub-menu">
-                            <li><a href="elements-products.html">Products</a></li>
-                            <li><a href="elements-typography.html">Typography</a></li>
-                            <li><a href="elements-buttons.html">Buttons</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
+		<!-- Notify sidebar -->
+		<div class="cr-notify-bar-overlay"></div>
+		<div class="cr-notify-bar">
+			<div class="cr-bar-title">
+				<h6>Notifications<span class="label">12</span></h6>
+				<a href="javascript:void(0)" class="close-notify"><i class="ri-close-line"></i></a>
+			</div>
+			<div class="cr-bar-content">
+				<ul class="nav nav-tabs" id="myTab" role="tablist">
+					<li class="nav-item" role="presentation">
+						<button class="nav-link active" id="alert-tab" data-bs-toggle="tab" data-bs-target="#alert"
+							type="button" role="tab" aria-controls="alert" aria-selected="true">Alert</button>
+					</li>
+					<li class="nav-item" role="presentation">
+						<button class="nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages"
+							type="button" role="tab" aria-controls="messages" aria-selected="false">Messages</button>
+					</li>
+					<li class="nav-item" role="presentation">
+						<button class="nav-link" id="log-tab" data-bs-toggle="tab" data-bs-target="#log" type="button"
+							role="tab" aria-controls="log" aria-selected="false">Log</button>
+					</li>
+				</ul>
+				<div class="tab-content" id="myTabContent">
+					<div class="tab-pane fade show active" id="alert" role="tabpanel" aria-labelledby="alert-tab">
+						<div class="cr-alert-list">
+							<ul>
+								<li>
+									<div class="icon cr-alert">
+										<i class="ri-alarm-warning-line"></i>
+									</div>
+									<div class="detail">
+										<div class="title">Your final report is overdue</div>
+										<p class="time">Just now</p>
+										<p class="message">Please submit your quarterly report before - June 15.</p>
+									</div>
+								</li>
+								<li>
+									<div class="icon cr-warn">
+										<i class="ri-error-warning-line"></i>
+									</div>
+									<div class="detail">
+										<div class="title">Your product campaign is stop!</div>
+										<p class="time">5:45AM - 25/05/2023</p>
+										<p class="message">Please submit your quarterly report before Jun 15.</p>
+									</div>
+								</li>
+								<li>
+									<div class="icon cr-success">
+										<i class="ri-check-double-line"></i>
+									</div>
+									<div class="detail">
+										<div class="title">Your payment is successfully processed</div>
+										<p class="time">9:20PM - 19/06/2023</p>
+										<p class="message">Check your account wallet. if there is any issue, create
+											support ticket.</p>
+									</div>
+								</li>
+								<li>
+									<div class="icon cr-warn">
+										<i class="ri-error-warning-line"></i>
+									</div>
+									<div class="detail">
+										<div class="title">Budget threshold exceeded!</div>
+										<p class="time">4:15AM - 01/04/2023</p>
+										<p class="message">Budget threshold was exceeded for project "Carrot" B612
+											elements.</p>
+									</div>
+								</li>
+								<li>
+									<div class="icon cr-warn">
+										<i class="ri-close-line"></i>
+									</div>
+									<div class="detail">
+										<div class="title">Project submission was decline!</div>
+										<p class="time">4:15AM - 01/04/2023</p>
+										<p class="message">Your project "B126" is declined by Theresa Mayeras.</p>
+									</div>
+								</li>
+								<li>
+									<div class="icon cr-success">
+										<i class="ri-check-double-line"></i>
+									</div>
+									<div class="detail">
+										<div class="title">Your payment is successfully processed</div>
+										<p class="time">9:20PM - 19/06/2023</p>
+										<p class="message">Check your account wallet. if there is any issue, create
+											support ticket.</p>
+									</div>
+								</li>
+								<li class="check"><a class="cr-primary-btn" href="chatapp.html">View all</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="messages" role="tabpanel" aria-labelledby="messages-tab">
+						<div class="cr-message-list">
+							<ul>
+								<li>
+									<a href="chatapp.html" class="reply">Reply</a>
+									<div class="user">
+										<img src="assets/admin/img/user/9.jpg" alt="user">
+										<span class="label online"></span>
+									</div>
+									<div class="detail">
+										<a href="chatapp.html" class="name">Boris Whisli</a>
+										<p class="time">5:30AM, Today</p>
+										<p class="message">Hello, I am sending some file. Please use this in landing
+											page. And make sure this all files are comppress.</p>
+										<span class="download-files">
+											<span class="download">
+												<img src="assets/admin/img/other/1.jpg" alt="image">
+												<a href="javascript:void(0)"><i class="ri-download-2-line"></i></a>
+											</span>
+											<span class="download">
+												<img src="assets/admin/img/other/2.jpg" alt="image">
+												<a href="javascript:void(0)"><i class="ri-download-2-line"></i></a>
+											</span>
+											<span class="download">
+												<span class="file">
+													<i class="ri-file-ppt-line"></i>
+												</span>
+												<a href="javascript:void(0)"><i class="ri-download-2-line"></i></a>
+											</span>
+										</span>
+									</div>
+								</li>
+								<li>
+									<a href="chatapp.html" class="reply">Reply</a>
+									<div class="user">
+										<img src="assets/admin/img/user/8.jpg" alt="user">
+										<span class="label offline"></span>
+									</div>
+									<div class="detail">
+										<a href="chatapp.html" class="name">Frank N. Stein</a>
+										<p class="time">8:30PM, 05/12/2023</p>
+										<p class="message">Please take a look on landing page. There is some bus to open
+											popup model. and save form data.</p>
+									</div>
+								</li>
+								<li>
+									<a href="chatapp.html" class="reply">Reply</a>
+									<div class="user">
+										<img src="assets/admin/img/user/7.jpg" alt="user">
+										<span class="label busy"></span>
+									</div>
+									<div class="detail">
+										<a href="chatapp.html" class="name">Frank N. Stein</a>
+										<p class="time">8:30PM, 05/12/2023</p>
+										<p class="message">Please take a look on landing page. There is some bus to open
+											popup model. and save form data.</p>
+										<span class="download-files">
+											<span class="download">
+												<span class="file">
+													<i class="ri-file-zip-line"></i>
+												</span>
+												<a href="javascript:void(0)"><i class="ri-download-2-line"></i></a>
+											</span>
+											<span class="download">
+												<span class="file">
+													<i class="ri-file-text-line"></i>
+												</span>
+												<a href="javascript:void(0)"><i class="ri-download-2-line"></i></a>
+											</span>
+											<span class="download">
+												<span class="file">
+													<i class="ri-file-ppt-line"></i>
+												</span>
+												<a href="javascript:void(0)"><i class="ri-download-2-line"></i></a>
+											</span>
+										</span>
+									</div>
+								</li>
+								<li>
+									<a href="chatapp.html" class="reply">Reply</a>
+									<div class="user">
+										<img src="assets/admin/img/user/6.jpg" alt="user">
+										<span class="label busy"></span>
+									</div>
+									<div class="detail">
+										<a href="chatapp.html" class="name">Paige Turner</a>
+										<p class="time">4:30PM, 12/12/2023</p>
+										<p class="message">Landing page issues are done. and now i am working on admin
+											user module.</p>
+									</div>
+								</li>
+								<li>
+									<a href="chatapp.html" class="reply">Reply</a>
+									<div class="user">
+										<img src="assets/admin/img/user/5.jpg" alt="user">
+										<span class="label busy"></span>
+									</div>
+									<div class="detail">
+										<a href="chatapp.html" class="name">Allie Grater</a>
+										<p class="time">8:30PM, 05/12/2023</p>
+										<p class="message">Take marketing module task.</p>
+									</div>
+								</li>
+								<li class="check"><a class="cr-primary-btn" href="chatapp.html">View all</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="log" role="tabpanel" aria-labelledby="log-tab">
+						<div class="cr-activity-list activity-list">
+							<ul>
+								<li>
+									<span class="date-time">8 Thu<span class="time">11:30 AM - 05:10 PM
+										</span></span>
+									<p class="title">Project Submitted from Smith</p>
+									<p class="detail">Lorem Ipsum is simply dummy text of the printing and
+										lorem is typesetting industry.</p>
+									<span class="download-files">
+										<span class="download">
+											<img src="assets/admin/img/other/1.jpg" alt="image">
+											<a href="javascript:void(0)"><i class="ri-download-2-line"></i></a>
+										</span>
+										<span class="download">
+											<img src="assets/admin/img/other/2.jpg" alt="image">
+											<a href="javascript:void(0)"><i class="ri-download-2-line"></i></a>
+										</span>
+										<span class="download">
+											<span class="file">
+												<i class="ri-file-ppt-line"></i>
+											</span>
+											<a href="javascript:void(0)"><i class="ri-download-2-line"></i></a>
+										</span>
+									</span>
+								</li>
+								<li>
+									<span class="date-time warn">7 Wed<span class="time">1:30 PM - 02:30 PM
+										</span></span>
+									<p class="title">Morgus pvt - project due</p>
+									<p class="detail">Project modul delay for some bugs.</p>
+									<span class="download-files">
+										<span class="download">
+											<span class="file">
+												<i class="ri-file-zip-line"></i>
+											</span>
+											<a href="javascript:void(0)"><i class="ri-download-2-line"></i></a>
+										</span>
+										<span class="download">
+											<span class="file">
+												<i class="ri-file-text-line"></i>
+											</span>
+											<a href="javascript:void(0)"><i class="ri-download-2-line"></i></a>
+										</span>
+										<span class="download">
+											<img src="assets/admin/img/other/3.jpg" alt="image">
+											<a href="javascript:void(0)"><i class="ri-download-2-line"></i></a>
+										</span>
+									</span>
+								</li>
+								<li>
+									<span class="date-time">6 Tue<span class="time">9:30 AM - 11:00 AM
+										</span></span>
+									<p class="title">Interview for management dept.</p>
+									<p class="detail">There are many variations of passages of Lorem Ipsum
+										available, but the majority have suffered alteration in some form,
+										by injected humour.</p>
+									<span class="download-files">
+										<span class="download">
+											<span class="file">
+												<i class="ri-file-zip-line"></i>
+											</span>
+											<a href="javascript:void(0)"><i class="ri-download-2-line"></i></a>
+										</span>
+										<span class="download">
+											<span class="file">
+												<i class="ri-file-text-line"></i>
+											</span>
+											<a href="javascript:void(0)"><i class="ri-download-2-line"></i></a>
+										</span>
+										<span class="download">
+											<span class="file">
+												<i class="ri-file-ppt-line"></i>
+											</span>
+											<a href="javascript:void(0)"><i class="ri-download-2-line"></i></a>
+										</span>
+									</span>
+								</li>
+								<li>
+									<span class="date-time">5 Mon<span class="time">3:30 AM - 4:00 PM
+										</span></span>
+									<p class="title">Meeting with mr. Ken doe</p>
+									<p class="detail">The majority have suffered alteration in some form,
+										by injected humour.</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-    <!-- Breadcrumb -->
-    <section class="section-breadcrumb">
-        <div class="cr-breadcrumb-image">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="cr-breadcrumb-title">
-                            <h2>Track Order</h2>
-                            <span> <a href="index.html">Home</a> - Track Order</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+		<!-- Main content -->
+		<div class="cr-main-content">
+			<div class="container-fluid">
+				<!-- Page title & breadcrumb -->
+				<div class="cr-page-title">
+					<div class="cr-breadcrumb">
+						<h5>eCommerce</h5>
+						<ul>
+							<li><a href="index.html">Carrot</a></li>
+							<li>eCommerce</li>
+						</ul>
+					</div>
+					<div class="cr-tools">
+						<div id="pagedate">
+							<div class="cr-date-range" title="Date">
+								<span></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xl-12">
+						<div class="row">
+							<div class="col-xl-3 col-md-6">
+								<div class="cr-card">
+									<div class="cr-card-content label-card">
+										<div class="title">
+											<span class="icon icon-1"><i class="ri-shield-user-line"></i></span>
+											<div class="growth-numbers">
+												<h4>Customers</h4>
+												<h5>857k</h5>
+											</div>
+										</div>
+										<p class="card-groth up">
+											<i class="ri-arrow-up-line"></i>
+											32%
+											<span>Last Month</span>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-3 col-md-6">
+								<div class="cr-card">
+									<div class="cr-card-content label-card">
+										<div class="title">
+											<span class="icon icon-2"><i class="ri-shopping-bag-3-line"></i></span>
+											<div class="growth-numbers">
+												<h4>Order</h4>
+												<h5>08.65k</h5>
+											</div>
+										</div>
+										<p class="card-groth down">
+											<i class="ri-arrow-down-line"></i>
+											1.7%
+											<span>Last Month</span>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-3 col-md-6">
+								<div class="cr-card">
+									<div class="cr-card-content label-card">
+										<div class="title">
+											<span class="icon icon-3"><i class="ri-money-dollar-circle-line"></i></span>
+											<div class="growth-numbers">
+												<h4>Revenue</h4>
+												<h5>$85746</h5>
+											</div>
+										</div>
+										<p class="card-groth down">
+											<i class="ri-arrow-down-line"></i>
+											3.8%
+											<span>Last Month</span>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-xl-3 col-md-6">
+								<div class="cr-card">
+									<div class="cr-card-content label-card">
+										<div class="title">
+											<span class="icon icon-4"><i class="ri-exchange-dollar-line"></i></span>
+											<div class="growth-numbers">
+												<h4>Expenses</h4>
+												<h5>$75462</h5>
+											</div>
+										</div>
+										<p class="card-groth up">
+											<i class="ri-arrow-up-line"></i>
+											8%
+											<span>Last Month</span>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xxl-8 col-xl-12">
+						<div class="cr-card revenue-overview">
+							<div class="cr-card-header header-575">
+								<h4 class="cr-card-title">Revenue Overview</h4>
+								<div class="header-tools">
+									<a href="javascript:void(0)" class="m-r-10 cr-full-card" title="Full Screen"><i
+											class="ri-fullscreen-line"></i></a>
+									<div class="cr-date-range date">
+										<span></span>
+									</div>
+								</div>
+							</div>
+							<div class="cr-card-content">
+								<div class="cr-chart-header">
+									<div class="block">
+										<h6>Orders</h6>
+										<h5>825
+											<span class="up"><i class="ri-arrow-up-line"></i>24%</span>
+										</h5>
+									</div>
+									<div class="block">
+										<h6>Revenue</h6>
+										<h5>$89k
+											<span class="up"><i class="ri-arrow-up-line"></i>24%</span>
+										</h5>
+									</div>
+									<div class="block">
+										<h6>Expence</h6>
+										<h5>$68k
+											<span class="down"><i class="ri-arrow-down-line"></i>24%</span>
+										</h5>
+									</div>
+									<div class="block">
+										<h6>Profit</h6>
+										<h5>$21k
+											<span class="up"><i class="ri-arrow-up-line"></i>24%</span>
+										</h5>
+									</div>
+								</div>
+								<div class="cr-chart-content">
+									<div id="newrevenueChart" class="mb-m-24"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xxl-4 col-xl-6 col-md-12">
+						<div class="cr-card" id="campaigns">
+							<div class="cr-card-header">
+								<h4 class="cr-card-title">Campaigns</h4>
+								<div class="header-tools">
+									<div class="cr-date-range dots">
+										<span></span>
+									</div>
+								</div>
+							</div>
+							<div class="cr-card-content">
+								<div class="cr-chart-content">
+									<div id="newcampaignsChart"></div>
+								</div>
+								<div class="cr-chart-header-2">
+									<div class="block">
+										<h6>Social</h6>
+										<h5><span class="up">94%<i class="ri-arrow-up-line"></i></span>75k</h5>
+									</div>
+									<div class="block">
+										<h6>Referral</h6>
+										<h5><span class="down">96%<i class="ri-arrow-down-line"></i></span>54k</h5>
+									</div>
+									<div class="block">
+										<h6>Organic</h6>
+										<h5><span class="up">72%<i class="ri-arrow-up-line"></i></span>2.5k</h5>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xxl-6 col-xl-12">
+						<div class="cr-card" id="best_seller_tbl">
+							<div class="cr-card-header">
+								<h4 class="cr-card-title">Best Seller</h4>
+								<div class="header-tools">
+									<a href="javascript:void(0)" class="m-r-10 cr-full-card" title="Full Screen"><i
+											class="ri-fullscreen-line"></i></a>
+									<div class="cr-date-range dots">
+										<span></span>
+									</div>
+								</div>
+							</div>
+							<div class="cr-card-content card-default">
+								<div class="best-seller-table">
+									<div class="table-responsive">
+										<table id="best_seller_data_table" class="table">
+											<thead>
+												<tr>
+													<th>Vendor</th>
+													<th>Category</th>
+													<th>Stock</th>
+													<th>Sales</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><img class="cat-thumb" src="assets/admin/img/clients/1.jpg"
+															alt="clients Image"><span class="name">DS Fashion</span>
+													</td>
+													<td>
+														<span class="cat">
+															<a href="product-list.html">Watches</a>
+															<a href="product-list.html">Clothes</a>
+															<a href="product-list.html">Phones</a>
+														</span>
+													</td>
+													<td>685</td>
+													<td>$1254</td>
+												</tr>
+												<tr>
+													<td><img class="cat-thumb" src="assets/admin/img/clients/2.jpg"
+															alt="clients Image"><span class="name">Loka Creation</span>
+													</td>
+													<td>
+														<span class="cat">
+															<a href="product-list.html">Phone</a>
+															<a href="product-list.html">Camera</a>
+															<a href="product-list.html">Clothes</a>
+															<a href="product-list.html">Phones</a>
+														</span>
+													</td>
+													<td>874</td>
+													<td>$1768</td>
+												</tr>
+												<tr>
+													<td><img class="cat-thumb" src="assets/admin/img/clients/3.jpg"
+															alt="clients Image"><span class="name">Vorna Arts</span>
+													</td>
+													<td>
+														<span class="cat">
+															<a href="product-list.html">Laptop</a>
+															<a href="product-list.html">Furniture</a>
+															<a href="product-list.html">Phones</a>
+														</span>
+													</td>
+													<td>95</td>
+													<td>$2296</td>
+												</tr>
+												<tr>
+													<td><img class="cat-thumb" src="assets/admin/img/clients/4.jpg"
+															alt="clients Image"><span class="name">Lestie Shop</span>
+													</td>
+													<td>
+														<span class="cat">
+															<a href="product-list.html">Clothes</a>
+															<a href="product-list.html">Phones</a>
+														</span>
+													</td>
+													<td>354</td>
+													<td>$2754</td>
+												</tr>
+												<tr>
+													<td><img class="cat-thumb" src="assets/admin/img/clients/5.jpg"
+															alt="clients Image"><span class="name">Moris Gallery</span>
+													</td>
+													<td>
+														<span class="cat">
+															<a href="product-list.html">Tools</a>
+															<a href="product-list.html">Clothes</a>
+															<a href="product-list.html">Bags</a>
+														</span>
+													</td>
+													<td>675</td>
+													<td>$3105</td>
+												</tr>
+												<tr>
+													<td><img class="cat-thumb" src="assets/admin/img/clients/6.jpg"
+															alt="clients Image"><span class="name">Jens Fashion.</span>
+													</td>
+													<td>
+														<span class="cat">
+															<a href="product-list.html">Shoes</a>
+															<a href="product-list.html">Clothes</a>
+															<a href="product-list.html">Jewellery</a>
+														</span>
+													</td>
+													<td>854</td>
+													<td>$3854</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xxl-6 col-xl-12">
+						<div class="cr-card" id="top_product_tbl">
+							<div class="cr-card-header">
+								<h4 class="cr-card-title">Top Product</h4>
+								<div class="header-tools">
+									<a href="javascript:void(0)" class="m-r-10 cr-full-card" title="Full Screen"><i
+											class="ri-fullscreen-line"></i></a>
+									<div class="cr-date-range dots">
+										<span></span>
+									</div>
+								</div>
+							</div>
+							<div class="cr-card-content card-default">
+								<div class="top-product-table">
+									<div class="table-responsive">
+										<table id="top_product_data_table" class="table">
+											<thead>
+												<tr>
+													<th>Product</th>
+													<th>Price</th>
+													<th>Orders</th>
+													<th>Stock</th>
+													<th>Total</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><img class="cat-thumb" src="assets/admin/img/product/1.jpg"
+															alt="clients Image"><span class="name">Mens t-shirt</span>
+													</td>
+													<td>$16</td>
+													<td>162</td>
+													<td>456</td>
+													<td>$3524</td>
+												</tr>
+												<tr>
+													<td><img class="cat-thumb" src="assets/admin/img/product/2.jpg"
+															alt="clients Image"><span class="name">Sofa chair</span>
+													</td>
+													<td>$52</td>
+													<td>178</td>
+													<td>958</td>
+													<td>$8654</td>
+												</tr>
+												<tr>
+													<td><img class="cat-thumb" src="assets/admin/img/product/3.jpg"
+															alt="clients Image"><span class="name">Night Lamp</span>
+													</td>
+													<td>$70</td>
+													<td>198</td>
+													<td>1524</td>
+													<td>$1152</td>
+												</tr>
+												<tr>
+													<td><img class="cat-thumb" src="assets/admin/img/product/4.jpg"
+															alt="clients Image"><span class="name">Mens hoodie</span>
+													</td>
+													<td>$16</td>
+													<td>205</td>
+													<td>253</td>
+													<td>$5645</td>
+												</tr>
+												<tr>
+													<td><img class="cat-thumb" src="assets/admin/img/product/5.jpg"
+															alt="clients Image"><span class="name">Digital Watch</span>
+													</td>
+													<td>$559</td>
+													<td>209</td>
+													<td>456</td>
+													<td>$20546</td>
+												</tr>
+												<tr>
+													<td><img class="cat-thumb" src="assets/admin/img/product/6.jpg"
+															alt="clients Image"><span class="name">DSLR Camera.</span>
+													</td>
+													<td>$1546</td>
+													<td>212</td>
+													<td>98</td>
+													<td>$33500</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xxl-8 col-xl-12">
+						<div class="cr-card" id="ordertbl">
+							<div class="cr-card-header">
+								<h4 class="cr-card-title">Recent Orders</h4>
+								<div class="header-tools">
+									<a href="javascript:void(0)" class="m-r-10 cr-full-card" title="Full Screen"><i
+											class="ri-fullscreen-line"></i></a>
+									<div class="cr-date-range dots">
+										<span></span>
+									</div>
+								</div>
+							</div>
+							<div class="cr-card-content card-default">
+								<div class="order-table">
+									<div class="table-responsive">
+										<table id="recent_order_data_table" class="table">
+											<thead>
+												<tr>
+													<th>ID</th>
+													<th>Product</th>
+													<th>Customer</th>
+													<th>Amount</th>
+													<th>Status</th>
+													<th>vendor</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td class="token">#fx2650</td>
+													<td><img class="cat-thumb" src="assets/admin/img/product/1.jpg"
+															alt="clients Image"><span class="name">Mens t-shirt</span>
+													</td>
+													<td>Avira Venusio</td>
+													<td>$15</td>
+													<td class="cod">COD</td>
+													<td>Melborn Fashion</td>
+												</tr>
+												<tr>
+													<td class="token">#fx2650</td>
+													<td><img class="cat-thumb" src="assets/admin/img/product/2.jpg"
+															alt="clients Image"><span class="name">Sofa chair</span>
+													</td>
+													<td>Zara nails</td>
+													<td>$52</td>
+													<td class="pending">Pending</td>
+													<td>Capital Mines</td>
+												</tr>
+												<tr>
+													<td class="token">#fx2365</td>
+													<td><img class="cat-thumb" src="assets/admin/img/product/3.jpg"
+															alt="clients Image"><span class="name">Night Lamp</span>
+													</td>
+													<td>Olive Yew</td>
+													<td>$69</td>
+													<td class="wallet">wallet</td>
+													<td>Bara Electrics</td>
+												</tr>
+												<tr>
+													<td class="token">#fx2205</td>
+													<td><img class="cat-thumb" src="assets/admin/img/product/4.jpg"
+															alt="clients Image"><span class="name">Mens hoodie</span>
+													</td>
+													<td>Allie Grater</td>
+													<td>$49</td>
+													<td class="paid">Paid</td>
+													<td>Forest clothes</td>
+												</tr>
+												<tr>
+													<td class="token">#fx2187</td>
+													<td><img class="cat-thumb" src="assets/admin/img/product/5.jpg"
+															alt="clients Image"><span class="name">Digital Watch</span>
+													</td>
+													<td>Stanley Knife</td>
+													<td>$559</td>
+													<td class="cod">COD</td>
+													<td>Samsung Digi</td>
+												</tr>
+												<tr>
+													<td class="token">#fx2050</td>
+													<td><img class="cat-thumb" src="assets/admin/img/product/6.jpg"
+															alt="clients Image"><span class="name">DSLR Camera.</span>
+													</td>
+													<td>Nick Carlet</td>
+													<td>$1546</td>
+													<td class="wallet">Wallet</td>
+													<td>Canion tech</td>
+												</tr>
+												<tr>
+													<td class="token">#fx1995</td>
+													<td><img class="cat-thumb" src="assets/admin/img/product/7.jpg"
+															alt="clients Image"><span class="name">Head phone</span>
+													</td>
+													<td>Moris Nency</td>
+													<td>$525</td>
+													<td class="paid">Paid</td>
+													<td>Beater Digital</td>
+												</tr>
+												<tr>
+													<td class="token">#fx1985</td>
+													<td><img class="cat-thumb" src="assets/admin/img/product/8.jpg"
+															alt="clients Image"><span class="name">Camera Dron</span>
+													</td>
+													<td>Wiley Waites</td>
+													<td>$1255</td>
+													<td class="paid">Paid</td>
+													<td>Four wing</td>
+												</tr>
+												<tr>
+													<td class="token">#fx1945</td>
+													<td><img class="cat-thumb" src="assets/admin/img/product/9.jpg"
+															alt="clients Image"><span class="name">Drill machine</span>
+													</td>
+													<td>Sarah Moanees</td>
+													<td>$684</td>
+													<td class="pending">pending</td>
+													<td>Hitachu</td>
+												</tr>
+												<tr>
+													<td class="token">#fx1865</td>
+													<td><img class="cat-thumb" src="assets/admin/img/product/10.jpg"
+															alt="clients Image"><span class="name">Camera Dron</span>
+													</td>
+													<td>Anne Ortha</td>
+													<td>$854</td>
+													<td class="cod">COD</td>
+													<td>Skyrider tech</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xxl-4 col-xl-6 col-md-12">
+						<div class="cr-card" id="fxmap">
+							<div class="cr-card-header">
+								<h4 class="cr-card-title">Top Country</h4>
+								<div class="header-tools">
+									<div class="cr-date-range dots">
+										<span></span>
+									</div>
+								</div>
+							</div>
+							<div class="cr-card-content">
+								<div class="cr-map-view ecom-map">
+									<div id="world-map" class="world-map"></div>
+								</div>
+								<div class="cr-map-detail">
+									<div class="cr-map-detail">
+										<div class="title">
+											<h5>Revenue</h5>
+											<a href="#" class="visit" title="View all data">view <i
+													class="ri-arrow-right-line"></i></a>
+										</div>
+										<div class="cr-detail-list">
+											<div class="cr-label">
+												<div>
+													<label>India</label>
+													<span class="down"><i class="ri-arrow-down-line"></i>2.6%</span>
+												</div>
+												<p>$958.5k</p>
+											</div>
+											<div class="progress">
+												<div class="progress-bar bg-secondary" role="progressbar"
+													style="width: 95%" aria-valuenow="95" aria-valuemin="0"
+													aria-valuemax="100"></div>
+											</div>
+										</div>
+										<div class="cr-detail-list">
+											<div class="cr-label">
+												<div>
+													<label>Morocco</label>
+													<span class="up"><i class="ri-arrow-up-line"></i>5.6%</span>
+												</div>
+												<p>$788.7k</p>
+											</div>
+											<div class="progress">
+												<div class="progress-bar bg-primary" role="progressbar"
+													style="width: 84%" aria-valuenow="84" aria-valuemin="0"
+													aria-valuemax="100"></div>
+											</div>
+										</div>
+										<div class="cr-detail-list">
+											<div class="cr-label">
+												<div>
+													<label>Brazil</label>
+													<span class="up"><i class="ri-arrow-up-line"></i>3.7%</span>
+												</div>
+												<p>$592.2k</p>
+											</div>
+											<div class="progress">
+												<div class="progress-bar bg-primary" role="progressbar"
+													style="width: 76%" aria-valuenow="76" aria-valuemin="0"
+													aria-valuemax="100"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-    <!-- Track Order section -->
-    <section class="cr-track padding-tb-100">
-        <div class="container">
-            <div class="row d-none">
-                <div class="col-lg-12">
-                    <div class="mb-30" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="400">
-                        <div class="cr-banner">
-                            <h2>Popular Products</h2>
-                        </div>
-                        <div class="cr-banner-sub-title">
-                            <p>We delivering happiness and needs, Faster than you can think.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="container">
-                    <div class="cr-track-box">
-                        <!-- Details-->
-                        <div class="row">
-                            <div class="col-md-4 m-b-767">
-                                <div class="cr-track-card"><span class="cr-track-title">order</span><span>#9857</span>
-                                </div>
-                            </div>
-                            <div class="col-md-4 m-b-767">
-                                <div class="cr-track-card"><span
-                                        class="cr-track-title">Grasshoppers</span><span>M254HT</span></div>
-                            </div>
-                            <div class="col-md-4 m-b-767">
-                                <div class="cr-track-card"><span class="cr-track-title">Expected date</span><span>Feb
-                                        17, 2025</span></div>
-                            </div>
-                        </div>
-                        <!-- Progress-->
-                        <div class="cr-steps">
-                            <div class="cr-steps-body">
-                                <div class="cr-step cr-step-completed">
-                                    <span class="cr-step-indicator">
-                                        <i class="ri-check-line"></i>
-                                    </span>
-                                    <span class="cr-step-icon">
-                                        <i class="ri-shield-check-line"></i>
-                                    </span>Order<br> confirmed
-                                </div>
+		<!-- Footer -->
+		<footer>
+			<div class="container-fluid">
+				<div class="copyright">
+					<p><span id="copyright_year"></span> © Carrot, All rights Reserved.</p>
+					<p>Design by MaraviyaInfotech.</p>
+				</div>
+			</div>
+		</footer>
 
-                                <div class="cr-step cr-step-completed">
-                                    <span class="cr-step-indicator">
-                                        <i class="ri-check-line"></i>
-                                    </span>
-                                    <span class="cr-step-icon">
-                                        <i class="ri-settings-4-line"></i>
-                                    </span>Processing<br> order
-                                </div>
-                                <div class="cr-step cr-step-active">
-                                    <span class="cr-step-icon">
-                                        <i class="ri-gift-line"></i>
-                                    </span>Quality<br> check
-                                </div>
-                                <div class="cr-step">
-                                    <span class="cr-step-icon">
-                                        <i class="ri-truck-line"></i>
-                                    </span>Product<br> dispatched
-                                </div>
-                                <div class="cr-step">
-                                    <span class="cr-step-icon">
-                                        <i class="ri-home-5-line"></i>
-                                    </span>Product<br> delivered
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Track Order section End -->
+		<!-- Feature tools -->
+		<div class="cr-tools-sidebar-overlay"></div>
+		<div class="cr-tools-sidebar">
+			<a href="javascript:void(0)" class="cr-tools-sidebar-toggle in-out">
+				<i class="ri-settings-4-line"></i>
+			</a>
+			<div class="cr-bar-title">
+				<h6>Tools</h6>
+				<a href="javascript:void(0)" class="close-tools"><i class="ri-close-line"></i></a>
+			</div>
+			<div class="cr-tools-detail">
+				<div class="cr-tools-block">
+					<h3>Sidebar</h3>
+					<div class="cr-tools-info">
+						<div class="cr-tools-item sidebar active" data-sidebar-mode-tool="light">
+							<img src="assets/admin/img/tools/side-light.png" alt="light">
+							<p>light</p>
+						</div>
+						<div class="cr-tools-item sidebar" data-sidebar-mode-tool="dark">
+							<img src="assets/admin/img/tools/side-dark.png" alt="dark">
+							<p>dark</p>
+						</div>
+						<div class="cr-tools-item sidebar" data-sidebar-mode-tool="bg-1">
+							<img src="assets/admin/img/tools/side-bg-1.png" alt="background">
+							<p>Bg-1</p>
+						</div>
+						<div class="cr-tools-item sidebar" data-sidebar-mode-tool="bg-2">
+							<img src="assets/admin/img/tools/side-bg-2.png" alt="background">
+							<p>Bg-2</p>
+						</div>
+						<div class="cr-tools-item sidebar" data-sidebar-mode-tool="bg-3">
+							<img src="assets/admin/img/tools/side-bg-3.png" alt="background">
+							<p>Bg-3</p>
+						</div>
+						<div class="cr-tools-item sidebar" data-sidebar-mode-tool="bg-4">
+							<img src="assets/admin/img/tools/side-bg-4.png" alt="background">
+							<p>Bg-4</p>
+						</div>
+					</div>
+				</div>
+				<div class="cr-tools-block">
+					<h3>Header</h3>
+					<div class="cr-tools-info">
+						<div class="cr-tools-item header active" data-header-mode="light">
+							<img src="assets/admin/img/tools/header-light.png" alt="light">
+							<p>light</p>
+						</div>
+						<div class="cr-tools-item header" data-header-mode="dark">
+							<img src="assets/admin/img/tools/header-dark.png" alt="dark">
+							<p>dark</p>
+						</div>
+					</div>
+				</div>
+				<div class="cr-tools-block">
+					<h3>Backgrounds</h3>
+					<div class="cr-tools-info">
+						<div class="cr-tools-item bg active" data-bg-mode="default">
+							<img src="assets/admin/img/tools/bg-0.png" alt="default">
+							<p>Default</p>
+						</div>
+						<div class="cr-tools-item bg" data-bg-mode="bg-1">
+							<img src="assets/admin/img/tools/bg-1.png" alt="bg-1">
+							<p>Bg-1</p>
+						</div>
+						<div class="cr-tools-item bg" data-bg-mode="bg-2">
+							<img src="assets/admin/img/tools/bg-2.png" alt="bg-2">
+							<p>Bg-2</p>
+						</div>
+						<div class="cr-tools-item bg" data-bg-mode="bg-3">
+							<img src="assets/admin/img/tools/bg-3.png" alt="bg-3">
+							<p>Bg-3</p>
+						</div>
+						<div class="cr-tools-item bg" data-bg-mode="bg-4">
+							<img src="assets/admin/img/tools/bg-4.png" alt="bg-4">
+							<p>Bg-4</p>
+						</div>
+						<div class="cr-tools-item bg" data-bg-mode="bg-5">
+							<img src="assets/admin/img/tools/bg-5.png" alt="bg-5">
+							<p>Bg-5</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
 
-    <!-- Footer -->
-    <footer class="footer padding-t-100 bg-off-white">
-        <div class="container">
-            <div class="row footer-top padding-b-100">
-                <div class="col-xl-4 col-lg-6 col-sm-12 col-12 cr-footer-border">
-                    <div class="cr-footer-logo">
-                        <div class="image">
-                            <img src="assets/users/img/logo/logo.png" alt="logo" class="logo">
-                            <img src="assets/users/img/logo/dark-logo.png" alt="logo" class="dark-logo">
-                        </div>
-                        <p>Carrot is the biggest market of grocery products. Get your daily needs from our store.</p>
-                    </div>
-                    <div class="cr-footer">
-                        <h4 class="cr-sub-title cr-title-hidden">
-                            Contact us
-                            <span class="cr-heading-res"></span>
-                        </h4>
-                        <ul class="cr-footer-links cr-footer-dropdown">
-                            <li class="location-icon">
-                                51 Green St.Huntington ohaio beach ontario, NY 11746 KY 4783, USA.
-                            </li>
-                            <li class="mail-icon">
-                                <a href="javascript:void(0)">example@email.com</a>
-                            </li>
-                            <li class="phone-icon">
-                                <a href="javascript:void(0)"> +91 123 4567890</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-xl-2 col-lg-3 col-sm-12 col-12 cr-footer-border">
-                    <div class="cr-footer">
-                        <h4 class="cr-sub-title">
-                            Company
-                            <span class="cr-heading-res"></span>
-                        </h4>
-                        <ul class="cr-footer-links cr-footer-dropdown">
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="track-order.html">Delivery Information</a></li>
-                            <li><a href="policy.html">Privacy Policy</a></li>
-                            <li><a href="terms.html">Terms & Conditions</a></li>
-                            <li><a href="contact-us.html">contact Us</a></li>
-                            <li><a href="faq.html">Support Center</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-xl-2 col-lg-3 col-sm-12 col-12 cr-footer-border">
-                    <div class="cr-footer">
-                        <h4 class="cr-sub-title">
-                            Category
-                            <span class="cr-heading-res"></span>
-                        </h4>
-                        <ul class="cr-footer-links cr-footer-dropdown">
-                            <li><a href="shop-left-sidebar.html">Dairy & Bakery</a></li>
-                            <li><a href="shop-left-sidebar.html">Fruits & Vegetable</a></li>
-                            <li><a href="shop-left-sidebar.html">Snack & Spice</a></li>
-                            <li><a href="shop-left-sidebar.html">Juice & Drinks</a></li>
-                            <li><a href="shop-left-sidebar.html">Chicken & Meat</a></li>
-                            <li><a href="shop-left-sidebar.html">Fast Food</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-12 col-sm-12 col-12 cr-footer-border">
-                    <div class="cr-footer cr-newsletter">
-                        <h4 class="cr-sub-title">
-                            Subscribe Our Newsletter
-                            <span class="cr-heading-res"></span>
-                        </h4>
-                        <div class="cr-footer-links cr-footer-dropdown">
-                            <form class="cr-search-footer">
-                                <input class="search-input" type="text" placeholder="Search here...">
-                                <a href="javascript:void(0)" class="search-btn">
-                                    <i class="ri-send-plane-fill"></i>
-                                </a>
-                            </form>
-                        </div>
-                        <div class="cr-social-media">
-                            <span><a href="javascript:void(0)"><i class="ri-facebook-line"></i></a></span>
-                            <span><a href="javascript:void(0)"><i class="ri-twitter-x-line"></i></a></span>
-                            <span><a href="javascript:void(0)"><i class="ri-dribbble-line"></i></a></span>
-                            <span><a href="javascript:void(0)"><i class="ri-instagram-line"></i></a></span>
-                        </div>
-                        <div class="cr-payment">
-                            <div class="cr-insta-slider swiper-container">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <a href="#" class="cr-payment-image">
-                                            <img src="assets/users/img/insta/1.jpg" alt="insta">
-                                            <div class="payment-overlay"></div>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="#" class="cr-payment-image">
-                                            <img src="assets/users/img/insta/2.jpg" alt="insta">
-                                            <div class="payment-overlay"></div>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="#" class="cr-payment-image">
-                                            <img src="assets/users/img/insta/3.jpg" alt="insta">
-                                            <div class="payment-overlay"></div>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="#" class="cr-payment-image">
-                                            <img src="assets/users/img/insta/4.jpg" alt="insta">
-                                            <div class="payment-overlay"></div>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="#" class="cr-payment-image">
-                                            <img src="assets/users/img/insta/5.jpg" alt="insta">
-                                            <div class="payment-overlay"></div>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="#" class="cr-payment-image">
-                                            <img src="assets/users/img/insta/6.jpg" alt="insta">
-                                            <div class="payment-overlay"></div>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="#" class="cr-payment-image">
-                                            <img src="assets/users/img/insta/7.jpg" alt="insta">
-                                            <div class="payment-overlay"></div>
-                                        </a>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <a href="#" class="cr-payment-image">
-                                            <img src="assets/users/img/insta/8.jpg" alt="insta">
-                                            <div class="payment-overlay"></div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="cr-last-footer">
-                <p>&copy; <span id="copyright_year"></span> <a href="index.html">Carrot</a>, All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+	<!-- Vendor Custom -->
+	<script src="assets/admin/js/vendor/jquery-3.6.4.min.js"></script>
+	<script src="assets/admin/js/vendor/simplebar.min.js"></script>
+	<script src="assets/admin/js/vendor/bootstrap.bundle.min.js"></script>
+	<script src="assets/admin/js/vendor/apexcharts.min.js"></script>
+	<script src="assets/admin/js/vendor/jquery-jvectormap-1.2.2.min.js"></script>
+	<script src="assets/admin/js/vendor/jquery-jvectormap-world-mill-en.js"></script>
+	<script src="assets/admin/js/vendor/owl.carousel.min.js"></script>
+	<!-- Data Tables -->
+	<script src='assets/admin/js/vendor/jquery.datatables.min.js'></script>
+	<script src='assets/admin/js/vendor/datatables.bootstrap5.min.js'></script>
+	<script src='assets/admin/js/vendor/datatables.responsive.min.js'></script>
+	<!-- Caleddar -->
+	<script src="assets/admin/js/vendor/jquery.simple-calendar.js"></script>
+	<!-- Date Range Picker -->
+	<script src="assets/admin/js/vendor/moment.min.js"></script>
+	<script src="assets/admin/js/vendor/daterangepicker.js"></script>
+	<script src="assets/admin/js/vendor/date-range.js"></script>
 
-    <!-- Tab to top -->
-    <a href="#Top" class="back-to-top result-placeholder">
-        <i class="ri-arrow-up-line"></i>
-        <div class="back-to-top-wrap">
-            <svg viewBox="-1 -1 102 102">
-                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
-            </svg>
-        </div>
-    </a>
-
-    <!-- Cart -->
-    <div class="cr-cart-overlay"></div>
-    <div class="cr-cart-view">
-        <div class="cr-cart-inner">
-            <div class="cr-cart-top">
-                <div class="cr-cart-title">
-                    <h6>My Cart</h6>
-                    <button type="button" class="close-cart">×</button>
-                </div>
-                <ul class="crcart-pro-items">
-                    <li>
-                        <a href="product-left-sidebar.html" class="crside_pro_img"><img src="assets/users/img/product/4.jpg"
-                                alt="product-1"></a>
-                        <div class="cr-pro-content">
-                            <a href="product-left-sidebar.html" class="cart_pro_title">Fresh Pomegranate</a>
-                            <span class="cart-price"><span>$56.00</span> x 1kg</span>
-                            <div class="cr-cart-qty">
-                                <div class="cart-qty-plus-minus">
-                                    <button type="button" class="plus">+</button>
-                                    <input type="text" placeholder="." value="1" minlength="1" maxlength="20"
-                                        class="quantity">
-                                    <button type="button" class="minus">-</button>
-                                </div>
-                            </div>
-                            <a href="javascript:void(0)" class="remove">×</a>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="product-left-sidebar.html" class="crside_pro_img"><img src="assets/users/img/product/2.jpg"
-                                alt="product-2"></a>
-                        <div class="cr-pro-content">
-                            <a href="product-left-sidebar.html" class="cart_pro_title">Green Apples</a>
-                            <span class="cart-price"><span>$75.00</span> x 1kg</span>
-                            <div class="cr-cart-qty">
-                                <div class="cart-qty-plus-minus">
-                                    <button type="button" class="plus">+</button>
-                                    <input type="text" placeholder="." value="1" minlength="1" maxlength="20"
-                                        class="quantity">
-                                    <button type="button" class="minus">-</button>
-                                </div>
-                            </div>
-                            <a href="javascript:void(0)" class="remove">×</a>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="product-left-sidebar.html" class="crside_pro_img"><img src="assets/users/img/product/3.jpg"
-                                alt="product-3"></a>
-                        <div class="cr-pro-content">
-                            <a href="product-left-sidebar.html" class="cart_pro_title">Watermelon  - Small</a>
-                            <span class="cart-price"><span>$48.00</span> x 5kg</span>
-                            <div class="cr-cart-qty">
-                                <div class="cart-qty-plus-minus">
-                                    <button type="button" class="plus">+</button>
-                                    <input type="text" placeholder="." value="1" minlength="1" maxlength="20"
-                                        class="quantity">
-                                    <button type="button" class="minus">-</button>
-                                </div>
-                            </div>
-                            <a href="javascript:void(0)" class="remove">×</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="cr-cart-bottom">
-                <div class="cart-sub-total">
-                    <table class="table cart-table">
-                        <tbody>
-                            <tr>
-                                <td class="text-left">Sub-Total :</td>
-                                <td class="text-right">$300.00</td>
-                            </tr>
-                            <tr>
-                                <td class="text-left">VAT (20%) :</td>
-                                <td class="text-right">$60.00</td>
-                            </tr>
-                            <tr>
-                                <td class="text-left">Total :</td>
-                                <td class="text-right primary-color">$360.00</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="cart_btn">
-                    <a href="cart.html" class="cr-button">View Cart</a>
-                    <a href="checkout.html" class="cr-btn-secondary">Checkout</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Side-tool -->
-    <div class="cr-tool-overlay"></div>
-    <div class="cr-tool">
-        <div class="cr-tool-btn">
-            <a href="javascript:void(0)" class="btn-cr-tool result-placeholder">
-                <i class="ri-settings-line"></i>
-            </a>
-            <div class="color-variant">
-                <div class="cr-bar-title">
-                    <h6>Tools</h6>
-                    <a href="javascript:void(0)" class="close-tools">
-                        <i class="ri-close-line"></i>
-                    </a>
-                </div>
-                <div class="cr-tools-detail">
-                    <div class="heading">
-                        <h2>Select Color</h2>
-                    </div>
-                    <ul class="cr-color">
-                        <li class="colors c1 active-colors">
-                        </li>
-                        <li class="colors c2">
-                        </li>
-                        <li class="colors c3">
-                        </li>
-                        <li class="colors c4">
-                        </li>
-                        <li class="colors c5">
-                        </li>
-                        <li class="colors c6">
-                        </li>
-                        <li class="colors c7">
-                        </li>
-                        <li class="colors c8">
-                        </li>
-                        <li class="colors c9">
-                        </li>
-                        <li class="colors c10">
-                        </li>
-                    </ul>
-                </div>
-                <div class="cr-tools-detail">
-                    <div class="heading">
-                        <h2>Dark mode</h2>
-                    </div>
-                    <ul class="dark-mode">
-                        <li class="dark">
-                        </li>
-                        <li class="white active-dark-mode">
-                        </li>
-                    </ul>
-                </div>
-                <div class="cr-tools-detail">
-                    <div class="heading">
-                        <h2>RTL mode</h2>
-                    </div>
-                    <ul class="rtl-mode">
-                        <li class="rtl">
-                            <img src="assets/users/img/tool/rtl.png" alt="rtl">
-                        </li>
-                        <li class="ltr active-rtl-mode">
-                            <img src="assets/users/img/tool/ltr.png" alt="ltr">
-                        </li>
-                    </ul>
-                </div>
-                <div class="cr-tools-detail">
-                    <div class="heading">
-                        <h2>Backgrounds</h2>
-                    </div>
-                    <ul class="bg-panel">
-                        <li class="bg-1">
-                            <img src="assets/users/img/shape/bg-shape-1.png" alt="bg-shape-1">
-                        </li>
-                        <li class="bg-2">
-                            <img src="assets/users/img/shape/bg-shape-2.png" alt="bg-shape-2">
-                        </li>
-                        <li class="bg-3">
-                            <img src="assets/users/img/shape/bg-shape-3.png" alt="bg-shape-3">
-                        </li>
-                        <li class="bg-4">
-                            <img src="assets/users/img/shape/bg-shape-4.png" alt="bg-shape-4">
-                        </li>
-                        <li class="bg-5">
-                            <img src="assets/users/img/shape/bg-shape-5.png" alt="bg-shape-5">
-                        </li>
-                        <li class="bg-6 active-bg-panel">
-                            <img src="assets/users/img/shape/bg-shape-6.png" alt="bg-shape-6">
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Vendor Custom -->
-    <script src="assets/users/js/vendor/jquery-3.6.4.min.js"></script>
-    <script src="assets/users/js/vendor/jquery.zoom.min.js"></script>
-    <script src="assets/users/js/vendor/bootstrap.bundle.min.js"></script>
-    <script src="assets/users/js/vendor/mixitup.min.js"></script>
-    <script src="assets/users/js/vendor/range-slider.js"></script>
-    <script src="assets/users/js/vendor/aos.min.js"></script>
-    <script src="assets/users/js/vendor/swiper-bundle.min.js"></script>
-    <script src="assets/users/js/vendor/slick.min.js"></script>
-
-    <!-- Main Custom -->
-    <script src="assets/users/js/main.js"></script>
+	<!-- Main Custom -->
+	<script src="assets/admin/js/main.js"></script>
+	<script src="assets/admin/js/data/ecommerce-chart-data.js"></script>
 </body>
 
 
-<!-- Mirrored from maraviyainfotech.com/projects/carrot/carrot-v21/carrot-html/track-order.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Nov 2024 15:30:29 GMT -->
+<!-- Mirrored from maraviyainfotech.com/projects/carrot/carrot-v21/admin-html/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Nov 2024 15:41:34 GMT -->
 </html>

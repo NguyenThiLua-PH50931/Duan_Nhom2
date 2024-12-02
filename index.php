@@ -9,7 +9,11 @@ include "controllers/admin/ProductsControllers.php";
 include "controllers/admin/AuthController.php";
 include "controllers/admin/AccountsController.php";
 include "controllers/admin/CommentController.php";
+
 include "controllers/admin/DasboardController.php";
+
+
+include "controllers/admin/OrdersController.php";
 
 
 //---------------Controllers-User-------------
@@ -52,7 +56,7 @@ include "commons/helpers.php";
 // /Lấy tham số
 $admin = $_GET['admin'] ?? "";
 $user = $_GET['user'] ?? "";
-
+$vaiTro = $_GET['vai_tro'] ?? "";
 // Kiểm tra quyền truy cập admin
 if (!empty($admin)) {
     if (!isset($_SESSION['nameAccount']) && $admin !== 'login') {
@@ -61,8 +65,12 @@ if (!empty($admin)) {
     }
 
     match ($admin) {
+
         // dasboad:
         'dasboard'=>(new DasboardController)->index(),
+
+
+
         // Sản phẩm
         'list-product' => (new ProductsController())->listProduct(),
         'add-product' => (new ProductsController())->addProduct(),
@@ -87,6 +95,9 @@ if (!empty($admin)) {
         'list-comment' => (new CommentController())->listComment(),
         'delete-comment' => (new CommentController())->deleteComment(),
 
+        // Bình luận
+        'listOrder' => (new OrdersController())->listOrder(),
+
         default => die("Không tìm thấy file")
     };
 }
@@ -104,7 +115,7 @@ if (!empty($user)) {
         'shop' => (new ProductControllers())->shop(),
         'cart' => (new CartControllers())->viewCart(),
         'updateCart' => (new CartControllers())->updateCart(),
-        'addCart' => (new CartControllers())->addCart(),
+        // 'addCart' => (new CartControllers())->addCart(),
         'deleteCart' => (new CartControllers())->deleteCart(),
         'wishlist' => (new WishlistController())->wishlist(),
         'deleteWishlist' => (new WishlistController())->deleteWishlist(),
@@ -112,7 +123,12 @@ if (!empty($user)) {
         'shipping' => (new ShippingController())->shipping(),
         'checkout' => (new CheckoutController())->getCheckout(),
         'thanhToanSP' => (new CheckoutController())->checkout(),
+
        'donMua' => (new donMuaController())->getDonMua(),
+
+        'donMua' => (new OrderController())->getOrder(),
+        'huyDon' => (new OrderController())->huyDon(),
+
         default => die("Không tìm thấy file"),
     };
 }

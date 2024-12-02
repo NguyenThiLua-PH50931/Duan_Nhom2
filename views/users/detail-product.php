@@ -144,7 +144,7 @@
                     <div class="cr-size-and-weight-contain">
                         <h2 class="heading"><?= $product['ten_sp'] ?></h2>
                     </div>
-                    <form action="index.php?user=addCart" method="post" enctype="multipart/form-data">
+                    <form action="" method="post" enctype="multipart/form-data">
                         <div class="cr-size-and-weight">
                             <div class="list">
                                 <ul>
@@ -156,6 +156,7 @@
                                 </ul>
                             </div>
                             <!-- Biến thể -->
+<<<<<<< HEAD
                             <div class="cr-size-weight">
                                 <!-- <form action="index.php?user=cart" method="POST">
                                     <h5><span>Size: </span></h5>
@@ -174,6 +175,8 @@
                                     </div>
                                 </form> -->
                             </div>
+=======
+>>>>>>> 8072630ef72034f4ea3a87ca39bad6d2febf0d06
                             <div class="cr-product-price">
                                 <span class="new-price"><?= $product['gia_tien'] ?>VND</span>
                                 <span class="old-price"><?= $product['gia_km'] ?>VND</span>
@@ -201,7 +204,7 @@
                                     <button name="addCart" class="cr-button btn-outline-success">Thêm vào giỏ hàng</button>
                                 </div>
                                 <div class="cr-add-button">
-                                    <button type="button" class="cr-button cr-shopping-bag">Mua ngay</button>
+                                    <button name="muaNgay" class="cr-button cr-shopping-bag">Mua ngay</button>
                                 </div>
                     </form>
                     <form action="" method="post">
@@ -411,7 +414,10 @@
         echo $_SESSION['deleteCart'];
     } elseif (isset($_SESSION['successWishlist'])) {
         echo $_SESSION['successWishlist'];
+    } elseif (isset($_SESSION['addCart'])) {
+        echo $_SESSION['addCart'];
     }
+    unset($_SESSION['addCart']);
     unset($_SESSION['thongBao']);
     unset($_SESSION['deleteCart']);
     unset($_SESSION['successWishlist']);

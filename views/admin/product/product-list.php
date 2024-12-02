@@ -107,8 +107,6 @@
         <footer>
             <?php include_once "views/admin/layout/footer.php" ?>
         </footer>
-        <!-- Feature tools -->
-        <?php include_once "views/admin/layout/feature-tools.php" ?>
     </main>
     <?php include_once "views/admin/layout/script.php" ?>
 </body>

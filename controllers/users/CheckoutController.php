@@ -21,8 +21,9 @@ class CheckoutController
             $_SESSION['tongTien'] = $totalAll;
         }
         $shipping = (new ShippingModel())->getShipping($id_tk);
+        $category = (new CategoryModels)->all();
 
-        view("users/checkout", ['shipping' => $shipping ?? '', 'cart' => $cart ?? [], 'total' => $total, 'totalAll' => $totalAll]);
+        view("users/checkout", ['shipping' => $shipping ?? '', 'cart' => $cart ?? [], 'total' => $total,'category' => $category, 'totalAll' => $totalAll]);
     }
 
     public function checkout()
@@ -38,7 +39,7 @@ class CheckoutController
 
             $thanhToan = (new CheckoutModel)->payment(
                 $id_shipping,
-                'Chờ thanh toán',
+                1,
                 $_POST['pttt'],
                 $id_tk,
             );

@@ -39,7 +39,7 @@
         <div class="cr-slider swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <div class="cr-hero-banner cr-banner-image-two" style="height: 500px; margin-top: 30px;">
+                    <div class="cr-hero-banner cr-banner-image-two" style="height: 700px; margin-top: 30px;">
                     <div class="container">
                             <div class="row">
                                 <div class="col-lg-12">
@@ -49,7 +49,7 @@
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="cr-hero-banner cr-banner-image-one" style="height: 500px; margin-top: 30px;">
+                    <div class="cr-hero-banner cr-banner-image-one" style="height: 700px; margin-top: 30px;">
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-12">

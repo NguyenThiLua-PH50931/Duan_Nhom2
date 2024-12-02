@@ -157,7 +157,7 @@
                             </div>
                             <!-- Biến thể -->
                             <div class="cr-size-weight">
-                                <form action="index.php?user=cart" method="POST">
+                                <!-- <form action="index.php?user=cart" method="POST">
                                     <h5><span>Size: </span></h5>
                                     <div>
                                         <input type="radio" name="size" value="37" id="size-37" required>
@@ -172,7 +172,7 @@
                                         <input type="radio" name="size" value="40" id="size-40">
                                         <label for="size-40">40</label>
                                     </div>
-                                </form>
+                                </form> -->
                             </div>
                             <div class="cr-product-price">
                                 <span class="new-price"><?= $product['gia_tien'] ?>VND</span>

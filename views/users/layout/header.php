@@ -6,7 +6,7 @@
                     <img src="assets/users/img/logo/logo.png" alt="logo" class="logo" style="height:90px; width:180px;">
                 </a>
 
-                <form class="row g-3" action="index.php?user=shop" method="post" style="margin-top: 2px;">
+                <form class="row g-3" action="" method="post" style="margin-top: 2px;">
                     <div class="col-auto">
                         <label for="inputPassword2" class="visually-hidden">Tìm kiếm tại đây</label>
                         <input type="text" class="form-control" id="text" name="keyword" placeholder="Tìm kiếm tại đây" style="width: 300px; border: 1px forestgreen solid;">
@@ -44,7 +44,7 @@
                                         <a class="dropdown-item" href="index.php?user=checkout">Checkout</a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="index.php?user=donMua">Đơn mua</a>
+                                        <a class="dropdown-item" href="index.php?user=checkout">Đơn mua</a>
                                     </li>
                                 </ul>
                             <?php } ?>

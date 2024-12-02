@@ -9,6 +9,8 @@ include "controllers/admin/ProductsControllers.php";
 include "controllers/admin/AuthController.php";
 include "controllers/admin/AccountsController.php";
 include "controllers/admin/CommentController.php";
+include "controllers/admin/DasboardController.php";
+
 
 //---------------Controllers-User-------------
 include "controllers/users/LoginControllers.php";
@@ -21,6 +23,7 @@ include "controllers/users/WishlistController.php";
 include "controllers/users/ShippingController.php";
 include "controllers/users/CheckoutController.php";
 include "controllers/users/OrderController.php";
+include "controllers/users/donMuaController.php";
 
 //==========================Models========================
 //---------------Model-Admin-------------
@@ -30,6 +33,7 @@ include "models/admin/ProductModels.php";
 include "models/admin/Auth.php";
 include "models/admin/AccountsModels.php";
 include "models/admin/CommentModels.php";
+include "models/admin/dasboardModel.php";
 
 //---------------Model-User-------------
 include "models/users/HomeModels.php";
@@ -58,6 +62,7 @@ if (!empty($admin)) {
 
     match ($admin) {
         // dasboad:
+        'dasboard'=>(new DasboardController)->index(),
         // Sản phẩm
         'list-product' => (new ProductsController())->listProduct(),
         'add-product' => (new ProductsController())->addProduct(),
@@ -107,7 +112,7 @@ if (!empty($user)) {
         'shipping' => (new ShippingController())->shipping(),
         'checkout' => (new CheckoutController())->getCheckout(),
         'thanhToanSP' => (new CheckoutController())->checkout(),
-        'donMua' => (new OrderController())->getOrder(),
+       'donMua' => (new donMuaController())->getDonMua(),
         default => die("Không tìm thấy file"),
     };
 }

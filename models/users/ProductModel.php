@@ -59,27 +59,22 @@ class ProductModel
         return $results;
     }
 
-    // cập nhập lượt xem:
-    public function updateViews($id_sp)
+    //Cập nhật lượt xem lên 1
+    public function updateLuotxem($id_sp)
     {
-        error_log("updateViews called for id_sp: " . $id_sp);
-        // Kiểm tra xem id_sp có tồn tại và hợp lệ không
-        if (empty($id_sp) || !is_numeric($id_sp)) {
-           
-            return; // Nếu id_sp không hợp lệ, không thực hiện cập nhật
-        }
-
-        $sql = "UPDATE san_pham SET luot_xem = luot_xem + 1 WHERE id_sp = :id_sp";
+        $sql = "SELECT * FROM san_pham WHERE id_sp = :id_sp ";
         $stmt = $this->db->pdo->prepare($sql);
-
-        // Liên kết id_sp vào câu lệnh chuẩn bị
         $stmt->bindParam(':id_sp', $id_sp, PDO::PARAM_INT);
-
-        // Thực thi câu lệnh và kiểm tra kết quả
-        if ($stmt->execute()) {
-            return true; // Cập nhật thành công
-        } else {
-            return false; // Cập nhật không thành công
+        $stmt->execute();
+        $product = $stmt->fetch();
+        if($product){
+            $sql = "UPDATE san_pham SET luot_xem = :luot_xem WHERE id_sp= :id_sp";
+            $stmt = $this->db->pdo->prepare($sql);
+            $newLx = floatval($product -> luot_xem) + 1;
+            $stmt->bindParam(':id_sp', $id_sp, PDO::PARAM_INT);
+            $stmt->bindParam(':luot_xem',$newLx);
+            $stmt->execute();
         }
+
     }
 }

@@ -8,7 +8,7 @@
         <div class="cr-sb-content">
             <ul class="cr-sb-list">
                 <li class="cr-sb-item sb-drop-item">
-                    <a href="javascript:void(0)" class="cr-drop-toggle">
+                    <a href="index.php?admin=dasboard" class="cr-drop-toggle">
 
                         <i class="ri-dashboard-3-line"></i><span class="condense">Dashboard<i
                                 class="drop-arrow ri-arrow-down-s-line"></i></span></a>

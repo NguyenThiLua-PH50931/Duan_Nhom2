@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Nov 29, 2024 at 03:20 PM
+-- Generation Time: Dec 02, 2024 at 03:12 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -34,6 +34,13 @@ CREATE TABLE `binh_luan` (
   `id_sp` int NOT NULL,
   `id_tk` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `binh_luan`
+--
+
+INSERT INTO `binh_luan` (`id_bl`, `noi_dung_bl`, `ngay_bl`, `id_sp`, `id_tk`) VALUES
+(1, 'a', '2024-11-30', 14, 6);
 
 -- --------------------------------------------------------
 
@@ -66,6 +73,7 @@ CREATE TABLE `donhangchitiet` (
   `id` int NOT NULL,
   `id_donHang` int NOT NULL,
   `id_sp` int NOT NULL,
+  `id_trangThai` int NOT NULL,
   `soLuong` int NOT NULL,
   `tongTien` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -74,12 +82,12 @@ CREATE TABLE `donhangchitiet` (
 -- Dumping data for table `donhangchitiet`
 --
 
-INSERT INTO `donhangchitiet` (`id`, `id_donHang`, `id_sp`, `soLuong`, `tongTien`) VALUES
-(1, 10, 14, 1, 6098),
-(2, 10, 13, 1, 6098),
-(3, 10, 11, 3, 6098),
-(4, 11, 14, 1, 5433),
-(5, 11, 7, 1, 5433);
+INSERT INTO `donhangchitiet` (`id`, `id_donHang`, `id_sp`, `id_trangThai`, `soLuong`, `tongTien`) VALUES
+(1, 10, 14, 1, 1, 6098),
+(2, 10, 13, 2, 1, 6098),
+(3, 10, 11, 3, 3, 6098),
+(4, 11, 14, 1, 1, 5433),
+(5, 11, 7, 2, 1, 5433);
 
 -- --------------------------------------------------------
 
@@ -91,7 +99,7 @@ CREATE TABLE `don_hang` (
   `id_donhang` int NOT NULL,
   `van_chuyen` int NOT NULL,
   `code_payment` int NOT NULL,
-  `trangthai_donhang` varchar(50) NOT NULL,
+  `trangthai_donhang` int NOT NULL,
   `phuongthuc_thanhtoan` varchar(199) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `ngaydat_don` varchar(255) NOT NULL,
   `id_tk` int NOT NULL
@@ -102,10 +110,10 @@ CREATE TABLE `don_hang` (
 --
 
 INSERT INTO `don_hang` (`id_donhang`, `van_chuyen`, `code_payment`, `trangthai_donhang`, `phuongthuc_thanhtoan`, `ngaydat_don`, `id_tk`) VALUES
-(8, 2, 8103, 'Chờ thanh toán', 'Tiền mặt', '27-11-2024 22:26:14', 5),
-(9, 2, 3502, 'Chờ thanh toán', 'Tiền mặt', '28-11-2024 21:22:36', 5),
-(10, 2, 618, 'Chờ thanh toán', 'Tiền mặt', '28-11-2024 22:03:22', 5),
-(11, 1, 5099, 'Chờ thanh toán', 'Tiền mặt', '28-11-2024 22:14:00', 6);
+(8, 2, 8103, 1, 'Tiền mặt', '27-11-2024 22:26:14', 5),
+(9, 2, 3502, 1, 'Tiền mặt', '28-11-2024 21:22:36', 5),
+(10, 2, 618, 1, 'Tiền mặt', '28-11-2024 22:03:22', 5),
+(11, 1, 5099, 1, 'Tiền mặt', '28-11-2024 22:14:00', 6);
 
 -- --------------------------------------------------------
 
@@ -117,6 +125,13 @@ CREATE TABLE `gio_hang` (
   `id_giohang` int NOT NULL,
   `id_tk` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `gio_hang`
+--
+
+INSERT INTO `gio_hang` (`id_giohang`, `id_tk`) VALUES
+(5, 6);
 
 -- --------------------------------------------------------
 
@@ -130,6 +145,13 @@ CREATE TABLE `gio_hang_chi_tiet` (
   `so_luong` int NOT NULL,
   `id_giohang` int DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `gio_hang_chi_tiet`
+--
+
+INSERT INTO `gio_hang_chi_tiet` (`id_giohang_chitiet`, `id_sp`, `so_luong`, `id_giohang`) VALUES
+(25, 13, 1, 5);
 
 -- --------------------------------------------------------
 
@@ -257,8 +279,8 @@ CREATE TABLE `van_chuyen` (
 --
 
 INSERT INTO `van_chuyen` (`id_vanChuyen`, `id_tk`, `diaChi`, `city`, `district`, `ward`, `soDienThoai`, `hoTen`, `note`) VALUES
-(1, 6, 'Cao đẳng FPT Polytechnic, Tòa nhà FPT Polytechnic, Phố Trịnh Văn Bô, Xuân Phương, Nam Từ Liêm', 'Hà Nội', 'Nam Từ Liêm', 'Phương Canh', '0123456789', 'nụ vs ín', ' Chúc anh ship 1 ngày tốt lành <3 Mãi iu'),
-(2, 5, 'Ngõ 2 Văn Trì, Phường Minh Khai, Quận Bắc Từ Liêm, Thành phố Hà Nội', 'Hà Nội', 'Bắc Từ Liêm', 'Minh Khai', '0339125387', 'Đào Việt Anh', 'Chao anh ship');
+(2, 5, 'Ngõ 2 Văn Trì, Phường Minh Khai, Quận Bắc Từ Liêm, Thành phố Hà Nội', 'Hà Nội', 'Bắc Từ Liêm', 'Minh Khai', '0339125387', 'Đào Việt Anh', 'Chao anh ship'),
+(3, 6, 'Ngõ 2 Văn Trì, Phường Minh Khai, Quận Bắc Từ Liêm, Thành phố Hà Nội', 'Hà Nội', 'Bắc Từ Liêm', 'Minh Khai', '0123456789', 'Đào Việt Anh', 'Chào bà con');
 
 --
 -- Indexes for dumped tables
@@ -282,14 +304,17 @@ ALTER TABLE `danh_muc`
 -- Indexes for table `donhangchitiet`
 --
 ALTER TABLE `donhangchitiet`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_donhang` (`id_donHang`),
+  ADD KEY `fk_trangThaiDonHang` (`id_trangThai`);
 
 --
 -- Indexes for table `don_hang`
 --
 ALTER TABLE `don_hang`
   ADD PRIMARY KEY (`id_donhang`),
-  ADD KEY `lk_donhang_taikhoan` (`id_tk`);
+  ADD KEY `lk_donhang_taikhoan` (`id_tk`),
+  ADD KEY `fk_trangThai` (`trangthai_donhang`);
 
 --
 -- Indexes for table `gio_hang`
@@ -348,7 +373,7 @@ ALTER TABLE `van_chuyen`
 -- AUTO_INCREMENT for table `binh_luan`
 --
 ALTER TABLE `binh_luan`
-  MODIFY `id_bl` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id_bl` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `danh_muc`
@@ -372,13 +397,13 @@ ALTER TABLE `don_hang`
 -- AUTO_INCREMENT for table `gio_hang`
 --
 ALTER TABLE `gio_hang`
-  MODIFY `id_giohang` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_giohang` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `gio_hang_chi_tiet`
 --
 ALTER TABLE `gio_hang_chi_tiet`
-  MODIFY `id_giohang_chitiet` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id_giohang_chitiet` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `san_pham`
@@ -408,7 +433,7 @@ ALTER TABLE `trangthaidonhang`
 -- AUTO_INCREMENT for table `van_chuyen`
 --
 ALTER TABLE `van_chuyen`
-  MODIFY `id_vanChuyen` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_vanChuyen` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables
@@ -422,9 +447,17 @@ ALTER TABLE `binh_luan`
   ADD CONSTRAINT `lk_tai_khoan_binh_luan` FOREIGN KEY (`id_tk`) REFERENCES `tai_khoan` (`id_tk`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
 --
+-- Constraints for table `donhangchitiet`
+--
+ALTER TABLE `donhangchitiet`
+  ADD CONSTRAINT `fk_donhang` FOREIGN KEY (`id_donHang`) REFERENCES `don_hang` (`id_donhang`) ON DELETE RESTRICT ON UPDATE RESTRICT,
+  ADD CONSTRAINT `fk_trangThaiDonHang` FOREIGN KEY (`id_trangThai`) REFERENCES `trangthaidonhang` (`id_trangThai`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+--
 -- Constraints for table `don_hang`
 --
 ALTER TABLE `don_hang`
+  ADD CONSTRAINT `fk_trangThai` FOREIGN KEY (`trangthai_donhang`) REFERENCES `trangthaidonhang` (`id_trangThai`) ON DELETE RESTRICT ON UPDATE RESTRICT,
   ADD CONSTRAINT `lk_donhang_taikhoan` FOREIGN KEY (`id_tk`) REFERENCES `tai_khoan` (`id_tk`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 
 --

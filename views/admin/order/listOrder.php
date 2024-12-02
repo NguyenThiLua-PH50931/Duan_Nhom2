@@ -5,18 +5,6 @@
 <head>
     <?php include_once "views/admin/layout/linkCss.php" ?>
 </head>
-<style>
-    table {
-        margin-top: 15px;
-        padding: 20px;
-        width: 70%;
-
-    }
-
-    th {
-        font-weight: bold;
-    }
-</style>
 
 <body>
     <main class="wrapper sb-default">
@@ -24,12 +12,10 @@
         <div id="cr-overlay">
             <div class="loader"></div>
         </div>
-
         <!-- Header -->
         <header class="cr-header">
             <?php include_once "views/admin/layout/header.php" ?>
         </header>
-
         <!-- sidebar -->
         <?php include_once "views/admin/layout/sidebar.php" ?>
 
@@ -39,53 +25,48 @@
                 <!-- Page title & breadcrumb -->
                 <div class="cr-page-title cr-page-title-2">
                     <div class="cr-breadcrumb">
+                        <a href="index.php?admin=add-product" class="cr-btn default-btn color-success">Thêm mới</a>
+                        <h3>Product List</h3>
                         <ul>
                             <li><a href="index.html">Carrot</a></li>
-                            <li>Account List</li>
+                            <li>Product List</li>
                         </ul>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
                         <div class="cr-card card-default product-list">
-                            <div class="cr-card-content ">
+                            <div class="cr-card-content">
                                 <div class="table-responsive">
-                                    <h5 style="text-align:center">Accounts List</h5>
-                                    <form action="" method="post" enctype="multipart/form-data">
 
-                                        <table id="" class="table table-hover">
-                                            <a href="index.php?admin=add-accounts" class="cr-btn default-btn color-success" style="width: 120px;">Thêm mới</a>
+                                    <form action="aaa" method="post" enctype="multipart/form-data">
+                                        <?php
+                                        if (!empty($_SESSION['message'])) {
+                                            echo '<div class="alert alert-success">' . $_SESSION['message'] . '</div>';
+                                        }
+                                        $_SESSION['message'] = null;
+                                        ?>
+                                        <table id="product_list" class="table">
                                             <thead>
                                                 <tr>
-                                                    <th>Tên tài khoản</th>
-                                                    <th>Họ tên</th>
-                                                    <th>Số điện thoại</th>
-                                                    <th>Mật khẩu</th>
-                                                    <th>Địa chỉ</th>
-                                                    <th>Email</th>
-                                                    <th>Vai trò</th>
-                                                    <th></th>
+                                                    <th>Ảnh sản phẩm</th>
+                                                    <th>Tên sản phẩm</th>
+                                                    <th>Số lượng</th>
+                                                    <th>Tổng tiền</th>
+                                                    <th>Action</th>
                                                 </tr>
                                             </thead>
 
                                             <tbody>
-                                                <?php foreach ($accounts as $ac) : ?>
+                                                <?php foreach ($product as $pro) : ?>
                                                     <tr>
-                                                        <td><?= $ac['ten_tk'] ?></td>
-                                                        <td><?= $ac['ho_ten'] ?></td>
-                                                        <td><?= $ac['so_dt'] ?></td>
-                                                        <td><?= $ac['mat_khau'] ?></td>
-                                                        <td><?= $ac['dia_chi'] ?></td>
-                                                        <td><?= $ac['email'] ?></td>
                                                         <td>
-                                                            <?php
-                                                            if ($ac["vai_tro"] == 1) {
-                                                                echo "Admin";
-                                                            } else {
-                                                                echo "User";
-                                                            }
-                                                            ?>
+                                                            <img src="<?= $pro['anh_sp'] ?>" style="width: 170px; height: auto" alt="">
                                                         </td>
+                                                        <td><?= $pro['ten_sp'] ?></td>
+                                                        <td><?= $pro['gia_tien'] ?> VNĐ</td>
+                                                        <td><?= $pro['luot_xem'] ?></td>
+                                                        <td><?= $pro['soluong_ton'] ?></td>
                                                         <!-- <td><span class="active">active</span></td> -->
                                                         <td>
                                                             <div class="d-flex justify-content-center">
@@ -96,15 +77,17 @@
                                                                     <span class="sr-only"><i
                                                                             class="ri-settings-3-line"></i></span>
                                                                 </button>
-                                                                <div class="dropdown-menu">
-                                                                    <a class="dropdown-item" href="index.php?admin=delete-accounts&id_tk=<?= $ac['id_tk'] ?>"
-                                                                        onclick="return confirm('Bạn có chắc muốn xóa ?')">Xóa tài khoản</a>
-                                                                </div>
 
+                                                                <div class="dropdown-menu">
+                                                                    <a class="dropdown-item" href="index.php?admin=edit-product&id_sp=<?= $pro['id_sp'] ?>">Sửa sản phẩm</a>
+                                                                    <a class="dropdown-item" href="index.php?admin=delete-product&id_sp=<?= $pro['id_sp'] ?>"
+                                                                        onclick="return confirm('Bạn có chắc muốn xóa ?')">Xóa sản phẩm</a>
+                                                                </div>
                                                             </div>
                                                         </td>
                                                     </tr>
                                                 <?php endforeach ?>
+                                                </tr>
                                             </tbody>
                                         </table>
                                     </form>
@@ -115,6 +98,7 @@
                 </div>
             </div>
         </div>
+
         <!-- Footer -->
         <footer>
             <?php include_once "views/admin/layout/footer.php" ?>

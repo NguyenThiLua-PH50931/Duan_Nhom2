@@ -22,23 +22,23 @@ class OrderModel
         $result =  $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         if ($result) {
-            $sql = "SELECT `id`, donhangchitiet.id_trangThai, san_pham.*, donhangchitiet.tongTien, donhangchitiet.soLuong
+            $sql = "SELECT `id`, donhangchitiet.id_trangThai, san_pham.*, donhangchitiet.tongTien, donhangchitiet.soLuong, don_hang.*
                     FROM `donhangchitiet` JOIN don_hang ON donhangchitiet.id_donHang = don_hang.id_donhang
                     JOIN san_pham ON donhangchitiet.id_sp = san_pham.id_sp
                     join trangthaidonhang on donhangchitiet.id_trangThai = trangthaidonhang.id_TrangThai
                     WHERE don_hang.id_tk = :id_tk";
-                    
+
             $stmt = $this->db->pdo->prepare($sql);
             $stmt->bindParam("id_tk", $id_tk);
             $stmt->execute();
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
     }
-    public function getCartById($id_tk)
+    public function updateTrangThai($id_donHang)
     {
-        $query = "SELECT * FROM gio_hang WHERE id_tk = :id_tk";
+        $query = "UPDATE `donhangchitiet` SET `id_trangThai`= 5 WHERE id = :id_donHang";
         $stmt = $this->db->pdo->prepare($query);
-        $stmt->bindParam("id_tk", $id_tk);
+        $stmt->bindParam("id_donHang", $id_donHang);
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }

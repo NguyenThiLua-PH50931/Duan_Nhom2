@@ -25,7 +25,7 @@ class AuthController
             if (empty($err_message['ten_tk']) && empty($err_message['mat_khau'])) {
                 // Xử lý dữ liệu đầu vào an toàn
                 $username = htmlspecialchars(trim($data['ten_tk']));
-    
+
                 // Lấy thông tin từ cơ sở dữ liệu
                 $auth = new Auth();
                 $acc = $auth->getLogin();
@@ -60,13 +60,13 @@ class AuthController
         }
 
         // Hiển thị giao diện đăng nhập và thông báo lỗi nếu có
-        include "views/admin/auth/login.php";
+        view("admin/auth/login");
     }
 
     public function logout()
     {
         // Kiểm tra session và logout
-        if (isset($_SESSION['nameAccount'])) {
+        if (isset($_SESSION['nameAccount']) && isset($_SESSION['vai_tro'])) {
             session_destroy(); // Hủy session hoàn toàn
             header('Location: index.php?admin=login'); // Quay lại trang đăng nhập
             exit();

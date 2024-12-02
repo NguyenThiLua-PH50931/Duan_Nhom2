@@ -144,7 +144,7 @@
                     <div class="cr-size-and-weight-contain">
                         <h2 class="heading"><?= $product['ten_sp'] ?></h2>
                     </div>
-                    <form action="index.php?user=addCart" method="post" enctype="multipart/form-data">
+                    <form action="" method="post" enctype="multipart/form-data">
                         <div class="cr-size-and-weight">
                             <div class="list">
                                 <ul>
@@ -182,7 +182,7 @@
                                     <button name="addCart" class="cr-button btn-outline-success">Thêm vào giỏ hàng</button>
                                 </div>
                                 <div class="cr-add-button">
-                                    <button type="button" class="cr-button cr-shopping-bag">Mua ngay</button>
+                                    <button name="muaNgay" class="cr-button cr-shopping-bag">Mua ngay</button>
                                 </div>
                     </form>
                     <form action="" method="post">
@@ -256,7 +256,7 @@
                                                         <!-- Chỉnh sửa bình luận -->
                                                         <form action="index.php?user=detail-product&id_sp=<?= htmlspecialchars($_GET['id_sp']) ?>&action=update&id_bl=<?= $comment['id_bl'] ?>" method="post">
                                                             <textarea name="noi_dung_bl" class="form-control" required><?= htmlspecialchars($comment['noi_dung_bl']) ?></textarea>
-                                                            
+
                                                             <button type="submit" style="color: green;" class="dropdown-item">Cập nhật</button>
                                                         </form>
 
@@ -389,7 +389,10 @@
         echo $_SESSION['deleteCart'];
     } elseif (isset($_SESSION['successWishlist'])) {
         echo $_SESSION['successWishlist'];
+    } elseif (isset($_SESSION['addCart'])) {
+        echo $_SESSION['addCart'];
     }
+    unset($_SESSION['addCart']);
     unset($_SESSION['thongBao']);
     unset($_SESSION['deleteCart']);
     unset($_SESSION['successWishlist']);

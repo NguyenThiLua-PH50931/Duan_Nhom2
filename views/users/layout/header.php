@@ -3,10 +3,10 @@
         <div class="col-lg-12">
             <div class="top-header">
                 <a href="index.html" class="cr-logo">
-                    <img src="assets/users/img/logo/logo.png" alt="logo" class="logo" style="height:90px; width:180px;">
+                    <img src="assets/users/img/logo/logo.png" alt="logo" class="logo" style="height: 90px; width:180px">
                 </a>
 
-                <form class="row g-3" action="index.php?user=shop" method="post" style="margin-top: 2px;">
+                <form class="row g-3" action="" method="post">
                     <div class="col-auto">
                         <label for="inputPassword2" class="visually-hidden">Tìm kiếm tại đây</label>
                         <input type="text" class="form-control" id="text" name="keyword" placeholder="Tìm kiếm tại đây" style="width: 300px; border: 1px forestgreen solid;">
@@ -58,10 +58,6 @@
                         <i class="ri-shopping-cart-line"></i>
                         <span>Cart</span>
                     </a>
-                    <!-- <a href="index.php?admin=login" class="cr-right-bar-item">
-                        <i class="ri-user-3-line"></i>
-                        <span>Đăng nhập Admin</span>
-                    </a> -->
 
                     <?php
                     if (isset($_SESSION['vai_tro']) && $_SESSION['vai_tro'] == 1) {

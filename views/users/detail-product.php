@@ -156,24 +156,6 @@
                                 </ul>
                             </div>
                             <!-- Biến thể -->
-                            <div class="cr-size-weight">
-                                <form action="index.php?user=cart" method="POST">
-                                    <h5><span>Size: </span></h5>
-                                    <div>
-                                        <input type="radio" name="size" value="37" id="size-37" required>
-                                        <label for="size-37">37</label>
-
-                                        <input type="radio" name="size" value="38" id="size-38">
-                                        <label for="size-38">38</label>
-
-                                        <input type="radio" name="size" value="39" id="size-39">
-                                        <label for="size-39">39</label>
-
-                                        <input type="radio" name="size" value="40" id="size-40">
-                                        <label for="size-40">40</label>
-                                    </div>
-                                </form>
-                            </div>
                             <div class="cr-product-price">
                                 <span class="new-price"><?= $product['gia_tien'] ?>VND</span>
                                 <span class="old-price"><?= $product['gia_km'] ?>VND</span>

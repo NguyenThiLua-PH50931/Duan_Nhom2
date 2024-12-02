@@ -179,16 +179,6 @@
                                                         <input type="text" id="district" name="district" value="<?= $shipping['district'] ?? ''?>" required placeholder="Nhập quận/huyện">
                                                     </div>
                                                     <div>
-                                                        <label for="ward">Phường/Xã</label>
-
-                                                        <label for="city">Tỉnh/Thành phố *</label>
-                                                        <input type="text" id="city" name="city" value="<?= $shipping['city'] ?? '' ?>" required placeholder="Nhập tỉnh/thành phố">
-                                                    </div>
-                                                    <div>
-                                                        <label for="district">Quận/Huyện *</label>
-                                                        <input type="text" id="district" name="district" value="<?= $shipping['district'] ?? '' ?>" required placeholder="Nhập quận/huyện">
-                                                    </div>
-                                                    <div>
                                                         <label for="ward">Phường/Xã *</label>
 
                                                         <input type="text" id="ward" name="ward" value="<?= $shipping['ward'] ?? '' ?>" required placeholder="Nhập phường/xã">

@@ -9,11 +9,16 @@ class ProductControllers
         // Lấy giá trị `sort` từ URL hoặc mặc định
         $sort = $_GET['sort'] ?? '';
         $id_dm = $_GET['id_dm'] ?? '';
+        $keyword = $_POST['keyword'] ?? '';
+
         if (!empty($sort)) {
             // Nếu có tham số `sort`, lọc sản phẩm theo giá
             $products = (new ProductModel)->getProductsBySort($sort);
         } elseif (!empty($id_dm)) {
             $products = (new CategoryModels)->productByCategory($id_dm);
+        } elseif ($keyword) {
+            $products = (new ProductModel())->search($keyword);
+            // debug($products);
         } else {
             // Nếu không có tham số `sort`, lấy toàn bộ sản phẩm
             $products = (new ProductModels)->getAllProducts();

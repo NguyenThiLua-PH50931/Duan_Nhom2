@@ -186,8 +186,7 @@
                                                 </div>
                                                 <span class="cr-bill-wrap mb-4">
 
-                                                    <label>Region State</label>
-                                                    <textarea class="form-control" rows="5" name="note" id=""><?= $shipping['note'] ?? ''?></textarea>
+                                                  
 
                                                     <label>Ghi chú</label>
                                                     <textarea class="form-control" rows="5" name="note" id=""><?= $shipping['note'] ?? '' ?></textarea>

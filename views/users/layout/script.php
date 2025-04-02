@@ -68,18 +68,10 @@
                 <div class="cr-product-details">
                     <div class="cr-brand">
                         <a href="shop-left-sidebar.html">${product.ten_dm}</a>
-                        <div class="cr-star">
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-fill"></i>
-                            <i class="ri-star-line"></i>
-                            <p>(4.5)</p>
-                        </div>
+                  
                     </div>
                     <a href="index.php?user=detail-product&id_sp=${product.id_sp}" class="title">${product.ten_sp}</a>
-                    <p class="cr-price"><span class="new-price">${product.gia_tien} VNĐ</span> <span
-                            class="old-price">${product.gia_km}</span></p>
+                    <p class="cr-price"><span class="new-price">${product.gia_tien} VNĐ</span></p>
                 </div>
             </div>
         </div>

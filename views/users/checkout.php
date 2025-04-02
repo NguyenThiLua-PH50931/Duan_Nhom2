@@ -167,16 +167,14 @@
                                                 </div>
                                                 <div class="cr-pro-content cr-product-details">
                                                     <h5 class="cr-pro-title"><a href="index.php?user=detail-product&id_sp=<?= $value['id_sp'] ?>"><?= $value['ten_sp'] ?></a></h5>
-                                                    <div class="cr-pro-rating">
+                                                    <!-- <div class="cr-pro-rating">
                                                         <i class="ri-star-fill"></i>
                                                         <i class="ri-star-fill"></i>
                                                         <i class="ri-star-fill"></i>
                                                         <i class="ri-star-fill"></i>
                                                         <i class="ri-star-line"></i>
-                                                    </div>
-                                                    <p class="cr-price"><span class="new-price"><?= number_format($value['gia_tien']) ?> VNĐ</span> <span
-                                                            class="old-price">$123.25</span>
-
+                                                    </div> -->
+                                                    <p class="cr-price"><span class="new-price"><?= number_format($value['gia_tien']) ?> VNĐ</span> 
                                                     </p>
                                                 </div>
 

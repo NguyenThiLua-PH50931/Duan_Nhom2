@@ -38,6 +38,8 @@ include "models/admin/Auth.php";
 include "models/admin/AccountsModels.php";
 include "models/admin/CommentModels.php";
 include "models/admin/dasboardModel.php";
+include "models/admin/OrdersModel.php";
+include "models/admin/WishlistModelAdmin.php";
 
 //---------------Model-User-------------
 include "models/users/HomeModels.php";
@@ -69,8 +71,6 @@ if (!empty($admin)) {
         // dasboad:
         'dasboard'=>(new DasboardController)->index(),
 
-
-
         // Sản phẩm
         'list-product' => (new ProductsController())->listProduct(),
         'add-product' => (new ProductsController())->addProduct(),
@@ -87,6 +87,17 @@ if (!empty($admin)) {
         'list-accounts' => (new AccountsController)->listAccounts(),
         'delete-accounts' => (new AccountsController)->deleteAccounts(),
         'add-accounts' => (new AccountsController)->addAccounts(),
+
+        // Thay đổi vai trò:
+        'change-role' => (new AccountsController)->changeRole(),
+
+        // Thay đổi trạng thái đơn hàng:
+        'change-status' => (new OrdersController)->changeStatus(),
+        'change-status1' => (new OrdersController)->changeStatus1(),
+        'change-status2' => (new OrdersController)->changeStatus2(),
+        // 'change-status3' => (new OrdersController)->changeStatus3(),
+
+        
         // Đăng nhập
         'login' => (new AuthController())->login(),
         'logout' => (new AuthController())->logout(),
@@ -95,8 +106,13 @@ if (!empty($admin)) {
         'list-comment' => (new CommentController())->listComment(),
         'delete-comment' => (new CommentController())->deleteComment(),
 
-        // Bình luận
+        // Đơn hàng:
         'listOrder' => (new OrdersController())->listOrder(),
+        'donXacNhan' => (new OrdersController())->donXacNhan(),
+        'donDangGiao' => (new OrdersController())->donDangGiao(),
+        'donHoanThanh' => (new OrdersController())->donHoanThanh(),
+        'donHuy' => (new OrdersController())->donHuy(),
+      
 
         default => die("Không tìm thấy file")
     };
@@ -126,7 +142,7 @@ if (!empty($user)) {
 
        'donMua' => (new donMuaController())->getDonMua(),
 
-        'donMua' => (new OrderController())->getOrder(),
+        'getOrder' => (new OrderController())->getOrder(),
         'huyDon' => (new OrderController())->huyDon(),
 
         default => die("Không tìm thấy file"),

@@ -19,14 +19,14 @@
                         </div>
                         <div class="cr-size-and-weight">
                             <div class="cr-review-star">
-                                <div class="cr-star">
+                                <!-- <div class="cr-star">
                                     <i class="ri-star-fill"></i>
                                     <i class="ri-star-fill"></i>
                                     <i class="ri-star-fill"></i>
                                     <i class="ri-star-fill"></i>
                                     <i class="ri-star-fill"></i>
                                 </div>
-                                <p>( 75 Review )</p>
+                                <p>( 75 Review )</p> -->
                             </div>
                             <div class="cr-product-price">
                                 <span class="new-price">$120.25</span>

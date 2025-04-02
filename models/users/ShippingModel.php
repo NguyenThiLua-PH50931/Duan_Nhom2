@@ -61,4 +61,12 @@ class ShippingModel
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
+
+    public function deleteShipping($id_tk)
+    {
+        $sql = "DELETE FROM van_chuyen WHERE id_tk = :id_tk";
+        $stmt = $this->db->pdo->prepare($sql);
+        $stmt->bindParam(':id_tk', $id_tk);
+        $stmt->execute();
+    }
 }

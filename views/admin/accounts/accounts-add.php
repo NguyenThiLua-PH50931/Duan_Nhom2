@@ -86,7 +86,7 @@
                                             </div>
                                             <div class="col-md-12">
                                                 <label class="mat_khau">Mật khẩu</label>
-                                                <input type="t" class="form-control slug-title" id="mat_khau" name="mat_khau" value="<?= htmlspecialchars($_POST['mat_khau'] ?? '') ?>">
+                                                <input type="password" class="form-control slug-title" id="mat_khau" name="mat_khau" value="<?= htmlspecialchars($_POST['mat_khau'] ?? '') ?>">
                                                 <?php if (!empty($err_message['mat_khau'])): ?>
                                                     <small style="color: red;"><?= $err_message['mat_khau'] ?></small>
                                                 <?php endif; ?>

@@ -118,33 +118,18 @@
                                             <div class="cr-side-view">
                                                 <input type="hidden" name="id_sp" value="<?= $pro['id_sp'] ?>">
                                                 <button class="rounded-circle border-0" name="addWishlist">
-                                                    <i class="ri-heart-line"></i>
+                                                    <!-- <i class="ri-heart-line"></i> -->
                                                 </button>
-                                                <a class="model-oraganic-product" data-bs-toggle="modal" href="#quickview"
-                                                    role="button">
-                                                    <i class="ri-eye-line"></i>
-                                                </a>
                                             </div>
                                         </form>
-                                        <a class="cr-shopping-bag" href="javascript:void(0)">
-                                            <i class="ri-shopping-bag-line"></i>
-                                        </a>
                                     </div>
                                     <div class="cr-product-details">
                                         <div class="cr-brand">
                                             <a href="shop-left-sidebar.html"><?= $pro['ten_dm'] ?></a>
-                                            <div class="cr-star">
-                                                <i class="ri-star-fill"></i>
-                                                <i class="ri-star-fill"></i>
-                                                <i class="ri-star-fill"></i>
-                                                <i class="ri-star-fill"></i>
-                                                <i class="ri-star-line"></i>
-                                                <p>(4.5)</p>
-                                            </div>
                                         </div>
                                         <a href="index.php?user=detail-product&id_sp=<?= $pro['id_sp'] ?>" class="title"><?= $pro['ten_sp'] ?></a>
-                                        <p class="cr-price"><span class="new-price"><?= $pro['gia_tien'] ?> VNĐ</span> <span
-                                                class="old-price"><?= $pro['gia_km'] ?></span></p>
+                                        <p class="cr-price"><span class="new-price"><?= $pro['gia_tien']?> VNĐ</span> 
+                                                 
                                     </div>
                                 </div>
                             </div>

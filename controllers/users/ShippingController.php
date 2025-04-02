@@ -5,10 +5,12 @@ class ShippingController
     {
         $id_tk = $_SESSION['id_tk'];
 
+        $category = (new CategoryModels)->all();
+
         $shipping = (new ShippingModel())->getShipping($id_tk);
         // debug($shipping);
 
-        view("users/shipping", ['shipping' => $shipping]);
+        view("users/shipping", ['shipping' => $shipping, 'category'=>$category]);
     }
     public function shipping()
     {

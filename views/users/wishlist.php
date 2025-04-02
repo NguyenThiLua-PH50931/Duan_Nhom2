@@ -82,18 +82,10 @@
                                 <div class="cr-product-details">
                                     <div class="cr-brand">
                                         <a href="shop-left-sidebar.html"><?= $nameCategory['ten_dm'] ?></a>
-                                        <div class="cr-star">
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-fill"></i>
-                                            <i class="ri-star-line"></i>
-                                            <p>(4.5)</p>
-                                        </div>
+                                     
                                     </div>
                                     <a href="index.php?user=detail-product&id_sp=<?= $value['id_sp'] ?>" class="title"><?= $value['ten_sp'] ?></a>
-                                    <p class="cr-price"><span class="new-price"><?= $value['gia_tien'] ?> VNĐ</span> <span
-                                            class="old-price">$123.25</span></p>
+                                    <p class="cr-price"><span class="new-price"><?= $value['gia_tien'] ?> VNĐ</span> </p>
                                 </div>
                             </div>
                         </div>

@@ -105,6 +105,14 @@ class OrderModel
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
+    public function deleteDHCT($id_tk)
+    {
+        $sql = "DELETE FROM `donhangchitiet` WHERE `id_tk` = :id_tk ";
+        $stmt = $this->db->pdo->prepare($sql);
+        $stmt->bindParam(':id_tk', $id_tk);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
     public function deleteCartByIDTK($id_tk)
     {
         $sql = "DELETE FROM `gio_hang` WHERE `id_tk` = :id_tk ";
@@ -121,4 +129,6 @@ class OrderModel
         $stmt->bindParam(':id_giohang_chitiet', $id_giohang_chitiet, PDO::PARAM_INT);
         $stmt->execute();
     }
+
+
 }

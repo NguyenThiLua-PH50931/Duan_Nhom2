@@ -12,10 +12,10 @@ class CheckoutModel
         $this->db = new Database();
     }
 
-    public function payment($van_chuyen, $trangthai_donhang, $phuongthuc_thanhtoan, $id_tk)
+    public function payment($van_chuyen, $code_payment, $trangthai_donhang, $phuongthuc_thanhtoan, $id_tk)
     {
         $now = (new DateTime('now', new DateTimeZone('Asia/Ho_Chi_Minh')))->format('d-m-Y H:i:s');
-        $code_payment = rand(0, 9999);
+
         $sql = "INSERT INTO `don_hang`(`van_chuyen`, `code_payment`,`trangthai_donhang`, `phuongthuc_thanhtoan`, `ngaydat_don`, `id_tk`) 
                     VALUES (:van_chuyen, :code_payment,:trangthai_donhang, :phuongthuc_thanhtoan, :ngaydat_don, :id_tk)";
         $stmt = $this->db->pdo->prepare($sql);
@@ -46,6 +46,49 @@ class CheckoutModel
                 $stmt->bindParam("tongTien", $tongTien);
                 $stmt->execute();
             }
+            // if ($a) {
+            $sql = "SELECT * FROM `donhangchitiet` WHERE id_donHang = :id_donHang";
+            $stmt = $this->db->pdo->prepare($sql);
+            $stmt->bindParam("id_donHang", $id_donHang);
+            $stmt->execute();
+            $stmt->fetchAll(PDO::FETCH_ASSOC);
+            // debug($result);
+
+            $getIDSP = (new CartModel())->getCart($id_tk);
+            // debug($getIDSP);
+            foreach ($getIDSP as $value) {
+                $sql = "SELECT * FROM `donhangchitiet` WHERE id_donHang = :id_donHang and id_sp = :id_sp";
+                $stmt = $this->db->pdo->prepare($sql);
+                $stmt->bindParam("id_donHang", $id_donHang);
+                $stmt->bindParam("id_sp", $value['id_sp']);
+                $stmt->execute();
+                $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                // debug($result);
+                if ($result) {
+                    $total = 0;
+                    foreach ($result as $value) {
+
+                        $total += $value['soLuong'];
+                    }
+                    // debug($total);
+
+                    $sql = "UPDATE `san_pham` SET `soluong_ton`= `soluong_ton` - :total WHERE id_sp = :id_sp";
+                    $stmt = $this->db->pdo->prepare($sql);
+                    $stmt->bindParam(':total', $total);
+                    $stmt->bindParam(':id_sp', $value['id_sp']);
+                    $stmt->execute();
+                }
+            }
         }
+    }
+
+    public function deleteDonHang($id_tk)
+    {
+        $sql = "DELETE FROM `don_hang` WHERE `id_tk` = :id_tk ";
+        $stmt = $this->db->pdo->prepare($sql);
+        $stmt->bindParam(':id_tk', $id_tk);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 }

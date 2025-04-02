@@ -98,44 +98,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="slider slider-nav thumb-image">
-                                <div class="thumbnail-image">
-                                    <div class="thumbImg">
-                                        <img src="" alt="product-tab-1">
-                                    </div>
-                                </div>
-                                <div class="thumbnail-image">
-                                    <div class="thumbImg">
-                                        <img src="" alt="product-tab-2">
-                                    </div>
-                                </div>
-                                <div class="thumbnail-image">
-                                    <div class="thumbImg">
-                                        <img src="" alt="product-tab-3">
-                                    </div>
-                                </div>
-                                <div class="thumbnail-image">
-                                    <div class="thumbImg">
-                                        <img src="" alt="product-tab-1">
-                                    </div>
-                                </div>
-                                <div class="thumbnail-image">
-                                    <div class="thumbImg">
-                                        <img src="" alt="product-tab-2">
-                                    </div>
-                                </div>
-                                <div class="thumbnail-image">
-                                    <div class="thumbImg">
-                                        <img src="" alt="product-tab-3">
-                                    </div>
-                                </div>
-                                <div class="thumbnail-image">
-                                    <div class="thumbImg">
-                                        <img src="" alt="product-tab-1">
-                                    </div>
-                                </div>
 
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -149,40 +112,23 @@
                             <div class="list">
                                 <ul>
                                     <li><label>Thương hiệu <span>:</span></label><?= $cateName['ten_dm'] ?></li>
-                                    <li><label>Giá tiền <span>:</span></label><?= $product['gia_tien'] ?></li>
 
                                     <li><label>Lượt xem <span>:</span></label><?= $product['luot_xem'] ?></li>
-                                    <li><label>Số lượng tồn <span>:</span></label><?= $product['soluong_ton'] ?></li>
+                                    <li>
+                                        <label>Số lượng tồn <span>:</span></label><?= $product['soluong_ton'] ?>
+                                    </li>
                                 </ul>
                             </div>
                             <!-- Biến thể -->
-<<<<<<< HEAD
-                            <div class="cr-size-weight">
-                                <!-- <form action="index.php?user=cart" method="POST">
-                                    <h5><span>Size: </span></h5>
-                                    <div>
-                                        <input type="radio" name="size" value="37" id="size-37" required>
-                                        <label for="size-37">37</label>
 
-                                        <input type="radio" name="size" value="38" id="size-38">
-                                        <label for="size-38">38</label>
 
-                                        <input type="radio" name="size" value="39" id="size-39">
-                                        <label for="size-39">39</label>
-
-                                        <input type="radio" name="size" value="40" id="size-40">
-                                        <label for="size-40">40</label>
-                                    </div>
-                                </form> -->
-                            </div>
-=======
->>>>>>> 8072630ef72034f4ea3a87ca39bad6d2febf0d06
                             <div class="cr-product-price">
-                                <span class="new-price"><?= $product['gia_tien'] ?>VND</span>
-                                <span class="old-price"><?= $product['gia_km'] ?>VND</span>
+                                <span class="new-price">
+                                    <?php echo number_format($product['gia_tien']) ?> VND</span>
+                                <?php if ($product['gia_km']) : ?>
+                                    <span class="old-price"><?= $product['gia_km'] ?> VND</span>
+                                <?php endif; ?>
                             </div>
-
-
 
                             <!-- Xử lý khi người dùng nhấn nút chọn size -->
                             <script></script>
@@ -194,18 +140,16 @@
                                     <button type="button" class="plus">+</button>
                                     <button type="button" class="minus">-</button>
                                 </div>
+
                                 <input type="hidden" name="id_sp" value="<?= $product['id_sp'] ?>">
-
-                                
-                            
-
 
                                 <div class="cr-add-button">
                                     <button name="addCart" class="cr-button btn-outline-success">Thêm vào giỏ hàng</button>
                                 </div>
                                 <div class="cr-add-button">
-                                    <button name="muaNgay" class="cr-button cr-shopping-bag">Mua ngay</button>
+                                    <button name="addCart" class="cr-button cr-shopping-bag">Mua ngay</button>
                                 </div>
+
                     </form>
                     <form action="" method="post">
                         <input type="hidden" name="id_sp" value="<?= $product['id_sp'] ?>">
@@ -215,10 +159,15 @@
                             </button>
                         </div>
                     </form>
-
-
                 </div>
+                <div class="cr-qty-main">
+                    <p class="text-danger mt-3"><?= $_SESSION['soLuong'] ?? '' ?></p>
+                </div>
+
+
+
             </div>
+        </div>
         </div>
         </div>
         <div class="row" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="600">
@@ -257,13 +206,6 @@
                                                 <div class="details">
                                                     <span class="date"><?= htmlspecialchars($comment['ngay_bl']) ?></span>
                                                     <span class="name"><?= htmlspecialchars($comment['ho_ten']) ?></span>
-                                                </div>
-                                                <div class="cr-t-review-rating">
-                                                    <i class="ri-star-s-fill"></i>
-                                                    <i class="ri-star-s-fill"></i>
-                                                    <i class="ri-star-s-fill"></i>
-                                                    <i class="ri-star-s-fill"></i>
-                                                    <i class="ri-star-s-fill"></i>
                                                 </div>
 
                                                 <div class="justify-content-center">
@@ -376,19 +318,14 @@
                                         <div class="cr-product-details">
                                             <div class="cr-brand">
                                                 <a href=""><?= $cateName['ten_dm'] ?></a>
-
-                                                <div class="cr-star">
-                                                    <i class="ri-star-fill"></i>
-                                                    <i class="ri-star-fill"></i>
-                                                    <i class="ri-star-fill"></i>
-                                                    <i class="ri-star-fill"></i>
-                                                    <i class="ri-star-line"></i>
-                                                    <p>(4.5)</p>
-                                                </div>
                                             </div>
                                             <a href="index.php?user=detail-product&id_sp=<?= $value['id_sp'] ?>" class="title"><?= $value['ten_sp'] ?></a>
-                                            <p class="cr-price"><span class="new-price"></span> <?= $value['gia_tien'] ?><span
-                                                    class="old-price"><?= $value['gia_km'] ?></span></p>
+                                            <p class="cr-price"><span class="new-price">
+                                                    <?php
+                                                    echo number_format($value['gia_tien']);
+                                                    ?>
+                                                </span>
+
 
                                         </div>
                                     </div>
@@ -404,6 +341,7 @@
         </div>
     </section>
 
+
     <!-- Footer -->
     <?php include_once "views/users/layout/footer.php" ?>
 
@@ -416,7 +354,10 @@
         echo $_SESSION['successWishlist'];
     } elseif (isset($_SESSION['addCart'])) {
         echo $_SESSION['addCart'];
+    } elseif (isset($_SESSION['soLuong'])) {
+        echo $_SESSION['soLuong'];
     }
+    unset($_SESSION['soLuong']);
     unset($_SESSION['addCart']);
     unset($_SESSION['thongBao']);
     unset($_SESSION['deleteCart']);

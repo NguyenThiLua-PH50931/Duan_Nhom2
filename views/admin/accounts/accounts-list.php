@@ -53,7 +53,7 @@
                             <div class="cr-card-content ">
                                 <div class="table-responsive">
                                     <form action="" method="post" enctype="multipart/form-data">
-                                        <table id="" class="table table-hover">
+                                        <table id="" class="table table-hover" style="margin-top: -40px;">
                                             <br>
                                             <thead>
                                                 <tr>
@@ -65,47 +65,47 @@
                                                     <th style="font-weight: bold; font-size:15px">Email</th>
                                                     <th style="font-weight: bold; font-size:15px">Vai trò</th>
                                                     <th></th>
+
                                                 </tr>
                                             </thead>
                                             <tbody>
+
                                                 <?php foreach ($accounts as $ac) : ?>
                                                     <tr>
                                                         <td style="width: 200px; "><?= $ac['ten_tk'] ?></td>
                                                         <td style="width: 200px;"><?= $ac['ho_ten'] ?></td>
                                                         <td style="width: 200px;"><?= $ac['so_dt'] ?></td>
-                                                        <td style="word-break: break-word; width: 300px;">
+                                                        <td style="word-break: break-word; width: 200px;">
                                                             <?= $ac['mat_khau'] ?>
                                                         </td>
-                                                        <td style="width: 200px;"><?= $ac['dia_chi'] ?></td>
-                                                        <td style="width: 200px;"><?= $ac['email'] ?></td>
-                                                        <td style="width: 200px;">
-                                                            <?php
-                                                            if ($ac["vai_tro"] == 1) {
-                                                                echo "Admin";
-                                                            } else {
-                                                                echo "User";
-                                                            }
-                                                            ?>
+                                                        <td style="width: 100px;"><?= $ac['dia_chi'] ?></td>
+                                                        <td style="width: 100px;"><?= $ac['email'] ?></td>
+
+                                                        <td style="width: 100px;">
+                                                            <form method="post" action="index.php?admin=change-role" style="display: flex; align-items: center; gap: 10px;">
+                                                                <input type="hidden" name="id_tk" value="<?= htmlspecialchars($ac['id_tk']) ?>">
+                                                                <select style="width: 100px; border-radius: 5px;" name="vai_tro" id="vai_tro" class="role-select">
+                                                                    <option value='0' <?= $ac['vai_tro'] == 0 ? 'selected' : '' ?>>User</option>
+                                                                    <option value='1' <?= $ac['vai_tro'] == 1 ? 'selected' : '' ?>>Admin</option>
+                                                                </select>
+                                                                <button type="submit" class="btn btn-warning" style="width: 90px; height:30px">Update</button>
+                                                            </form>
                                                         </td>
-                                                        <!-- <td><span class="active">active</span></td> -->
-                                                        <td>
+
+
+                                                        <td style="width: 100px;">
                                                             <div class="d-flex justify-content-center">
-                                                                <button type="button"
-                                                                    class="btn btn-success dropdown-toggle dropdown-toggle-split"
-                                                                    data-bs-toggle="dropdown" aria-haspopup="true"
-                                                                    aria-expanded="false" data-display="static">
-                                                                    <span class="sr-only"><i
-                                                                            class="ri-settings-3-line"></i></span>
+                                                                <button type="button" style="height:30px" class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                    <span class="sr-only"><i class="ri-settings-3-line"></i></span>
                                                                 </button>
                                                                 <div class="dropdown-menu">
-                                                                    <a class="dropdown-item" href="index.php?admin=delete-accounts&id_tk=<?= $ac['id_tk'] ?>"
-                                                                        onclick="return confirm('Bạn có chắc muốn xóa ?')">Xóa tài khoản</a>
+                                                                    <a class="dropdown-item" href="index.php?admin=delete-accounts&id_tk=<?= $ac['id_tk'] ?>" onclick="return confirm('Bạn có chắc muốn xóa ?')">Xóa tài khoản</a>
                                                                 </div>
-
                                                             </div>
                                                         </td>
                                                     </tr>
-                                                <?php endforeach ?>
+                                                <?php endforeach; ?>
+
                                             </tbody>
                                         </table>
                                     </form>

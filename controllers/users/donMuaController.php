@@ -17,8 +17,10 @@ class donMuaController
             $id_shipping = $get_shipping['id_vanChuyen'];
             $get_cart = (new CartModel())->getCartById($id_tk);
             $id_cart = $get_cart['id_giohang'];
+            $code_payment = rand(0,9999);
             $thanhToan = (new CheckoutModel)->payment(
                 $id_shipping,
+                $code_payment,
                 'Chờ thanh toán',
                 $_POST['pttt'],
                 $id_tk,

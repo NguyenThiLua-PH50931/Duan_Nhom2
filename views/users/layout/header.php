@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="top-header">
-                <a href="index.html" class="cr-logo">
+                <a href="index.php?user=home" class="cr-logo">
                     <img src="assets/users/img/logo/logo.png" alt="logo" class="logo" style="height: 90px; width:180px">
                 </a>
 
@@ -48,7 +48,7 @@
                                         <a class="dropdown-item" href="index.php?user=checkout">Checkout</a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="index.php?user=checkout">Đơn mua</a>
+                                        <a class="dropdown-item" href="index.php?user=getOrder">Đơn mua</a>
                                     </li>
                                 </ul>
                             <?php } ?>
@@ -310,20 +310,20 @@
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link" href="javascript:void(0)">
-                                Pages
+                            <a class="nav-link" href="index.php?user=wishlist">
+                               Products Wishlist
                             </a>
                         </li>
-                        <li class="nav-item dropdown">
+                        <!-- <li class="nav-item dropdown">
                             <a class="nav-link " href="javascript:void(0)">
-                                Blog
+                                
                             </a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link " href="javascript:void(0)">
                                 Elements
                             </a>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </nav>

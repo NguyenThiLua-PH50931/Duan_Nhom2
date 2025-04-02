@@ -75,16 +75,6 @@ class ProductModels
         $stmt->bindParam(':id_sp', $id_sp);
         $stmt->execute();
     }
-
-    // Cập nhập lượt xem lên 1:
-    //Cập nhật lượt xem lên 1
-    public function updateLuotxem($id_sp)
-    {
-        $sql = "UPDATE san_pham SET luot_xem = luot_xem + 1 WHERE id_sp=$id_sp";
-        $stmt = $this->conn->prepare($sql);
-        $stmt->execute();
-    }
-
     public function deleteProductsByCategoryId($categoryId)
     {
         $sql = "DELETE FROM san_pham WHERE id_dm = :id_dm";

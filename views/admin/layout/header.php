@@ -1,21 +1,8 @@
 <div class="container-fluid">
     <div class="cr-header-items">
         <div class="left-header">
-            <a href="javascript:void(0)" class="cr-toggle-sidebar">
-                <span class="outer-ring">
-                    <span class="inner-ring"></span>
-                </span>
-            </a>
-            <div class="header-search-box">
-                <div class="header-search-drop">
-                    <a href="javascript:void(0)" class="open-search"><i class="ri-search-line"></i></a>
-                    <form class="cr-search">
-                        <input class="search-input" type="text" placeholder="Search...">
-                        <a href="javascript:void(0)" class="search-btn"><i class="ri-search-line"></i>
-                        </a>
-                    </form>
-                </div>
-            </div>
+           
+            
         </div>
         <div class="right-header">
           
@@ -48,8 +35,7 @@
                                         <li><a href="index.php?user=home"><i class="ri-logout-circle-r-line"></i>Quay lại trang chủ</a></li>
                                     </ul>
                                 </div>
-                            </div>';
-                            
+                            </div>';    
                 }
                 ?>
 

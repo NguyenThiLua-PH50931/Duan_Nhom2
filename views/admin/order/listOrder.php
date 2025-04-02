@@ -25,11 +25,10 @@
                 <!-- Page title & breadcrumb -->
                 <div class="cr-page-title cr-page-title-2">
                     <div class="cr-breadcrumb">
-                        <a href="index.php?admin=add-product" class="cr-btn default-btn color-success">Thêm mới</a>
-                        <h3>Product List</h3>
+                        <h5 style="text-align:center; font-size: 30px; color:green;">Order List</h5>
                         <ul>
-                            <li><a href="index.html">Carrot</a></li>
-                            <li>Product List</li>
+                            <li><a href="index.html">SHOE-SHOP</a></li>
+                            <li>Order List</li>
                         </ul>
                     </div>
                 </div>
@@ -39,55 +38,66 @@
                             <div class="cr-card-content">
                                 <div class="table-responsive">
 
-                                    <form action="aaa" method="post" enctype="multipart/form-data">
-                                        <?php
-                                        if (!empty($_SESSION['message'])) {
-                                            echo '<div class="alert alert-success">' . $_SESSION['message'] . '</div>';
-                                        }
-                                        $_SESSION['message'] = null;
-                                        ?>
-                                        <table id="product_list" class="table">
+                                    <form action="" method="post" enctype="multipart/form-data">
+                                        <table id="order_list" class="table">
                                             <thead>
                                                 <tr>
-                                                    <th>Ảnh sản phẩm</th>
-                                                    <th>Tên sản phẩm</th>
-                                                    <th>Số lượng</th>
-                                                    <th>Tổng tiền</th>
-                                                    <th>Action</th>
+                                                    <th>Product</th>
+                                                    <th>Price</th>
+                                                    <th>Quantity</th>
+                                                    <th>Total</th>
+                                                    <th>Phương thức</th>
+                                                    <th>Startus</th>
+                                              
+
                                                 </tr>
                                             </thead>
 
                                             <tbody>
-                                                <?php foreach ($product as $pro) : ?>
-                                                    <tr>
-                                                        <td>
-                                                            <img src="<?= $pro['anh_sp'] ?>" style="width: 170px; height: auto" alt="">
-                                                        </td>
-                                                        <td><?= $pro['ten_sp'] ?></td>
-                                                        <td><?= $pro['gia_tien'] ?> VNĐ</td>
-                                                        <td><?= $pro['luot_xem'] ?></td>
-                                                        <td><?= $pro['soluong_ton'] ?></td>
-                                                        <!-- <td><span class="active">active</span></td> -->
-                                                        <td>
-                                                            <div class="d-flex justify-content-center">
-                                                                <button type="button"
-                                                                    class="btn btn-outline-success dropdown-toggle dropdown-toggle-split"
-                                                                    data-bs-toggle="dropdown" aria-haspopup="true"
-                                                                    aria-expanded="false" data-display="static">
-                                                                    <span class="sr-only"><i
-                                                                            class="ri-settings-3-line"></i></span>
-                                                                </button>
 
-                                                                <div class="dropdown-menu">
-                                                                    <a class="dropdown-item" href="index.php?admin=edit-product&id_sp=<?= $pro['id_sp'] ?>">Sửa sản phẩm</a>
-                                                                    <a class="dropdown-item" href="index.php?admin=delete-product&id_sp=<?= $pro['id_sp'] ?>"
-                                                                        onclick="return confirm('Bạn có chắc muốn xóa ?')">Xóa sản phẩm</a>
-                                                                </div>
-                                                            </div>
+                                                <?php foreach ($listOrder as $value) : ?>
+                                                    <tr>
+                                                        <td class="cr-cart-name">
+                                                            <a href="">
+                                                                <img src="<?= $value['anh_sp'] ?>" width="150px" alt="product-1" class="cr-cart-img">
+                                                                <?= $value['ten_sp'] ?>
+                                                            </a>
+                                                        </td>
+                                                        <td class="cr-cart-price">
+                                                            <span class="amount"><?= number_format($value['gia_tien'], 0, ',', '.') ?> VNĐ</span>
+                                                        </td>
+                                                        <td class="cr-cart-subtotal">
+                                                            <?= $value['soLuong'] ?>
+                                                        </td>
+                                                        <td class="cr-cart-subtotal">
+                                                            <?= number_format($value['soLuong'] * $value['gia_tien'], 0, ',', '.') ?> VNĐ
+                                                        </td>
+                                                        <td class="cr-cart-subtotal">
+                                                            <?= $value['phuongthuc_thanhtoan'] ?>
+                                                        </td>
+
+
+                                                        <td>
+                                                            <form method="post" action="index.php?admin=change-status">
+                                                                <!-- Truyền ID đơn hàng qua input ẩn -->
+                                                                <input type="hidden" name="id" value="<?= $value['id'] ?>">
+
+                                                                <!-- Dropdown chọn trạng thái mới -->
+                                                                <select style="width: 150px; height:35px; border-radius: 5px;" name="id_trangThai" id="status" class="role-select">
+                                                               
+                                                                    <option value='1' <?= $value['id_trangThai'] == 1 ? 'selected' : '' ?>>Chờ xử lý</option>
+                                                                    <option value='2' <?= $value['id_trangThai'] == 2 ? 'selected' : '' ?>>Đã xác nhận</option>
+                                                                    <option value='5' <?= $value['id_trangThai'] == 5 ? 'selected' : '' ?>>Hủy đơn</option>
+                                                                  
+                                                                </select>
+
+                                                                <!-- Nút cập nhật trạng thái -->
+                                                                <button type="submit" class="btn btn-warning">Cập nhập</button>
+                                                            </form>
                                                         </td>
                                                     </tr>
-                                                <?php endforeach ?>
-                                                </tr>
+                                                <?php endforeach; ?>
+
                                             </tbody>
                                         </table>
                                     </form>

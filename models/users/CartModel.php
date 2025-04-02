@@ -92,7 +92,6 @@ class CartModel
         $stmt = $this->db->pdo->prepare($sql);
         $stmt->bindParam(':id_giohang', $id_giohang);
         $stmt->execute();
-        return $stmt->fetch(PDO::FETCH_ASSOC);
     }
     public function deleteCartByIDTK($id_tk)
     {
@@ -100,7 +99,6 @@ class CartModel
         $stmt = $this->db->pdo->prepare($sql);
         $stmt->bindParam(':id_tk', $id_tk);
         $stmt->execute();
-        return $stmt->fetch(PDO::FETCH_ASSOC);
     }
     public function updateCart($id_giohang_chitiet, $so_luong)
     {

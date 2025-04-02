@@ -67,20 +67,8 @@
                                     </div>
                                 </div>
 
-                                <!-- Mật khẩu -->
-                                <div class="col-12 col-sm-6">
-                                    <div class="form-group">
-                                        <label>Mật khẩu</label>
-                                        <input type="password" class="cr-form-control" name="mat_khau"
-                                         value="<?= htmlspecialchars($data['mat_khau'] ?? '') ?>">  
-                                         <?php if (!empty($err_message['mat_khau'])): ?>
-                                                    <small style="color: red;"><?= $err_message['mat_khau'] ?></small>
-                                                <?php endif; ?>             
-                                    </div>
-                                </div>
-
-                                <!-- Họ và tên -->
-                                <div class="col-12 col-sm-6">
+                                 <!-- Họ và tên -->
+                                 <div class="col-12 col-sm-6">
                                     <div class="form-group">
                                         <label>Họ và tên</label>
                                         <input type="text" class="cr-form-control" name="ho_ten"
@@ -103,6 +91,32 @@
                                         
                                     </div>
                                 </div>
+
+                                <!-- Mật khẩu -->
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label>Mật khẩu</label>
+                                        <input type="password" class="cr-form-control" name="mat_khau"
+                                         value="<?= htmlspecialchars($data['mat_khau'] ?? '') ?>">  
+                                         <?php if (!empty($err_message['mat_khau'])): ?>
+                                                    <small style="color: red;"><?= $err_message['mat_khau'] ?></small>
+                                                <?php endif; ?>             
+                                    </div>
+                                </div>
+
+                                 <!--  Nhập lại Mật khẩu -->
+                                 <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <label> Xác nhận mật khẩu</label>
+                                        <input type="password" class="cr-form-control" name="xacnhan_matkhau"
+                                         value="<?= htmlspecialchars($data['mat_khau'] ?? '') ?>">  
+                                         <?php if (!empty($err_message['xacnhan_matkhau'])): ?>
+                                                    <small style="color: red;"><?= $err_message['xacnhan_matkhau'] ?></small>
+                                                <?php endif; ?>             
+                                    </div>
+                                </div>
+
+                                
 
                                 <!-- Số điện thoại -->
                                 <div class="col-12 col-sm-6">
@@ -154,7 +168,6 @@
     <?php include_once "views/users/layout/tap-top.php" ?>
 
     <!-- Cart -->
-    <?php include_once "views/users/layout/cart.php" ?>
 
 
     <!-- Side-tool -->

@@ -14,7 +14,7 @@ class AccountsModels
     // Lấy ra tất cả tài khoản:
     public function getAllAccount()
     {
-        $sql = "SELECT * FROM tai_khoan ORDER BY id_tk DESC";
+        $sql = "SELECT * FROM tai_khoan ORDER BY id_tk ";
         // $stmt = $this->conn->prepare($sql);
         // $stmt->execute();
         $stmt = $this->db->pdo->query($sql);
@@ -64,5 +64,15 @@ class AccountsModels
         $stmt = $this->db->pdo->prepare($sql);
         $stmt->execute(['email' => $email]);
         return $stmt->fetch();
+    }
+    // xử ký vai trò:
+    public function updateRole($id_tk, $newRole)
+    {
+        $sql = "UPDATE tai_khoan SET vai_tro = :newRole WHERE id_tk = :id_tk";
+        $stmt = $this->db->pdo->prepare($sql);
+        return $stmt->execute([
+            'newRole' => $newRole,
+            'id_tk'  => $id_tk
+        ]);
     }
 }

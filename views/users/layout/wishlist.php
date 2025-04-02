@@ -39,14 +39,14 @@
                 <div class="cr-product-details">
                     <div class="cr-brand">
                         <a href="shop-left-sidebar.html">Vegetables</a>
-                        <div class="cr-star">
+                        <!-- <div class="cr-star">
                             <i class="ri-star-fill"></i>
                             <i class="ri-star-fill"></i>
                             <i class="ri-star-fill"></i>
                             <i class="ri-star-fill"></i>
                             <i class="ri-star-line"></i>
                             <p>(4.5)</p>
-                        </div>
+                        </div> -->
                     </div>
                     <a href="product-left-sidebar.html" class="title">Fresh organic villa farm lomon
                         500gm pack</a>
@@ -80,14 +80,14 @@
                 <div class="cr-product-details">
                     <div class="cr-brand">
                         <a href="shop-left-sidebar.html">Snacks</a>
-                        <div class="cr-star">
+                        <!-- <div class="cr-star">
                             <i class="ri-star-fill"></i>
                             <i class="ri-star-fill"></i>
                             <i class="ri-star-fill"></i>
                             <i class="ri-star-fill"></i>
                             <i class="ri-star-fill"></i>
                             <p>(5.0)</p>
-                        </div>
+                        </div> -->
                     </div>
                     <a href="product-left-sidebar.html" class="title">Best snakes with hazel nut pack
                         200gm</a>

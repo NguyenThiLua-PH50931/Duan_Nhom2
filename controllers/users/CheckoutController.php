@@ -23,7 +23,7 @@ class CheckoutController
         $shipping = (new ShippingModel())->getShipping($id_tk);
         $category = (new CategoryModels)->all();
 
-        view("users/checkout", ['shipping' => $shipping ?? '', 'cart' => $cart ?? [], 'total' => $total,'category' => $category, 'totalAll' => $totalAll]);
+        view("users/checkout", ['shipping' => $shipping ?? '', 'cart' => $cart ?? [], 'total' => $total, 'category' => $category, 'totalAll' => $totalAll]);
     }
 
     public function checkout()
@@ -35,10 +35,15 @@ class CheckoutController
             $id_shipping = $get_shipping['id_vanChuyen'];
 
             $get_cart = (new CartModel())->getCartById($id_tk);
+            
+
             $id_cart = $get_cart['id_giohang'];
+            $code_payment = rand(0, 9999);
+
 
             $thanhToan = (new CheckoutModel)->payment(
                 $id_shipping,
+                $code_payment,
                 1,
                 $_POST['pttt'],
                 $id_tk,
@@ -47,8 +52,9 @@ class CheckoutController
             (new CartModel)->deleteCartByID($id_cart);
             (new CartModel)->deleteCartByIDTK($id_tk);
 
+
             unset($_SESSION['tongTien']);
-            header('location: index.php?user=home');
+            header('location: index.php?user=getOrder');
             exit();
         }
     }

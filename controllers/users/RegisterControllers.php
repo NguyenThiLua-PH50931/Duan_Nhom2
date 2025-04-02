@@ -3,6 +3,7 @@ class RegisterControllers
 {
     public function registerForm()
     {
+        $category=(new CategoryModels)->all();
         // Khởi tạo thông báo lỗi cho từng trường
         $err_message = [
             'ten_tk' => '',
@@ -25,11 +26,20 @@ class RegisterControllers
 
 
             // Kiểm tra dữ liệu
+            // Kiểm tra tên tài khoản
             if (empty($data['ten_tk'])) {
                 $err_message['ten_tk'] = 'Tên tài khoản không được để trống.';
+            } elseif ((new AccountsModels)->findByUsername($data['ten_tk'])) {
+                $err_message['ten_tk'] = 'Tên tài khoản đã tồn tại.';
             }
             if (empty($data['mat_khau'])) {
                 $err_message['mat_khau'] = 'Mật khẩu không được để trống.';
+            }
+            if($data['xacnhan_matkhau'] != $data['mat_khau']){
+                $err_message['xacnhan_matkhau'] = 'Mật khẩu không khớp.';
+            }
+            elseif(empty($data['xacnhan_matkhau'])){
+                $err_message['xacnhan_matkhau'] = 'Mật khẩu không được để trống.';
             }
             if (empty($data['ho_ten'])) {
                 $err_message['ho_ten'] = 'Họ và tên không được để trống.';
@@ -48,6 +58,7 @@ class RegisterControllers
                 $err_message['dia_chi'] = 'Địa chỉ không được để trống.';
             }
 
+            
             // Kiểm tra nếu không có lỗi thì tiếp tục xử lý
             if (empty(array_filter($err_message))) { // Nếu không còn lỗi
                 // Mã hóa mật khẩu trước khi lưu

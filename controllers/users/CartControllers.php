@@ -24,7 +24,7 @@ class CartControllers
         $category = (new CategoryModels)->all();
 
         // Render view giỏ hàng
-        view("users/cart", ['cart' => $cart ?? [], 'total' => $total, 'category' => $category, 'totalAll' => $totalAll]);
+        view("users/cart", ['cart' => $cart ?? [], 'total' => $total , 'category' => $category, 'totalAll' => $totalAll ?? '']);
     }
 
 

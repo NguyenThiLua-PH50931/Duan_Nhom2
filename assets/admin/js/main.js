@@ -585,14 +585,14 @@
     // //     });
     // // }
     /*========== Recent order DATA TABLE(order-list.html) ===========*/
-    var responsiveDataTable = $("#recent_order");
-    if (responsiveDataTable.length !== 0) {
-        responsiveDataTable.DataTable({
-            "aLengthMenu": [[10, 20, 30, 50, 75, -1], [10, 20, 30, 50, 75, "All"]],
-            "pageLength": 10,
-            "dom": '<"row justify-content-between top-information"lf>rt<"row justify-content-between bottom-information"ip><"clear">'
-        });
-    }
+    // var responsiveDataTable = $("#recent_order");
+    // if (responsiveDataTable.length !== 0) {
+    //     responsiveDataTable.DataTable({
+    //         "aLengthMenu": [[10, 20, 30, 50, 75, -1], [10, 20, 30, 50, 75, "All"]],
+    //         "pageLength": 10,
+    //         "dom": '<"row justify-content-between top-information"lf>rt<"row justify-content-between bottom-information"ip><"clear">'
+    //     });
+    // }
     /*========== Recent order DATA TABLE(add-category.html.html) ===========*/
     var responsiveDataTable = $("#cat_data_table");
     if (responsiveDataTable.length !== 0) {

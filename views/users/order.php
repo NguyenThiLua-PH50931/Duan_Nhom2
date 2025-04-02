@@ -137,33 +137,41 @@
                                         </tr>
                                     </thead>
                                     <tbody id="order-table-body">
-                                        <?php foreach ($order as $value): ?>
+                                        <?php if (!empty($order)): ?>
+                                            <?php foreach ($order as $value): ?>
+                                                <tr>
+                                                    <td class="cr-cart-name">
+                                                        <a href="javascript:void(0)">
+                                                            <img src="<?= $value['anh_sp'] ?>" width="150px" alt="product-1" class="cr-cart-img">
+                                                            <?= $value['ten_sp'] ?>
+                                                        </a>
+                                                    </td>
+                                                    <td class="cr-cart-price">
+                                                        <span class="amount"><?= number_format($value['gia_tien'], 0, ',', '.') ?> VNĐ</span>
+                                                    </td>
+                                                    <td class="cr-cart-qty">
+                                                        <div class="cart-qty-plus-minus">
+                                                            <input type="number" name="so_luong" value="<?= $value['soLuong'] ?>" class="quantity">
+                                                        </div>
+                                                    </td>
+                                                    <td class="cr-cart-subtotal">
+                                                        <?= number_format($value['soLuong'] * $value['gia_tien'], 0, ',', '.') ?> VNĐ
+                                                    </td>
+                                                    <td class="cr-cart-remove">
+                                                        <a onclick="return confirm('Bạn có chắc muốn xóa ?')" href="">
+                                                            <i class="ri-delete-bin-line"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            <?php endforeach; ?>
+                                        <?php else: ?>
                                             <tr>
-                                                <td class="cr-cart-name">
-                                                    <a href="javascript:void(0)">
-                                                        <img src="<?= $value['anh_sp'] ?>" width="150px" alt="product-1" class="cr-cart-img">
-                                                        <?= $value['ten_sp'] ?>
-                                                    </a>
-                                                </td>
-                                                <td class="cr-cart-price">
-                                                    <span class="amount"><?= number_format($value['gia_tien'], 0, ',', '.') ?> VNĐ</span>
-                                                </td>
-                                                <td class="cr-cart-qty">
-                                                    <div class="cart-qty-plus-minus">
-                                                        <!-- Input number để thay đổi số lượng -->
-                                                        <input type="number" name="so_luong" value="<?= $value['soLuong'] ?>" class="quantity">
-                                                    </div>
-                                                </td>
-                                                <td class="cr-cart-subtotal">
-                                                    <?= number_format($value['soLuong'] * $value['gia_tien'], 0, ',', '.') ?> VNĐ
-                                                </td>
-                                                <td class="cr-cart-remove">
-                                                    <a onclick="return confirm('Bạn có chắc muốn xóa ?')" href="">
-                                                        <i class="ri-delete-bin-line"></i>
-                                                    </a>
+                                                <td colspan="5" style="text-align: center; color: gray; font-style: italic;">
+                                                    Không có sản phẩm nào trong đơn hàng.
                                                 </td>
                                             </tr>
-                                        <?php endforeach; ?>
+                                        <?php endif; ?>
+
                                     </tbody>
                                 </table>
                             </div>

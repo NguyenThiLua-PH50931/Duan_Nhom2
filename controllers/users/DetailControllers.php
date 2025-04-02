@@ -5,9 +5,8 @@ class DetailControllers
     {
         $id_sp = $_GET['id_sp'] ?? '';
 
-        (new ProductModel())->updateLuotxem($id_sp);
 
-        $id_tk = $_SESSION['id_tk'];
+        $id_tk = $_SESSION['id_tk'] ?? '';
 
 
         $product = (new ProductModels)->getProductById($id_sp);
@@ -16,6 +15,10 @@ class DetailControllers
 
         // lấy ra các sản phẩm cùng loại trong trang chi tiết:
         $sameProduct = (new CategoryModels())->sameProduct($id_sp, $product['id_dm']);
+
+        (new ProductModel())->updateLuotxem($id_sp);
+
+
 
         if (isset($_POST['addWishlist'])) {
             if (!isset($_SESSION['id_tk'])) {
@@ -39,11 +42,17 @@ class DetailControllers
         if (isset($_POST['addCart'])) {
             $id_sp = $_POST['id_sp'] ?? '';
             $so_luong = $_POST['so_luong'];
-            // $id_giohang = $_POST['id_giohang'];
-            (new CartModel)->addCart($id_tk, $id_sp, $so_luong);
-            $_SESSION['addCart'] = '<div class="cr-cart-notify"><p class="compare-note">Add product in <a href="cart.html"> Cart</a> Successfully!</p></div>';
-            header('Location: index.php?user=detail-product&id_sp=' . $id_sp);
-            exit();
+            if ($so_luong > $product['soluong_ton']) {
+                $_SESSION['soLuong'] = "Sản phẩm vượt quá số lượng trong kho";
+                header('Location: index.php?user=detail-product&id_sp=' . $id_sp);
+                exit();
+            } else {
+                // $id_giohang = $_POST['id_giohang'];
+                (new CartModel)->addCart($id_tk, $id_sp, $so_luong);
+                $_SESSION['addCart'] = '<div class="cr-cart-notify"><p class="compare-note">Add product in <a href="cart.html"> Cart</a> Successfully!</p></div>';
+                header('Location: index.php?user=cart');
+                exit();
+            }
         }
 
         if (isset($_POST['muaNgay'])) {
